@@ -1,4 +1,4 @@
-import { IOperadorInput } from './operador.input';
+import { IOperadorInput } from './operador.inputs';
 
 export interface ICrearUsuarioInput {
   nombre: string;
