@@ -2,7 +2,7 @@ import { ICrearClientInput } from './client.inputs';
 import { IUsuario } from './usuario.model';
 import { IVecino } from './vecino.model';
 
-export class CrearTokenInput {
+export interface ICrearTokenInput {
   accessToken: string;
   accessTokenExpiresAt?: string;
   refreshToken?: string;

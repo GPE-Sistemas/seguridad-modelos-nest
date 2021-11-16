@@ -2,7 +2,7 @@ import { IClient } from './client.model';
 import { IUsuario } from './usuario.model';
 import { IVecino } from './vecino.model';
 
-export class Token {
+export interface IToken {
   accessToken: string;
   accessTokenExpiresAt: string;
   refreshToken?: string;
