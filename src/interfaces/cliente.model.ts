@@ -11,7 +11,7 @@ export interface ICliente {
   edadMinima: number;
   twitter: string;
   sirenas: boolean;
-  idsCategorias: string[];
+  idsCategorias?: string[];
   // Virtuals
-  categorias: ICategoria[];
+  categorias?: ICategoria[];
 }

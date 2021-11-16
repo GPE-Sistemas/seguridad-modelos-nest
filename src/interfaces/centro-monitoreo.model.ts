@@ -7,5 +7,5 @@ export interface ICentroMonitoreo {
   coordenadas: ICoordenadas;
   idCliente: string;
   // Virtuals
-  cliente: ICliente;
+  cliente?: ICliente;
 }

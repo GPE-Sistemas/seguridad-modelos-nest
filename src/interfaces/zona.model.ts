@@ -9,6 +9,6 @@ export interface IZona {
   idCliente: string;
   idsPrioridad: string[];
   // Virtuals
-  cliente: ICliente;
-  centrosMonitoreo: ICentroMonitoreo[];
+  cliente?: ICliente;
+  centrosMonitoreo?: ICentroMonitoreo[];
 }

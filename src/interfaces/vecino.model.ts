@@ -9,13 +9,13 @@ export class IVecino {
   dni: string;
   sexo: boolean;
   idCliente: string;
-  email: string;
+  email?: string;
   direccion: string;
   pais: string;
   telefono: string;
   fechaNacimiento: string;
-  codigoValidacionSMS: string; // codigo autogenerado para validar el nro de teléfono
-  categoria: ICategoriaVecino;
+  codigoValidacionSMS?: string; // codigo autogenerado para validar el nro de teléfono
+  categoria?: ICategoriaVecino;
   // Virtuals
-  cliente: ICliente;
+  cliente?: ICliente;
 }

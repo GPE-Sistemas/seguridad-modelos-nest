@@ -14,5 +14,5 @@ export interface ICrearUsuarioInput {
   fechaNacimiento?: string;
   usuario: string;
   clave: string;
-  operador: IOperadorInput;
+  operador?: IOperadorInput;
 }
