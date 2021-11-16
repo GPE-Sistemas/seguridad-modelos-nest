@@ -6,7 +6,7 @@ export interface IToken {
   accessToken: string;
   accessTokenExpiresAt: string;
   refreshToken?: string;
-  refreshTokenExpiresAt?: Date;
+  refreshTokenExpiresAt?: string;
   scope?: string | string[];
   client: IClient;
   user: IUsuario | IVecino;

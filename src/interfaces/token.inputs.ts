@@ -6,7 +6,7 @@ export interface ICrearTokenInput {
   accessToken: string;
   accessTokenExpiresAt?: string;
   refreshToken?: string;
-  refreshTokenExpiresAt?: Date;
+  refreshTokenExpiresAt?: string;
   scope?: string | string[];
   client: ICrearClientInput;
   user: IUsuario | IVecino;
