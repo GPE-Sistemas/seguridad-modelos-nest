@@ -16,5 +16,5 @@ export interface ISocketMessage {
    * En caso de post o put, el body es el nuevo objeto
    * En caso de delete, el body es un objeto { _id: "id del objeto eliminado" }
    */
-  body?: object | string;
+  body?: Record<string, any>;
 }
