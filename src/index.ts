@@ -22,6 +22,7 @@ export * from './interfaces/coordenadas';
 export * from './interfaces/operador.inputs';
 export * from './interfaces/operador.model';
 export * from './interfaces/query-filter.input';
+export * from './interfaces/socket-message';
 export * from './interfaces/token.inputs';
 export * from './interfaces/token.model';
 export * from './interfaces/trackeo.inputs';
