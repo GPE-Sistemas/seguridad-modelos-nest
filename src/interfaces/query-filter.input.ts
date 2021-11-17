@@ -22,6 +22,24 @@ export interface IQueryFilterInput {
    *   ]
    * });
    */
+  // filter?: string;
+  /**
+   * @description
+   * Es un array IFilter en string
+   * @example
+   * filter = JSON.stringify([
+   *  {
+   *   field: 'nombre',
+   *   type: string,
+   *   value: 'nombre',
+   *  },
+   *  {
+   *   field: 'idCliente',
+   *   type: objectid,
+   *   value: 'idCliente',
+   *  },
+   * ]);
+   */
   filter?: string;
   /**
    * @description
@@ -35,4 +53,11 @@ export interface IQueryFilterInput {
    */
   populate?: string;
   select?: string;
+  [key: string]: any;
+}
+
+export interface IFilter {
+  field: string | string[];
+  type: 'number' | 'string' | 'boolean' | 'date' | 'object' | 'regex' | 'objectid';
+  value: any;
 }
