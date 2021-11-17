@@ -1,4 +1,4 @@
-export interface ICrearinterfaceInput {
+export interface ICrearCategoriaInput {
   nombre: string;
   prioridad: number;
   color?: string;
@@ -6,7 +6,7 @@ export interface ICrearinterfaceInput {
   idsBtnsSecundarios?: string[];
 }
 
-export interface IUpdateinterfaceInput {
+export interface IUpdateCategoriaInput {
   nombre?: string;
   prioridad?: number;
   color?: string;
