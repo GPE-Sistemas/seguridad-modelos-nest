@@ -4,7 +4,7 @@ export interface IQueryFilterInput {
   sort?: string;
   /**
    * @description
-   * Representa un objecto de filtros tal cual lo recibe mongoose para la query
+   * Representa un objeto de filtros tal cual lo recibe mongoose para la query
    * @example
    * filter = JSON.stringify({
    *   nombre: 'nombre', // => Busqueda literal
@@ -23,6 +23,16 @@ export interface IQueryFilterInput {
    * });
    */
   filter?: string;
+  /**
+   * @description
+   * Representa un string u objeto para populate tal cual lo recibe mongoose para la query
+   * @example
+   * populate = 'cliente'
+   * populate = JSON.stringify({
+   *  path: 'cliente',
+   *  select: 'nombre',
+   * });
+   */
   populate?: string;
   select?: string;
 }

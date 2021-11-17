@@ -16,3 +16,19 @@ export interface ICrearUsuarioInput {
   clave: string;
   operador?: IOperadorInput;
 }
+
+export interface IUpdateUsuarioInput {
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean;
+  telefono?: string;
+  roles?: string[];
+  activo?: boolean;
+  email?: string;
+  direccion?: string;
+  pais?: string;
+  fechaNacimiento?: string;
+  usuario?: string;
+  clave?: string;
+  operador?: IOperadorInput;
+}

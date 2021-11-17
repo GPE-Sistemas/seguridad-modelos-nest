@@ -15,3 +15,8 @@ export interface IUpdateAlertaInput {
   idUsuario?: string;
   tiempoRespuesta?: number;
 }
+
+export interface IAlertaNuevaInput {
+  ubicacion: ICoordenadasInput;
+  idBoton: string;
+}
