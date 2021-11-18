@@ -19,6 +19,7 @@ export * from './interfaces/client.model';
 export * from './interfaces/cliente.inputs';
 export * from './interfaces/cliente.model';
 export * from './interfaces/coordenadas';
+export * from './interfaces/listado';
 export * from './interfaces/operador.inputs';
 export * from './interfaces/operador.model';
 export * from './interfaces/query-filter.input';
