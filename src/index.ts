@@ -6,6 +6,7 @@ export * from './interfaces/alerta-ubicacion.inputs';
 export * from './interfaces/alerta-ubicacion.model';
 export * from './interfaces/alerta.inputs';
 export * from './interfaces/alerta.model';
+export * from './interfaces/borrado';
 export * from './interfaces/boton.inputs';
 export * from './interfaces/boton.model';
 export * from './interfaces/categoria-vecino.inputs';
