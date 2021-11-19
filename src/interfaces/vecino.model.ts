@@ -1,7 +1,7 @@
 import { ICategoriaVecino } from './categoria-vecino.model';
 import { ICliente } from './cliente.model';
 
-export class IVecino {
+export interface IVecino {
   _id: string;
   activo: boolean;
   fechaCreacion: string;
