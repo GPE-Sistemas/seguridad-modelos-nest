@@ -1,6 +1,6 @@
 import { ICategoriaVecino } from './categoria-vecino.model';
 
-export interface CrearVecinoInput {
+export interface ICrearVecinoInput {
   nombre: string;
   dni: string;
   sexo: boolean;
@@ -14,7 +14,7 @@ export interface CrearVecinoInput {
   categoria?: ICategoriaVecino;
 }
 
-export interface UpdateVecinoInput {
+export interface IUpdateVecinoInput {
   activo?: boolean;
   categoria?: ICategoriaVecino;
 }
