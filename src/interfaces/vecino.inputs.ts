@@ -1,4 +1,5 @@
 import { ICategoriaVecino } from './categoria-vecino.model';
+import { ICoordenadasInput } from './coordenadas';
 
 export interface ICrearVecinoInput {
   nombre: string;
@@ -17,4 +18,19 @@ export interface ICrearVecinoInput {
 export interface IUpdateVecinoInput {
   activo?: boolean;
   categoria?: ICategoriaVecino;
+}
+
+export interface INuevoVecinoInput {
+  nombre: string;
+  dni: string;
+  sexo: boolean;
+  fechaNacimiento: string;
+  pais: string;
+  telefono: string;
+  email: string;
+  direccion: string;
+  /**
+   * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
+   */
+  ubicacion?: ICoordenadasInput;
 }
