@@ -14,18 +14,19 @@ export interface IAlerta {
   estadoActual: string;
   fechaCreacion: string;
   tiempoRespuesta: number;
-  idsCentrosMonitoreo: string[];
-  idZona: string;
-  idVecino: string;
-  idI: string;
-  idCliente: string;
+  //
   idBoton: string;
+  idsCentrosMonitoreo: string[];
+  idCliente: string;
+  idUsuario: string;
+  idVecino: string;
+  idZona: string;
 
   // Virtuals
-  zona?: IZona;
-  usuario?: IUsuario;
-  vecino?: IVecino;
+  boton?: IBoton;
   centrosMonitoreo?: ICentroMonitoreo[];
   cliente?: ICliente;
-  boton?: IBoton;
+  usuario?: IUsuario;
+  vecino?: IVecino;
+  zona?: IZona;
 }
