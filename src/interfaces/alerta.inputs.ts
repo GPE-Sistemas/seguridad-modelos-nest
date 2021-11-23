@@ -1,3 +1,7 @@
+import { IAlertaEstado } from './alerta-estado.model';
+import { IAlertaMedia } from './alerta-media.model';
+import { IAlertaUbicacion } from './alerta-ubicacion.model';
+import { IAlerta } from './alerta.model';
 import { ICoordenadasInput } from './coordenadas';
 
 export interface ICrearAlertaInput {
@@ -20,4 +24,11 @@ export interface IUpdateAlertaInput {
 export interface IAlertaNuevaInput {
   ubicacion: ICoordenadasInput;
   idBoton: string;
+}
+
+export interface IAlertaDetalle {
+  alerta: IAlerta;
+  estados?: IAlertaEstado[];
+  multimedia?: IAlertaMedia[];
+  ubicaciones?: IAlertaUbicacion[];
 }
