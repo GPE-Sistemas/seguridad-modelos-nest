@@ -1,3 +1,4 @@
+import { IBoton } from './boton.model';
 import { ICentroMonitoreo } from './centro-monitoreo.model';
 import { ICliente } from './cliente.model';
 import { ICoordenadas } from './coordenadas';
@@ -18,6 +19,7 @@ export interface IAlerta {
   idVecino: string;
   idI: string;
   idCliente: string;
+  idBoton: string;
 
   // Virtuals
   zona?: IZona;
@@ -25,4 +27,5 @@ export interface IAlerta {
   vecino?: IVecino;
   centrosMonitoreo?: ICentroMonitoreo[];
   cliente?: ICliente;
+  boton?: IBoton;
 }
