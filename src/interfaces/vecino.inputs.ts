@@ -13,11 +13,13 @@ export interface ICrearVecinoInput {
   pais?: string;
   fechaNacimiento?: string;
   categoria?: ICategoriaVecino;
+  codigoValidacionSMS?: string;
 }
 
 export interface IUpdateVecinoInput {
   activo?: boolean;
   categoria?: ICategoriaVecino;
+  codigoValidacionSMS?: string;
 }
 
 export interface INuevoVecinoInput {
