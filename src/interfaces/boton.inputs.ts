@@ -6,6 +6,7 @@ export interface ICrearBotonInput {
   texto?: string;
   urlImagen?: string;
   trackeo: ICrearTrackeoInput;
+  editable?: boolean;
 }
 
 export interface IUpdateBotonInput {

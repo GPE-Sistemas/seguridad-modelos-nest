@@ -16,6 +16,8 @@ export interface IVecino {
   fechaNacimiento: string;
   codigoValidacionSMS?: string; // codigo autogenerado para validar el nro de teléfono
   categoria?: ICategoriaVecino;
+  idCategoriaDefault: string;
   // Virtuals
   cliente?: ICliente;
+  categoriaDefault?: ICategoriaVecino;
 }

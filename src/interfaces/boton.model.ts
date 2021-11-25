@@ -7,4 +7,5 @@ export interface IBoton {
   texto: string;
   urlImagen: string;
   trackeo: ITrackeo;
+  editable: boolean;
 }

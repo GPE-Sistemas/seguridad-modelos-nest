@@ -4,6 +4,7 @@ export interface ICrearCategoriaInput {
   color?: string;
   idBtnPrincipal: string;
   idsBtnsSecundarios?: string[];
+  editable?: boolean;
 }
 
 export interface IUpdateCategoriaInput {

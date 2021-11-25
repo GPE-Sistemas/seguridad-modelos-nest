@@ -5,6 +5,7 @@ export interface ICategoria {
   nombre: string;
   prioridad: number;
   color: string;
+  editable: boolean;
   idBtnPrincipal: string;
   idsBtnsSecundarios: string[];
   // Virtuals
