@@ -1,4 +1,5 @@
 import { ICategoriaVecino } from './categoria-vecino.model';
+import { ICategoria } from './categoria.model';
 import { ICliente } from './cliente.model';
 
 export interface IVecino {
@@ -19,5 +20,5 @@ export interface IVecino {
   idCategoriaDefault: string;
   // Virtuals
   cliente?: ICliente;
-  categoriaDefault?: ICategoriaVecino;
+  categoriaDefault?: ICategoria;
 }
