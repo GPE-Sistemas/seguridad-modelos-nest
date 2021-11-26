@@ -10,3 +10,8 @@ export interface IUpdateCentroMonitoreoInput {
   nombre?: string;
   ubicacion?: ICoordenadasInput;
 }
+
+export interface INuevoCentroMonitoreoInput {
+  nombre: string;
+  ubicacion: ICoordenadasInput;
+}

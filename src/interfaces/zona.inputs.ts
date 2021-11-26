@@ -12,3 +12,9 @@ export interface IUpdateZonaInput {
   coordenadas?: ICoordenadasInput[];
   idsPrioridad?: string[];
 }
+
+export interface INuevaZonaInput {
+  nombre: string;
+  coordenadas: ICoordenadasInput[];
+  idsPrioridad: string[];
+}
