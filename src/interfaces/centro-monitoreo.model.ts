@@ -4,7 +4,7 @@ import { ICoordenadas } from './coordenadas';
 export interface ICentroMonitoreo {
   _id: string;
   nombre: string;
-  coordenadas: ICoordenadas;
+  ubicacion: ICoordenadas;
   idCliente: string;
   // Virtuals
   cliente?: ICliente;
