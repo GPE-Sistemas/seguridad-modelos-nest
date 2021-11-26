@@ -2,9 +2,9 @@ import { IBoton } from './boton.model';
 import { ICentroMonitoreo } from './centro-monitoreo.model';
 
 export interface IOperador {
-  idsCentrosMonitoreo: string[];
+  idCentroMonitoreo: string;
   idsBotones: string[];
   // Virtuals
-  centrosMonitoreo?: ICentroMonitoreo[];
+  centroMonitoreo?: ICentroMonitoreo;
   botones?: IBoton[];
 }

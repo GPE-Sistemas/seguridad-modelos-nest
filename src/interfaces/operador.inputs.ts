@@ -1,4 +1,4 @@
 export interface IOperadorInput {
-  idsCentrosMonitoreo: string[];
+  idCentroMonitoreo: string;
   idsBotones: string[];
 }
