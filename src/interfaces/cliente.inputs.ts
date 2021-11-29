@@ -1,3 +1,4 @@
+import { IImagenesClienteInput } from '..';
 import { ICoordenadasInput } from './coordenadas';
 
 export interface ICrearClienteInput {
@@ -7,6 +8,7 @@ export interface ICrearClienteInput {
   twitter?: string;
   idsCategorias: string[];
   coordenadas: ICoordenadasInput[][];
+  imagenes: IImagenesClienteInput;
 }
 
 export interface IUpdateClienteInput {
@@ -16,4 +18,5 @@ export interface IUpdateClienteInput {
   twitter?: string;
   idsCategorias?: string[];
   coordenadas?: ICoordenadasInput[][];
+  imagenes?: IImagenesClienteInput;
 }

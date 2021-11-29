@@ -1,5 +1,6 @@
 import { ICategoria } from './categoria.model';
 import { ICoordenadas } from './coordenadas';
+import { IImagenesCliente } from './imagenes-cliente';
 
 export interface ICliente {
   _id: string;
@@ -12,6 +13,7 @@ export interface ICliente {
   twitter: string;
   sirenas: boolean;
   idsCategorias?: string[];
+  imagenes: IImagenesCliente;
   // Virtuals
   categorias?: ICategoria[];
 }

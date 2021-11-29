@@ -20,6 +20,8 @@ export * from './interfaces/client.model';
 export * from './interfaces/cliente.inputs';
 export * from './interfaces/cliente.model';
 export * from './interfaces/coordenadas';
+export * from './interfaces/imagenes-cliente.input';
+export * from './interfaces/imagenes-cliente';
 export * from './interfaces/listado';
 export * from './interfaces/operador.inputs';
 export * from './interfaces/operador.model';

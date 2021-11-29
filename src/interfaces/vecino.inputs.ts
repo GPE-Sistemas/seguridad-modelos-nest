@@ -13,8 +13,8 @@ export interface ICrearVecinoInput {
   pais?: string;
   fechaNacimiento?: string;
   categoria?: ICategoriaVecino;
-  codigoValidacionSMS?: string;
-  idCategoriaDefault?: string;
+  codigoValidacionSMS: string;
+  idCategoriaDefault: string;
 }
 
 export interface IUpdateVecinoInput {
