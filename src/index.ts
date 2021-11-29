@@ -9,6 +9,8 @@ export * from './interfaces/alerta.model';
 export * from './interfaces/borrado';
 export * from './interfaces/boton.inputs';
 export * from './interfaces/boton.model';
+export * from './interfaces/categoria-cliente.inputs';
+export * from './interfaces/categoria-cliente.model';
 export * from './interfaces/categoria-vecino.inputs';
 export * from './interfaces/categoria-vecino.model';
 export * from './interfaces/categoria.inputs';
