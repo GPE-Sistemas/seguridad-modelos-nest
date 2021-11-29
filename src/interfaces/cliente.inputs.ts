@@ -7,6 +7,7 @@ export interface ICrearClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
+  sirenas?: boolean;
   categorias: ICrearCategoriaClienteInput[];
   coordenadas: ICoordenadasInput[][];
   imagenes: IImagenesClienteInput;
@@ -17,6 +18,7 @@ export interface IUpdateClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
+  sirenas?: boolean;
   categorias?: ICrearCategoriaClienteInput[];
   coordenadas?: ICoordenadasInput[][];
   imagenes?: IImagenesClienteInput;
