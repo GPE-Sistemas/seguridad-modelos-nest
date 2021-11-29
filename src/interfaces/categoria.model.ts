@@ -9,8 +9,6 @@ export interface ICategoria {
   idBtnPrincipal: string;
   idsBtnsSecundarios: string[];
   twitter: boolean;
-  imagenArriba?: string;
-  imagenAbajo?: string;
   // Virtuals
   btnPrincipal?: IBoton;
   btnsSecundarios?: IBoton[];

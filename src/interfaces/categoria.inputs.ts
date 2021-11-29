@@ -6,8 +6,6 @@ export interface ICrearCategoriaInput {
   idsBtnsSecundarios?: string[];
   editable?: boolean;
   twitter: boolean;
-  imagenArriba?: string;
-  imagenAbajo?: string;
 }
 
 export interface IUpdateCategoriaInput {
@@ -17,6 +15,4 @@ export interface IUpdateCategoriaInput {
   idBtnPrincipal?: string;
   idsBtnsSecundarios?: string[];
   twitter?: boolean;
-  imagenArriba?: string;
-  imagenAbajo?: string;
 }
