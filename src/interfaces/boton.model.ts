@@ -6,6 +6,7 @@ export interface IBoton {
   color: string;
   texto: string;
   urlImagen: string;
+  urlImagenPush: string;
   trackeo: ITrackeo;
   editable: boolean;
 }
