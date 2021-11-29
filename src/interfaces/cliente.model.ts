@@ -1,4 +1,4 @@
-import { ICategoria } from './categoria.model';
+import { ICategoriaCliente } from './categoria-cliente.model';
 import { ICoordenadas } from './coordenadas';
 import { IImagenesCliente } from './imagenes-cliente';
 
@@ -12,8 +12,6 @@ export interface ICliente {
   edadMinima: number;
   twitter: string;
   sirenas: boolean;
-  idsCategorias?: string[];
+  categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
-  // Virtuals
-  categorias?: ICategoria[];
 }

@@ -1,4 +1,5 @@
 import { IImagenesClienteInput } from '..';
+import { ICrearCategoriaClienteInput } from './categoria-cliente.inputs';
 import { ICoordenadasInput } from './coordenadas';
 
 export interface ICrearClienteInput {
@@ -6,7 +7,7 @@ export interface ICrearClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
-  idsCategorias: string[];
+  categorias: ICrearCategoriaClienteInput[];
   coordenadas: ICoordenadasInput[][];
   imagenes: IImagenesClienteInput;
 }
@@ -16,7 +17,7 @@ export interface IUpdateClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
-  idsCategorias?: string[];
+  categorias?: ICrearCategoriaClienteInput[];
   coordenadas?: ICoordenadasInput[][];
   imagenes?: IImagenesClienteInput;
 }
