@@ -1,4 +1,5 @@
 import { IBoton } from './boton.model';
+import { ICategoria } from './categoria.model';
 import { ICentroMonitoreo } from './centro-monitoreo.model';
 import { ICliente } from './cliente.model';
 import { ICoordenadas } from './coordenadas';
@@ -16,6 +17,7 @@ export interface IAlerta {
   tiempoRespuesta: number;
   //
   idBoton: string;
+  idCategoria: string;
   idsCentrosMonitoreo: string[];
   idCliente: string;
   idUsuario: string;
@@ -24,6 +26,7 @@ export interface IAlerta {
 
   // Virtuals
   boton?: IBoton;
+  categoria?: ICategoria;
   centrosMonitoreo?: ICentroMonitoreo[];
   cliente?: ICliente;
   usuario?: IUsuario;

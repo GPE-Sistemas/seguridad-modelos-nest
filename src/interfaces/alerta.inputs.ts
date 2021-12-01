@@ -11,6 +11,7 @@ export interface ICrearAlertaInput {
   idsCentrosMonitoreo: string[];
   idZona: string;
   idBoton: string;
+  idCategoria: string;
   prioridad: number;
 }
 
