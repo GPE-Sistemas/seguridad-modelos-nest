@@ -33,3 +33,8 @@ export interface IAlertaDetalle {
   multimedia?: IAlertaMedia[];
   ubicaciones?: IAlertaUbicacion[];
 }
+
+export interface IResumenAlertasPorCliente {
+  cliente: string;
+  cantidad: number;
+}

@@ -37,3 +37,8 @@ export interface INuevoVecinoInput {
    */
   ubicacion?: ICoordenadasInput;
 }
+
+export interface IResumenVecinosPorCliente {
+  cliente: string;
+  cantidad: number;
+}

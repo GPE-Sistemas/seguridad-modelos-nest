@@ -23,3 +23,10 @@ export interface IUpdateClienteInput {
   coordenadas?: ICoordenadasInput[][];
   imagenes?: IImagenesClienteInput;
 }
+
+export interface IResumenClientes {
+  cliente: string;
+  cantidadUsuarios: number;
+  cantidadVecinos: number;
+  cantidadAlertas: number;
+}

@@ -49,3 +49,8 @@ export interface INuevoUsuarioInput {
   clave: string;
   operador?: IOperadorInput;
 }
+
+export interface IResumenUsuariosPorCliente {
+  cliente: string;
+  cantidad: number;
+}
