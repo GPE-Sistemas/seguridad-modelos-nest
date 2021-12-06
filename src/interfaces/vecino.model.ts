@@ -2,6 +2,21 @@ import { ICategoriaVecino } from './categoria-vecino.model';
 import { ICategoria } from './categoria.model';
 import { ICliente } from './cliente.model';
 
+// TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
+export interface IPrivacidad {
+  audio: boolean;
+  video: boolean;
+  foto: boolean;
+  ubicacion: boolean;
+}
+
+// TODO: implementar para controlar el pedido de SMS
+export interface IEnvioCodigo {
+  cantidad: number;
+  fechaUltimoEnvio: string;
+  fechaSiguienteEnvio: string;
+}
+
 export interface IVecino {
   _id: string;
   activo: boolean;

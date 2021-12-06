@@ -11,10 +11,12 @@ export interface IAlerta {
   _id: string;
   activa: boolean;
   ubicacion: ICoordenadas;
+  direccion: string;
   prioridad: number;
   estadoActual: string;
   fechaCreacion: string;
   tiempoRespuesta: number;
+  tiempoResolucion: number;
   //
   idBoton: string;
   idCategoria: string;
