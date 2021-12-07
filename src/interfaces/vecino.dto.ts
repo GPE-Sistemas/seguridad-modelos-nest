@@ -1,4 +1,4 @@
-import { ICategoriaVecino } from './categoria-vecino.model';
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.inputs';
 import { ICoordenadasInput } from './coordenadas';
 
 export interface INuevoVecino {
@@ -27,14 +27,14 @@ export interface ICrearVecino {
   direccion: string;
   pais?: string;
   fechaNacimiento?: string;
-  categoria?: ICategoriaVecino;
+  categoria?: ICrearCategoriaVecinoInput;
   codigoValidacionSMS: string;
   idCategoriaDefault: string;
 }
 
 export interface IUpdateVecino {
   activo?: boolean;
-  categoria?: ICategoriaVecino;
+  categoria?: ICrearCategoriaVecinoInput;
   codigoValidacionSMS?: string;
 }
 
