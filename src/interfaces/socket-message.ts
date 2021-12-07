@@ -17,4 +17,8 @@ export interface ISocketMessage {
    * En caso de delete, el body es un objeto { _id: "id del objeto eliminado" }
    */
   body?: Record<string, any>;
+  /**
+   * Por que el usuario recibio el mensaje (para debug mas que nada)
+   */
+  motivo?: string;
 }
