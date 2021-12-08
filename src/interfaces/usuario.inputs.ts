@@ -1,5 +1,10 @@
 import { IOperadorInput } from './operador.inputs';
 
+export enum roles {
+  admin = 'admin',
+  operador = 'operador',
+}
+
 export interface ICrearUsuarioInput {
   nombre: string;
   dni?: string;
