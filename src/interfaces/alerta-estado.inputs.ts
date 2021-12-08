@@ -4,6 +4,7 @@ export enum estados {
     'Vista' = 'Vista',
     'En Atención' = 'En Atención',
     'En Espera' = 'En Espera',
+    'Liberada' = 'Liberada',
     'Finalizada' = 'Finalizada',
 }
 
