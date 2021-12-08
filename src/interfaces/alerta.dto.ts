@@ -1,3 +1,4 @@
+import { estados } from './alerta-estado.inputs';
 import { IAlertaEstado } from './alerta-estado.model';
 import { IAlertaMedia } from './alerta-media.model';
 import { IAlertaUbicacion } from './alerta-ubicacion.model';
@@ -25,7 +26,7 @@ export interface ICrearAlerta {
 
 export interface IUpdateAlerta {
   activa?: boolean;
-  estadoActual?: string;
+  estadoActual?: estados;
   idUsuario?: string;
   tiempoRespuesta?: number;
   tiempoResolucion?: number;

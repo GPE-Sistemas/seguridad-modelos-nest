@@ -1,3 +1,4 @@
+import { estados } from './alerta-estado.inputs';
 import { IBoton } from './boton.model';
 import { ICategoria } from './categoria.model';
 import { ICentroMonitoreo } from './centro-monitoreo.model';
@@ -13,7 +14,7 @@ export interface IAlerta {
   ubicacion: ICoordenadas;
   direccion: string;
   prioridad: number;
-  estadoActual: string;
+  estadoActual: estados;
   fechaCreacion: string;
   tiempoRespuesta: number;
   tiempoResolucion: number;
