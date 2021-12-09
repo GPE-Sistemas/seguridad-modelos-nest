@@ -14,6 +14,7 @@ export interface ICrearClienteInput {
 }
 
 export interface IUpdateClienteInput {
+  activo?: boolean;
   nombre?: string;
   admin?: boolean;
   edadMinima?: number;
