@@ -30,6 +30,7 @@ export interface ICrearVecino {
   categoria?: ICrearCategoriaVecinoInput;
   codigoValidacionSMS: string;
   idCategoriaDefault: string;
+  creadoPorAdmin: boolean;
 }
 
 export interface IUpdateVecino {

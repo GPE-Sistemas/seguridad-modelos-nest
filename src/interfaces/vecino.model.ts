@@ -33,6 +33,7 @@ export interface IVecino {
   codigoValidacionSMS?: string; // codigo autogenerado para validar el nro de teléfono
   categoria?: ICategoriaVecino;
   idCategoriaDefault: string;
+  creadoPorAdmin: boolean;
   // Virtuals
   cliente?: ICliente;
   categoriaDefault?: ICategoria;
