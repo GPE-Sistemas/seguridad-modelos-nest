@@ -6,6 +6,7 @@ export interface IAlertaUbicacion {
   idAlerta: string;
   fecha: string;
   ubicacion: ICoordenadas;
+  direccion: string;
   // Virtuals
   alerta?: IAlerta;
 }
