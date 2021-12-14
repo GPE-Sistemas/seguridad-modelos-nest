@@ -39,3 +39,10 @@ export * from './interfaces/vecino.dto';
 export * from './interfaces/vecino.model';
 export * from './interfaces/zona.inputs';
 export * from './interfaces/zona.model';
+// Sirena
+export * from './interfaces/evento-sirena-luz.dto';
+export * from './interfaces/evento-sirena-luz.model';
+export * from './interfaces/evento-sirena-sonido.dto';
+export * from './interfaces/evento-sirena-sonido.model';
+export * from './interfaces/sirena.dto';
+export * from './interfaces/sirena.model';
