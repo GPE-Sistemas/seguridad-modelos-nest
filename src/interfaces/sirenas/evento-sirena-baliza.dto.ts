@@ -1,4 +1,4 @@
-export interface ICrearEventoSirenaLuz {
+export interface ICrearEventoSirenaBaliza {
   chipId: string;
   fecha?: string;
   encendida: boolean;

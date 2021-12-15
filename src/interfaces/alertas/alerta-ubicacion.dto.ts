@@ -1,4 +1,4 @@
-import { ICoordenadasInput } from './coordenadas';
+import { ICoordenadasInput } from '../..';
 
 export interface ICrearAlertaUbicacionInput {
   idAlerta: string;

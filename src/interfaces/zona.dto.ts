@@ -1,4 +1,4 @@
-import { ICoordenadasInput } from './coordenadas';
+import { ICoordenadasInput } from './generales/coordenadas';
 
 export interface ICrearZonaInput {
   nombre: string;

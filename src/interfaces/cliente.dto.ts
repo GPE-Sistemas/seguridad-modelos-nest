@@ -1,6 +1,17 @@
-import { IImagenesClienteInput } from '..';
-import { ICrearCategoriaClienteInput } from './categoria-cliente.inputs';
-import { ICoordenadasInput } from './coordenadas';
+import { ICoordenadasInput } from './generales/coordenadas';
+
+export interface ICrearCategoriaClienteInput {
+  imagenArriba?: string;
+  imagenAbajo?: string;
+  idCategoria: string;
+}
+
+export interface IImagenesClienteInput {
+  icono: string;
+  lateral: string;
+  arriba: string;
+  abajo: string;
+}
 
 export interface ICrearClienteInput {
   nombre: string;

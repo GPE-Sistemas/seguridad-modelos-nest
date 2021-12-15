@@ -1,4 +1,4 @@
-import { IVecino } from './vecino.model';
+import { IVecino } from '../vecino.model';
 
 export interface IEventoSirenaSonido {
   _id: string;

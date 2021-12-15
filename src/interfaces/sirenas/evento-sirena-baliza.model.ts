@@ -1,6 +1,6 @@
-import { IVecino } from './vecino.model';
+import { IVecino } from '../vecino.model';
 
-export interface IEventoSirenaLuz {
+export interface IEventoSirenaBaliza {
   _id: string;
   chipId: string;
   fecha: string;

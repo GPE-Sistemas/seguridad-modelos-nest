@@ -1,4 +1,11 @@
-import { ITrackeo } from './trackeo.model';
+export interface ITrackeo {
+  tiempoMinutos: number;
+  intervaloSegundos: number;
+  gps: boolean;
+  foto: boolean;
+  audio: boolean;
+  video: boolean;
+}
 
 export interface IBoton {
   _id: string;

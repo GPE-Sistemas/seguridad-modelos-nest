@@ -1,24 +1,33 @@
-import { ICliente } from './cliente.model';
-import { ICoordenadas } from './coordenadas';
+import { ICliente } from '../cliente.model';
+import { ICoordenadas } from '../..';
 
 export interface ISirena {
   _id: string;
+  fechaCreacion: string;
+  chipId: string;
   /**
    * Si la sirena se puede usar
    */
-  fechaCreacion: string;
   activa: boolean;
-  chipId: string;
+  /**
+   * Ubicacion reportada por la sirena y direccion calculada
+   */
   ubicacionGps: ICoordenadas;
   direccionGps: string;
+  /**
+   * Ubicacion cargada manualmente y direccion calculada
+   */
   ubicacionManual: ICoordenadas;
   direccionManual: string;
   /**
    * Cliente determinado por la ubicacion
    */
-  idCliente: string;
-  tiempoEncendidoLuzMs: number;
-  tiempoEncendidoSonidoMs: number;
+  idCliente: string;3
+  /**
+   * Tiempo de encendido en segundos
+   */
+  tiempoEncendidoSonido: number;
+  tiempoEncendidoBaliza: number;
   /**
    * Si tiene la luz encendida
    */
@@ -27,7 +36,6 @@ export interface ISirena {
    * Si está sonando
    */
   sonidoEncendido: boolean;
-
 
   // Virtuals
   cliente?: ICliente;

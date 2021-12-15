@@ -1,5 +1,5 @@
 import { ICliente } from './cliente.model';
-import { ICoordenadas } from './coordenadas';
+import { ICoordenadas } from './generales/coordenadas';
 
 export interface ICentroMonitoreo {
   _id: string;
