@@ -1,5 +1,5 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.inputs';
-import { ICoordenadasInput } from './coordenadas';
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
+import { ICoordenadasInput } from './generales/coordenadas';
 
 export interface INuevoVecino {
   nombre: string;

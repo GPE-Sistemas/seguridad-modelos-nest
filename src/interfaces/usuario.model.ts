@@ -1,5 +1,12 @@
-import { ICliente } from './cliente.model';
-import { IOperador } from './operador.model';
+import { IBoton, ICentroMonitoreo, ICliente } from '..';
+
+export interface IOperador {
+  idCentroMonitoreo: string;
+  idsBotones: string[];
+  // Virtuals
+  centroMonitoreo?: ICentroMonitoreo;
+  botones?: IBoton[];
+}
 
 export interface IUsuario {
   _id: string;

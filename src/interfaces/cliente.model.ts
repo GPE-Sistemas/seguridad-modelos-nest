@@ -1,6 +1,20 @@
-import { ICategoriaCliente } from './categoria-cliente.model';
-import { ICoordenadas } from './coordenadas';
-import { IImagenesCliente } from './imagenes-cliente';
+import { ICategoria } from '..';
+import { ICoordenadas } from './generales/coordenadas';
+
+export interface ICategoriaCliente {
+  imagenArriba?: string;
+  imagenAbajo?: string;
+  idCategoria: string;
+  // Virtuals
+  categoria?: ICategoria;
+}
+
+export interface IImagenesCliente {
+  icono: string;
+  lateral: string;
+  arriba: string;
+  abajo: string;
+}
 
 export interface ICliente {
   _id: string;

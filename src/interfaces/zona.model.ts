@@ -1,6 +1,6 @@
 import { ICentroMonitoreo } from './centro-monitoreo.model';
 import { ICliente } from './cliente.model';
-import { ICoordenadas } from './coordenadas';
+import { ICoordenadas } from './generales/coordenadas';
 
 export interface IZona {
   _id: string;

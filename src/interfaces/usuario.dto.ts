@@ -1,8 +1,11 @@
-import { IOperadorInput } from './operador.inputs';
-
 export enum roles {
   admin = 'admin',
   operador = 'operador',
+}
+
+export interface IOperadorInput {
+  idCentroMonitoreo: string;
+  idsBotones: string[];
 }
 
 export interface ICrearUsuarioInput {

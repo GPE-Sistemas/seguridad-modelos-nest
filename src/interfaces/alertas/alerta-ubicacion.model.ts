@@ -1,5 +1,5 @@
+import { ICoordenadas } from '../..';
 import { IAlerta } from './alerta.model';
-import { ICoordenadas } from './coordenadas';
 
 export interface IAlertaUbicacion {
   _id: string;

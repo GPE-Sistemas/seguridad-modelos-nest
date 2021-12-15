@@ -1,9 +1,9 @@
-import { estados } from './alerta-estado.inputs';
+import { ICoordenadasInput } from '../..';
+import { estados } from './alerta-estado.dto';
 import { IAlertaEstado } from './alerta-estado.model';
 import { IAlertaMedia } from './alerta-media.model';
 import { IAlertaUbicacion } from './alerta-ubicacion.model';
 import { IAlerta } from './alerta.model';
-import { ICoordenadasInput } from './coordenadas';
 
 // Lo que envia el frontend
 export interface INuevaAlerta {
