@@ -22,7 +22,7 @@ export interface ISirena {
   /**
    * Cliente determinado por la ubicacion
    */
-  idCliente: string;3
+  idCliente: string;
   /**
    * Tiempo de encendido en segundos
    */
