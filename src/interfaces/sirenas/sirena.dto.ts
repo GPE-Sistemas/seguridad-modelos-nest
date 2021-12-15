@@ -7,23 +7,23 @@ enum TipoEventoSirena {
   APAGAR_SONIDO = 'APAGAR_SONIDO',
 }
 
-interface IDataAuthSirena {
+export interface IDataAuthSirena {
   chipId: string;
   chipKey: string;
 }
 
-interface IDataUbicacionSirena {
+export interface IDataUbicacionSirena {
   lat: number;
   lng: number;
 }
 
-interface IDataBalizaSirena {
+export interface IDataBalizaSirena {
   id: string;
   duracion: number;
   error?: any;
 }
 
-interface IDataSonidoSirena {
+export interface IDataSonidoSirena {
   id: string;
   duracion: number;
   error?: any;
