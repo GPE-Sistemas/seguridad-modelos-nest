@@ -41,6 +41,11 @@ export interface IDetalleAlerta {
 
 // Resumenes
 
+export interface IResumenAlertasPorFecha {
+  fecha: string;
+  cantidad: number;
+}
+
 export interface IResumenAlertasPorCliente {
   cliente: string;
   cantidad: number;
