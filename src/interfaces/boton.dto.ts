@@ -1,4 +1,11 @@
-import { ICrearTrackeoInput } from './trackeo.inputs';
+export interface ICrearTrackeoInput {
+  tiempoMinutos: number;
+  intervaloSegundos: number;
+  gps: boolean;
+  foto: boolean;
+  audio: boolean;
+  video: boolean;
+}
 
 export interface ICrearBotonInput {
   nombre: string;

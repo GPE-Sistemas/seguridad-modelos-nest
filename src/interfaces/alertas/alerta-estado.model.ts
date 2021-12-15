@@ -1,4 +1,4 @@
-import { estados } from './alerta-estado.inputs';
+import { estados } from './alerta-estado.dto';
 import { IAlerta } from './alerta.model';
 
 export interface IAlertaEstado {
