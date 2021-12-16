@@ -4,11 +4,16 @@ import { ICoordenadas } from '../..';
 export interface ISirena {
   _id: string;
   fechaCreacion: string;
+  versionFirmware: string;
   chipId: string;
   /**
    * Si la sirena se puede usar
    */
   activa: boolean;
+  /**
+   * Si la sirena esta conectada al websocket
+   */
+  online: boolean;
   /**
    * Ubicacion reportada por la sirena y direccion calculada
    */

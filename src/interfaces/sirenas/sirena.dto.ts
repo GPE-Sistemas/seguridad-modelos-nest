@@ -20,13 +20,11 @@ export interface IDataUbicacionSirena {
 export interface IDataBalizaSirena {
   id: string;
   duracion: number;
-  error?: any;
 }
 
 export interface IDataSonidoSirena {
   id: string;
   duracion: number;
-  error?: any;
 }
 
 
