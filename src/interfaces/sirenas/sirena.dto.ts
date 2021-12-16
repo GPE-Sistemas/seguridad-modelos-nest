@@ -1,3 +1,24 @@
+import { ICoordenadas } from '../..';
+
+export interface ICrearSirena {
+  fechaCreacion?: string;
+  versionFirmware?: string;
+  chipId?: string;
+  activa?: boolean;
+  online?: boolean;
+  ubicacionGps?: ICoordenadas;
+  direccionGps?: string;
+  ubicacionManual?: ICoordenadas;
+  direccionManual?: string;
+  idCliente?: string;
+  tiempoEncendidoSonido?: number;
+  tiempoEncendidoBaliza?: number;
+  luzEncendida?: boolean;
+  sonidoEncendido?: boolean;
+}
+
+// Mensajes
+
 enum TipoEventoSirena {
   AUTH_SIRENA = 'AUTH_SIRENA',
   UBICACION_SIRENA = 'UBICACION_SIRENA',
