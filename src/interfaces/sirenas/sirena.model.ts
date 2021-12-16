@@ -2,6 +2,7 @@ import { ICliente } from "../cliente.model";
 import { ICoordenadas } from "../..";
 
 export interface ISirena {
+  _id: string;
   fechaCreacion: string;
   versionFirmware: string;
   chipId: string;
