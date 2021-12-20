@@ -1,4 +1,4 @@
-import { ICoordenadas } from '../..';
+import { ICoordenadas } from "../..";
 
 export interface ICrearSirena {
   fechaCreacion?: string;
@@ -20,12 +20,12 @@ export interface ICrearSirena {
 // Mensajes
 
 enum TipoEventoSirena {
-  AUTH_SIRENA = 'AUTH_SIRENA',
-  UBICACION_SIRENA = 'UBICACION_SIRENA',
-  ENCENDER_BALIZA = 'ENCENDER_BALIZA',
-  APAGAR_BALIZA = 'APAGAR_BALIZA',
-  ENCENDER_SONIDO = 'ENCENDER_SONIDO',
-  APAGAR_SONIDO = 'APAGAR_SONIDO',
+  AUTH_SIRENA = "AUTH_SIRENA",
+  UBICACION_SIRENA = "UBICACION_SIRENA",
+  ENCENDER_BALIZA = "ENCENDER_BALIZA",
+  APAGAR_BALIZA = "APAGAR_BALIZA",
+  ENCENDER_SONIDO = "ENCENDER_SONIDO",
+  APAGAR_SONIDO = "APAGAR_SONIDO",
 }
 
 export interface IDataAuthSirena {
@@ -41,13 +41,14 @@ export interface IDataUbicacionSirena {
 export interface IDataBalizaSirena {
   id: string;
   duracion: number;
+  idVecino: string;
 }
 
 export interface IDataSonidoSirena {
   id: string;
   duracion: number;
+  idVecino: string;
 }
-
 
 export interface IMensajeAuthSirena {
   event: TipoEventoSirena.AUTH_SIRENA;
