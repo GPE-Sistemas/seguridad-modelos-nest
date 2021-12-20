@@ -3,4 +3,5 @@ export interface ICrearEventoSirenaSonido {
   fecha?: string;
   encendida: boolean;
   idVecino?: string;
+  idCliente?: string;
 }

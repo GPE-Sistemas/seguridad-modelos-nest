@@ -1,4 +1,5 @@
-import { IVecino } from '../vecino.model';
+import { ICliente } from "../cliente.model";
+import { IVecino } from "../vecino.model";
 
 export interface IEventoSirenaSonido {
   _id: string;
@@ -6,7 +7,9 @@ export interface IEventoSirenaSonido {
   fecha: string;
   encendida: boolean;
   idVecino: string;
+  idCliente?: string;
 
   // Virtuals
   vecino?: IVecino;
+  cliente?: ICliente;
 }

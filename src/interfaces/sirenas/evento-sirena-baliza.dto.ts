@@ -3,4 +3,5 @@ export interface ICrearEventoSirenaBaliza {
   fecha?: string;
   encendida: boolean;
   idVecino?: string;
+  idCliente?: string;
 }
