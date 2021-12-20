@@ -69,3 +69,8 @@ export interface IMensajeSonidoSirena {
   event: TipoEventoSirena.ENCENDER_SONIDO | TipoEventoSirena.APAGAR_SONIDO;
   data: IDataSonidoSirena;
 }
+
+export interface IMensajeSirena {
+  event: TipoEventoSirena;
+  data: IDataBalizaSirena | IDataSonidoSirena;
+}
