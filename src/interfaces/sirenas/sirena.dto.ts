@@ -40,12 +40,14 @@ export interface IDataUbicacionSirena {
 
 export interface IDataBalizaSirena {
   id: string;
+  chipId: string;
   duracion: number;
   idVecino: string;
 }
 
 export interface IDataSonidoSirena {
   id: string;
+  chipId: string;
   duracion: number;
   idVecino: string;
 }
