@@ -43,17 +43,19 @@ export interface IDataUbicacionSirena {
 }
 
 export interface IDataBalizaSirena {
-  id: string;
-  chipId: string;
-  duracion: number;
-  idVecino: string;
+  id?: string;
+  chipId?: string;
+  duracion?: number;
+  idVecino?: string;
+  idCliente?: string;
 }
 
 export interface IDataSonidoSirena {
-  id: string;
-  chipId: string;
-  duracion: number;
-  idVecino: string;
+  id?: string;
+  chipId?: string;
+  duracion?: number;
+  idVecino?: string;
+  idCliente?: string;
 }
 
 export interface IMensajeAuthSirena {
