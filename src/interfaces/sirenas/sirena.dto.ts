@@ -34,16 +34,16 @@ enum ETipoEventoSirena {
 }
 
 export type TipoEventoSirena =
-  | ETipoEventoSirena.AUTH_SIRENA
-  | ETipoEventoSirena.UBICACION_SIRENA
-  | ETipoEventoSirena.ENCENDER_BALIZA
-  | ETipoEventoSirena.APAGAR_BALIZA
-  | ETipoEventoSirena.ENCENDER_SONIDO
-  | ETipoEventoSirena.APAGAR_SONIDO
-  | ETipoEventoSirena.BALIZA_ENCENDIDA
-  | ETipoEventoSirena.BALIZA_APAGADA
-  | ETipoEventoSirena.SONIDO_ENCENDIDO
-  | ETipoEventoSirena.SONIDO_APAGADO;
+  | "AUTH_SIRENA"
+  | "UBICACION_SIRENA"
+  | "ENCENDER_BALIZA"
+  | "APAGAR_BALIZA"
+  | "ENCENDER_SONIDO"
+  | "APAGAR_SONIDO"
+  | "BALIZA_ENCENDIDA"
+  | "BALIZA_APAGADA"
+  | "SONIDO_ENCENDIDO"
+  | "SONIDO_APAGADO;";
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -92,6 +92,6 @@ export interface IMensajeSonidoSirena {
 }
 
 export interface IMensajeSirena {
-  event: ETipoEventoSirena;
+  event: TipoEventoSirena;
   data: IDataBalizaSirena | IDataSonidoSirena;
 }
