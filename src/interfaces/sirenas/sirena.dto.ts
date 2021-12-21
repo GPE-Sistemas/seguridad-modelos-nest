@@ -19,7 +19,8 @@ export interface ICrearSirena {
 
 // Mensajes
 
-enum TipoEventoSirena {
+// No anda si exporto esto
+enum ETipoEventoSirena {
   AUTH_SIRENA = "AUTH_SIRENA",
   UBICACION_SIRENA = "UBICACION_SIRENA",
   ENCENDER_BALIZA = "ENCENDER_BALIZA",
@@ -31,6 +32,18 @@ enum TipoEventoSirena {
   SONIDO_ENCENDIDO = "SONIDO_ENCENDIDO",
   SONIDO_APAGADO = "SONIDO_APAGADO",
 }
+
+export type TipoEventoSirena =
+  | ETipoEventoSirena.AUTH_SIRENA
+  | ETipoEventoSirena.UBICACION_SIRENA
+  | ETipoEventoSirena.ENCENDER_BALIZA
+  | ETipoEventoSirena.APAGAR_BALIZA
+  | ETipoEventoSirena.ENCENDER_SONIDO
+  | ETipoEventoSirena.APAGAR_SONIDO
+  | ETipoEventoSirena.BALIZA_ENCENDIDA
+  | ETipoEventoSirena.BALIZA_APAGADA
+  | ETipoEventoSirena.SONIDO_ENCENDIDO
+  | ETipoEventoSirena.SONIDO_APAGADO;
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -59,26 +72,26 @@ export interface IDataSonidoSirena {
 }
 
 export interface IMensajeAuthSirena {
-  event: TipoEventoSirena.AUTH_SIRENA;
+  event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
 }
 
 export interface IMensajeUbicacionSirena {
-  event: TipoEventoSirena.UBICACION_SIRENA;
+  event: ETipoEventoSirena.UBICACION_SIRENA;
   data: IDataUbicacionSirena;
 }
 
 export interface IMensajeBalizaSirena {
-  event: TipoEventoSirena.ENCENDER_BALIZA | TipoEventoSirena.APAGAR_BALIZA;
+  event: ETipoEventoSirena.ENCENDER_BALIZA | ETipoEventoSirena.APAGAR_BALIZA;
   data: IDataBalizaSirena;
 }
 
 export interface IMensajeSonidoSirena {
-  event: TipoEventoSirena.ENCENDER_SONIDO | TipoEventoSirena.APAGAR_SONIDO;
+  event: ETipoEventoSirena.ENCENDER_SONIDO | ETipoEventoSirena.APAGAR_SONIDO;
   data: IDataSonidoSirena;
 }
 
 export interface IMensajeSirena {
-  event: TipoEventoSirena;
+  event: ETipoEventoSirena;
   data: IDataBalizaSirena | IDataSonidoSirena;
 }
