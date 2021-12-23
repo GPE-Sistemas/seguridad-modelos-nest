@@ -66,6 +66,7 @@ export interface IDataBalizaSirena {
 export interface IDataSonidoSirena {
   id?: string;
   chipId?: string;
+  sonido?: string;
   duracion?: number;
   idVecino?: string;
   idCliente?: string;
