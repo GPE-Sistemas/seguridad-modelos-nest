@@ -1,4 +1,4 @@
-import { ICategoria } from './categoria.model';
+import { ICategoria } from "../categoria.model";
 
 export interface ICategoriaVecino {
   desde: string;

@@ -1,5 +1,6 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
-import { ICoordenadasInput } from './generales/coordenadas';
+import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
+import { ICoordenadasInput } from "../generales/coordenadas";
+import { IEnvioCodigo } from "./envio-codigo.dto";
 
 export interface INuevoVecino {
   nombre: string;
@@ -28,7 +29,7 @@ export interface ICrearVecino {
   pais?: string;
   fechaNacimiento?: string;
   categoria?: ICrearCategoriaVecinoInput;
-  codigoValidacionSMS: string;
+  envioCodigo?: IEnvioCodigo;
   idCategoriaDefault: string;
   creadoPorAdmin: boolean;
 }
@@ -36,7 +37,7 @@ export interface ICrearVecino {
 export interface IUpdateVecino {
   activo?: boolean;
   categoria?: ICrearCategoriaVecinoInput;
-  codigoValidacionSMS?: string;
+  envioCodigo?: IEnvioCodigo;
 }
 
 // Resumen
