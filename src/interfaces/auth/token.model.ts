@@ -1,6 +1,6 @@
-import { IClient } from './client.model';
-import { IUsuario } from '../usuario.model';
-import { IVecino } from '../vecino.model';
+import { IClient } from "./client.model";
+import { IUsuario } from "../usuario.model";
+import { IVecino } from "../..";
 
 export interface IToken {
   accessToken: string;

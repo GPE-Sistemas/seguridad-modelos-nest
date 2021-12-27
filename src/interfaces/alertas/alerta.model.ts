@@ -1,12 +1,12 @@
-import { estados } from './alerta-estado.dto';
-import { IBoton } from '../boton.model';
-import { ICategoria } from '../categoria.model';
-import { ICentroMonitoreo } from '../centro-monitoreo.model';
-import { ICliente } from '../cliente.model';
-import { ICoordenadas } from '../generales/coordenadas';
-import { IUsuario } from '../usuario.model';
-import { IVecino } from '../vecino.model';
-import { IZona } from '../zona.model';
+import { estados } from "./alerta-estado.dto";
+import { IBoton } from "../boton.model";
+import { ICategoria } from "../categoria.model";
+import { ICentroMonitoreo } from "../centro-monitoreo.model";
+import { ICliente } from "../cliente.model";
+import { ICoordenadas } from "../generales/coordenadas";
+import { IUsuario } from "../usuario.model";
+import { IZona } from "../zona.model";
+import { IVecino } from "../..";
 
 export interface IAlerta {
   _id: string;

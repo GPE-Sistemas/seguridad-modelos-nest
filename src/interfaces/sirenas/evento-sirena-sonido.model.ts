@@ -1,5 +1,5 @@
+import { IVecino } from "../..";
 import { ICliente } from "../cliente.model";
-import { IVecino } from "../vecino.model";
 
 export interface IEventoSirenaSonido {
   _id: string;
