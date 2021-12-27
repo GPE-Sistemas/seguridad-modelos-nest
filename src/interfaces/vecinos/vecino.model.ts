@@ -1,6 +1,7 @@
-import { ICategoriaVecino } from './categoria-vecino.model';
-import { ICategoria } from './categoria.model';
-import { ICliente } from './cliente.model';
+import { ICategoria } from "../categoria.model";
+import { ICliente } from "../cliente.model";
+import { ICategoriaVecino } from "./categoria-vecino.model";
+import { IEnvioCodigo } from "./envio-codigo.dto";
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -10,17 +11,11 @@ export interface IPrivacidad {
   ubicacion: boolean;
 }
 
-// TODO: implementar para controlar el pedido de SMS
-export interface IEnvioCodigo {
-  cantidad: number;
-  fechaUltimoEnvio: string;
-  fechaSiguienteEnvio: string;
-}
-
 export interface IVecino {
   _id: string;
   activo: boolean;
   fechaCreacion: string;
+  creadoPorAdmin: boolean;
   nombre: string;
   dni: string;
   sexo: boolean;
@@ -30,10 +25,9 @@ export interface IVecino {
   pais: string;
   telefono: string;
   fechaNacimiento: string;
-  codigoValidacionSMS?: string; // codigo autogenerado para validar el nro de teléfono
+  envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
   idCategoriaDefault: string;
-  creadoPorAdmin: boolean;
   // Virtuals
   cliente?: ICliente;
   categoriaDefault?: ICategoria;
