@@ -1,4 +1,4 @@
-import { IBoton } from './boton.model';
+import { IBoton } from "./boton.model";
 
 export interface ICategoria {
   _id: string;
@@ -8,8 +8,10 @@ export interface ICategoria {
   editable: boolean;
   idBtnPrincipal: string;
   idsBtnsSecundarios: string[];
+  idsOtrosBotones: string[];
   twitter: boolean;
   // Virtuals
   btnPrincipal?: IBoton;
   btnsSecundarios?: IBoton[];
+  otrosBotones?: IBoton[];
 }
