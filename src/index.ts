@@ -43,3 +43,7 @@ export * from "./interfaces/sirenas/evento-sirena-sonido.dto";
 export * from "./interfaces/sirenas/evento-sirena-sonido.model";
 export * from "./interfaces/sirenas/sirena.dto";
 export * from "./interfaces/sirenas/sirena.model";
+export * from "./interfaces/sirenas/firmware-cliente.dto";
+export * from "./interfaces/sirenas/firmware-cliente.model";
+export * from "./interfaces/sirenas/firmware-sirena.dto";
+export * from "./interfaces/sirenas/firmware-sirena.model";
