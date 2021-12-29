@@ -48,6 +48,7 @@ export type TipoEventoSirena =
 export interface IDataAuthSirena {
   chipId: string;
   chipKey: string;
+  firmware: string;
 }
 
 export interface IDataUbicacionSirena {
