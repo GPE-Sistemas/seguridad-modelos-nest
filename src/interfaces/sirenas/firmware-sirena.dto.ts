@@ -1,6 +1,6 @@
 export interface INuevoFirmwareSirena {
   version: string;
-  file: Blob;
+  file: File;
 }
 
 export interface ICrearFirmwareSirena {
