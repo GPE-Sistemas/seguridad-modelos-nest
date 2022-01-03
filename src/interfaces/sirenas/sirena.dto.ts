@@ -43,7 +43,9 @@ export type TipoEventoSirena =
   | "BALIZA_ENCENDIDA"
   | "BALIZA_APAGADA"
   | "SONIDO_ENCENDIDO"
-  | "SONIDO_APAGADO;";
+  | "SONIDO_APAGADO"
+  | "PERIFONEO"
+  | "ACTUALIZAR_FIRMWARE";
 
 export interface IDataAuthSirena {
   chipId: string;
