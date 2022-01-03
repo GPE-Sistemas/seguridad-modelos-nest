@@ -75,6 +75,10 @@ export interface IDataSonidoSirena {
   idCliente?: string;
 }
 
+export interface IDataActualizarFirmwareSirena {
+  url?: string;
+}
+
 export interface IMensajeAuthSirena {
   event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
@@ -97,5 +101,5 @@ export interface IMensajeSonidoSirena {
 
 export interface IMensajeSirena {
   event: TipoEventoSirena;
-  data: IDataBalizaSirena | IDataSonidoSirena;
+  data: IDataBalizaSirena | IDataSonidoSirena | IDataActualizarFirmwareSirena;
 }
