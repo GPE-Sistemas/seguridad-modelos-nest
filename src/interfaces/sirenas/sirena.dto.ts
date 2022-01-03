@@ -77,6 +77,7 @@ export interface IDataSonidoSirena {
 
 export interface IDataActualizarFirmwareSirena {
   url?: string;
+  chipId?: string;
 }
 
 export interface IMensajeAuthSirena {
