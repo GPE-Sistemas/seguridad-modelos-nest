@@ -80,6 +80,12 @@ export interface IDataActualizarFirmwareSirena {
   chipId?: string;
 }
 
+export interface IDataPerifoneoSirena {
+  posicion?: number;
+  url?: string;
+  chipId?: string;
+}
+
 export interface IMensajeAuthSirena {
   event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
@@ -102,5 +108,9 @@ export interface IMensajeSonidoSirena {
 
 export interface IMensajeSirena {
   event: TipoEventoSirena;
-  data: IDataBalizaSirena | IDataSonidoSirena | IDataActualizarFirmwareSirena;
+  data:
+    | IDataBalizaSirena
+    | IDataSonidoSirena
+    | IDataActualizarFirmwareSirena
+    | IDataPerifoneoSirena;
 }

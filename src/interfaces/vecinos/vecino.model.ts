@@ -22,6 +22,7 @@ export interface IVecino {
   idCliente: string;
   email?: string;
   direccion: string;
+  complementoDireccion?: string;
   pais: string;
   telefono: string;
   fechaNacimiento: string;

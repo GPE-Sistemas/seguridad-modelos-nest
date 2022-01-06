@@ -11,6 +11,7 @@ export interface INuevoVecino {
   telefono: string;
   email: string;
   direccion: string;
+  complementoDireccion?: string;
   /**
    * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
    */
@@ -26,6 +27,7 @@ export interface ICrearVecino {
   activo?: boolean;
   email?: string;
   direccion: string;
+  complementoDireccion?: string;
   pais?: string;
   fechaNacimiento?: string;
   categoria?: ICrearCategoriaVecinoInput;
@@ -38,6 +40,8 @@ export interface IUpdateVecino {
   activo?: boolean;
   categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
+  direccion?: string;
+  complementoDireccion?: string;
 }
 
 // Resumen
