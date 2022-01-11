@@ -31,6 +31,9 @@ enum ETipoEventoSirena {
   BALIZA_APAGADA = "BALIZA_APAGADA",
   SONIDO_ENCENDIDO = "SONIDO_ENCENDIDO",
   SONIDO_APAGADO = "SONIDO_APAGADO",
+  COMANDO_RFID = "COMANDO_RFID",
+  CONTROL_AGREGAR = "CONTROL_AGREGAR",
+  CONTROL_BORRAR = "CONTROL_BORRAR",
 }
 
 export type TipoEventoSirena =
@@ -45,7 +48,10 @@ export type TipoEventoSirena =
   | "SONIDO_ENCENDIDO"
   | "SONIDO_APAGADO"
   | "PERIFONEO"
-  | "ACTUALIZAR_FIRMWARE";
+  | "ACTUALIZAR_FIRMWARE"
+  | "COMANDO_RFID"
+  | "CONTROL_AGREGAR"
+  | "CONTROL_BORRAR";
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -86,6 +92,11 @@ export interface IDataPerifoneoSirena {
   chipId?: string;
 }
 
+export interface IDataControlSirena {
+  control?: string;
+  chipId?: string;
+}
+
 export interface IMensajeAuthSirena {
   event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
@@ -112,5 +123,6 @@ export interface IMensajeSirena {
     | IDataBalizaSirena
     | IDataSonidoSirena
     | IDataActualizarFirmwareSirena
-    | IDataPerifoneoSirena;
+    | IDataPerifoneoSirena
+    | IDataControlSirena;
 }
