@@ -95,6 +95,7 @@ export interface IDataPerifoneoSirena {
 export interface IDataControlSirena {
   controles?: string[];
   chipId?: string;
+  inicial?: boolean;
 }
 
 export interface IMensajeAuthSirena {
