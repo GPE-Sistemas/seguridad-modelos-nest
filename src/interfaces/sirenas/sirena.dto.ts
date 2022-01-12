@@ -93,7 +93,7 @@ export interface IDataPerifoneoSirena {
 }
 
 export interface IDataControlSirena {
-  control?: string;
+  controles?: string[];
   chipId?: string;
 }
 
