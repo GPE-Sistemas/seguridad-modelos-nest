@@ -49,7 +49,7 @@ export type TipoEventoSirena =
   | "SONIDO_APAGADO"
   | "PERIFONEO"
   | "ACTUALIZAR_FIRMWARE"
-  | "COMANDO_RFID"
+  | "COMANDO_RF"
   | "CONTROL_AGREGAR"
   | "CONTROL_BORRAR";
 
