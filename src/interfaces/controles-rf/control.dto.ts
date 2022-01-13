@@ -10,3 +10,8 @@ export interface IUpdateControl {
   idCliente?: string;
   idVecino?: string;
 }
+
+export interface IResumenControlesPorCliente {
+  cliente: string;
+  cantidad: number;
+}

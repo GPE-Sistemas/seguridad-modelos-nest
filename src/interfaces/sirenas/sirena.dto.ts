@@ -17,6 +17,11 @@ export interface ICrearSirena {
   sonidoEncendido?: boolean;
 }
 
+export interface IResumenSirenasPorCliente {
+  cliente: string;
+  cantidad: number;
+}
+
 // Mensajes
 
 // No anda si exporto esto
