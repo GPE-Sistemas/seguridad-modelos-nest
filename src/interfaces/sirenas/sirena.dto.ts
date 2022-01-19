@@ -106,6 +106,7 @@ export interface IDataControlSirena {
 }
 
 export interface IDataAudioClienteSirena {
+  chipId?: string;
   idAudio?: string;
 }
 
