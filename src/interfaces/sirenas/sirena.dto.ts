@@ -39,6 +39,7 @@ enum ETipoEventoSirena {
   COMANDO_RF = "COMANDO_RF",
   CONTROL_AGREGAR = "CONTROL_AGREGAR",
   CONTROL_BORRAR = "CONTROL_BORRAR",
+  AUDIO_CLIENTE = "AUDIO_CLIENTE",
 }
 
 export type TipoEventoSirena =
@@ -56,7 +57,8 @@ export type TipoEventoSirena =
   | "ACTUALIZAR_FIRMWARE"
   | "COMANDO_RF"
   | "CONTROL_AGREGAR"
-  | "CONTROL_BORRAR";
+  | "CONTROL_BORRAR"
+  | "AUDIO_CLIENTE";
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -103,6 +105,10 @@ export interface IDataControlSirena {
   inicial?: boolean;
 }
 
+export interface IDataAudioClienteSirena {
+  idAudio?: string;
+}
+
 export interface IMensajeAuthSirena {
   event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
@@ -123,6 +129,11 @@ export interface IMensajeSonidoSirena {
   data: IDataSonidoSirena;
 }
 
+export interface IMensajeAudioClienteSirena {
+  event: ETipoEventoSirena.AUDIO_CLIENTE;
+  data: IDataAudioClienteSirena;
+}
+
 export interface IMensajeSirena {
   event: TipoEventoSirena;
   data:
@@ -130,5 +141,6 @@ export interface IMensajeSirena {
     | IDataSonidoSirena
     | IDataActualizarFirmwareSirena
     | IDataPerifoneoSirena
-    | IDataControlSirena;
+    | IDataControlSirena
+    | IDataAudioClienteSirena;
 }
