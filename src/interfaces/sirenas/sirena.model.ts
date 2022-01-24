@@ -1,5 +1,5 @@
 import { ICliente } from "../cliente.model";
-import { ICoordenadas } from "../..";
+import { ICoordenadas, ISim } from "../..";
 
 export interface ISirena {
   _id: string;
@@ -42,6 +42,10 @@ export interface ISirena {
    */
   sonidoEncendido: boolean;
 
+  idSim?: string;
+
   // Virtuals
   cliente?: ICliente;
+
+  sim?: ISim;
 }

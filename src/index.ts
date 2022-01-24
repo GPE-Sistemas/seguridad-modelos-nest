@@ -47,6 +47,9 @@ export * from "./interfaces/sirenas/firmware-cliente.dto";
 export * from "./interfaces/sirenas/firmware-cliente.model";
 export * from "./interfaces/sirenas/firmware-sirena.dto";
 export * from "./interfaces/sirenas/firmware-sirena.model";
+// Sim
+export * from "./interfaces/sims/sim.dto";
+export * from "./interfaces/sims/sim.model";
 // Control
 export * from "./interfaces/controles-rf/control.dto";
 export * from "./interfaces/controles-rf/control.model";

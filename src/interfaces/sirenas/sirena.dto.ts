@@ -15,6 +15,20 @@ export interface ICrearSirena {
   tiempoEncendidoBaliza?: number;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
+  idSim?: string;
+}
+
+export interface IUpdateSirena {
+  activa?: boolean;
+  online?: boolean;
+  ubicacionGps?: ICoordenadas;
+  direccionGps?: string;
+  ubicacionManual?: ICoordenadas;
+  direccionManual?: string;
+  idCliente?: string;
+  luzEncendida?: boolean;
+  sonidoEncendido?: boolean;
+  idSim?: string;
 }
 
 export interface IResumenSirenasPorCliente {
