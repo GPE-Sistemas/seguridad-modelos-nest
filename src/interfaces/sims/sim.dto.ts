@@ -6,5 +6,5 @@ export interface ICrearSim {
 }
 
 export interface IUpdateSim {
-  number?: string;
+  numero?: string;
 }
