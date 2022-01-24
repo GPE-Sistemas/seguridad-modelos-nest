@@ -15,7 +15,7 @@ export interface ICrearSirena {
   tiempoEncendidoBaliza?: number;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
-  idSim?: string;
+  iccidSim?: string;
 }
 
 export interface IUpdateSirena {
@@ -28,7 +28,7 @@ export interface IUpdateSirena {
   idCliente?: string;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
-  idSim?: string;
+  iccidSim?: string;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -78,6 +78,9 @@ export interface IDataAuthSirena {
   chipId: string;
   chipKey: string;
   firmware: string;
+  operador?: string;
+  apn?: string;
+  iccid?: string;
 }
 
 export interface IDataUbicacionSirena {

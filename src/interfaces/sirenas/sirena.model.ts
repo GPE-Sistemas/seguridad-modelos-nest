@@ -42,7 +42,7 @@ export interface ISirena {
    */
   sonidoEncendido: boolean;
 
-  idSim?: string;
+  iccidSim?: string;
 
   // Virtuals
   cliente?: ICliente;
