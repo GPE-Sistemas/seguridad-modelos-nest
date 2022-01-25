@@ -54,6 +54,7 @@ enum ETipoEventoSirena {
   CONTROL_AGREGAR = "CONTROL_AGREGAR",
   CONTROL_BORRAR = "CONTROL_BORRAR",
   AUDIO_CLIENTE = "AUDIO_CLIENTE",
+  ENCENDER_PANICO = "ENCENDER_PANICO",
 }
 
 export type TipoEventoSirena =
@@ -72,7 +73,8 @@ export type TipoEventoSirena =
   | "COMANDO_RF"
   | "CONTROL_AGREGAR"
   | "CONTROL_BORRAR"
-  | "AUDIO_CLIENTE";
+  | "AUDIO_CLIENTE"
+  | "ENCENDER_PANICO";
 
 export interface IDataAuthSirena {
   chipId: string;
