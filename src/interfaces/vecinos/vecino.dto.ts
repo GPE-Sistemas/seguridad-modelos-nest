@@ -42,6 +42,13 @@ export interface IUpdateVecino {
   envioCodigo?: IEnvioCodigo;
   direccion?: string;
   complementoDireccion?: string;
+  idCliente?: string;
+}
+
+export interface IUpdateDomicilioVecino {
+  direccion: string;
+  complementoDireccion?: string;
+  ubicacion: ICoordenadasInput;
 }
 
 // Resumen
