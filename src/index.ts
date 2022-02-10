@@ -18,6 +18,8 @@ export * from "./interfaces/alertas/alerta-ubicacion.model";
 export * from "./interfaces/alertas/alerta.dto";
 export * from "./interfaces/alertas/alerta.model";
 //
+export * from "./interfaces/vecinos/baneo-vecino.dto";
+export * from "./interfaces/vecinos/baneo-vecino.model";
 export * from "./interfaces/vecinos/categoria-vecino.dto";
 export * from "./interfaces/vecinos/categoria-vecino.model";
 export * from "./interfaces/vecinos/envio-codigo.dto";
@@ -37,6 +39,8 @@ export * from "./interfaces/usuario.model";
 export * from "./interfaces/zona.dto";
 export * from "./interfaces/zona.model";
 // Sirena
+export * from "./interfaces/sirenas/evento-sirena.dto";
+export * from "./interfaces/sirenas/evento-sirena.model";
 export * from "./interfaces/sirenas/evento-sirena-baliza.dto";
 export * from "./interfaces/sirenas/evento-sirena-baliza.model";
 export * from "./interfaces/sirenas/evento-sirena-sonido.dto";
