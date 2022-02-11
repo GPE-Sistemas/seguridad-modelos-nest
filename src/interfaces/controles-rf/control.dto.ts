@@ -1,12 +1,12 @@
 export interface ICrearControl {
-  idControl: string;
+  chipId: string;
   fechaCreacion?: string;
   idCliente?: string;
   idVecino?: string;
 }
 
 export interface IUpdateControl {
-  idControl?: string;
+  chipId?: string;
   idCliente?: string;
   idVecino?: string;
 }

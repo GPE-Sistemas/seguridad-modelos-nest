@@ -3,7 +3,7 @@ import { IVecino } from "../..";
 
 export interface IControl {
   _id: string;
-  idControl: string;
+  chipId: string;
   fechaCreacion: string;
   idCliente?: string;
   idVecino?: string;

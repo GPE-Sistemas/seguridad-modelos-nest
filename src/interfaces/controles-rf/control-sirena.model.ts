@@ -3,8 +3,8 @@ import { IControl } from "./control.model";
 
 export interface IControlSirena {
   _id: string;
-  idControl: string;
-  idSirena: string;
+  chipIdControl: string;
+  chipIdSirena: string;
 
   // Virtuals
   control?: IControl;
