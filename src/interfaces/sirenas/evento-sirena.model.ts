@@ -8,8 +8,9 @@ export interface IEventoSirena {
   encendida: boolean;
   idVecino: string;
   idCliente?: string;
-  tipo: string; // reflector | sirena | alerta
+  tipo: string; // reflector | sirena
   origen: string; // app | control
+  motivo?: string; // alerta | sirena
 
   // Virtuals
   vecino?: IVecino;
