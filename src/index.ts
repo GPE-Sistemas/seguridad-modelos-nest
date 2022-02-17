@@ -38,6 +38,8 @@ export * from "./interfaces/usuario.dto";
 export * from "./interfaces/usuario.model";
 export * from "./interfaces/zona.dto";
 export * from "./interfaces/zona.model";
+export * from "./interfaces/mensaje.dto";
+export * from "./interfaces/mensaje.model";
 // Sirena
 export * from "./interfaces/sirenas/evento-sirena.dto";
 export * from "./interfaces/sirenas/evento-sirena.model";
