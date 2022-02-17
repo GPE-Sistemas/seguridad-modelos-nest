@@ -27,6 +27,7 @@ export interface ICrearVecino {
   activo?: boolean;
   email?: string;
   direccion: string;
+  ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
   pais?: string;
   fechaNacimiento?: string;
@@ -41,6 +42,7 @@ export interface IUpdateVecino {
   categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
   direccion?: string;
+  ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
   idCliente?: string;
 }
