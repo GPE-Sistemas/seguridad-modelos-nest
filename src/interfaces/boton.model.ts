@@ -16,4 +16,5 @@ export interface IBoton {
   urlImagenPush: string;
   trackeo: ITrackeo;
   editable: boolean;
+  sirena?: boolean;
 }

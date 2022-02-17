@@ -1,3 +1,4 @@
+import { ICoordenadas } from "../..";
 import { ICategoria } from "../categoria.model";
 import { ICliente } from "../cliente.model";
 import { ICategoriaVecino } from "./categoria-vecino.model";
@@ -22,6 +23,7 @@ export interface IVecino {
   idCliente: string;
   email?: string;
   direccion: string;
+  ubicacionDireccion?: ICoordenadas;
   complementoDireccion?: string;
   pais: string;
   telefono: string;
