@@ -96,6 +96,8 @@ export interface IDataBalizaSirena {
   duracion?: number;
   idVecino?: string;
   idCliente?: string;
+  origen?: string;
+  motivo?: string;
 }
 
 export interface IDataSonidoSirena {
@@ -105,6 +107,8 @@ export interface IDataSonidoSirena {
   duracion?: number;
   idVecino?: string;
   idCliente?: string;
+  origen?: string;
+  motivo?: string;
 }
 
 export interface IDataActualizarFirmwareSirena {
