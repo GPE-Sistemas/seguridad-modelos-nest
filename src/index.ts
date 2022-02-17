@@ -41,10 +41,6 @@ export * from "./interfaces/zona.model";
 // Sirena
 export * from "./interfaces/sirenas/evento-sirena.dto";
 export * from "./interfaces/sirenas/evento-sirena.model";
-export * from "./interfaces/sirenas/evento-sirena-baliza.dto";
-export * from "./interfaces/sirenas/evento-sirena-baliza.model";
-export * from "./interfaces/sirenas/evento-sirena-sonido.dto";
-export * from "./interfaces/sirenas/evento-sirena-sonido.model";
 export * from "./interfaces/sirenas/sirena.dto";
 export * from "./interfaces/sirenas/sirena.model";
 export * from "./interfaces/sirenas/firmware-cliente.dto";
