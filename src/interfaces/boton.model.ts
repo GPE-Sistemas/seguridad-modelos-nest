@@ -10,6 +10,7 @@ export interface ITrackeo {
 export interface IBoton {
   _id: string;
   nombre: string;
+  variante: string;
   color: string;
   texto: string;
   urlImagen: string;
