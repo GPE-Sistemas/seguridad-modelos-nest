@@ -1,5 +1,4 @@
 import { ICoordenadas } from "../..";
-import { ICategoria } from "../categoria.model";
 import { ICliente } from "../cliente.model";
 import { ICategoriaVecino } from "./categoria-vecino.model";
 import { IEnvioCodigo } from "./envio-codigo.dto";
@@ -30,8 +29,6 @@ export interface IVecino {
   fechaNacimiento: string;
   envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
-  idCategoriaDefault: string;
   // Virtuals
   cliente?: ICliente;
-  categoriaDefault?: ICategoria;
 }

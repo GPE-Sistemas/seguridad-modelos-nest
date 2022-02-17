@@ -22,7 +22,7 @@ export interface ICrearClienteInput {
   categorias: ICrearCategoriaClienteInput[];
   coordenadas: ICoordenadasInput[][];
   imagenes: IImagenesClienteInput;
-  idCategoriaDefecto?: string;
+  idCategoriaDefault?: string;
 }
 
 export interface IUpdateClienteInput {
@@ -35,7 +35,7 @@ export interface IUpdateClienteInput {
   categorias?: ICrearCategoriaClienteInput[];
   coordenadas?: ICoordenadasInput[][];
   imagenes?: IImagenesClienteInput;
-  idCategoriaDefecto?: string;
+  idCategoriaDefault?: string;
 }
 
 export interface IResumenClientes {

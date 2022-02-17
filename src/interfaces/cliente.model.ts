@@ -28,5 +28,8 @@ export interface ICliente {
   sirenas: boolean;
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
-  idCategoriaDefecto?: string;
+  idCategoriaDefault?: string;
+
+  // Virtuals
+  categoriaDefault?: ICategoria;
 }

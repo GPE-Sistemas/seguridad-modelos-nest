@@ -31,9 +31,8 @@ export interface ICrearVecino {
   complementoDireccion?: string;
   pais?: string;
   fechaNacimiento?: string;
-  categoria?: ICrearCategoriaVecinoInput;
+  // categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
-  idCategoriaDefault: string;
   creadoPorAdmin: boolean;
 }
 
