@@ -7,12 +7,12 @@ export interface ICategoria {
   prioridad: number;
   color: string;
   editable: boolean;
-  idBtnPrincipal: string;
+  idsBtnPrincipales: string[];
   idsBtnsSecundarios: string[];
   idsOtrosBotones: string[];
   twitter: boolean;
   // Virtuals
-  btnPrincipal?: IBoton;
+  btnsPrincipales?: IBoton[];
   btnsSecundarios?: IBoton[];
   otrosBotones?: IBoton[];
 }
