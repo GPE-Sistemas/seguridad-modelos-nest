@@ -3,7 +3,7 @@ export interface ICrearCategoriaInput {
   variante?: string;
   prioridad: number;
   color?: string;
-  idsBtnPrincipales?: string[];
+  idsBtnsPrincipales?: string[];
   idsBtnsSecundarios?: string[];
   idsOtrosBotones?: string[];
   editable?: boolean;
@@ -15,7 +15,7 @@ export interface IUpdateCategoriaInput {
   variante?: string;
   prioridad?: number;
   color?: string;
-  idsBtnPrincipales?: string[];
+  idsBtnsPrincipales?: string[];
   idsBtnsSecundarios?: string[];
   idsOtrosBotones?: string[];
   twitter?: boolean;

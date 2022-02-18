@@ -7,7 +7,7 @@ export interface ICategoria {
   prioridad: number;
   color: string;
   editable: boolean;
-  idsBtnPrincipales: string[];
+  idsBtnsPrincipales: string[];
   idsBtnsSecundarios: string[];
   idsOtrosBotones: string[];
   twitter: boolean;
