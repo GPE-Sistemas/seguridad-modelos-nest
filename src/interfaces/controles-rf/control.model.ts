@@ -7,6 +7,7 @@ export interface IControl {
   fechaCreacion: string;
   idCliente?: string;
   idVecino?: string;
+  baneado?: boolean;
 
   // Virtuals
   cliente?: ICliente;
