@@ -4,6 +4,7 @@ export interface ICrearEventoSirena {
   encendida: boolean;
   idVecino?: string;
   idCliente?: string;
+  chipIdControl?: string;
   tipo?: string; // reflector | sirena
   origen?: string; // app | control
   motivo?: string; // alerta | sirena
