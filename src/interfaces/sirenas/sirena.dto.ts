@@ -96,6 +96,7 @@ export interface IDataBalizaSirena {
   duracion?: number;
   idVecino?: string;
   idCliente?: string;
+  chipIdControl?: string;
   origen?: string;
   motivo?: string;
 }
@@ -107,6 +108,7 @@ export interface IDataSonidoSirena {
   duracion?: number;
   idVecino?: string;
   idCliente?: string;
+  chipIdControl?: string;
   origen?: string;
   motivo?: string;
 }
