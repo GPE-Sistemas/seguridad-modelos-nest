@@ -18,5 +18,6 @@ export interface IUpdateZonaInput {
 export interface INuevaZonaInput {
   nombre: string;
   coordenadas: ICoordenadasInput[];
+  superficie?: number;
   idsPrioridad: string[];
 }
