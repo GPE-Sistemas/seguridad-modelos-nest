@@ -3,6 +3,7 @@ import { IUsuario } from "../usuario.model";
 import { IVecino } from "./vecino.model";
 
 export interface IBaneoVecino {
+  _id: string;
   desde: string;
   hasta: string;
   idCliente: string;
