@@ -35,6 +35,7 @@ export interface IUpdateClienteInput {
   sirenas?: boolean;
   categorias?: ICrearCategoriaClienteInput[];
   coordenadas?: ICoordenadasInput[][];
+  superficie?: number;
   imagenes?: IImagenesClienteInput;
   idCategoriaDefault?: string;
 }
