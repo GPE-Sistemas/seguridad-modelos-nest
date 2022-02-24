@@ -21,6 +21,7 @@ export interface ICliente {
   activo: boolean;
   admin: boolean;
   coordenadas: ICoordenadas[][];
+  superficie?: number;
   fechaCreacion: string;
   nombre: string;
   edadMinima: number;

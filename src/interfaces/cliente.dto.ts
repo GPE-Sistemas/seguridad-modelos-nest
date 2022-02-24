@@ -21,6 +21,7 @@ export interface ICrearClienteInput {
   sirenas?: boolean;
   categorias: ICrearCategoriaClienteInput[];
   coordenadas: ICoordenadasInput[][];
+  superficie?: number;
   imagenes: IImagenesClienteInput;
   idCategoriaDefault?: string;
 }
