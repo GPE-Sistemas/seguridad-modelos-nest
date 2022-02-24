@@ -4,4 +4,5 @@ export interface ICrearBaneoVecino {
   idVecino: string;
   idCliente?: string;
   tipo: string; // 'sirenas' | 'control' | 'alertas'
+  idUsuario?: string;
 }
