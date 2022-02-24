@@ -9,3 +9,8 @@ export interface ICrearEventoSirena {
   origen?: string; // app | control
   motivo?: string; // alerta | sirena
 }
+
+export interface IResumenEventoSirenaPorFecha {
+  fecha: string;
+  cantidad: number;
+}
