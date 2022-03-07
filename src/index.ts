@@ -43,6 +43,8 @@ export * from "./interfaces/mensaje.model";
 // Sirena
 export * from "./interfaces/sirenas/evento-sirena.dto";
 export * from "./interfaces/sirenas/evento-sirena.model";
+export * from "./interfaces/sirenas/estado-sirena.dto";
+export * from "./interfaces/sirenas/estado-sirena.model";
 export * from "./interfaces/sirenas/sirena.dto";
 export * from "./interfaces/sirenas/sirena.model";
 export * from "./interfaces/sirenas/firmware-cliente.dto";
