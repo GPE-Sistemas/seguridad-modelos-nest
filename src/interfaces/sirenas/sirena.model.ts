@@ -29,11 +29,6 @@ export interface ISirena {
    */
   idCliente: string;
   /**
-   * Tiempo de encendido en segundos
-   */
-  tiempoEncendidoSonido: number;
-  tiempoEncendidoBaliza: number;
-  /**
    * Si tiene la luz encendida
    */
   luzEncendida: boolean;
@@ -43,6 +38,17 @@ export interface ISirena {
   sonidoEncendido: boolean;
 
   iccidSim?: string;
+
+  /**
+   * Tiempo desde que se energizó hasta que se registró en el sistema
+   */
+  wakeup?: number;
+
+  imei?: string;
+
+  rssi?: number;
+
+  ber?: number;
 
   // Virtuals
   cliente?: ICliente;

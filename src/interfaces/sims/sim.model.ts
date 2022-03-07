@@ -4,4 +4,5 @@ export interface ISim {
   operador?: string;
   apn?: string;
   numero?: string;
+  imsi?: string;
 }

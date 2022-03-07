@@ -11,11 +11,13 @@ export interface ICrearSirena {
   ubicacionManual?: ICoordenadas;
   direccionManual?: string;
   idCliente?: string;
-  tiempoEncendidoSonido?: number;
-  tiempoEncendidoBaliza?: number;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
   iccidSim?: string;
+  wakeup?: number;
+  imei?: string;
+  rssi?: number;
+  ber?: number;
 }
 
 export interface IUpdateSirena {
@@ -29,6 +31,10 @@ export interface IUpdateSirena {
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
   iccidSim?: string;
+  wakeup?: number;
+  imei?: string;
+  rssi?: number;
+  ber?: number;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -83,6 +89,11 @@ export interface IDataAuthSirena {
   operador?: string;
   apn?: string;
   iccid?: string;
+  wakeup?: number;
+  imei?: string;
+  rssi?: number;
+  ber?: number;
+  imsi?: string;
 }
 
 export interface IDataUbicacionSirena {

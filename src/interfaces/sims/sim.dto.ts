@@ -3,6 +3,7 @@ export interface ICrearSim {
   operador?: string;
   apn?: string;
   numero?: string;
+  imsi?: string;
 }
 
 export interface IUpdateSim {

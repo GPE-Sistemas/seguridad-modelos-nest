@@ -9,6 +9,9 @@ export interface IEventoSirena {
   idVecino: string;
   idCliente?: string;
   chipIdControl?: string;
+  tiempoEstadoAnterior?: number;
+  tiempoAcumuladoEncendido?: number;
+  tiempoAcumuladoApagado?: number;
   tipo: string; // reflector | sirena
   origen: string; // app | control
   motivo?: string; // alerta | sirena
