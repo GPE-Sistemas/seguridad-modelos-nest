@@ -4,12 +4,11 @@ import { ICliente } from "../cliente.model";
 export interface IEventoSirena {
   _id: string;
   chipId: string;
-  fecha: string;
-  encendida: boolean;
   idVecino: string;
   idCliente?: string;
   chipIdControl?: string;
-  tiempoEstadoAnterior?: number;
+  fechaEncendido: string;
+  fechaApagado: string;
   tiempoAcumuladoEncendido?: number;
   tiempoAcumuladoApagado?: number;
   tipo: string; // reflector | sirena

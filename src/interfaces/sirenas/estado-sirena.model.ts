@@ -3,12 +3,11 @@ import { ICliente } from "../cliente.model";
 export interface IEstadoSirena {
   _id: string;
   chipId: string;
-  fecha: string;
-  online: boolean;
-  idCliente?: string;
-  tiempoEstadoAnterior?: number;
+  fechaOnline: string;
+  fechaOffline?: string;
   tiempoAcumuladoOnline?: number;
   tiempoAcumuladoOffline?: number;
+  idCliente?: string;
   rssi?: number;
   ber?: number;
 
