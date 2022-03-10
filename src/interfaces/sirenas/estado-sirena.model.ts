@@ -1,4 +1,5 @@
 import { ICliente } from "../cliente.model";
+import { ISirena } from "./sirena.model";
 
 export interface IEstadoSirena {
   _id: string;
@@ -13,4 +14,5 @@ export interface IEstadoSirena {
 
   // Virtuals
   cliente?: ICliente;
+  sirena?: ISirena;
 }
