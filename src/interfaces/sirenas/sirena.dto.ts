@@ -18,6 +18,7 @@ export interface ICrearSirena {
   imei?: string;
   rssi?: number;
   ber?: number;
+  actualizando?: boolean;
 }
 
 export interface IUpdateSirena {
@@ -35,6 +36,7 @@ export interface IUpdateSirena {
   imei?: string;
   rssi?: number;
   ber?: number;
+  actualizando?: boolean;
 }
 
 export interface IResumenSirenasPorCliente {

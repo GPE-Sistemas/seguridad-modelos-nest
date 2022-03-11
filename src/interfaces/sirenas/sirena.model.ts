@@ -50,6 +50,8 @@ export interface ISirena {
 
   ber?: number;
 
+  actualizando?: boolean;
+
   // Virtuals
   cliente?: ICliente;
 
