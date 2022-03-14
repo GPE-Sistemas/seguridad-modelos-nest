@@ -19,6 +19,8 @@ export interface ICrearSirena {
   rssi?: number;
   ber?: number;
   actualizando?: boolean;
+  fechaOnline?: string;
+  fechaOffline?: string;
 }
 
 export interface IUpdateSirena {
@@ -37,6 +39,9 @@ export interface IUpdateSirena {
   rssi?: number;
   ber?: number;
   actualizando?: boolean;
+  fechaOnline?: string;
+  fechaOffline?: string;
+  instaladaEn?: string;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -63,6 +68,7 @@ enum ETipoEventoSirena {
   CONTROL_BORRAR = "CONTROL_BORRAR",
   AUDIO_CLIENTE = "AUDIO_CLIENTE",
   ENCENDER_PANICO = "ENCENDER_PANICO",
+  COMANDO_RESET = "COMANDO_RESET",
 }
 
 export type TipoEventoSirena =
@@ -82,7 +88,8 @@ export type TipoEventoSirena =
   | "CONTROL_AGREGAR"
   | "CONTROL_BORRAR"
   | "AUDIO_CLIENTE"
-  | "ENCENDER_PANICO";
+  | "ENCENDER_PANICO"
+  | "COMANDO_RESET";
 
 export interface IDataAuthSirena {
   chipId: string;

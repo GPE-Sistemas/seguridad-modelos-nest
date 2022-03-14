@@ -52,6 +52,12 @@ export interface ISirena {
 
   actualizando?: boolean;
 
+  fechaOnline?: string;
+
+  fechaOffline?: string;
+
+  instaladaEn?: string;
+
   // Virtuals
   cliente?: ICliente;
 

@@ -44,6 +44,7 @@ export interface IUpdateVecino {
   ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
   idCliente?: string;
+  ultimoAcceso?: string;
 }
 
 export interface IUpdateDomicilioVecino {

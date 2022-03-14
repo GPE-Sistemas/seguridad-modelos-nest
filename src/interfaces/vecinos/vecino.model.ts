@@ -29,6 +29,7 @@ export interface IVecino {
   fechaNacimiento: string;
   envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
+  ultimoAcceso?: string;
   // Virtuals
   cliente?: ICliente;
 }
