@@ -3,5 +3,5 @@ export interface ILogSirena {
   chipId: string;
   fecha: string;
   mensaje?: string;
-  origen?: number;
+  origen?: string;
 }
