@@ -58,6 +58,14 @@ export interface ISirena {
 
   instaladaEn?: string;
 
+  acumuladoOnline?: number;
+
+  acumuladoOffline?: number;
+
+  acumuladoReflector?: number;
+
+  acumuladoSirena?: number;
+
   // Virtuals
   cliente?: ICliente;
 

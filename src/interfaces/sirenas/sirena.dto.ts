@@ -21,6 +21,10 @@ export interface ICrearSirena {
   actualizando?: boolean;
   fechaOnline?: string;
   fechaOffline?: string;
+  acumuladoOnline?: number;
+  acumuladoOffline?: number;
+  acumuladoReflector?: number;
+  acumuladoSirena?: number;
 }
 
 export interface IUpdateSirena {
@@ -42,6 +46,10 @@ export interface IUpdateSirena {
   fechaOnline?: string;
   fechaOffline?: string;
   instaladaEn?: string;
+  acumuladoOnline?: number;
+  acumuladoOffline?: number;
+  acumuladoReflector?: number;
+  acumuladoSirena?: number;
 }
 
 export interface IResumenSirenasPorCliente {
