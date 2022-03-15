@@ -4,6 +4,7 @@ export * from "./interfaces/generales/mongo-date-to-string-format";
 export * from "./interfaces/generales/query-filter";
 export * from "./interfaces/generales/socket-message";
 export * from "./interfaces/generales/exactly";
+export * from "./interfaces/generales/error-cliente";
 //
 export * from "./interfaces/auth/client.dto";
 export * from "./interfaces/auth/client.model";
