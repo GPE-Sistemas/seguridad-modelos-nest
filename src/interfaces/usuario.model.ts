@@ -1,4 +1,5 @@
-import { IBoton, ICentroMonitoreo, ICliente } from '..';
+import { IBoton, ICentroMonitoreo, ICliente } from "..";
+import { Rol } from "./generales/rol";
 
 export interface IOperador {
   idCentroMonitoreo: string;
@@ -21,7 +22,7 @@ export interface IUsuario {
   pais?: string;
   telefono?: string;
   fechaNacimiento?: string;
-  roles: string[];
+  roles: Rol[];
   usuario: string;
   clave?: string;
   operador?: IOperador;

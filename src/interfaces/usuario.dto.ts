@@ -1,6 +1,8 @@
+import { Rol } from "./generales/rol";
+
 export enum roles {
-  admin = 'admin',
-  operador = 'operador',
+  admin = "admin",
+  operador = "operador",
 }
 
 export interface IOperadorInput {
@@ -13,7 +15,7 @@ export interface ICrearUsuarioInput {
   dni?: string;
   sexo?: boolean;
   telefono?: string;
-  roles: string[];
+  roles: Rol[];
   idCliente: string;
   activo?: boolean;
   email?: string;
@@ -30,7 +32,7 @@ export interface IUpdateUsuarioInput {
   dni?: string;
   sexo?: boolean;
   telefono?: string;
-  roles?: string[];
+  roles?: Rol[];
   activo?: boolean;
   email?: string;
   direccion?: string;
