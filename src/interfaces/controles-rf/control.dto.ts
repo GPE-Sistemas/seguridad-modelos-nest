@@ -1,5 +1,6 @@
 export interface ICrearControl {
   chipId: string;
+  etiqueta?: string;
   fechaCreacion?: string;
   idCliente?: string;
   idVecino?: string;
@@ -8,6 +9,7 @@ export interface ICrearControl {
 
 export interface IUpdateControl {
   chipId?: string;
+  etiqueta?: string;
   idCliente?: string;
   idVecino?: string;
   baneado?: boolean;

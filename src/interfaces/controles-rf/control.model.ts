@@ -4,6 +4,7 @@ import { IVecino } from "../..";
 export interface IControl {
   _id: string;
   chipId: string;
+  etiqueta?: string;
   fechaCreacion: string;
   idCliente?: string;
   idVecino?: string;
