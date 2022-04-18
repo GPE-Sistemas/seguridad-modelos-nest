@@ -18,6 +18,7 @@ export interface ICrearClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
+  instagram?: string;
   sirenas?: boolean;
   categorias: ICrearCategoriaClienteInput[];
   coordenadas: ICoordenadasInput[][];
@@ -32,6 +33,7 @@ export interface IUpdateClienteInput {
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
+  instagram?: string;
   sirenas?: boolean;
   categorias?: ICrearCategoriaClienteInput[];
   coordenadas?: ICoordenadasInput[][];

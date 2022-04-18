@@ -26,6 +26,7 @@ export interface ICliente {
   nombre: string;
   edadMinima: number;
   twitter: string;
+  instagram: string;
   sirenas: boolean;
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
