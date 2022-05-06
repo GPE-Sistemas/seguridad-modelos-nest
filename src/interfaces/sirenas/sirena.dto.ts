@@ -77,6 +77,7 @@ enum ETipoEventoSirena {
   AUDIO_CLIENTE = "AUDIO_CLIENTE",
   ENCENDER_PANICO = "ENCENDER_PANICO",
   COMANDO_RESET = "COMANDO_RESET",
+  COMANDO_AUTH = "COMANDO_AUTH",
 }
 
 export type TipoEventoSirena =
@@ -97,7 +98,8 @@ export type TipoEventoSirena =
   | "CONTROL_BORRAR"
   | "AUDIO_CLIENTE"
   | "ENCENDER_PANICO"
-  | "COMANDO_RESET";
+  | "COMANDO_RESET"
+  | "COMANDO_AUTH";
 
 export interface IDataAuthSirena {
   chipId: string;
