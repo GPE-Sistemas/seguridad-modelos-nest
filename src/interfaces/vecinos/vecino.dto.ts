@@ -45,6 +45,14 @@ export interface IUpdateVecino {
   complementoDireccion?: string;
   idCliente?: string;
   ultimoAcceso?: string;
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean;
+  fechaNacimiento?: string;
+  pais?: string;
+  telefono?: string;
+  email?: string;
+  ubicacion?: ICoordenadasInput;
 }
 
 export interface IUpdateDomicilioVecino {
