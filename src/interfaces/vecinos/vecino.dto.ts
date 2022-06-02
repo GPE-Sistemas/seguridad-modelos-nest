@@ -1,6 +1,6 @@
-import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
-import { ICoordenadasInput } from "../generales/coordenadas";
-import { IEnvioCodigo } from "./envio-codigo.dto";
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
+import { ICoordenadasInput } from '../generales/coordenadas';
+import { IEnvioCodigo } from './envio-codigo.dto';
 
 export interface INuevoVecino {
   nombre: string;
@@ -68,4 +68,17 @@ export interface IResumenVecinosPorCategoria {
 export interface IResumenVecinosPorSexo {
   sexo: boolean;
   cantidad: number;
+}
+
+export interface IUpdateVecinoDatos {
+  nombre: string;
+  dni: string;
+  sexo: boolean;
+  fechaNacimiento: string;
+  pais: string;
+  telefono: string;
+  email: string;
+  direccion: string;
+  complementoDireccion?: string;
+  ubicacion: ICoordenadasInput;
 }
