@@ -1,4 +1,4 @@
-import { ICoordenadasInput } from "./generales/coordenadas";
+import { ICoordenadasInput } from './generales/coordenadas';
 
 export interface ICrearCategoriaClienteInput {
   imagenArriba?: string;
@@ -11,6 +11,7 @@ export interface IImagenesClienteInput {
   lateral: string;
   arriba: string;
   abajo: string;
+  fondo?: string;
 }
 
 export interface ICrearClienteInput {
