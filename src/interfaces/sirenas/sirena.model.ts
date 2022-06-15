@@ -1,5 +1,5 @@
-import { ICliente } from "../cliente.model";
-import { ICoordenadas, ISim } from "../..";
+import { ICliente } from '../cliente.model';
+import { ICoordenadas, ISim } from '../..';
 
 export interface ISirena {
   _id: string;
@@ -65,6 +65,11 @@ export interface ISirena {
   acumuladoReflector?: number;
 
   acumuladoSirena?: number;
+
+  /**
+   * Tipo de dispositivo para el frontend, solo puede ser Sirena o Tótem.
+   */
+  tipo?: string;
 
   // Virtuals
   cliente?: ICliente;
