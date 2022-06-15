@@ -25,6 +25,7 @@ export interface ICrearSirena {
   acumuladoOffline?: number;
   acumuladoReflector?: number;
   acumuladoSirena?: number;
+  tipo?: string;
 }
 
 export interface IUpdateSirena {
