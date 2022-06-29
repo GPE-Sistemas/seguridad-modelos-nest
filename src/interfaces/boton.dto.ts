@@ -17,6 +17,7 @@ export interface ICrearBotonInput {
   trackeo: ICrearTrackeoInput;
   editable?: boolean;
   sirena?: boolean;
+  global?: boolean;
 }
 
 export interface IUpdateBotonInput {
@@ -28,4 +29,5 @@ export interface IUpdateBotonInput {
   urlImagenPush?: string;
   trackeo?: ICrearTrackeoInput;
   sirena?: boolean;
+  global?: boolean;
 }

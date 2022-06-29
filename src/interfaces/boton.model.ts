@@ -18,4 +18,6 @@ export interface IBoton {
   trackeo: ITrackeo;
   editable: boolean;
   sirena?: boolean;
+  // True puede mandar alertas fuera de su zona.
+  global?: boolean;
 }
