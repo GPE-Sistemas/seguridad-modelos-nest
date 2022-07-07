@@ -52,6 +52,7 @@ export interface IUpdateSirena {
   acumuladoReflector?: number;
   acumuladoSirena?: number;
   tipo?: string;
+  errorSd?: string;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -80,6 +81,7 @@ enum ETipoEventoSirena {
   ENCENDER_PANICO = 'ENCENDER_PANICO',
   COMANDO_RESET = 'COMANDO_RESET',
   COMANDO_AUTH = 'COMANDO_AUTH',
+  ERROR_SD = 'ERROR_SD',
 }
 
 export type TipoEventoSirena =
@@ -101,7 +103,8 @@ export type TipoEventoSirena =
   | 'AUDIO_CLIENTE'
   | 'ENCENDER_PANICO'
   | 'COMANDO_RESET'
-  | 'COMANDO_AUTH';
+  | 'COMANDO_AUTH'
+  | 'ERROR_SD';
 
 export interface IDataAuthSirena {
   chipId: string;

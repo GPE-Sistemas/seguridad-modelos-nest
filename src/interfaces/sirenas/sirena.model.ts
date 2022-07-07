@@ -66,6 +66,8 @@ export interface ISirena {
 
   acumuladoSirena?: number;
 
+  errorSd?: string;
+
   /**
    * Tipo de dispositivo para el frontend, solo puede ser Sirena o Tótem.
    */
