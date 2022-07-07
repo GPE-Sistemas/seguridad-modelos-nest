@@ -52,7 +52,7 @@ export interface IUpdateSirena {
   acumuladoReflector?: number;
   acumuladoSirena?: number;
   tipo?: string;
-  errorSd?: string;
+  errorSd?: string | null;
 }
 
 export interface IResumenSirenasPorCliente {
