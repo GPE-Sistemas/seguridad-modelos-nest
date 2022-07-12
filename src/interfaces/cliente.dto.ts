@@ -26,6 +26,7 @@ export interface ICrearClienteInput {
   superficie?: number;
   imagenes: IImagenesClienteInput;
   idCategoriaDefault?: string;
+  configuracion: { verActualizaciones: boolean };
 }
 
 export interface IUpdateClienteInput {
