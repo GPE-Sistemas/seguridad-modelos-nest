@@ -41,6 +41,7 @@ export interface IUpdateClienteInput {
   superficie?: number;
   imagenes?: IImagenesClienteInput;
   idCategoriaDefault?: string;
+  configuracion: { verActualizaciones: boolean };
 }
 
 export interface IResumenClientes {
