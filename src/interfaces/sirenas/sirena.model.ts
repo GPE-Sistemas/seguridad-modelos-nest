@@ -73,6 +73,16 @@ export interface ISirena {
    */
   tipo?: string;
 
+  /**
+   * Datos varios de hw
+   */
+
+  datosHw?: {
+    version?: string;
+    fuenteExterna?: boolean;
+    fechaDeFabricacion?: string;
+  };
+
   // Virtuals
   cliente?: ICliente;
 

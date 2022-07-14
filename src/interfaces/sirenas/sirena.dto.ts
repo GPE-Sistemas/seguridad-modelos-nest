@@ -26,6 +26,11 @@ export interface ICrearSirena {
   acumuladoReflector?: number;
   acumuladoSirena?: number;
   tipo?: string;
+  datosHw?: {
+    version?: string;
+    fuenteExterna?: boolean;
+    fechaDeFabricacion?: string;
+  };
 }
 
 export interface IUpdateSirena {
@@ -53,6 +58,11 @@ export interface IUpdateSirena {
   acumuladoSirena?: number;
   tipo?: string;
   errorSd?: string | null;
+  datosHw?: {
+    version?: string;
+    fuenteExterna?: boolean;
+    fechaDeFabricacion?: string;
+  };
 }
 
 export interface IResumenSirenasPorCliente {
