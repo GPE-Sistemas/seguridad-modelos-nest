@@ -27,6 +27,7 @@ export interface ICrearSirena {
   acumuladoSirena?: number;
   tipo?: string;
   datosHw?: {
+    numeroNac: string;
     version?: string;
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
@@ -59,6 +60,7 @@ export interface IUpdateSirena {
   tipo?: string;
   errorSd?: string | null;
   datosHw?: {
+    numeroNac: string;
     version?: string;
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
