@@ -78,7 +78,7 @@ export interface ISirena {
    */
 
   datosHw?: {
-    numeroNac: string;
+    numeroNac?: string;
     version?: string;
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
