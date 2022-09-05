@@ -7,6 +7,7 @@ export interface ICrearCategoriaInput {
   idsBtnsSecundarios?: string[];
   idsOtrosBotones?: string[];
   editable?: boolean;
+  tercerBoton?: boolean;
   twitter: boolean;
 }
 
@@ -19,4 +20,5 @@ export interface IUpdateCategoriaInput {
   idsBtnsSecundarios?: string[];
   idsOtrosBotones?: string[];
   twitter?: boolean;
+  tercerBoton?: boolean;
 }
