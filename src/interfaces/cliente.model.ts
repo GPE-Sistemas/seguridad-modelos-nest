@@ -32,7 +32,7 @@ export interface ICliente {
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
-  configuracion?: { verActualizaciones: boolean };
+  configuracion: { verActualizaciones: boolean };
 
   // Virtuals
   categoriaDefault?: ICategoria;
