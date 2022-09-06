@@ -255,6 +255,6 @@ export interface IMensajeSirena {
     | IDataPerifoneoSirena
     | IDataControlSirena
     | IDataAudioClienteSirena
-    | IMensajeBalizaSirenaOperador
-    | IMensajeSonidoSirenaOperador;
+    | IDataBalizaSirenaOperador
+    | IDataSonidoSirenaOperador;
 }
