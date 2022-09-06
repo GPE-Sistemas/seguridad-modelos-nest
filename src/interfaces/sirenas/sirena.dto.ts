@@ -94,6 +94,9 @@ enum ETipoEventoSirena {
   COMANDO_RESET = 'COMANDO_RESET',
   COMANDO_AUTH = 'COMANDO_AUTH',
   ERROR_SD = 'ERROR_SD',
+  ENCENDER_BALIZA_OPERADOR = 'ENCENDER_BALIZA_OPERADOR',
+  ENCENDER_SONIDO_OPERADOR = 'ENCENDER_SONIDO_OPERADOR',
+  ENCENDER_PANICO_OPERADOR = 'ENCENDER_PANICO_OPERADOR',
 }
 
 export type TipoEventoSirena =
@@ -116,7 +119,10 @@ export type TipoEventoSirena =
   | 'ENCENDER_PANICO'
   | 'COMANDO_RESET'
   | 'COMANDO_AUTH'
-  | 'ERROR_SD';
+  | 'ERROR_SD'
+  | 'ENCENDER_BALIZA_OPERADOR'
+  | 'ENCENDER_SONIDO_OPERADOR'
+  | 'ENCENDER_PANICO_OPERADOR';
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -148,6 +154,15 @@ export interface IDataBalizaSirena {
   motivo?: string;
 }
 
+export interface IDataBalizaSirenaOperador {
+  id?: string;
+  chipId?: string;
+  duracion?: number;
+  idOperador?: string;
+  idCliente?: string;
+  chipIdControl?: string;
+}
+
 export interface IDataSonidoSirena {
   id?: string;
   chipId?: string;
@@ -158,6 +173,16 @@ export interface IDataSonidoSirena {
   chipIdControl?: string;
   origen?: string;
   motivo?: string;
+}
+
+export interface IDataSonidoSirenaOperador {
+  id?: string;
+  chipId?: string;
+  sonido?: string;
+  duracion?: number;
+  idOperador?: string;
+  idCliente?: string;
+  chipIdControl?: string;
 }
 
 export interface IDataActualizarFirmwareSirena {
@@ -202,6 +227,16 @@ export interface IMensajeSonidoSirena {
   data: IDataSonidoSirena;
 }
 
+export interface IMensajeBalizaSirenaOperador {
+  event: ETipoEventoSirena.ENCENDER_BALIZA | ETipoEventoSirena.APAGAR_BALIZA;
+  data: IDataBalizaSirenaOperador;
+}
+
+export interface IMensajeSonidoSirenaOperador {
+  event: ETipoEventoSirena.ENCENDER_SONIDO | ETipoEventoSirena.APAGAR_SONIDO;
+  data: IDataSonidoSirenaOperador;
+}
+
 export interface IMensajeAudioClienteSirena {
   event: ETipoEventoSirena.AUDIO_CLIENTE;
   data: IDataAudioClienteSirena;
@@ -215,5 +250,7 @@ export interface IMensajeSirena {
     | IDataActualizarFirmwareSirena
     | IDataPerifoneoSirena
     | IDataControlSirena
-    | IDataAudioClienteSirena;
+    | IDataAudioClienteSirena
+    | IMensajeBalizaSirenaOperador
+    | IMensajeSonidoSirenaOperador;
 }
