@@ -228,12 +228,16 @@ export interface IMensajeSonidoSirena {
 }
 
 export interface IMensajeBalizaSirenaOperador {
-  event: ETipoEventoSirena.ENCENDER_BALIZA | ETipoEventoSirena.APAGAR_BALIZA;
+  event:
+    | ETipoEventoSirena.ENCENDER_BALIZA_OPERADOR
+    | ETipoEventoSirena.APAGAR_BALIZA;
   data: IDataBalizaSirenaOperador;
 }
 
 export interface IMensajeSonidoSirenaOperador {
-  event: ETipoEventoSirena.ENCENDER_SONIDO | ETipoEventoSirena.APAGAR_SONIDO;
+  event:
+    | ETipoEventoSirena.ENCENDER_SONIDO_OPERADOR
+    | ETipoEventoSirena.APAGAR_SONIDO;
   data: IDataSonidoSirenaOperador;
 }
 
