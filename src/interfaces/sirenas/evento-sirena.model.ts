@@ -1,11 +1,12 @@
-import { IControl, IVecino } from "../..";
-import { ICliente } from "../cliente.model";
-import { ISirena } from "./sirena.model";
+import { IControl, IUsuario, IVecino } from '../..';
+import { ICliente } from '../cliente.model';
+import { ISirena } from './sirena.model';
 
 export interface IEventoSirena {
   _id: string;
   chipId: string;
-  idVecino: string;
+  idVecino?: string;
+  idUsuario?: string;
   idCliente?: string;
   chipIdControl?: string;
   fechaEncendido: string;
@@ -21,4 +22,5 @@ export interface IEventoSirena {
   cliente?: ICliente;
   control?: IControl;
   sirena?: ISirena;
+  usuario?: IUsuario;
 }
