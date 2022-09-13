@@ -18,6 +18,8 @@ export interface ICrearBotonInput {
   editable?: boolean;
   sirena?: boolean;
   global?: boolean;
+  // Para elegir uno de tres sonidos
+  notificacion?: string;
 }
 
 export interface IUpdateBotonInput {
@@ -30,4 +32,6 @@ export interface IUpdateBotonInput {
   trackeo?: ICrearTrackeoInput;
   sirena?: boolean;
   global?: boolean;
+  // Para elegir uno de tres sonidos
+  notificacion?: string;
 }

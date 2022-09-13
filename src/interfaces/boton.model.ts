@@ -20,4 +20,6 @@ export interface IBoton {
   sirena?: boolean;
   // True puede mandar alertas fuera de su zona.
   global?: boolean;
+  // Para elegir uno de tres sonidos
+  notificacion?: string;
 }
