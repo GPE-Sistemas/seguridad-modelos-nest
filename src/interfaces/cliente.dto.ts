@@ -26,7 +26,7 @@ export interface ICrearClienteInput {
   superficie?: number;
   imagenes: IImagenesClienteInput;
   idCategoriaDefault?: string;
-  configuracion: {
+  configuracion?: {
     verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
