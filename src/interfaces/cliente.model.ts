@@ -32,8 +32,11 @@ export interface ICliente {
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
-  configuracion: { verActualizaciones: boolean };
-
+  configuracion: {
+    verActualizaciones: boolean;
+    categoriasDeEvento?: string[];
+    tagsDeEvento?: string[];
+  };
   // Virtuals
   categoriaDefault?: ICategoria;
 }

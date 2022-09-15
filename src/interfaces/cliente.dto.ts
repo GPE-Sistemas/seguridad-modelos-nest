@@ -26,7 +26,11 @@ export interface ICrearClienteInput {
   superficie?: number;
   imagenes: IImagenesClienteInput;
   idCategoriaDefault?: string;
-  configuracion: { verActualizaciones: boolean };
+  configuracion: {
+    verActualizaciones: boolean;
+    categoriasDeEvento?: string[];
+    tagsDeEvento?: string[];
+  };
 }
 
 export interface IUpdateClienteInput {
@@ -42,7 +46,11 @@ export interface IUpdateClienteInput {
   superficie?: number;
   imagenes?: IImagenesClienteInput;
   idCategoriaDefault?: string;
-  configuracion?: { verActualizaciones: boolean };
+  configuracion?: {
+    verActualizaciones: boolean;
+    categoriasDeEvento?: string[];
+    tagsDeEvento?: string[];
+  };
 }
 
 export interface IResumenClientes {
