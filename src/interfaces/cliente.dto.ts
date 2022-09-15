@@ -27,7 +27,7 @@ export interface ICrearClienteInput {
   imagenes: IImagenesClienteInput;
   idCategoriaDefault?: string;
   configuracion: {
-    verActualizaciones: boolean;
+    verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
   };
@@ -47,7 +47,7 @@ export interface IUpdateClienteInput {
   imagenes?: IImagenesClienteInput;
   idCategoriaDefault?: string;
   configuracion?: {
-    verActualizaciones: boolean;
+    verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
   };
