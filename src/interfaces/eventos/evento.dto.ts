@@ -1,7 +1,7 @@
 import { ICoordenadas } from '../generales/coordenadas';
 
 export interface ICrearEvento {
-  idCliente: string;
+  idCliente?: string;
   fecha: string;
   emisor?: string;
   categoria: string;
