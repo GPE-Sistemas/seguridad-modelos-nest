@@ -9,6 +9,10 @@ export interface ICategoriaCliente {
   imagenReflector?: string;
   imagenAdelante?: string;
   imagenAtras?: string;
+  imagenSirenaPush?: string;
+  imagenReflectorPush?: string;
+  imagenAdelantePush?: string;
+  imagenAtrasPush?: string;
   // virtual
   categoria?: ICategoria;
 }
@@ -23,6 +27,10 @@ export interface IImagenesCliente {
   reflector?: string;
   adelante?: string;
   atras?: string;
+  sirenaPush?: string;
+  reflectorPush?: string;
+  adelantePush?: string;
+  atrasPush?: string;
 }
 
 export interface ICliente {
