@@ -5,16 +5,24 @@ export interface ICategoriaCliente {
   imagenArriba?: string;
   imagenAbajo?: string;
   idCategoria: string;
-  // Virtuals
+  imagenSirena?: string;
+  imagenReflector?: string;
+  imagenAdelante?: string;
+  imagenAtras?: string;
+  // virtual
   categoria?: ICategoria;
 }
 
 export interface IImagenesCliente {
-  icono: string;
-  lateral: string;
-  arriba: string;
-  abajo: string;
+  icono?: string;
+  lateral?: string;
+  arriba?: string;
+  abajo?: string;
   fondo?: string;
+  sirena?: string;
+  reflector?: string;
+  adelante?: string;
+  atras?: string;
 }
 
 export interface ICliente {

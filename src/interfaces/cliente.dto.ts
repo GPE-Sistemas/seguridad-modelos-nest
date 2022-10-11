@@ -1,18 +1,5 @@
+import { ICategoriaCliente, IImagenesCliente } from './cliente.model';
 import { ICoordenadasInput } from './generales/coordenadas';
-
-export interface ICrearCategoriaClienteInput {
-  imagenArriba?: string;
-  imagenAbajo?: string;
-  idCategoria: string;
-}
-
-export interface IImagenesClienteInput {
-  icono: string;
-  lateral: string;
-  arriba: string;
-  abajo: string;
-  fondo?: string;
-}
 
 export interface ICrearClienteInput {
   nombre: string;
@@ -21,10 +8,10 @@ export interface ICrearClienteInput {
   twitter?: string;
   instagram?: string;
   sirenas?: boolean;
-  categorias: ICrearCategoriaClienteInput[];
+  categorias: ICategoriaCliente[];
   coordenadas: ICoordenadasInput[][];
   superficie?: number;
-  imagenes: IImagenesClienteInput;
+  imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
   configuracion?: {
     verActualizaciones?: boolean;
@@ -41,10 +28,10 @@ export interface IUpdateClienteInput {
   twitter?: string;
   instagram?: string;
   sirenas?: boolean;
-  categorias?: ICrearCategoriaClienteInput[];
+  categorias?: ICategoriaCliente[];
   coordenadas?: ICoordenadasInput[][];
   superficie?: number;
-  imagenes?: IImagenesClienteInput;
+  imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;
   configuracion?: {
     verActualizaciones?: boolean;
