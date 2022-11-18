@@ -1,3 +1,5 @@
+import { FuncionBoton } from "./boton.model";
+
 export interface ICrearTrackeoInput {
   tiempoMinutos: number;
   intervaloSegundos: number;
@@ -10,6 +12,7 @@ export interface ICrearTrackeoInput {
 export interface ICrearBotonInput {
   nombre: string;
   variante?: string;
+  funcion?: FuncionBoton;
   color?: string;
   texto?: string;
   urlImagen?: string;
@@ -25,6 +28,7 @@ export interface ICrearBotonInput {
 export interface IUpdateBotonInput {
   nombre?: string;
   variante?: string;
+  funcion?: FuncionBoton;
   color?: string;
   texto?: string;
   urlImagen?: string;
