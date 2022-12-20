@@ -1,8 +1,9 @@
-import { IAlerta } from '../alertas/alerta.model';
-import { ICoordenadas } from '../generales/coordenadas';
-import { IVecino } from '../vecinos/vecino.model';
+import { IAlerta } from "../alertas/alerta.model";
+import { ICoordenadas } from "../generales/coordenadas";
+import { IVecino } from "../vecinos/vecino.model";
 
 export interface IEvento {
+  observaciones?: string;
   _id: string;
   idCliente: string;
   fecha: string;
