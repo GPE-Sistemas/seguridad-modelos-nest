@@ -6,6 +6,7 @@ export * from './interfaces/generales/socket-message';
 export * from './interfaces/generales/exactly';
 export * from './interfaces/generales/error-cliente';
 export * from './interfaces/generales/rol';
+export * from './interfaces/generales/direccionV2';
 //
 export * from './interfaces/auth/client.dto';
 export * from './interfaces/auth/client.model';

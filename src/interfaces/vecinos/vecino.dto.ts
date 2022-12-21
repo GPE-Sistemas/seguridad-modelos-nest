@@ -1,6 +1,7 @@
 import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
 import { ICoordenadasInput } from '../generales/coordenadas';
 import { IEnvioCodigo } from './envio-codigo.dto';
+import { DireccionV2 } from '../..';
 
 export interface INuevoVecino {
   nombre: string;
@@ -10,7 +11,11 @@ export interface INuevoVecino {
   pais: string;
   telefono: string;
   email: string;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion: string;
+  direccionV2?: DireccionV2;
   complementoDireccion?: string;
   /**
    * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
@@ -26,7 +31,11 @@ export interface ICrearVecino {
   idCliente: string;
   activo?: boolean;
   email?: string;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion: string;
+  direccionV2?: DireccionV2;
   ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
   pais?: string;
@@ -40,7 +49,11 @@ export interface IUpdateVecino {
   activo?: boolean;
   categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion?: string;
+  direccionV2?: DireccionV2;
   ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
   idCliente?: string;
@@ -56,7 +69,11 @@ export interface IUpdateVecino {
 }
 
 export interface IUpdateDomicilioVecino {
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion: string;
+  direccionV2?: DireccionV2;
   complementoDireccion?: string;
   ubicacion: ICoordenadasInput;
 }
@@ -86,7 +103,11 @@ export interface IUpdateVecinoDatos {
   pais: string;
   telefono: string;
   email: string;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion: string;
+  direccionV2?: DireccionV2;
   complementoDireccion?: string;
   ubicacion: ICoordenadasInput;
 }
