@@ -15,6 +15,7 @@ export interface INuevoVecino {
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
   direccion: string;
+  // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
   /**
