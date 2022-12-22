@@ -1,6 +1,6 @@
 export interface DireccionV2 {
   calle: string;
-  numbero: number;
+  numero: string;
   barrio: string;
   localidad: string;
   partido: string;
