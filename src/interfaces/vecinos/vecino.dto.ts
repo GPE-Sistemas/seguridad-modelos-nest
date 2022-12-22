@@ -11,9 +11,6 @@ export interface INuevoVecino {
   pais: string;
   telefono: string;
   email: string;
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   direccion: string;
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
@@ -32,9 +29,6 @@ export interface ICrearVecino {
   idCliente: string;
   activo?: boolean;
   email?: string;
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   direccion: string;
   direccionV2?: DireccionV2;
   ubicacionDireccion?: ICoordenadasInput;
@@ -70,9 +64,6 @@ export interface IUpdateVecino {
 }
 
 export interface IUpdateDomicilioVecino {
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   direccion: string;
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
