@@ -1,3 +1,5 @@
+import { ICoordenadas } from './coordenadas';
+
 export interface DireccionV2 {
   calle?: string;
   numero?: string;
@@ -6,4 +8,5 @@ export interface DireccionV2 {
   partido?: string;
   provincia?: string;
   direccion?: string;
+  coordenadas?: ICoordenadas;
 }
