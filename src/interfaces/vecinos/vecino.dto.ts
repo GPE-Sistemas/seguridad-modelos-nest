@@ -44,9 +44,6 @@ export interface IUpdateVecino {
   activo?: boolean;
   categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   direccion?: string;
   direccionV2?: DireccionV2;
   ubicacionDireccion?: ICoordenadasInput;
