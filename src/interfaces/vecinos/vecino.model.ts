@@ -26,6 +26,9 @@ export interface IVecino {
    */
   direccion: string;
   direccionV2?: DireccionV2;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   ubicacionDireccion?: ICoordenadas;
   complementoDireccion?: string;
   pais: string;
