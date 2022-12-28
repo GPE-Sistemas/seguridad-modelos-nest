@@ -1,7 +1,8 @@
-import { ICoordenadas } from '../generales/coordenadas';
+import { ICoordenadas } from "../generales/coordenadas";
 
 export interface ICrearEvento {
   idCliente?: string;
+  observaciones?: string;
   fecha: string;
   emisor?: string;
   categoria: string;
@@ -13,6 +14,7 @@ export interface ICrearEvento {
 }
 
 export interface IUpdateEvento {
+  observaciones?: string;
   fecha?: string;
   emisor?: string;
   categoria?: string;

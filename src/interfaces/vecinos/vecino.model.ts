@@ -1,7 +1,7 @@
-import { ICoordenadas } from "../..";
-import { ICliente } from "../cliente.model";
-import { ICategoriaVecino } from "./categoria-vecino.model";
-import { IEnvioCodigo } from "./envio-codigo.dto";
+import { DireccionV2, ICoordenadas } from '../..';
+import { ICliente } from '../cliente.model';
+import { ICategoriaVecino } from './categoria-vecino.model';
+import { IEnvioCodigo } from './envio-codigo.dto';
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -21,7 +21,14 @@ export interface IVecino {
   sexo: boolean;
   idCliente: string;
   email?: string;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   direccion: string;
+  direccionV2?: DireccionV2;
+  /**
+   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
+   */
   ubicacionDireccion?: ICoordenadas;
   complementoDireccion?: string;
   pais: string;
