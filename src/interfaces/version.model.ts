@@ -1,10 +1,10 @@
-export interface Version {
+export interface IVersion {
   nombre: string;
   version: string;
-  servicios: Servicio[];
+  servicios: IServicio[];
 }
 
-export interface Servicio {
+export interface IServicio {
   nombre: string;
   version: string;
 }
