@@ -1,8 +1,8 @@
 export interface ICrearMensajeVecino {
-  idAlerta: string;
-  mensaje: string;
+  idAlerta?: string;
+  mensaje?: string;
 }
 
 export interface IUpdateMensajeVecino {
-  mensaje: string;
+  mensaje?: string;
 }
