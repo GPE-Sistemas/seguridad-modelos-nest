@@ -2,8 +2,8 @@ import { ICliente } from "./cliente.model";
 
 export interface IMensaje {
   _id: string;
-  idCliente: string;
   texto: string;
+  idCliente: string;
   // Virtuals
   cliente?: ICliente;
 }
