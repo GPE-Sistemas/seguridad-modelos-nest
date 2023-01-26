@@ -1,6 +1,7 @@
 export interface IMensajeVecino {
-  idAlerta: string;
-  fecha: string;
-  mensaje: string;
-  remitente: string;
+  id?: string;
+  idAlerta?: string;
+  fecha?: string;
+  mensaje?: string;
+  remitente?: string;
 }
