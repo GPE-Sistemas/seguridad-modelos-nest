@@ -9,6 +9,8 @@ export interface ICrearEvento {
   tags: string[];
   direccion?: string;
   coordenadas?: ICoordenadas;
+  victima?: string;
+  causante?: string;
   idVecino?: string;
   idAlerta?: string;
 }
