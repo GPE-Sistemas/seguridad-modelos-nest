@@ -14,6 +14,8 @@ export interface IEvento {
   idVecino?: string;
   idAlerta?: string;
   observaciones?: string;
+  victima?: string;
+  causante?: string;
   // Virtuals
   vecino?: IVecino;
   alerta?: IAlerta;
