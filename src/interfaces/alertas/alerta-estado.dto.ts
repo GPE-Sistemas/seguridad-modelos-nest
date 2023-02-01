@@ -13,4 +13,5 @@ export interface ICrearAlertaEstadoInput {
   notaPredefinida?: string;
   nota?: string;
   notaInterna?: string;
+  causante?: string;
 }
