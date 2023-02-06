@@ -1,4 +1,4 @@
-export interface IMensajeVecino {
+export interface IAlertaMensaje {
   id?: string;
   idAlerta?: string;
   fecha?: string;
