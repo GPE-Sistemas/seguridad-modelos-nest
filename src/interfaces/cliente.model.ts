@@ -52,6 +52,7 @@ export interface ICliente {
     verActualizaciones: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
+    nombreAppMonit?: string;
   };
   // Virtuals
   categoriaDefault?: ICategoria;

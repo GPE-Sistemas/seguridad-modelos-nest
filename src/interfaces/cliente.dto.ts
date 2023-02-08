@@ -17,6 +17,7 @@ export interface ICrearClienteInput {
     verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
+    nombreAppMonit?: string;
   };
 }
 
@@ -37,6 +38,7 @@ export interface IUpdateClienteInput {
     verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
+    nombreAppMonit?: string;
   };
 }
 
