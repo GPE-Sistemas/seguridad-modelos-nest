@@ -1,5 +1,5 @@
-import { ICategoria } from '..';
-import { ICoordenadas } from './generales/coordenadas';
+import { ICategoria } from "..";
+import { ICoordenadas } from "./generales/coordenadas";
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
@@ -13,6 +13,7 @@ export interface ICategoriaCliente {
   imagenReflectorPush?: string;
   imagenAdelantePush?: string;
   imagenAtrasPush?: string;
+  imagenFondo?: string;
   // virtual
   categoria?: ICategoria;
 }
