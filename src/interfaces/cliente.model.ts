@@ -49,6 +49,7 @@ export interface ICliente {
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
+  categoriasDefault: { desde: number; hasta: number; idCategoria: string }[];
   configuracion: {
     verActualizaciones: boolean;
     categoriasDeEvento?: string[];
