@@ -72,3 +72,4 @@ export * from "./interfaces/controles-rf/control-sirena.dto";
 export * from "./interfaces/controles-rf/control-sirena.model";
 // Evento
 export * from "./interfaces/eventos";
+export * from "./interfaces/auditoria";
