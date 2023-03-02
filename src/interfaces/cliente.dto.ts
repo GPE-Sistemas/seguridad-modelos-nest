@@ -13,7 +13,7 @@ export interface ICrearClienteInput {
   superficie?: number;
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
-  categoriasDefault: { desde: number; hasta: number; idCategoria: string }[];
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
   configuracion?: {
     verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
@@ -35,7 +35,7 @@ export interface IUpdateClienteInput {
   superficie?: number;
   imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;
-  categoriasDefault: { desde: number; hasta: number; idCategoria: string }[];
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
   configuracion?: {
     verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
