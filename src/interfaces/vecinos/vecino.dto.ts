@@ -4,14 +4,14 @@ import { IEnvioCodigo } from './envio-codigo.dto';
 import { DireccionV2 } from '../..';
 
 export interface INuevoVecino {
-  nombre: string;
-  dni: string;
-  sexo: boolean;
-  fechaNacimiento: string;
-  pais: string;
-  telefono: string;
-  email: string;
-  direccion: string;
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean;
+  fechaNacimiento?: string;
+  pais?: string;
+  telefono?: string;
+  email?: string;
+  direccion?: string;
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
