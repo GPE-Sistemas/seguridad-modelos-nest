@@ -9,6 +9,7 @@ export interface ICrearCategoriaInput {
   editable?: boolean;
   tercerBoton?: boolean;
   twitter: boolean;
+  nombreTemplate: string;
 }
 
 export interface IUpdateCategoriaInput {
@@ -21,4 +22,5 @@ export interface IUpdateCategoriaInput {
   idsOtrosBotones?: string[];
   twitter?: boolean;
   tercerBoton?: boolean;
+  nombreTemplate: string;
 }
