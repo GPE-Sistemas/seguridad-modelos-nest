@@ -1,3 +1,5 @@
+import { ObjectId } from "mongoose";
+
 export interface ITrackeo {
   tiempoMinutos: number;
   intervaloSegundos: number;
@@ -21,8 +23,11 @@ export interface IBoton {
   trackeo?: ITrackeo;
   editable: boolean;
   sirena?: boolean;
+  idBotonAlertaControl: ObjectId;
   // True puede mandar alertas fuera de su zona.
   global?: boolean;
   // Para elegir uno de tres sonidos
   notificacion?: string;
+  // virtuals
+  BotonAlertaControl: IBoton;
 }
