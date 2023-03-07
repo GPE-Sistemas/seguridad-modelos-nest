@@ -13,8 +13,10 @@ export interface ICategoria {
   twitter: boolean;
   tercerBoton: boolean;
   nombreTemplate: string;
+  idBotonAlertaControl: string;
   // Virtuals
   btnsPrincipales?: IBoton[];
   btnsSecundarios?: IBoton[];
   otrosBotones?: IBoton[];
+  BotonAlertaControl?: IBoton;
 }
