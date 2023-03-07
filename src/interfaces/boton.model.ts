@@ -26,5 +26,4 @@ export interface IBoton {
   global?: boolean;
   // Para elegir uno de tres sonidos
   notificacion?: string;
-  // virtuals
 }

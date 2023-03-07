@@ -18,5 +18,5 @@ export interface ICategoria {
   btnsPrincipales?: IBoton[];
   btnsSecundarios?: IBoton[];
   otrosBotones?: IBoton[];
-  BotonAlertaControl?: IBoton[];
+  BotonAlertaControl?: IBoton;
 }
