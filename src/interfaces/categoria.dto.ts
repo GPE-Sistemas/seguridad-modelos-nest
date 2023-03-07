@@ -10,7 +10,7 @@ export interface ICrearCategoriaInput {
   tercerBoton?: boolean;
   twitter: boolean;
   nombreTemplate: string;
-  idBotonAlertaControl: string;
+  idBotonAlertaControl?: string;
 }
 
 export interface IUpdateCategoriaInput {
@@ -24,5 +24,5 @@ export interface IUpdateCategoriaInput {
   twitter?: boolean;
   tercerBoton?: boolean;
   nombreTemplate: string;
-  idBotonAlertaControl: string;
+  idBotonAlertaControl?: string;
 }
