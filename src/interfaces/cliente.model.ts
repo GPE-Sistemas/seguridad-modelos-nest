@@ -50,13 +50,17 @@ export interface ICliente {
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
   categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
-  configuracion?: {
-    verActualizaciones?: boolean;
-    categoriasDeEvento?: string[];
-    tagsDeEvento?: string[];
-    nombreAppMonit?: string;
-    actualizacionesFirmware?: boolean;
-  };
+  configuracion?: IConfigCliente;
   // Virtuals
   categoriaDefault?: ICategoria;
+}
+
+export interface IConfigCliente {
+  verActualizaciones?: boolean;
+  categoriasDeEvento?: string[];
+  tagsDeEvento?: string[];
+  nombreAppMonit?: string;
+  actualizacionesFirmware?: boolean;
+  cronLimiteSirenasPor100?: number;
+  cronLimiteSirenasMax?: number;
 }
