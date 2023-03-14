@@ -50,8 +50,8 @@ export interface ICliente {
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
   categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
-  configuracion: {
-    verActualizaciones: boolean;
+  configuracion?: {
+    verActualizaciones?: boolean;
     categoriasDeEvento?: string[];
     tagsDeEvento?: string[];
     nombreAppMonit?: string;
