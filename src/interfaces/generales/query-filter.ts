@@ -1,42 +1,27 @@
-export interface IQueryFilterInput {
-  page?: number;
-  limit?: number;
+export interface IQueryParam {
+  // page: es el número de página a devolver de los resultados, comenzando desde cero.
+  page?: string | number;
+  // limit: es la cantidad de resultados que debe devolver la consulta, cero para sin límite.
+  limit?: string | number;
+  // sort: es el orden en que se devolverán los datos, es el nombre de una propiedad de la entidad, ej. ‘username’ para orden ascendente o ‘-username’ para orden descendente.
   sort?: string;
-  /**
-   * @description
-   * Es un array IFilter en string
-   * @example
-   * filter = JSON.stringify([
-   *  {
-   *   field: 'nombre',
-   *   type: string,
-   *   value: 'nombre',
-   *  },
-   *  {
-   *   field: 'idCliente',
-   *   type: objectid,
-   *   value: 'idCliente',
-   *  },
-   * ]);
-   */
+  // filter: es un objeto con la misma estructura que recibe MongoDb para hacer las querys.
   filter?: string;
-  /**
-   * @description
-   * Representa un string u objeto para populate tal cual lo recibe mongoose para la query
-   * @example
-   * populate = 'cliente'
-   * populate = JSON.stringify({
-   *  path: 'cliente',
-   *  select: 'nombre',
-   * });
-   */
+  // populate: es un String u objeto con la misma estructura que recibe Mongoose.
   populate?: string;
+  // select: es un String que contiene separados por espacio todos los campos de la entidad que se desean obtener en la consulta, si no se proporciona se devuelve el objeto completo.
   select?: string;
+  // Se deja un campo genérico para agregar cualquier otro parámetro no contemplado.
   [key: string]: any;
 }
 
 export interface IFilter {
-  field: string | string[];
-  type: 'number' | 'string' | 'boolean' | 'date' | 'object' | 'regex' | 'objectid';
-  value: any;
+  [key: string]: any;
+}
+
+export interface IPopulate {
+  path?: string;
+  select?: string;
+  populate?: IPopulate;
+  [key: string]: any;
 }
