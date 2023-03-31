@@ -27,6 +27,7 @@ export interface ICrearSirena {
   acumuladoSirena?: number;
   tipo?: string;
   errorSd?: string | null;
+  errorActualizacion?: boolean;
   datosHw?: {
     numeroNac?: string;
     version?: string;
@@ -60,6 +61,7 @@ export interface IUpdateSirena {
   acumuladoSirena?: number;
   tipo?: string;
   errorSd?: string | null;
+  errorActualizacion?: boolean;
   datosHw?: {
     numeroNac?: string;
     version?: string;

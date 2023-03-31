@@ -64,6 +64,7 @@ export interface IUpdateVecino {
   telefono?: string;
   email?: string;
   ubicacion?: ICoordenadasInput;
+  tokenPush?: string;
 }
 
 export interface IUpdateDomicilioVecino {

@@ -68,6 +68,8 @@ export interface ISirena {
 
   errorSd?: string | null;
 
+  errorActualizacion?: boolean;
+
   /**
    * Tipo de dispositivo para el frontend, solo puede ser Sirena o Tótem.
    */

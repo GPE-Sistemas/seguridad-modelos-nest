@@ -37,6 +37,7 @@ export interface IVecino {
   envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
   ultimoAcceso?: string;
+  tokenPush?: string;
   // Virtuals
   cliente?: ICliente;
 }
