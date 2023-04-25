@@ -24,7 +24,7 @@ export interface INuevoVecino {
 export interface ICrearVecino {
   nombre: string;
   dni: string;
-  sexo: boolean;
+  sexo: boolean | null;
   telefono: string;
   idCliente: string;
   activo?: boolean;
@@ -58,7 +58,7 @@ export interface IUpdateVecino {
   ultimoAcceso?: string;
   nombre?: string;
   dni?: string;
-  sexo?: boolean;
+  sexo?: boolean | null;
   fechaNacimiento?: string;
   pais?: string;
   telefono?: string;
@@ -87,14 +87,14 @@ export interface IResumenVecinosPorCategoria {
 }
 
 export interface IResumenVecinosPorSexo {
-  sexo: boolean;
+  sexo: boolean | null;
   cantidad: number;
 }
 
 export interface IUpdateVecinoDatos {
   nombre: string;
   dni: string;
-  sexo: boolean;
+  sexo: boolean | null;
   fechaNacimiento: string;
   pais: string;
   telefono: string;

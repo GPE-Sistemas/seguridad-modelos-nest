@@ -18,7 +18,7 @@ export interface IVecino {
   creadoPorAdmin: boolean;
   nombre: string;
   dni: string;
-  sexo: boolean;
+  sexo: boolean | null;
   idCliente: string;
   email?: string;
   /**
