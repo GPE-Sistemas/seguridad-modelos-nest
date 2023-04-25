@@ -24,7 +24,7 @@ export interface INuevoVecino {
 export interface ICrearVecino {
   nombre: string;
   dni: string;
-  sexo: boolean | null;
+  sexo?: boolean | null;
   telefono: string;
   idCliente: string;
   activo?: boolean;
