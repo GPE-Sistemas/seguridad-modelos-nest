@@ -222,6 +222,7 @@ export interface IDataAuthSirena {
 }
 
 export interface IDataUbicacionSirena {
+  chipId: string;
   lat: number;
   lng: number;
 }
