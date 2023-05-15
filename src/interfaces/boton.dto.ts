@@ -21,6 +21,7 @@ export interface ICrearBotonInput {
   editable?: boolean;
   sirena?: boolean;
   global?: boolean;
+  codigoSmartCity?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
 }
@@ -36,6 +37,7 @@ export interface IUpdateBotonInput {
   trackeo?: ICrearTrackeoInput;
   sirena?: boolean;
   global?: boolean;
+  codigoSmartCity?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
 }

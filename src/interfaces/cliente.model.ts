@@ -1,5 +1,5 @@
-import { ICategoria } from '..';
-import { ICoordenadas } from './generales/coordenadas';
+import { ICategoria } from "..";
+import { ICoordenadas } from "./generales/coordenadas";
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
@@ -63,4 +63,5 @@ export interface IConfigCliente {
   actualizacionesFirmware?: boolean;
   cronLimiteSirenasPor100?: number;
   cronLimiteSirenasMax?: number;
+  hostSmartCity?: string;
 }

@@ -21,9 +21,9 @@ export interface IBoton {
   trackeo?: ITrackeo;
   editable: boolean;
   sirena?: boolean;
-
   // True puede mandar alertas fuera de su zona.
   global?: boolean;
+  codigoSmartCity?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
 }
