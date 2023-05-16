@@ -1,4 +1,4 @@
-import { FuncionBoton } from "./boton.model";
+import { FuncionBoton } from './boton.model';
 
 export interface ICrearTrackeoInput {
   tiempoMinutos: number;
@@ -22,6 +22,7 @@ export interface ICrearBotonInput {
   sirena?: boolean;
   global?: boolean;
   codigoSmartCity?: string;
+  link?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
 }
@@ -38,6 +39,7 @@ export interface IUpdateBotonInput {
   sirena?: boolean;
   global?: boolean;
   codigoSmartCity?: string;
+  link?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
 }
