@@ -5,6 +5,8 @@ export interface IAlertaEstado {
   _id: string;
   idAlerta: string;
   idCliente?: string;
+  idVecino?: string;
+  idUsuario?: string;
   fecha: string;
   estado: estados;
   nota: string;
