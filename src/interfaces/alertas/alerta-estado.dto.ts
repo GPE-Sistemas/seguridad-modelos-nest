@@ -9,6 +9,7 @@ export enum estados {
 
 export interface ICrearAlertaEstadoInput {
   idAlerta: string;
+  idCliente?: string;
   estado: estados;
   notaPredefinida?: string;
   nota?: string;

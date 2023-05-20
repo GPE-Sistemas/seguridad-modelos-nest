@@ -4,6 +4,7 @@ import { IAlerta } from "./alerta.model";
 export interface IAlertaEstado {
   _id: string;
   idAlerta: string;
+  idCliente?: string;
   fecha: string;
   estado: estados;
   nota: string;
