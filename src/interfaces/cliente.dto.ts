@@ -1,4 +1,8 @@
-import { ICategoriaCliente, IImagenesCliente } from './cliente.model';
+import {
+  ICategoriaCliente,
+  IConfigCliente,
+  IImagenesCliente,
+} from './cliente.model';
 import { ICoordenadasInput } from './generales/coordenadas';
 
 export interface ICrearClienteInput {
@@ -13,11 +17,8 @@ export interface ICrearClienteInput {
   superficie?: number;
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
-  configuracion?: {
-    verActualizaciones?: boolean;
-    categoriasDeEvento?: string[];
-    tagsDeEvento?: string[];
-  };
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
+  configuracion?: IConfigCliente;
 }
 
 export interface IUpdateClienteInput {
@@ -33,11 +34,8 @@ export interface IUpdateClienteInput {
   superficie?: number;
   imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;
-  configuracion?: {
-    verActualizaciones?: boolean;
-    categoriasDeEvento?: string[];
-    tagsDeEvento?: string[];
-  };
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
+  configuracion?: IConfigCliente;
 }
 
 export interface IResumenClientes {

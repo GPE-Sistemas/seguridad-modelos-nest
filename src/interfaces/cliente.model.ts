@@ -13,6 +13,7 @@ export interface ICategoriaCliente {
   imagenReflectorPush?: string;
   imagenAdelantePush?: string;
   imagenAtrasPush?: string;
+  imagenFondo?: string;
   // virtual
   categoria?: ICategoria;
 }
@@ -48,11 +49,22 @@ export interface ICliente {
   categorias?: ICategoriaCliente[];
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
-  configuracion: {
-    verActualizaciones: boolean;
-    categoriasDeEvento?: string[];
-    tagsDeEvento?: string[];
-  };
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
+  configuracion?: IConfigCliente;
   // Virtuals
   categoriaDefault?: ICategoria;
+}
+
+export interface IConfigCliente {
+  verActualizaciones?: boolean;
+  categoriasDeEvento?: string[];
+  tagsDeEvento?: string[];
+  nombreAppMonit?: string;
+  actualizacionesFirmware?: boolean;
+  cronLimiteSirenasPor100?: number;
+  cronLimiteSirenasMax?: number;
+  hostSmartCity?: string;
+  //COLORES
+  colorInstalar?: string;
+  colorMenu?: string;
 }

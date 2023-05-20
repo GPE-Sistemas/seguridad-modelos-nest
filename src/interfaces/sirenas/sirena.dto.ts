@@ -27,6 +27,7 @@ export interface ICrearSirena {
   acumuladoSirena?: number;
   tipo?: string;
   errorSd?: string | null;
+  errorActualizacion?: boolean;
   datosHw?: {
     numeroNac?: string;
     version?: string;
@@ -60,6 +61,7 @@ export interface IUpdateSirena {
   acumuladoSirena?: number;
   tipo?: string;
   errorSd?: string | null;
+  errorActualizacion?: boolean;
   datosHw?: {
     numeroNac?: string;
     version?: string;
@@ -98,6 +100,47 @@ enum ETipoEventoSirena {
   ENCENDER_BALIZA_OPERADOR = "ENCENDER_BALIZA_OPERADOR",
   ENCENDER_SONIDO_OPERADOR = "ENCENDER_SONIDO_OPERADOR",
   ENCENDER_PANICO_OPERADOR = "ENCENDER_PANICO_OPERADOR",
+  ENCENDER_BALIZA_CONTROL = "ENCENDER_BALIZA_CONTROL",
+  ENCENDER_SONIDO_CONTROL = "ENCENDER_SONIDO_CONTROL",
+  ENCENDER_PANICO_CONTROL = "ENCENDER_PANICO_CONTROL",
+}
+
+enum ETipoEventoMensajeSirena {
+  AUTH_SIRENA = "AUTH_SIRENA",
+  UBICACION_SIRENA = "UBICACION_SIRENA",
+  SONIDO_ENCENDIDO = "SONIDO_ENCENDIDO",
+  SONIDO_ENCENDIDO_OPERADOR = "SONIDO_ENCENDIDO_OPERADOR",
+  SONIDO_APAGADO = "SONIDO_APAGADO",
+  SONIDO_APAGADO_OPERADOR = "SONIDO_APAGADO_OPERADOR",
+  BALIZA_ENCENDIDA = "BALIZA_ENCENDIDA",
+  BALIZA_ENCENDIDA_OPERADOR = "BALIZA_ENCENDIDA_OPERADOR",
+  BALIZA_APAGADA = "BALIZA_APAGADA",
+  BALIZA_APAGADA_OPERADOR = "BALIZA_APAGADA_OPERADOR",
+  PANICO_ENCENDIDO = "PANICO_ENCENDIDO",
+  PANICO_ENCENDIDO_OPERADOR = "PANICO_ENCENDIDO_OPERADOR",
+  PANICO_APAGADO = "PANICO_APAGADO",
+  PANICO_APAGADO_OPERADOR = "PANICO_APAGADO_OPERADOR",
+  CONTROL_NO_CONOCIDO = "CONTROL_NO_CONOCIDO",
+  ERROR_SD = "ERROR_SD",
+  CONTROL_PANICO = "CONTROL_PANICO",
+}
+
+enum ETipoEventoComandoSirena {
+  ENCENDER_PANICO = "ENCENDER_PANICO",
+  ENCENDER_PANICO_OPERADOR = "ENCENDER_PANICO_OPERADOR",
+  ENCENDER_PANICO_CONTROL = "ENCENDER_PANICO_CONTROL",
+  ENCENDER_BALIZA = "ENCENDER_BALIZA",
+  ENCENDER_BALIZA_OPERADOR = "ENCENDER_BALIZA_OPERADOR",
+  ENCENDER_BALIZA_CONTROL = "ENCENDER_BALIZA_CONTROL",
+  ENCENDER_SONIDO = "ENCENDER_SONIDO",
+  ENCENDER_SONIDO_OPERADOR = "ENCENDER_SONIDO_OPERADOR",
+  ENCENDER_SONIDO_CONTROL = "ENCENDER_SONIDO_CONTROL",
+  COMANDO_RF = "COMANDO_RF",
+  CONTROL_BORRAR = "CONTROL_BORRAR",
+  CONTROL_AGREGAR = "CONTROL_AGREGAR",
+  AUDIO_CLIENTE = "AUDIO_CLIENTE",
+  COMANDO_RESET = "COMANDO_RESET",
+  ACTUALIZAR_FIRMWARE = "ACTUALIZAR_FIRMWARE",
 }
 
 export type TipoEventoSirena =
@@ -123,7 +166,46 @@ export type TipoEventoSirena =
   | "ERROR_SD"
   | "ENCENDER_BALIZA_OPERADOR"
   | "ENCENDER_SONIDO_OPERADOR"
-  | "ENCENDER_PANICO_OPERADOR";
+  | "ENCENDER_PANICO_OPERADOR"
+  | "ENCENDER_BALIZA_CONTROL"
+  | "ENCENDER_SONIDO_CONTROL"
+  | "ENCENDER_PANICO_CONTROL";
+
+export type TipoEventoMensajeSirena =
+  | "AUTH_SIRENA"
+  | "UBICACION_SIRENA"
+  | "SONIDO_ENCENDIDO"
+  | "SONIDO_ENCENDIDO_OPERADOR"
+  | "SONIDO_APAGADO"
+  | "SONIDO_APAGADO_OPERADOR"
+  | "BALIZA_ENCENDIDA"
+  | "BALIZA_ENCENDIDA_OPERADOR"
+  | "BALIZA_APAGADA"
+  | "BALIZA_APAGADA_OPERADOR"
+  | "PANICO_ENCENDIDO"
+  | "PANICO_ENCENDIDO_OPERADOR"
+  | "PANICO_APAGADO"
+  | "PANICO_APAGADO_OPERADOR"
+  | "CONTROL_NO_CONOCIDO"
+  | "ERROR_SD"
+  | "CONTROL_PANICO";
+
+export type TipoEventoComandoSirena =
+  | "ENCENDER_PANICO"
+  | "ENCENDER_PANICO_OPERADOR"
+  | "ENCENDER_PANICO_CONTROL"
+  | "ENCENDER_BALIZA"
+  | "ENCENDER_BALIZA_OPERADOR"
+  | "ENCENDER_BALIZA_CONTROL"
+  | "ENCENDER_SONIDO"
+  | "ENCENDER_SONIDO_OPERADOR"
+  | "ENCENDER_SONIDO_CONTROL"
+  | "COMANDO_RF"
+  | "CONTROL_BORRAR"
+  | "CONTROL_AGREGAR"
+  | "AUDIO_CLIENTE"
+  | "COMANDO_RESET"
+  | "ACTUALIZAR_FIRMWARE";
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -140,6 +222,7 @@ export interface IDataAuthSirena {
 }
 
 export interface IDataUbicacionSirena {
+  chipId: string;
   lat: number;
   lng: number;
 }
@@ -248,7 +331,20 @@ export interface IMensajeAudioClienteSirena {
 }
 
 export interface IMensajeSirena {
-  event: TipoEventoSirena;
+  event: TipoEventoMensajeSirena;
+  data:
+    | IDataBalizaSirena
+    | IDataSonidoSirena
+    | IDataActualizarFirmwareSirena
+    | IDataPerifoneoSirena
+    | IDataControlSirena
+    | IDataAudioClienteSirena
+    | IDataBalizaSirenaOperador
+    | IDataSonidoSirenaOperador;
+}
+
+export interface IComandoSirena {
+  event: TipoEventoComandoSirena;
   data:
     | IDataBalizaSirena
     | IDataSonidoSirena

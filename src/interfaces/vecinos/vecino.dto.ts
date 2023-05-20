@@ -1,17 +1,17 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
-import { ICoordenadasInput } from '../generales/coordenadas';
-import { IEnvioCodigo } from './envio-codigo.dto';
-import { DireccionV2 } from '../..';
+import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
+import { ICoordenadasInput } from "../generales/coordenadas";
+import { IEnvioCodigo } from "./envio-codigo.dto";
+import { DireccionV2 } from "../..";
 
 export interface INuevoVecino {
-  nombre: string;
-  dni: string;
-  sexo: boolean;
-  fechaNacimiento: string;
-  pais: string;
-  telefono: string;
-  email: string;
-  direccion: string;
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean;
+  fechaNacimiento?: string;
+  pais?: string;
+  telefono?: string;
+  email?: string;
+  direccion?: string;
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
@@ -19,17 +19,18 @@ export interface INuevoVecino {
    * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
    */
   ubicacion?: ICoordenadasInput;
+  idSmartCity?: string;
 }
 
 export interface ICrearVecino {
-  nombre: string;
-  dni: string;
-  sexo: boolean;
-  telefono: string;
-  idCliente: string;
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean | null;
+  telefono?: string;
+  idCliente?: string;
   activo?: boolean;
   email?: string;
-  direccion: string;
+  direccion?: string;
   direccionV2?: DireccionV2;
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
@@ -40,7 +41,8 @@ export interface ICrearVecino {
   fechaNacimiento?: string;
   // categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
-  creadoPorAdmin: boolean;
+  creadoPorAdmin?: boolean;
+  idSmartCity?: string;
 }
 
 export interface IUpdateVecino {
@@ -58,19 +60,21 @@ export interface IUpdateVecino {
   ultimoAcceso?: string;
   nombre?: string;
   dni?: string;
-  sexo?: boolean;
+  sexo?: boolean | null;
   fechaNacimiento?: string;
   pais?: string;
   telefono?: string;
   email?: string;
   ubicacion?: ICoordenadasInput;
+  tokenPush?: string;
+  idSmartCity?: string;
 }
 
 export interface IUpdateDomicilioVecino {
-  direccion: string;
+  direccion?: string;
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
-  ubicacion: ICoordenadasInput;
+  ubicacion?: ICoordenadasInput;
 }
 
 // Resumen
@@ -86,23 +90,24 @@ export interface IResumenVecinosPorCategoria {
 }
 
 export interface IResumenVecinosPorSexo {
-  sexo: boolean;
+  sexo: boolean | null;
   cantidad: number;
 }
 
 export interface IUpdateVecinoDatos {
-  nombre: string;
-  dni: string;
-  sexo: boolean;
-  fechaNacimiento: string;
-  pais: string;
-  telefono: string;
-  email: string;
+  nombre?: string;
+  dni?: string;
+  sexo?: boolean | null;
+  fechaNacimiento?: string;
+  pais?: string;
+  telefono?: string;
+  email?: string;
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
-  direccion: string;
+  direccion?: string;
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
-  ubicacion: ICoordenadasInput;
+  ubicacion?: ICoordenadasInput;
+  idSmartCity?: string;
 }

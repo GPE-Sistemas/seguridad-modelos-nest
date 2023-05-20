@@ -1,7 +1,7 @@
-import { DireccionV2, ICoordenadas } from '../..';
-import { ICliente } from '../cliente.model';
-import { ICategoriaVecino } from './categoria-vecino.model';
-import { IEnvioCodigo } from './envio-codigo.dto';
+import { DireccionV2, ICoordenadas } from "../..";
+import { ICliente } from "../cliente.model";
+import { ICategoriaVecino } from "./categoria-vecino.model";
+import { IEnvioCodigo } from "./envio-codigo.dto";
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -18,7 +18,7 @@ export interface IVecino {
   creadoPorAdmin: boolean;
   nombre: string;
   dni: string;
-  sexo: boolean;
+  sexo?: boolean | null;
   idCliente: string;
   email?: string;
   /**
@@ -37,6 +37,8 @@ export interface IVecino {
   envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
   ultimoAcceso?: string;
+  tokenPush?: string;
+  idSmartCity?: string;
   // Virtuals
   cliente?: ICliente;
 }

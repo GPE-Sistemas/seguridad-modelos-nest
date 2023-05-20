@@ -12,6 +12,10 @@ export interface ISocketMessage {
    */
   idUser?: string;
   /**
+   * El id del cliente del usuario que ejecutó la accion
+   */
+  idCliente?: string;
+  /**
    * El body que se devolvio al usuario
    * En caso de post o put, el body es el nuevo objeto
    * En caso de delete, el body es un objeto { _id: "id del objeto eliminado" }
