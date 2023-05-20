@@ -1,5 +1,6 @@
 export interface ICrearAlertaMensaje {
   idAlerta?: string;
+  idCliente?: string;
   mensaje?: string;
   remitente?: string;
 }
