@@ -23,6 +23,7 @@ export interface ICrearAlerta {
   idCategoria: string;
   prioridad: number;
   estadoActual?: estados;
+  activa?: boolean;
 }
 
 export interface IUpdateAlerta {
