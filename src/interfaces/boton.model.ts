@@ -7,7 +7,7 @@ export interface ITrackeo {
   video: boolean;
 }
 
-export type FuncionBoton = 'Alerta' | 'Sirena' | 'Reflector' | '911' | 'Link';
+export type FuncionBoton = "Alerta" | "Sirena" | "Reflector" | "911" | "Link";
 
 export interface IBoton {
   _id: string;
@@ -27,4 +27,6 @@ export interface IBoton {
   codigoSmartCity?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
+  // para que el botón no sirva para nada
+  finalizacionAutomatica?: boolean;
 }
