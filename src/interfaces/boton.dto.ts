@@ -22,8 +22,11 @@ export interface ICrearBotonInput {
   sirena?: boolean;
   global?: boolean;
   codigoSmartCity?: string;
+  link?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
+  // para que el botón no sirva para nada
+  finalizacionAutomatica?: boolean;
 }
 
 export interface IUpdateBotonInput {
@@ -38,6 +41,9 @@ export interface IUpdateBotonInput {
   sirena?: boolean;
   global?: boolean;
   codigoSmartCity?: string;
+  link?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
+  // para que el botón no sirva para nada
+  finalizacionAutomatica?: boolean;
 }

@@ -1,5 +1,6 @@
 export interface ICrearAlertaMedia {
   idAlerta: string;
+  idCliente?: string;
   tipo: string;
   mime: string;
   url: string;
