@@ -1,9 +1,9 @@
-import { ICoordenadasInput } from '../..';
-import { estados } from './alerta-estado.dto';
-import { IAlertaEstado } from './alerta-estado.model';
-import { IAlertaMedia } from './alerta-media.model';
-import { IAlertaUbicacion } from './alerta-ubicacion.model';
-import { IAlerta } from './alerta.model';
+import { ICoordenadasInput } from "../..";
+import { estados } from "./alerta-estado.dto";
+import { IAlertaEstado } from "./alerta-estado.model";
+import { IAlertaMedia } from "./alerta-media.model";
+import { IAlertaUbicacion } from "./alerta-ubicacion.model";
+import { IAlerta } from "./alerta.model";
 
 // Lo que envia el frontend
 export interface INuevaAlerta {
@@ -22,6 +22,7 @@ export interface ICrearAlerta {
   idBoton: string;
   idCategoria: string;
   prioridad: number;
+  estadoActual?: estados;
 }
 
 export interface IUpdateAlerta {
