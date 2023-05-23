@@ -16,6 +16,8 @@ export interface IVecino {
   activo: boolean;
   fechaCreacion: string;
   creadoPorAdmin: boolean;
+  importado?: boolean;
+  dniEscaneado?: boolean;
   nombre: string;
   dni: string;
   sexo?: boolean | null;

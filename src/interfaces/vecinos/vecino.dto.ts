@@ -42,6 +42,8 @@ export interface ICrearVecino {
   // categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
   creadoPorAdmin?: boolean;
+  importado?: boolean;
+  dniEscaneado?: boolean;
   idSmartCity?: string;
 }
 
