@@ -7,6 +7,13 @@ export interface ITrackeo {
   video: boolean;
 }
 
+export interface IEnvioMultimedia {
+  gps: boolean;
+  foto: boolean;
+  audio: boolean;
+  video: boolean;
+}
+
 export type FuncionBoton = "Alerta" | "Sirena" | "Reflector" | "911" | "Link";
 
 export interface IBoton {
@@ -19,6 +26,7 @@ export interface IBoton {
   urlImagen?: string;
   urlImagenPush?: string;
   trackeo?: ITrackeo;
+  envioMultimedia?: IEnvioMultimedia;
   editable: boolean;
   sirena?: boolean;
   link?: string;

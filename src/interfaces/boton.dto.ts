@@ -1,4 +1,4 @@
-import { FuncionBoton } from "./boton.model";
+import { FuncionBoton, IEnvioMultimedia } from "./boton.model";
 
 export interface ICrearTrackeoInput {
   tiempoMinutos: number;
@@ -18,6 +18,7 @@ export interface ICrearBotonInput {
   urlImagen?: string;
   urlImagenPush?: string;
   trackeo: ICrearTrackeoInput;
+  envioMultimedia?: IEnvioMultimedia;
   editable?: boolean;
   sirena?: boolean;
   global?: boolean;
@@ -38,6 +39,7 @@ export interface IUpdateBotonInput {
   urlImagen?: string;
   urlImagenPush?: string;
   trackeo?: ICrearTrackeoInput;
+  envioMultimedia?: IEnvioMultimedia;
   sirena?: boolean;
   global?: boolean;
   codigoSmartCity?: string;
