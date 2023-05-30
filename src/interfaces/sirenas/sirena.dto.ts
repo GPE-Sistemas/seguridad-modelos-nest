@@ -10,6 +10,8 @@ export interface ICrearSirena {
   direccionGps?: string;
   ubicacionManual?: ICoordenadas;
   direccionManual?: string;
+  idLocalidad?: string;
+  idBarrio?: string;
   idCliente?: string;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;
@@ -43,6 +45,8 @@ export interface IUpdateSirena {
   direccionGps?: string;
   ubicacionManual?: ICoordenadas;
   direccionManual?: string;
+  idLocalidad?: string;
+  idBarrio?: string;
   idCliente?: string;
   luzEncendida?: boolean;
   sonidoEncendido?: boolean;

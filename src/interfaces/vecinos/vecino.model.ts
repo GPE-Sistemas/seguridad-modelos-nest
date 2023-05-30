@@ -1,4 +1,4 @@
-import { DireccionV2, ICoordenadas } from "../..";
+import { DireccionV2, IBarrio, ICoordenadas, ILocalidad } from "../..";
 import { ICliente } from "../cliente.model";
 import { ICategoriaVecino } from "./categoria-vecino.model";
 import { IEnvioCodigo } from "./envio-codigo.dto";
@@ -23,6 +23,8 @@ export interface IVecino {
   sexo?: boolean | null;
   idCliente: string;
   email?: string;
+  idLocalidad?: string;
+  idBarrio?: string;
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
@@ -43,4 +45,6 @@ export interface IVecino {
   idSmartCity?: string;
   // Virtuals
   cliente?: ICliente;
+  localidad?: ILocalidad;
+  barrio?: IBarrio;
 }

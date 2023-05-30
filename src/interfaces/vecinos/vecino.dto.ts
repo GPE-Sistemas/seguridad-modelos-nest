@@ -32,6 +32,8 @@ export interface ICrearVecino {
   email?: string;
   direccion?: string;
   direccionV2?: DireccionV2;
+  idLocalidad?: string;
+  idBarrio?: string;
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
@@ -53,6 +55,8 @@ export interface IUpdateVecino {
   envioCodigo?: IEnvioCodigo;
   direccion?: string;
   direccionV2?: DireccionV2;
+  idLocalidad?: string;
+  idBarrio?: string;
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */

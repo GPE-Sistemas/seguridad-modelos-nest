@@ -1,5 +1,5 @@
-import { ICliente } from '../cliente.model';
-import { ICoordenadas, ISim } from '../..';
+import { ICliente } from "../cliente.model";
+import { IBarrio, ICoordenadas, ILocalidad, ISim } from "../..";
 
 export interface ISirena {
   _id: string;
@@ -24,6 +24,8 @@ export interface ISirena {
    */
   ubicacionManual: ICoordenadas;
   direccionManual: string;
+  idLocalidad?: string;
+  idBarrio?: string;
   /**
    * Cliente determinado por la ubicacion
    */
@@ -90,4 +92,8 @@ export interface ISirena {
   cliente?: ICliente;
 
   sim?: ISim;
+
+  localidad?: ILocalidad;
+
+  barrio?: IBarrio;
 }
