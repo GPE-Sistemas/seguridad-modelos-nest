@@ -6,7 +6,7 @@ import { ICliente } from "../cliente.model";
 import { ICoordenadas } from "../generales/coordenadas";
 import { IUsuario } from "../usuario.model";
 import { IZona } from "../zona.model";
-import { IVecino } from "../..";
+import { IBarrio, ILocalidad, IVecino } from "../..";
 
 export interface IAlerta {
   _id: string;
@@ -26,6 +26,8 @@ export interface IAlerta {
   idUsuario: string;
   idVecino: string;
   idZona: string;
+  idLocalidad?: string;
+  idBarrio?: string;
 
   // Virtuals
   boton?: IBoton;
@@ -35,4 +37,6 @@ export interface IAlerta {
   usuario?: IUsuario;
   vecino?: IVecino;
   zona?: IZona;
+  localidad?: ILocalidad;
+  barrio?: IBarrio;
 }

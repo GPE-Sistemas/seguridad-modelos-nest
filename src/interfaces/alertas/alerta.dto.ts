@@ -20,6 +20,8 @@ export interface ICrearAlerta {
   idsCentrosMonitoreo: string[];
   idZona: string;
   idBoton: string;
+  idLocalidad?: string;
+  idBarrio?: string;
   idCategoria: string;
   prioridad: number;
   estadoActual?: estados;
