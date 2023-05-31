@@ -84,3 +84,5 @@ export * from "./interfaces/localidades/localidad.model";
 export * from "./interfaces/barrios/barrio.model";
 // Ubicación
 export * from "./interfaces/auxiliares/ubicacion.model";
+//
+export * from "./interfaces/notificacion";
