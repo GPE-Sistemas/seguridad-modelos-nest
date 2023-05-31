@@ -5,6 +5,7 @@ export interface INotificacion {
   fechaCreacion?: Date;
   leido?: boolean;
   fechaLeido?: string;
+  idCliente?: string;
 
   idVecino?: string;
   titulo?: string;
