@@ -41,7 +41,7 @@ export interface IVecino {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
   pais: string;
   telefono: string;

@@ -25,7 +25,7 @@ export interface INuevoVecino {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
   idSmartCity?: string;
 }
@@ -53,7 +53,7 @@ export interface ICrearVecino {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
   pais?: string;
   fechaNacimiento?: string;
@@ -84,7 +84,7 @@ export interface IUpdateVecino {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
   idCliente?: string;
   ultimoAcceso?: string;
@@ -111,7 +111,7 @@ export interface IUpdateDomicilioVecino {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
 }
 
@@ -153,7 +153,7 @@ export interface IUpdateVecinoDatos {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: GeoJSONType;
-    coordinates: number[];
+    coordinates: [number, number] | [number, number][];
   };
   idSmartCity?: string;
 }
