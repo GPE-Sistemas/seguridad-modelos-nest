@@ -1,7 +1,7 @@
-import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
-import { ICoordenadasInput } from "../generales/coordenadas";
-import { IEnvioCodigo } from "./envio-codigo.dto";
-import { DireccionV2 } from "../..";
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
+import { ICoordenadasInput } from '../generales/coordenadas';
+import { IEnvioCodigo } from './envio-codigo.dto';
+import { DireccionV2, GeoJSONType } from '../..';
 
 export interface INuevoVecino {
   nombre?: string;
@@ -19,6 +19,14 @@ export interface INuevoVecino {
    * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
    */
   ubicacion?: ICoordenadasInput;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: number[];
+  };
   idSmartCity?: string;
 }
 
@@ -39,6 +47,14 @@ export interface ICrearVecino {
    */
   ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: number[];
+  };
   pais?: string;
   fechaNacimiento?: string;
   // categoria?: ICrearCategoriaVecinoInput;
@@ -62,6 +78,14 @@ export interface IUpdateVecino {
    */
   ubicacionDireccion?: ICoordenadasInput;
   complementoDireccion?: string;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: number[];
+  };
   idCliente?: string;
   ultimoAcceso?: string;
   nombre?: string;
@@ -81,6 +105,14 @@ export interface IUpdateDomicilioVecino {
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
   ubicacion?: ICoordenadasInput;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: number[];
+  };
 }
 
 // Resumen
@@ -115,5 +147,13 @@ export interface IUpdateVecinoDatos {
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
   ubicacion?: ICoordenadasInput;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: number[];
+  };
   idSmartCity?: string;
 }
