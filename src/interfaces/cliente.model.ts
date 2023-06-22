@@ -45,7 +45,7 @@ export interface ICliente {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'MultiPolygon';
-    coordinates: [number, number][][];
+    coordinates: [number, number][][][];
   };
   superficie?: number;
   fechaCreacion: string;

@@ -10,7 +10,7 @@ export interface ICrearZonaInput {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   superficie?: number;
   idCliente: string;
@@ -26,7 +26,7 @@ export interface IUpdateZonaInput {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   superficie?: number;
   idsPrioridad?: string[];
@@ -41,7 +41,7 @@ export interface INuevaZonaInput {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   superficie?: number;
   idsPrioridad: string[];

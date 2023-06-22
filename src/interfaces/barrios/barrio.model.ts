@@ -11,7 +11,7 @@ export interface IBarrio {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
   idLocalidad?: string;
@@ -28,7 +28,7 @@ export interface ICreateBarrio {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
   idLocalidad?: string;
@@ -43,7 +43,7 @@ export interface IUpdateBarrio {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
   idLocalidad?: string;

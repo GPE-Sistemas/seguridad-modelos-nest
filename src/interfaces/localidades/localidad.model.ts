@@ -11,7 +11,7 @@ export interface ILocalidad {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
 }
@@ -25,7 +25,7 @@ export interface ICreateLocalidad {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
 }
@@ -39,7 +39,7 @@ export interface IUpdateLocalidad {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   idCliente?: string;
 }

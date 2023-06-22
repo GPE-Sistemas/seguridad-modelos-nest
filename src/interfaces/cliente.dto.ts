@@ -20,7 +20,7 @@ export interface ICrearClienteInput {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'MultiPolygon';
-    coordinates: [number, number][][];
+    coordinates: [number, number][][][];
   };
   superficie?: number;
   imagenes: IImagenesCliente;
@@ -45,7 +45,7 @@ export interface IUpdateClienteInput {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'MultiPolygon';
-    coordinates: [number, number][][];
+    coordinates: [number, number][][][];
   };
   superficie?: number;
   imagenes?: IImagenesCliente;

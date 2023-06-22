@@ -13,7 +13,7 @@ export interface IZona {
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: 'Polygon';
-    coordinates: [number, number][];
+    coordinates: [number, number][][];
   };
   superficie?: number;
   idCliente: string;
