@@ -1,6 +1,6 @@
-import { IAlerta } from "../alertas/alerta.model";
-import { ICoordenadas } from "../generales/coordenadas";
-import { IVecino } from "../vecinos/vecino.model";
+import { IAlerta } from '../alertas/alerta.model';
+import { ICoordenadas } from '../generales/coordenadas';
+import { IVecino } from '../vecinos/vecino.model';
 
 export interface IEvento {
   _id: string;
@@ -11,6 +11,14 @@ export interface IEvento {
   tags: string[];
   direccion?: string;
   coordenadas?: ICoordenadas;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: 'Point';
+    coordinates: [number, number];
+  };
   idVecino?: string;
   idAlerta?: string;
   observaciones?: string;

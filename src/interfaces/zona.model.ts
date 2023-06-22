@@ -12,8 +12,8 @@ export interface IZona {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   idCliente: string;

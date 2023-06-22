@@ -13,8 +13,8 @@ export interface ICrearSirena {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Point';
+    coordinates: [number, number];
   };
   ubicacionManual?: ICoordenadas;
   direccionManual?: string;
@@ -56,8 +56,8 @@ export interface IUpdateSirena {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Point';
+    coordinates: [number, number];
   };
   ubicacionManual?: ICoordenadas;
   direccionManual?: string;

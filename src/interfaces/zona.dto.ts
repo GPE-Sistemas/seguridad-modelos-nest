@@ -9,8 +9,8 @@ export interface ICrearZonaInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   idCliente: string;
@@ -25,8 +25,8 @@ export interface IUpdateZonaInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   idsPrioridad?: string[];
@@ -40,8 +40,8 @@ export interface INuevaZonaInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   idsPrioridad: string[];

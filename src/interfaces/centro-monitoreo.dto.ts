@@ -9,8 +9,8 @@ export interface ICrearCentroMonitoreoInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Point';
+    coordinates: [number, number];
   };
   idCliente: string;
 }
@@ -23,8 +23,8 @@ export interface IUpdateCentroMonitoreoInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Point';
+    coordinates: [number, number];
   };
 }
 
@@ -36,7 +36,7 @@ export interface INuevoCentroMonitoreoInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Point';
+    coordinates: [number, number];
   };
 }

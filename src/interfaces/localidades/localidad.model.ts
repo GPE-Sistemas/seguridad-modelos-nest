@@ -10,8 +10,8 @@ export interface ILocalidad {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
 }
@@ -24,8 +24,8 @@ export interface ICreateLocalidad {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
 }
@@ -38,8 +38,8 @@ export interface IUpdateLocalidad {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
 }

@@ -1,6 +1,5 @@
 import { IUbicacion } from '../auxiliares/ubicacion.model';
 import { ILocalidad } from '../localidades/localidad.model';
-import { GeoJSONType } from '../vecinos/vecino.model';
 
 export interface IBarrio {
   _id: string;
@@ -11,8 +10,8 @@ export interface IBarrio {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
   idLocalidad?: string;
@@ -28,8 +27,8 @@ export interface ICreateBarrio {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
   idLocalidad?: string;
@@ -43,8 +42,8 @@ export interface IUpdateBarrio {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   idCliente?: string;
   idLocalidad?: string;
