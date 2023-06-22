@@ -4,7 +4,6 @@ import {
   IImagenesCliente,
 } from './cliente.model';
 import { ICoordenadasInput } from './generales/coordenadas';
-import { GeoJSONType } from './vecinos/vecino.model';
 
 export interface ICrearClienteInput {
   nombre: string;
@@ -20,8 +19,8 @@ export interface ICrearClienteInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
-    coordinates: [number, number];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   imagenes: IImagenesCliente;
@@ -45,8 +44,8 @@ export interface IUpdateClienteInput {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
-    coordinates: [number, number];
+    type: 'Polygon';
+    coordinates: [number, number][];
   };
   superficie?: number;
   imagenes?: IImagenesCliente;
