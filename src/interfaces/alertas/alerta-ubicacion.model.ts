@@ -1,5 +1,5 @@
-import { ICoordenadas } from "../..";
-import { IAlerta } from "./alerta.model";
+import { GeoJSONType, ICoordenadas } from '../..';
+import { IAlerta } from './alerta.model';
 
 export interface IAlertaUbicacion {
   _id: string;
@@ -7,6 +7,14 @@ export interface IAlertaUbicacion {
   idCliente?: string;
   fecha: string;
   ubicacion: ICoordenadas;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   direccion: string;
   // Virtuals
   alerta?: IAlerta;

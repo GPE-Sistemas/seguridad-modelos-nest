@@ -1,9 +1,9 @@
-import { ICoordenadasInput } from "../..";
-import { estados } from "./alerta-estado.dto";
-import { IAlertaEstado } from "./alerta-estado.model";
-import { IAlertaMedia } from "./alerta-media.model";
-import { IAlertaUbicacion } from "./alerta-ubicacion.model";
-import { IAlerta } from "./alerta.model";
+import { GeoJSONType, ICoordenadasInput } from '../..';
+import { estados } from './alerta-estado.dto';
+import { IAlertaEstado } from './alerta-estado.model';
+import { IAlertaMedia } from './alerta-media.model';
+import { IAlertaUbicacion } from './alerta-ubicacion.model';
+import { IAlerta } from './alerta.model';
 
 // Lo que envia el frontend
 export interface INuevaAlerta {
@@ -15,6 +15,14 @@ export interface INuevaAlerta {
 export interface ICrearAlerta {
   idCliente: string;
   ubicacion: ICoordenadasInput;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   direccion: string;
   idVecino: string;
   idsCentrosMonitoreo: string[];
