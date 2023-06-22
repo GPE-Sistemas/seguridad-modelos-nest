@@ -1,5 +1,5 @@
-import { ICliente } from "../cliente.model";
-import { IBarrio, ICoordenadas, ILocalidad, ISim } from "../..";
+import { ICliente } from '../cliente.model';
+import { GeoJSONType, IBarrio, ICoordenadas, ILocalidad, ISim } from '../..';
 
 export interface ISirena {
   _id: string;
@@ -19,6 +19,14 @@ export interface ISirena {
    */
   ubicacionGps: ICoordenadas;
   direccionGps: string;
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   /**
    * Ubicacion cargada manualmente y direccion calculada
    */

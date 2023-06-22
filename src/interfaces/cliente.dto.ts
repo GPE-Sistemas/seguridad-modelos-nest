@@ -4,6 +4,7 @@ import {
   IImagenesCliente,
 } from './cliente.model';
 import { ICoordenadasInput } from './generales/coordenadas';
+import { GeoJSONType } from './vecinos/vecino.model';
 
 export interface ICrearClienteInput {
   nombre: string;
@@ -14,6 +15,14 @@ export interface ICrearClienteInput {
   sirenas?: boolean;
   categorias: ICategoriaCliente[];
   coordenadas: ICoordenadasInput[][];
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   superficie?: number;
   imagenes: IImagenesCliente;
   idCategoriaDefault?: string;
@@ -31,6 +40,14 @@ export interface IUpdateClienteInput {
   sirenas?: boolean;
   categorias?: ICategoriaCliente[];
   coordenadas?: ICoordenadasInput[][];
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   superficie?: number;
   imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;

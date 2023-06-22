@@ -1,4 +1,4 @@
-import { ICategoria } from '..';
+import { GeoJSONType, ICategoria } from '..';
 import { ICoordenadas } from './generales/coordenadas';
 
 export interface ICategoriaCliente {
@@ -39,6 +39,14 @@ export interface ICliente {
   activo: boolean;
   admin: boolean;
   coordenadas: ICoordenadas[][];
+  // GEOJSON
+  // https://www.mongodb.com/docs/manual/reference/geojson/
+  // type es el tipo de objeto a guardar
+  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  geojson?: {
+    type: GeoJSONType;
+    coordinates: [number, number] | [number, number][];
+  };
   superficie?: number;
   fechaCreacion: string;
   nombre: string;
