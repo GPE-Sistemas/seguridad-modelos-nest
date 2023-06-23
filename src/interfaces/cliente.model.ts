@@ -44,8 +44,8 @@ export interface ICliente {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'MultiPolygon';
-    coordinates: [number, number][][][];
+    type: 'Polygon';
+    coordinates: [number, number][][];
   };
   superficie?: number;
   fechaCreacion: string;
