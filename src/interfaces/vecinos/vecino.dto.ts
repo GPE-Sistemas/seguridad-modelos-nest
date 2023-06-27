@@ -63,6 +63,9 @@ export interface ICrearVecino {
   importado?: boolean;
   dniEscaneado?: boolean;
   idSmartCity?: string;
+  appVersion?: string;
+  app?: string;
+  appType?: string;
 }
 
 export interface IUpdateVecino {
@@ -98,6 +101,9 @@ export interface IUpdateVecino {
   ubicacion?: ICoordenadasInput;
   tokenPush?: string;
   idSmartCity?: string;
+  appVersion?: string;
+  app?: string;
+  appType?: string;
 }
 
 export interface IUpdateDomicilioVecino {

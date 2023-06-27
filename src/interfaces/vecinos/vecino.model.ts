@@ -51,6 +51,10 @@ export interface IVecino {
   ultimoAcceso?: string;
   tokenPush?: string;
   idSmartCity?: string;
+  appVersion?: string;
+  app?: string;
+  appType?: string;
+
   // Virtuals
   cliente?: ICliente;
   localidad?: ILocalidad;
