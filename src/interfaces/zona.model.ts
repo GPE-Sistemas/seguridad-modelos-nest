@@ -1,7 +1,7 @@
-import { ICentroMonitoreo } from './centro-monitoreo.model';
-import { ICliente } from './cliente.model';
-import { ICoordenadas } from './generales/coordenadas';
-import { GeoJSONType } from './vecinos/vecino.model';
+import { ICentroMonitoreo } from "./centro-monitoreo.model";
+import { ICliente } from "./cliente";
+import { ICoordenadas } from "./generales/coordenadas";
+import { GeoJSONType } from "./vecinos/vecino.model";
 
 export interface IZona {
   _id: string;
@@ -12,7 +12,7 @@ export interface IZona {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Polygon';
+    type: "Polygon";
     coordinates: [number, number][][];
   };
   superficie?: number;

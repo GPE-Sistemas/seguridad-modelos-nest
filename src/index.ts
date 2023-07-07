@@ -41,8 +41,6 @@ export * from "./interfaces/categoria.dto";
 export * from "./interfaces/categoria.model";
 export * from "./interfaces/centro-monitoreo.dto";
 export * from "./interfaces/centro-monitoreo.model";
-export * from "./interfaces/cliente.dto";
-export * from "./interfaces/cliente.model";
 export * from "./interfaces/usuario.dto";
 export * from "./interfaces/usuario.model";
 export * from "./interfaces/zona.dto";
@@ -78,6 +76,7 @@ export * from "./interfaces/eventos";
 export * from "./interfaces/auditoria";
 //ApiKey
 export * from "./interfaces/apiKey";
+export * from "./interfaces/cliente";
 // Localidad
 export * from "./interfaces/localidades/localidad.model";
 // Barrios

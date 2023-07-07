@@ -1,4 +1,4 @@
-import { ICliente } from "../cliente.model";
+import { ICliente } from "../cliente";
 import { IUsuario } from "../usuario.model";
 
 export interface IAuditoria {

@@ -1,4 +1,4 @@
-import { ICliente } from "./cliente.model";
+import { ICliente } from "./cliente";
 import { ISirena } from "./sirenas/sirena.model";
 
 export interface IActualizacionFirmware {

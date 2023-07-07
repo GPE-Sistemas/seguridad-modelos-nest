@@ -1,5 +1,4 @@
-import { ICliente } from '../cliente.model';
-import { GeoJSONType, IBarrio, ICoordenadas, ILocalidad, ISim } from '../..';
+import { IBarrio, ICliente, ICoordenadas, ILocalidad, ISim } from "../..";
 
 export interface ISirena {
   _id: string;
@@ -24,7 +23,7 @@ export interface ISirena {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   /**

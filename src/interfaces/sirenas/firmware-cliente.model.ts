@@ -1,4 +1,4 @@
-import { ICliente } from "../cliente.model";
+import { ICliente } from "../cliente";
 
 export interface IFirmwareCliente {
   _id: string;

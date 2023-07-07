@@ -1,6 +1,5 @@
-import { IControl, IUsuario, IVecino } from '../..';
-import { ICliente } from '../cliente.model';
-import { ISirena } from './sirena.model';
+import { ICliente, IControl, IUsuario, IVecino } from "../..";
+import { ISirena } from "./sirena.model";
 
 export interface IEventoSirena {
   _id: string;

@@ -1,5 +1,4 @@
-import { ICliente } from "../cliente.model";
-import { IVecino } from "../..";
+import { ICliente, IVecino } from "../..";
 
 export interface IControl {
   _id: string;
