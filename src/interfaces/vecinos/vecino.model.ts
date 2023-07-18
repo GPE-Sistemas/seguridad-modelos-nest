@@ -4,9 +4,10 @@ import {
   ICliente,
   ICoordenadas,
   ILocalidad,
-} from "../..";
-import { ICategoriaVecino } from "./categoria-vecino.model";
-import { IEnvioCodigo } from "./envio-codigo.dto";
+} from '../..';
+import { ICategoriaVecino } from './categoria-vecino.model';
+import { IEnvioCodigo } from './envio-codigo.dto';
+import { IConfigNotificacion } from './config-notificaciones';
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -60,6 +61,9 @@ export interface IVecino {
   app?: string;
   appType?: string;
 
+  // Configs
+  configs?: IConfigNotificacion;
+
   // Virtuals
   cliente?: ICliente;
   localidad?: ILocalidad;
@@ -67,10 +71,10 @@ export interface IVecino {
 }
 
 export type GeoJSONType =
-  | "Point"
-  | "LineString"
-  | "Polygon"
-  | "MultiPoint"
-  | "MultiLineString"
-  | "MultiPolygon"
-  | "GeometryCollection";
+  | 'Point'
+  | 'LineString'
+  | 'Polygon'
+  | 'MultiPoint'
+  | 'MultiLineString'
+  | 'MultiPolygon'
+  | 'GeometryCollection';

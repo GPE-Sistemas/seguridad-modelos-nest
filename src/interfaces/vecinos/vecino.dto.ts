@@ -2,6 +2,7 @@ import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
 import { ICoordenadasInput } from '../generales/coordenadas';
 import { IEnvioCodigo } from './envio-codigo.dto';
 import { DireccionV2, GeoJSONType } from '../..';
+import { IConfigNotificacion } from './config-notificaciones';
 
 export interface INuevoVecino {
   nombre?: string;
@@ -28,6 +29,9 @@ export interface INuevoVecino {
     coordinates: [number, number] | [number, number][];
   };
   idSmartCity?: string;
+
+  // Configs
+  configs?: IConfigNotificacion;
 }
 
 export interface ICrearVecino {
@@ -66,6 +70,9 @@ export interface ICrearVecino {
   appVersion?: string;
   app?: string;
   appType?: string;
+
+  // Configs
+  configs?: IConfigNotificacion;
 }
 
 export interface IUpdateVecino {
@@ -104,6 +111,9 @@ export interface IUpdateVecino {
   appVersion?: string;
   app?: string;
   appType?: string;
+
+  // Configs
+  configs?: IConfigNotificacion;
 }
 
 export interface IUpdateDomicilioVecino {
@@ -162,4 +172,7 @@ export interface IUpdateVecinoDatos {
     coordinates: [number, number] | [number, number][];
   };
   idSmartCity?: string;
+
+  // Configs
+  configs?: IConfigNotificacion;
 }
