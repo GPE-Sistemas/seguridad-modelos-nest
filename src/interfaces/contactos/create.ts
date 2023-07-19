@@ -4,4 +4,5 @@ export interface ICreateContacto {
   aprobado?: boolean;
   // Datos del Contacto
   nombre?: string;
+  telefono?: string;
 }
