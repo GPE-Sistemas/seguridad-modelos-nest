@@ -4,4 +4,8 @@ export interface IUpdateContacto {
   aprobado?: boolean;
   // Datos del Contacto
   nombre?: string;
+  telefono?: string;
+  // Datos del Vecino
+  nombreVecino?: string;
+  telefonoVecino?: string;
 }
