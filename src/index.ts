@@ -85,3 +85,5 @@ export * from './interfaces/barrios/barrio.model';
 export * from './interfaces/auxiliares/ubicacion.model';
 //
 export * from './interfaces/notificacion';
+//
+export * from './interfaces/contactos';
