@@ -1,3 +1,5 @@
+import { IConfigContacto } from './config';
+
 export interface IUpdateContacto {
   idVecino?: string;
   idContacto?: string;
@@ -10,4 +12,6 @@ export interface IUpdateContacto {
   nombreVecino?: string;
   nombreParaMostrarVecino?: string;
   telefonoVecino?: string;
+  //Configs
+  configs?: IConfigContacto;
 }

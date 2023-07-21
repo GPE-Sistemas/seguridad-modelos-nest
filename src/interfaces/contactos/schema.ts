@@ -1,3 +1,5 @@
+import { IConfigContacto } from './config';
+
 export interface IContacto {
   _id?: string;
   //
@@ -12,4 +14,6 @@ export interface IContacto {
   nombreVecino?: string;
   nombreParaMostrarVecino?: string;
   telefonoVecino?: string;
+  //Configs
+  configs?: IConfigContacto;
 }
