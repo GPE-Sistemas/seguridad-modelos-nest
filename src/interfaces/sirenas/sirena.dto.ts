@@ -1,4 +1,4 @@
-import { GeoJSONType, ICoordenadas } from '../..';
+import { GeoJSONType, IConfigSirena, ICoordenadas } from '../..';
 
 export interface ICrearSirena {
   fechaCreacion?: string;
@@ -44,6 +44,7 @@ export interface ICrearSirena {
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
   };
+  configs?: IConfigSirena;
 }
 
 export interface IUpdateSirena {
@@ -88,6 +89,8 @@ export interface IUpdateSirena {
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
   };
+  // configs de la sirena
+  configs?: IConfigSirena;
 }
 
 export interface IResumenSirenasPorCliente {

@@ -63,6 +63,7 @@ export * from './interfaces/sirenas/firmware-version.dto';
 export * from './interfaces/sirenas/firmware-version.model';
 export * from './interfaces/sirenas/log-sirena.dto';
 export * from './interfaces/sirenas/log-sirena.model';
+export * from './interfaces/sirenas/config';
 // Sim
 export * from './interfaces/sims/sim.dto';
 export * from './interfaces/sims/sim.model';

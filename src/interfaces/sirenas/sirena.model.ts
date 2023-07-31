@@ -1,4 +1,11 @@
-import { IBarrio, ICliente, ICoordenadas, ILocalidad, ISim } from "../..";
+import {
+  IBarrio,
+  ICliente,
+  IConfigSirena,
+  ICoordenadas,
+  ILocalidad,
+  ISim,
+} from '../..';
 
 export interface ISirena {
   _id: string;
@@ -23,7 +30,7 @@ export interface ISirena {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "Point";
+    type: 'Point';
     coordinates: [number, number];
   };
   /**
@@ -94,6 +101,9 @@ export interface ISirena {
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
   };
+
+  // configs de la sirena
+  configs?: IConfigSirena;
 
   // Virtuals
   cliente?: ICliente;
