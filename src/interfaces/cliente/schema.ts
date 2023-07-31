@@ -48,6 +48,7 @@ export interface IConfigCliente {
   mostrarEstadoSirenas?: boolean;
   // Sirenas
   distanciaCobertura?: number;
+  verSirenasOnline?: boolean;
 }
 
 export interface ICategoriaCliente {
