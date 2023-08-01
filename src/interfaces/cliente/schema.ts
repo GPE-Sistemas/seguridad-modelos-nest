@@ -49,6 +49,8 @@ export interface IConfigCliente {
   // Sirenas
   distanciaCobertura?: number;
   verSirenasOnline?: boolean;
+  // Contactos
+  verContactos?: boolean;
 }
 
 export interface ICategoriaCliente {
