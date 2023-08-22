@@ -1,4 +1,5 @@
-import { FuncionBoton, IEnvioMultimedia } from "./boton.model";
+import { FuncionBoton, IEnvioMultimedia } from './boton.model';
+import { TipoDePunto } from './puntos';
 
 export interface ICrearTrackeoInput {
   tiempoMinutos: number;
@@ -13,6 +14,7 @@ export interface ICrearBotonInput {
   nombre: string;
   variante?: string;
   funcion?: FuncionBoton;
+  tipoDePunto?: TipoDePunto[];
   color?: string;
   texto?: string;
   urlImagen?: string;
@@ -34,6 +36,7 @@ export interface IUpdateBotonInput {
   nombre?: string;
   variante?: string;
   funcion?: FuncionBoton;
+  tipoDePunto?: TipoDePunto[];
   color?: string;
   texto?: string;
   urlImagen?: string;

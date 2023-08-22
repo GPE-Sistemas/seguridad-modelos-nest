@@ -88,3 +88,5 @@ export * from './interfaces/auxiliares/ubicacion.model';
 export * from './interfaces/notificacion';
 //
 export * from './interfaces/contactos';
+//
+export * from './interfaces/puntos';
