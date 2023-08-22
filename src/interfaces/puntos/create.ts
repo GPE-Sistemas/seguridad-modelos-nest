@@ -11,6 +11,7 @@ export interface ICreatePunto {
     coordinates: [number, number];
   };
   coordenadas?: ICoordenadas;
+  urlIcono?: string;
   // Tenant
   idCliente?: string;
 }

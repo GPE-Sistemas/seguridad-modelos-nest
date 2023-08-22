@@ -11,6 +11,7 @@ export interface IUpdatePunto {
     coordinates: [number, number];
   };
   coordenadas?: ICoordenadas;
+  urlIcono?: string;
   // Tenant
   idCliente?: string;
 }

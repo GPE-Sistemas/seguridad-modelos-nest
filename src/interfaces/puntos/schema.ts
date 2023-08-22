@@ -13,6 +13,7 @@ export interface IPunto {
     coordinates: [number, number];
   };
   coordenadas?: ICoordenadas;
+  urlIcono?: string;
   // Tenant
   idCliente?: string;
 
