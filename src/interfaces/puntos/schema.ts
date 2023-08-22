@@ -1,4 +1,4 @@
-import { IClient } from '../auth/client.model';
+import { ICliente } from '../cliente';
 import { ICoordenadas } from '../generales/coordenadas';
 
 export interface IPunto {
@@ -17,7 +17,7 @@ export interface IPunto {
   idCliente?: string;
 
   // Virtuals
-  cliente?: IClient;
+  cliente?: ICliente;
 }
 
 export type TipoDePunto =
