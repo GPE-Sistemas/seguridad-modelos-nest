@@ -1,3 +1,5 @@
+import { TipoDePunto } from './puntos';
+
 export interface ITrackeo {
   tiempoMinutos: number;
   intervaloSegundos: number;
@@ -14,13 +16,20 @@ export interface IEnvioMultimedia {
   video: boolean;
 }
 
-export type FuncionBoton = "Alerta" | "Sirena" | "Reflector" | "911" | "Link";
+export type FuncionBoton =
+  | 'Alerta'
+  | 'Sirena'
+  | 'Reflector'
+  | '911'
+  | 'Link'
+  | 'Alerta por Punto';
 
 export interface IBoton {
   _id: string;
   nombre: string;
   variante?: string;
   funcion?: FuncionBoton;
+  tipoDePunto?: TipoDePunto[];
   color?: string;
   texto?: string;
   urlImagen?: string;

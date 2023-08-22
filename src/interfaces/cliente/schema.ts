@@ -51,6 +51,8 @@ export interface IConfigCliente {
   verSirenasOnline?: boolean;
   // Contactos
   verContactos?: boolean;
+  // Puntos
+  verPuntos?: boolean;
 }
 
 export interface ICategoriaCliente {
