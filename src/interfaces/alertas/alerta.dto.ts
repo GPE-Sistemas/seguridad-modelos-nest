@@ -30,6 +30,7 @@ export interface ICrearAlerta {
   idBoton: string;
   idLocalidad?: string;
   idBarrio?: string;
+  idPunto?: string;
   idCategoria: string;
   prioridad: number;
   estadoActual?: estados;
