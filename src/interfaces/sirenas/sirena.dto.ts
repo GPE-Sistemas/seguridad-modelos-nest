@@ -378,3 +378,5 @@ export interface IComandoSirena {
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
+
+export type TipoSirena = 'sirena' | 'totem' | 'sirena escolar';
