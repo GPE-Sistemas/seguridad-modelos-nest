@@ -90,3 +90,5 @@ export * from './interfaces/notificacion';
 export * from './interfaces/contactos';
 //
 export * from './interfaces/puntos';
+//
+export * from './interfaces/mantenimiento/mantenimiento.model';

@@ -53,6 +53,8 @@ export interface IConfigCliente {
   verContactos?: boolean;
   // Puntos
   verPuntos?: boolean;
+  // tagsMantenimiento
+  tagsMantenimiento?: string[];
 }
 
 export interface ICategoriaCliente {
