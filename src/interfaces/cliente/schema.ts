@@ -49,6 +49,7 @@ export interface IConfigCliente {
   // Sirenas
   distanciaCobertura?: number;
   verSirenasOnline?: boolean;
+  tiposDeSirena?: string[]; // 'sirena' | 'totem' | 'sirena escolar';
   // Contactos
   verContactos?: boolean;
   // Puntos
