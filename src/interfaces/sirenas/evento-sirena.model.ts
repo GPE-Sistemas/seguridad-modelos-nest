@@ -1,4 +1,4 @@
-import { ICliente, IControl, IUsuario, IVecino } from "../..";
+import { IApiKey, ICliente, IControl, IUsuario, IVecino } from "../..";
 import { ISirena } from "./sirena.model";
 
 export interface IEventoSirena {
@@ -8,6 +8,7 @@ export interface IEventoSirena {
   idUsuario?: string;
   idCliente?: string;
   chipIdControl?: string;
+  idApikey?: string;
   fechaEncendido: string;
   fechaApagado: string;
   tiempoAcumuladoEncendido?: number;
@@ -22,4 +23,5 @@ export interface IEventoSirena {
   control?: IControl;
   sirena?: ISirena;
   usuario?: IUsuario;
+  idApiKey?: IApiKey;
 }

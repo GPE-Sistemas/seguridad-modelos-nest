@@ -4,6 +4,7 @@ export interface ICrearEventoSirena {
   idUsuario?: string;
   idCliente?: string;
   chipIdControl?: string;
+  idApikey?: string;
   fechaEncendido?: string;
   fechaApagado?: string;
   tiempoAcumuladoEncendido?: number;
