@@ -1,7 +1,7 @@
 import { ICoordenadas } from "../generales/coordenadas";
 import { ICategoriaVecino } from "../vecinos/categoria-vecino.model";
 
-interface IDireccionVecino {
+export interface IDireccionVecino {
   direccion?: string;
   complementoDireccion?: string;
   idLocalidad?: string;
