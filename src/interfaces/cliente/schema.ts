@@ -1,5 +1,5 @@
-import { ICategoria } from '../categoria.model';
-import { ICoordenadas } from '../generales/coordenadas';
+import { ICategoria } from "../categoria.model";
+import { ICoordenadas } from "../generales/coordenadas";
 
 export interface ICliente {
   _id: string;
@@ -11,12 +11,13 @@ export interface ICliente {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'MultiPolygon';
+    type: "MultiPolygon";
     coordinates: [number, number][][][];
   };
   superficie?: number;
   fechaCreacion: string;
   nombre: string;
+  nombreAppMobile?: string;
   edadMinima: number;
   twitter: string;
   instagram: string;

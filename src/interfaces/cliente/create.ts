@@ -3,6 +3,7 @@ import { ICoordenadasInput } from "../generales/coordenadas";
 
 export interface ICrearClienteInput {
   nombre: string;
+  nombreAppMobile?: string;
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;

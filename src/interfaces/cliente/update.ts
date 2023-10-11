@@ -4,6 +4,7 @@ import { ICoordenadasInput } from "../generales/coordenadas";
 export interface IUpdateClienteInput {
   activo?: boolean;
   nombre?: string;
+  nombreAppMobile?: string;
   admin?: boolean;
   edadMinima?: number;
   twitter?: string;
