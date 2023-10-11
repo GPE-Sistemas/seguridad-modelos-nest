@@ -2,6 +2,7 @@ import { ICoordenadas } from "../generales/coordenadas";
 import { DireccionV2 } from "../generales/direccionV2";
 
 export interface IDireccionVecino {
+  _id?: string;
   idVecino?: string;
   //
   idCliente?: string;
