@@ -92,4 +92,4 @@ export * from "./interfaces/contactos";
 export * from "./interfaces/puntos";
 //
 export * from "./interfaces/mantenimiento/mantenimiento.model";
-export * from "./interfaces/direccion-vecino";
+export * from "./interfaces/config-vecino";
