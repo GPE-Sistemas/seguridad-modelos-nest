@@ -2,6 +2,7 @@ import { ICliente } from '../cliente';
 import { ICoordenadas } from '../generales/coordenadas';
 import { ICategoriaVecino } from '../vecinos/categoria-vecino.model';
 import { IConfigNotificacion } from '../vecinos/config-notificaciones';
+import { IEnvioCodigo } from '../vecinos/envio-codigo.dto';
 import { IVecino } from '../vecinos/vecino.model';
 
 export interface IDireccionVecino {
@@ -27,6 +28,8 @@ export interface IConfigVecino {
   appVersion?: string;
   app?: string;
   appType?: string;
+
+  envioCodigo?: IEnvioCodigo;
 
   // Configs
   configs?: IConfigNotificacion;

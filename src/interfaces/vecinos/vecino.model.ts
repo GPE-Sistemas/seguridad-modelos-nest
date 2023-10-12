@@ -19,26 +19,26 @@ export interface IPrivacidad {
 
 export interface IVecino {
   _id: string;
+  // IVECINO DE VERDAD
+  nombre: string;
+  dni: string;
+  sexo?: boolean | null;
+  email?: string;
+  pais: string;
+  telefono: string;
+  fechaNacimiento: string;
+  // Quizás
   activo: boolean;
   fechaCreacion: string;
   creadoPorAdmin: boolean;
   importado?: boolean;
   dniEscaneado?: boolean;
-  nombre: string;
-  dni: string;
-  sexo?: boolean | null;
+  // Pasadas a ConfigVecino
   idCliente: string;
-  email?: string;
   idLocalidad?: string;
   idBarrio?: string;
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   direccion: string;
   direccionV2?: DireccionV2;
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
   ubicacionDireccion?: ICoordenadas;
   complementoDireccion?: string;
   // GEOJSON
@@ -49,9 +49,7 @@ export interface IVecino {
     type: GeoJSONType;
     coordinates: [number, number] | [number, number][];
   };
-  pais: string;
-  telefono: string;
-  fechaNacimiento: string;
+
   envioCodigo?: IEnvioCodigo;
   categoria?: ICategoriaVecino;
   ultimoAcceso?: string;
