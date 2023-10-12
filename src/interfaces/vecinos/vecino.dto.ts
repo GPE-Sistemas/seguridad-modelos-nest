@@ -1,8 +1,8 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
-import { ICoordenadasInput } from '../generales/coordenadas';
-import { IEnvioCodigo } from './envio-codigo.dto';
-import { DireccionV2, GeoJSONType } from '../..';
-import { IConfigNotificacion } from './config-notificaciones';
+import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
+import { ICoordenadasInput } from "../generales/coordenadas";
+import { IEnvioCodigo } from "./envio-codigo.dto";
+import { DireccionV2, GeoJSONType, ICategoriaVecino } from "../..";
+import { IConfigNotificacion } from "./config-notificaciones";
 
 export interface INuevoVecino {
   nombre?: string;
@@ -63,6 +63,7 @@ export interface ICrearVecino {
   fechaNacimiento?: string;
   // categoria?: ICrearCategoriaVecinoInput;
   envioCodigo?: IEnvioCodigo;
+  categoria?: ICategoriaVecino;
   creadoPorAdmin?: boolean;
   importado?: boolean;
   dniEscaneado?: boolean;
