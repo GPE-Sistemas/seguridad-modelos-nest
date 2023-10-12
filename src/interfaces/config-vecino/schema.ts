@@ -1,7 +1,8 @@
-import { ICliente } from "../cliente";
-import { ICoordenadas } from "../generales/coordenadas";
-import { ICategoriaVecino } from "../vecinos/categoria-vecino.model";
-import { IVecino } from "../vecinos/vecino.model";
+import { ICliente } from '../cliente';
+import { ICoordenadas } from '../generales/coordenadas';
+import { ICategoriaVecino } from '../vecinos/categoria-vecino.model';
+import { IConfigNotificacion } from '../vecinos/config-notificaciones';
+import { IVecino } from '../vecinos/vecino.model';
 
 export interface IDireccionVecino {
   direccion?: string;
@@ -10,7 +11,7 @@ export interface IDireccionVecino {
   idBarrio?: string;
   ubicacionDireccion?: ICoordenadas;
   geojson?: {
-    type: "Point";
+    type: 'Point';
     coordinates: [number, number];
   };
 }
@@ -27,6 +28,9 @@ export interface IConfigVecino {
   app?: string;
   appType?: string;
 
+  // Configs
+  configs?: IConfigNotificacion;
+
   categoria?: ICategoriaVecino;
   direccion?: IDireccionVecino;
 
@@ -35,12 +39,12 @@ export interface IConfigVecino {
   vecino?: IVecino;
 }
 
-type OmitirCreate = "_id" | "cliente" | "vecino";
+type OmitirCreate = '_id' | 'cliente' | 'vecino';
 
 export interface ICreateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "idCliente" | "idVecino" | "cliente" | "vecino";
+type OmitirUpdate = '_id' | 'idCliente' | 'idVecino' | 'cliente' | 'vecino';
 
 export interface IUpdateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirUpdate> {}
