@@ -1,7 +1,7 @@
-import { ICliente } from '../cliente';
+import { ICliente } from "../cliente";
 import { ICoordenadas } from "../generales/coordenadas";
 import { ICategoriaVecino } from "../vecinos/categoria-vecino.model";
-import { IVecino } from '../vecinos/vecino.model';
+import { IVecino } from "../vecinos/vecino.model";
 
 export interface IDireccionVecino {
   direccion?: string;
@@ -35,7 +35,7 @@ export interface IConfigVecino {
   vecino?: IVecino;
 }
 
-type OmitirCreate = "_id" | "idCliente" | "idVecino;
+type OmitirCreate = "_id" | "idCliente" | "idVecino";
 
 export interface ICreateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirCreate> {}
