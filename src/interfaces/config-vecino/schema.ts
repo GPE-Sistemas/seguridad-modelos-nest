@@ -29,10 +29,12 @@ export interface IConfigVecino {
   direccion?: IDireccionVecino;
 }
 
-type Omitir = "_id";
+type OmitirCreate = "_id";
 
 export interface ICreateConfigVecino
-  extends Omit<Partial<IConfigVecino>, Omitir> {}
+  extends Omit<Partial<IConfigVecino>, OmitirCreate> {}
+
+type OmitirUpdate = "_id" | "idCliente" | "idVecino";
 
 export interface IUpdateConfigVecino
-  extends Omit<Partial<IConfigVecino>, Omitir> {}
+  extends Omit<Partial<IConfigVecino>, OmitirUpdate> {}
