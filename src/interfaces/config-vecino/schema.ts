@@ -35,7 +35,7 @@ export interface IConfigVecino {
   vecino?: IVecino;
 }
 
-type OmitirCreate = "_id" | "idCliente" | "idVecino";
+type OmitirCreate = "_id" | "cliente" | "vecino";
 
 export interface ICreateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirCreate> {}
