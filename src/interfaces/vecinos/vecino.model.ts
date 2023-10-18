@@ -27,6 +27,7 @@ export interface IVecino {
   pais: string;
   telefono: string;
   fechaNacimiento: string;
+  idsCliente?: string[];
   // Quizás
   activo: boolean;
   fechaCreacion: string;

@@ -1,8 +1,8 @@
-import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
-import { ICoordenadasInput } from "../generales/coordenadas";
-import { IEnvioCodigo } from "./envio-codigo.dto";
-import { DireccionV2, GeoJSONType, ICategoriaVecino } from "../..";
-import { IConfigNotificacion } from "./config-notificaciones";
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
+import { ICoordenadasInput } from '../generales/coordenadas';
+import { IEnvioCodigo } from './envio-codigo.dto';
+import { DireccionV2, GeoJSONType, ICategoriaVecino } from '../..';
+import { IConfigNotificacion } from './config-notificaciones';
 
 export interface INuevoVecino {
   nombre?: string;
@@ -13,6 +13,7 @@ export interface INuevoVecino {
   telefono?: string;
   email?: string;
   direccion?: string;
+  idsCliente?: string[];
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
@@ -46,6 +47,7 @@ export interface ICrearVecino {
   direccionV2?: DireccionV2;
   idLocalidad?: string;
   idBarrio?: string;
+  idsCliente?: string[];
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
@@ -84,6 +86,7 @@ export interface IUpdateVecino {
   direccionV2?: DireccionV2;
   idLocalidad?: string;
   idBarrio?: string;
+  idsCliente?: string[];
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
@@ -157,6 +160,7 @@ export interface IUpdateVecinoDatos {
   pais?: string;
   telefono?: string;
   email?: string;
+  idsCliente?: string[];
   /**
    * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
    */
