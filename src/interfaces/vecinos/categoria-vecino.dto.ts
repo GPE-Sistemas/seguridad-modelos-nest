@@ -3,6 +3,7 @@ export interface ICrearCategoriaVecinoInput {
   hasta?: string;
   idCategoria?: string;
   idVecino?: string;
+  idCliente?: string;
   idUsuario?: string;
   idsArchivosVecino?: string[];
 }
