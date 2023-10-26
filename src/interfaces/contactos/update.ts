@@ -3,6 +3,7 @@ import { IConfigContacto } from './config';
 export interface IUpdateContacto {
   idVecino?: string;
   idContacto?: string;
+  idCliente?: string;
   aprobado?: boolean;
   // Datos del Contacto
   nombre?: string;

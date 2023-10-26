@@ -5,6 +5,7 @@ export interface IContacto {
   //
   idVecino?: string;
   idContacto?: string;
+  idCliente?: string;
   aprobado?: boolean;
   // Datos del Contacto
   nombre?: string;
