@@ -1,17 +1,17 @@
-import { ICategoria } from "../categoria.model";
-import { ICoordenadas } from "../generales/coordenadas";
+import { ICategoria } from '../categoria.model';
+import { ICoordenadas } from '../generales/coordenadas';
 
 export interface ICliente {
   _id: string;
   activo: boolean;
   admin: boolean;
-  coordenadas: ICoordenadas[][];
+  coordenadas?: ICoordenadas[][];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "MultiPolygon";
+    type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
   superficie?: number;

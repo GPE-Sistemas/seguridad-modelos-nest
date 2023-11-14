@@ -1,5 +1,5 @@
-import { ICategoriaCliente, IConfigCliente, IImagenesCliente } from "./schema";
-import { ICoordenadasInput } from "../generales/coordenadas";
+import { ICategoriaCliente, IConfigCliente, IImagenesCliente } from './schema';
+import { ICoordenadasInput } from '../generales/coordenadas';
 
 export interface ICrearClienteInput {
   nombre: string;
@@ -10,13 +10,13 @@ export interface ICrearClienteInput {
   instagram?: string;
   sirenas?: boolean;
   categorias: ICategoriaCliente[];
-  coordenadas: ICoordenadasInput[][];
+  coordenadas?: ICoordenadasInput[][];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "MultiPolygon";
+    type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
   superficie?: number;
