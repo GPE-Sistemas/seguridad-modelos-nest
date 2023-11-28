@@ -64,7 +64,7 @@ export interface IConfigCliente {
 export interface ICategoriaCliente {
   imagenArriba?: string;
   imagenAbajo?: string;
-  idCategoria: string;
+  idCategoria?: string;
   imagenSirena?: string;
   imagenReflector?: string;
   imagenAdelante?: string;
