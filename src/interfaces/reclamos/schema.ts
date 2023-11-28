@@ -8,7 +8,7 @@ export interface IReclamo {
   idVecino?: string;
   idCliente?: string;
   fechaCreacion?: string;
-  fechaHecho?: number;
+  fechaHecho?: string;
   denunciaPrevia?: boolean;
   documentoDenunciaPrevia?: string;
   anonimo?: boolean;
