@@ -1,5 +1,5 @@
-import { ICliente } from '../cliente';
-import { ICoordenadas } from '../generales/coordenadas';
+import { ICliente } from "../cliente";
+import { ICoordenadas } from "../../auxiliares/coordenadas";
 
 export interface IPunto {
   _id?: string;
@@ -9,7 +9,7 @@ export interface IPunto {
   descripcion?: string;
   areaDeCobertura?: number; // En metros
   geojson?: {
-    type: 'Point'; //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+    type: "Point"; //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
     coordinates: [number, number];
   };
   coordenadas?: ICoordenadas;
@@ -22,9 +22,9 @@ export interface IPunto {
 }
 
 export type TipoDePunto =
-  | 'Escuela'
-  | 'Hospital'
-  | 'Comisaría'
-  | 'Bomberos'
-  | 'Municipalidad'
-  | 'Otros';
+  | "Escuela"
+  | "Hospital"
+  | "Comisaría"
+  | "Bomberos"
+  | "Municipalidad"
+  | "Otros";

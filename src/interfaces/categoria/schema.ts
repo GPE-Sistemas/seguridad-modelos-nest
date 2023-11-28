@@ -1,4 +1,4 @@
-import { IBoton } from "./boton.model";
+import { IBoton } from "../boton/schema";
 
 export interface ICategoria {
   _id: string;

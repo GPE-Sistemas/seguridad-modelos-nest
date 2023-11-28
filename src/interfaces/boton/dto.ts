@@ -1,5 +1,5 @@
-import { FuncionBoton, IEnvioMultimedia } from './boton.model';
-import { TipoDePunto } from './puntos';
+import { FuncionBoton, IEnvioMultimedia } from "./schema";
+import { TipoDePunto } from "../puntos";
 
 export interface ICrearTrackeoInput {
   tiempoMinutos: number;

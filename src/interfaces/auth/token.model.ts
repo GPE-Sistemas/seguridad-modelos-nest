@@ -1,5 +1,5 @@
 import { IClient } from "./client.model";
-import { IUsuario } from "../usuario.model";
+import { IUsuario } from "../usuario/schema";
 import { IVecino } from "../..";
 
 export interface IToken {

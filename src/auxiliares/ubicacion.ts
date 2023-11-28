@@ -1,4 +1,4 @@
-import { ICoordenadas } from "../generales/coordenadas";
+import { ICoordenadas } from "./coordenadas";
 
 export type IPoligono = ICoordenadas[];
 

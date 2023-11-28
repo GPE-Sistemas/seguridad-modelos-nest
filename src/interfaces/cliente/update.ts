@@ -1,5 +1,5 @@
 import { ICategoriaCliente, IConfigCliente, IImagenesCliente } from "./schema";
-import { ICoordenadasInput } from "../generales/coordenadas";
+import { ICoordenadasInput } from "../../auxiliares/coordenadas";
 
 export interface IUpdateClienteInput {
   activo?: boolean;

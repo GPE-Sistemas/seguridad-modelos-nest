@@ -1,4 +1,4 @@
-import { ICliente } from "./cliente";
+import { ICliente } from "../cliente";
 
 export interface IMensaje {
   _id: string;

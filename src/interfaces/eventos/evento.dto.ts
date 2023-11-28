@@ -1,4 +1,4 @@
-import { ICoordenadas } from '../generales/coordenadas';
+import { ICoordenadas } from "../../auxiliares/coordenadas";
 
 export interface ICrearEvento {
   idCliente?: string;
@@ -14,7 +14,7 @@ export interface ICrearEvento {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   victima?: string;
@@ -36,7 +36,7 @@ export interface IUpdateEvento {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   victima?: string;

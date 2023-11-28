@@ -1,5 +1,5 @@
 import { ICliente } from "../cliente";
-import { IUsuario } from "../usuario.model";
+import { IUsuario } from "../usuario/schema";
 import { IVecino } from "./vecino.model";
 
 export interface IBaneoVecino {

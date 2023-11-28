@@ -1,5 +1,5 @@
-import { IBoton, ICentroMonitoreo, ICliente } from "..";
-import { Rol } from "./generales/rol";
+import { IBoton, ICentroMonitoreo, ICliente } from "../..";
+import { Rol } from "../../auxiliares/rol";
 
 export interface IOperador {
   idCentroMonitoreo: string;

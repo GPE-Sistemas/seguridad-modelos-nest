@@ -1,50 +1,48 @@
-import { IUbicacion } from '../auxiliares/ubicacion.model';
-import { ILocalidad } from '../localidades/localidad.model';
+import { ICoordenadasInput } from "../../auxiliares/coordenadas";
+import { GeoJSONType } from "../vecinos/vecino.model";
 
-export interface IBarrio {
-  _id: string;
-  nombre?: string;
-  ubicacion?: IUbicacion;
+export interface ICrearZonaInput {
+  nombre: string;
+  coordenadas: ICoordenadasInput[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Polygon';
+    type: "Polygon";
     coordinates: [number, number][][];
   };
-  idCliente?: string;
-  idLocalidad?: string;
-  // Populate
-  localidad?: ILocalidad;
+  superficie?: number;
+  idCliente: string;
+  idsPrioridad: string[];
 }
 
-export interface ICreateBarrio {
+export interface IUpdateZonaInput {
   nombre?: string;
-  ubicacion?: IUbicacion;
+  coordenadas?: ICoordenadasInput[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Polygon';
+    type: "Polygon";
     coordinates: [number, number][][];
   };
-  idCliente?: string;
-  idLocalidad?: string;
+  superficie?: number;
+  idsPrioridad?: string[];
 }
 
-export interface IUpdateBarrio {
-  nombre?: string;
-  ubicacion?: IUbicacion;
+export interface INuevaZonaInput {
+  nombre: string;
+  coordenadas: ICoordenadasInput[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Polygon';
+    type: "Polygon";
     coordinates: [number, number][][];
   };
-  idCliente?: string;
-  idLocalidad?: string;
+  superficie?: number;
+  idsPrioridad: string[];
 }

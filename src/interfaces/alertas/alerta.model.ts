@@ -1,10 +1,10 @@
-import { estados } from './alerta-estado.dto';
-import { IBoton } from '../boton.model';
-import { ICategoria } from '../categoria.model';
-import { ICentroMonitoreo } from '../centro-monitoreo.model';
-import { ICoordenadas } from '../generales/coordenadas';
-import { IUsuario } from '../usuario.model';
-import { IZona } from '../zona.model';
+import { estados } from "./alerta-estado.dto";
+import { IBoton } from "../boton/schema";
+import { ICategoria } from "../categoria/schema";
+import { ICentroMonitoreo } from "../centro-monitoreo/schema";
+import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { IUsuario } from "../usuario/schema";
+import { IZona } from "../zona/schema";
 import {
   GeoJSONType,
   IBarrio,
@@ -12,7 +12,7 @@ import {
   ILocalidad,
   IPunto,
   IVecino,
-} from '../..';
+} from "../..";
 
 export interface IAlerta {
   _id: string;
@@ -23,7 +23,7 @@ export interface IAlerta {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   direccion: string;

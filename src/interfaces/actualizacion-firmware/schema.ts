@@ -1,5 +1,5 @@
-import { ICliente } from "./cliente";
-import { ISirena } from "./sirenas/sirena.model";
+import { ICliente } from "../cliente";
+import { ISirena } from "../sirenas/sirena.model";
 
 export interface IActualizacionFirmware {
   _id: string;

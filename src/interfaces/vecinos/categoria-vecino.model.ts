@@ -1,7 +1,7 @@
-import { ICategoria } from '../categoria.model';
-import { IUsuario } from '../usuario.model';
-import { IArchivoVecino } from './archivo-vecino.dto';
-import { IVecino } from './vecino.model';
+import { ICategoria } from "../categoria/schema";
+import { IUsuario } from "../usuario/schema";
+import { IArchivoVecino } from "./archivo-vecino.dto";
+import { IVecino } from "./vecino.model";
 
 export interface ICategoriaVecino {
   _id?: string;

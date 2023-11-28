@@ -1,6 +1,6 @@
-import { ICliente } from "./cliente";
-import { ICoordenadas } from "./generales/coordenadas";
-import { GeoJSONType } from "./vecinos/vecino.model";
+import { ICliente } from "../cliente";
+import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { GeoJSONType } from "../vecinos/vecino.model";
 
 export interface ICentroMonitoreo {
   _id: string;

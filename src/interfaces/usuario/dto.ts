@@ -1,4 +1,4 @@
-import { Rol } from "./generales/rol";
+import { Rol } from "../../auxiliares/rol";
 
 export enum roles {
   admin = "admin",
