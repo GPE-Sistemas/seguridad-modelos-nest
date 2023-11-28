@@ -57,6 +57,8 @@ export interface IConfigCliente {
   verPuntos?: boolean;
   // tagsMantenimiento
   tagsMantenimiento?: string[];
+  // Ver reclamos
+  verReclamos?: boolean;
 }
 
 export interface ICategoriaCliente {
