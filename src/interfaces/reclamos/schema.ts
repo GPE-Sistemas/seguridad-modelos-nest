@@ -12,7 +12,7 @@ export interface IReclamo {
   denunciaPrevia?: boolean;
   documentoDenunciaPrevia?: string;
   anonimo?: boolean;
-  relato?: string;
+  titulo?: string;
   datos?: string;
   observaciones?: string;
   documentos?: string[];
