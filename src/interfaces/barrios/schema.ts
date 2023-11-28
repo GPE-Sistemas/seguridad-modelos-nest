@@ -2,7 +2,7 @@ import { IUbicacion } from "../../auxiliares/ubicacion";
 import { ILocalidad } from "../localidades/schema";
 
 export interface IBarrio {
-  _id: string;
+  _id?: string;
   nombre?: string;
   ubicacion?: IUbicacion;
   // GEOJSON

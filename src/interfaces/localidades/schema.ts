@@ -2,7 +2,7 @@ import { IUbicacion } from "../../auxiliares/ubicacion";
 import { GeoJSONType } from "../vecinos/vecino.model";
 
 export interface ILocalidad {
-  _id: string;
+  _id?: string;
   nombre?: string;
   ubicacion?: IUbicacion;
   // GEOJSON

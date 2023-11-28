@@ -3,12 +3,12 @@ import { ICoordenadas } from "../../auxiliares/coordenadas";
 import { IVecino } from "../vecinos/vecino.model";
 
 export interface IEvento {
-  _id: string;
-  idCliente: string;
-  fecha: string;
+  _id?: string;
+  idCliente?: string;
+  fecha?: string;
   emisor?: string;
-  categoria: string;
-  tags: string[];
+  categoria?: string;
+  tags?: string[];
   direccion?: string;
   coordenadas?: ICoordenadas;
   // GEOJSON

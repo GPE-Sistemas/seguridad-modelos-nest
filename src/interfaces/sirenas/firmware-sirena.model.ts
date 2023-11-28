@@ -1,5 +1,5 @@
 export interface IFirmwareSirena {
-  _id: string;
-  version: string;
-  url: string;
+  _id?: string;
+  version?: string;
+  url?: string;
 }

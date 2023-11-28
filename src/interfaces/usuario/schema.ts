@@ -10,20 +10,20 @@ export interface IOperador {
 }
 
 export interface IUsuario {
-  _id: string;
-  activo: boolean;
-  fechaCreacion: string;
-  nombre: string;
+  _id?: string;
+  activo?: boolean;
+  fechaCreacion?: string;
+  nombre?: string;
   dni?: string;
   sexo?: boolean;
-  idCliente: string;
+  idCliente?: string;
   email?: string;
   direccion?: string;
   pais?: string;
   telefono?: string;
   fechaNacimiento?: string;
-  roles: Rol[];
-  usuario: string;
+  roles?: Rol[];
+  usuario?: string;
   clave?: string;
   operador?: IOperador;
   // Virtuals

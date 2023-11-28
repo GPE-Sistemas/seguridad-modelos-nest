@@ -3,9 +3,9 @@ import { ICoordenadas } from "../../auxiliares/coordenadas";
 import { GeoJSONType } from "../vecinos/vecino.model";
 
 export interface ICentroMonitoreo {
-  _id: string;
-  nombre: string;
-  ubicacion: ICoordenadas;
+  _id?: string;
+  nombre?: string;
+  ubicacion?: ICoordenadas;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
@@ -14,7 +14,7 @@ export interface ICentroMonitoreo {
     type: "Point";
     coordinates: [number, number];
   };
-  idCliente: string;
+  idCliente?: string;
   // Virtuals
   cliente?: ICliente;
 }

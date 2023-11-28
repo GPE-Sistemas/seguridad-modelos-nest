@@ -25,8 +25,8 @@ export type FuncionBoton =
   | "Alerta por Punto";
 
 export interface IBoton {
-  _id: string;
-  nombre: string;
+  _id?: string;
+  nombre?: string;
   variante?: string;
   funcion?: FuncionBoton;
   tipoDePunto?: TipoDePunto[];
@@ -36,7 +36,7 @@ export interface IBoton {
   urlImagenPush?: string;
   trackeo?: ITrackeo;
   envioMultimedia?: IEnvioMultimedia;
-  editable: boolean;
+  editable?: boolean;
   sirena?: boolean;
   link?: string;
   // True puede mandar alertas fuera de su zona.

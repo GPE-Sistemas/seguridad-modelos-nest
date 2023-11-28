@@ -15,9 +15,9 @@ import {
 } from "../..";
 
 export interface IAlerta {
-  _id: string;
-  activa: boolean;
-  ubicacion: ICoordenadas;
+  _id?: string;
+  activa?: boolean;
+  ubicacion?: ICoordenadas;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
@@ -26,20 +26,20 @@ export interface IAlerta {
     type: "Point";
     coordinates: [number, number];
   };
-  direccion: string;
-  prioridad: number;
-  estadoActual: estados;
-  fechaCreacion: string;
-  tiempoRespuesta: number;
-  tiempoResolucion: number;
+  direccion?: string;
+  prioridad?: number;
+  estadoActual?: estados;
+  fechaCreacion?: string;
+  tiempoRespuesta?: number;
+  tiempoResolucion?: number;
   //
-  idBoton: string;
-  idCategoria: string;
-  idsCentrosMonitoreo: string[];
-  idCliente: string;
-  idUsuario: string;
-  idVecino: string;
-  idZona: string;
+  idBoton?: string;
+  idCategoria?: string;
+  idsCentrosMonitoreo?: string[];
+  idCliente?: string;
+  idUsuario?: string;
+  idVecino?: string;
+  idZona?: string;
   idLocalidad?: string;
   idBarrio?: string;
   idPunto?: string;

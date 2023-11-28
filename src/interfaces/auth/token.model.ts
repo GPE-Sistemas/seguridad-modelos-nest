@@ -3,11 +3,11 @@ import { IUsuario } from "../usuario/schema";
 import { IVecino } from "../..";
 
 export interface IToken {
-  accessToken: string;
-  accessTokenExpiresAt: string;
+  accessToken?: string;
+  accessTokenExpiresAt?: string;
   refreshToken?: string;
   refreshTokenExpiresAt?: string;
   scope?: string | string[];
-  client: IClient;
-  user: IUsuario | IVecino;
+  client?: IClient;
+  user?: IUsuario | IVecino;
 }

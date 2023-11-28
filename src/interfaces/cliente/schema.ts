@@ -2,9 +2,9 @@ import { ICategoria } from "../categoria/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 
 export interface ICliente {
-  _id: string;
-  activo: boolean;
-  admin: boolean;
+  _id?: string;
+  activo?: boolean;
+  admin?: boolean;
   coordenadas?: ICoordenadas[][];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
@@ -15,15 +15,15 @@ export interface ICliente {
     coordinates: [number, number][][][];
   };
   superficie?: number;
-  fechaCreacion: string;
-  nombre: string;
+  fechaCreacion?: string;
+  nombre?: string;
   nombreAppMobile?: string;
-  edadMinima: number;
-  twitter: string;
-  instagram: string;
-  sirenas: boolean;
+  edadMinima?: number;
+  twitter?: string;
+  instagram?: string;
+  sirenas?: boolean;
   categorias?: ICategoriaCliente[];
-  imagenes: IImagenesCliente;
+  imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;
   categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
   configuracion?: IConfigCliente;

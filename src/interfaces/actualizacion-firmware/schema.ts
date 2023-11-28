@@ -2,13 +2,13 @@ import { ICliente } from "../cliente";
 import { ISirena } from "../sirenas/sirena.model";
 
 export interface IActualizacionFirmware {
-  _id: string;
-  fecha: string;
-  chipIdSirena: string;
-  firmwareActual: string;
-  firmwareNuevo: string;
-  idCliente: string;
-  etapa: string;
+  _id?: string;
+  fecha?: string;
+  chipIdSirena?: string;
+  firmwareActual?: string;
+  firmwareNuevo?: string;
+  idCliente?: string;
+  etapa?: string;
 
   // Virtuals
 

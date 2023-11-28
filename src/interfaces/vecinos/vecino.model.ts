@@ -4,10 +4,10 @@ import {
   ICliente,
   ICoordenadas,
   ILocalidad,
-} from '../..';
-import { ICategoriaVecino } from './categoria-vecino.model';
-import { IEnvioCodigo } from './envio-codigo.dto';
-import { IConfigNotificacion } from './config-notificaciones';
+} from "../..";
+import { ICategoriaVecino } from "./categoria-vecino.model";
+import { IEnvioCodigo } from "./envio-codigo.dto";
+import { IConfigNotificacion } from "./config-notificaciones";
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -18,27 +18,27 @@ export interface IPrivacidad {
 }
 
 export interface IVecino {
-  _id: string;
+  _id?: string;
   // IVECINO DE VERDAD
-  nombre: string;
-  dni: string;
+  nombre?: string;
+  dni?: string;
   sexo?: boolean | null;
   email?: string;
-  pais: string;
-  telefono: string;
-  fechaNacimiento: string;
+  pais?: string;
+  telefono?: string;
+  fechaNacimiento?: string;
   idsCliente?: string[];
   // Quizás
-  activo: boolean;
-  fechaCreacion: string;
-  creadoPorAdmin: boolean;
+  activo?: boolean;
+  fechaCreacion?: string;
+  creadoPorAdmin?: boolean;
   importado?: boolean;
   dniEscaneado?: boolean;
   // Pasadas a ConfigVecino
-  idCliente: string;
+  idCliente?: string;
   idLocalidad?: string;
   idBarrio?: string;
-  direccion: string;
+  direccion?: string;
   direccionV2?: DireccionV2;
   ubicacionDireccion?: ICoordenadas;
   complementoDireccion?: string;
@@ -70,10 +70,10 @@ export interface IVecino {
 }
 
 export type GeoJSONType =
-  | 'Point'
-  | 'LineString'
-  | 'Polygon'
-  | 'MultiPoint'
-  | 'MultiLineString'
-  | 'MultiPolygon'
-  | 'GeometryCollection';
+  | "Point"
+  | "LineString"
+  | "Polygon"
+  | "MultiPoint"
+  | "MultiLineString"
+  | "MultiPolygon"
+  | "GeometryCollection";

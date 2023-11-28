@@ -1,5 +1,5 @@
 export interface ISim {
-  _id: string;
+  _id?: string;
   iccid?: string;
   operador?: string;
   apn?: string;

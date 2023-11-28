@@ -1,10 +1,10 @@
 import { ICliente, IVecino } from "../..";
 
 export interface IControl {
-  _id: string;
-  chipId: string;
+  _id?: string;
+  chipId?: string;
   etiqueta?: string;
-  fechaCreacion: string;
+  fechaCreacion?: string;
   idCliente?: string;
   idVecino?: string;
   baneado?: boolean;

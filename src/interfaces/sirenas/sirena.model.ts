@@ -5,53 +5,53 @@ import {
   ICoordenadas,
   ILocalidad,
   ISim,
-} from '../..';
+} from "../..";
 
 export interface ISirena {
-  _id: string;
-  fechaCreacion: string;
-  versionFirmware: string;
-  chipId: string;
+  _id?: string;
+  fechaCreacion?: string;
+  versionFirmware?: string;
+  chipId?: string;
   /**
    * Si la sirena se puede usar
    */
-  activa: boolean;
+  activa?: boolean;
   /**
    * Si la sirena esta conectada al websocket
    */
-  online: boolean;
+  online?: boolean;
   /**
    * Ubicacion reportada por la sirena y direccion calculada
    */
-  ubicacionGps: ICoordenadas;
-  direccionGps: string;
+  ubicacionGps?: ICoordenadas;
+  direccionGps?: string;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   /**
    * Ubicacion cargada manualmente y direccion calculada
    */
-  ubicacionManual: ICoordenadas;
-  direccionManual: string;
+  ubicacionManual?: ICoordenadas;
+  direccionManual?: string;
   idLocalidad?: string;
   idBarrio?: string;
   /**
    * Cliente determinado por la ubicacion
    */
-  idCliente: string;
+  idCliente?: string;
   /**
    * Si tiene la luz encendida
    */
-  luzEncendida: boolean;
+  luzEncendida?: boolean;
   /**
    * Si está sonando
    */
-  sonidoEncendido: boolean;
+  sonidoEncendido?: boolean;
 
   iccidSim?: string;
 
