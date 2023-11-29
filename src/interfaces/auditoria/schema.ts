@@ -1,5 +1,6 @@
 import { ICliente } from "../cliente";
 import { IUsuario } from "../usuario/schema";
+import { IVecino } from "../vecinos";
 
 export interface IAuditoria {
   _id?: string;
@@ -11,5 +12,6 @@ export interface IAuditoria {
   fechaCreacion?: string;
   // Populate
   usuario?: IUsuario;
+  vecino?: IVecino;
   cliente?: ICliente;
 }
