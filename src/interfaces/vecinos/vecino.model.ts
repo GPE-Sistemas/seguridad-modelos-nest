@@ -4,10 +4,10 @@ import {
   ICliente,
   ICoordenadas,
   ILocalidad,
-} from "../..";
-import { ICategoriaVecino } from "./categoria-vecino.model";
-import { IEnvioCodigo } from "./envio-codigo.dto";
-import { IConfigNotificacion } from "./config-notificaciones";
+} from '../..';
+import { ICategoriaVecino } from './categoria-vecino.model';
+import { IEnvioCodigo } from './envio-codigo.dto';
+import { IConfigNotificacion } from './config-notificaciones';
 
 // TODO: implementar para que el vecino autorice los permisos de envio de multimedia con las alertas
 export interface IPrivacidad {
@@ -34,46 +34,21 @@ export interface IVecino {
   creadoPorAdmin?: boolean;
   importado?: boolean;
   dniEscaneado?: boolean;
-  // Pasadas a ConfigVecino
-  idCliente?: string;
-  idLocalidad?: string;
-  idBarrio?: string;
-  direccion?: string;
-  direccionV2?: DireccionV2;
-  ubicacionDireccion?: ICoordenadas;
-  complementoDireccion?: string;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
-  geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
-  };
-
-  envioCodigo?: IEnvioCodigo;
-  categoria?: ICategoriaVecino;
-  ultimoAcceso?: string;
-  tokenPush?: string;
-  idSmartCity?: string;
-  appVersion?: string;
-  app?: string;
-  appType?: string;
-
-  // Configs
-  configs?: IConfigNotificacion;
-
-  // Virtuals
-  cliente?: ICliente;
-  localidad?: ILocalidad;
-  barrio?: IBarrio;
 }
 
+type OmitirCreate = '_id';
+
+export interface ICrearVecino extends Omit<Partial<IVecino>, OmitirCreate> {}
+
+type OmitirUpdate = '_id';
+
+export interface IUpdateVecino extends Omit<Partial<IVecino>, OmitirUpdate> {}
+
 export type GeoJSONType =
-  | "Point"
-  | "LineString"
-  | "Polygon"
-  | "MultiPoint"
-  | "MultiLineString"
-  | "MultiPolygon"
-  | "GeometryCollection";
+  | 'Point'
+  | 'LineString'
+  | 'Polygon'
+  | 'MultiPoint'
+  | 'MultiLineString'
+  | 'MultiPolygon'
+  | 'GeometryCollection';
