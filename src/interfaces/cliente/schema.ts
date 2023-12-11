@@ -1,9 +1,11 @@
 import { ICategoria } from "../categoria/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 
+export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
 export interface ICliente {
   _id?: string;
   activo?: boolean;
+  tipo?: TipoCliente;
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   // GEOJSON
