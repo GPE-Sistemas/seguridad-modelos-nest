@@ -1,8 +1,8 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
-import { ICoordenadasInput } from '../../auxiliares/coordenadas';
-import { IEnvioCodigo } from './envio-codigo.dto';
-import { DireccionV2, GeoJSONType, ICategoriaVecino } from '../..';
-import { IConfigNotificacion } from './config-notificaciones';
+import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
+import { ICoordenadasInput } from "../../auxiliares/coordenadas";
+import { IEnvioCodigo } from "./envio-codigo.dto";
+import { DireccionV2, GeoJSONType, ICategoriaVecino } from "../..";
+import { IConfigNotificacion } from "./config-notificaciones";
 
 export interface INuevoVecino {
   nombre?: string;
@@ -13,6 +13,8 @@ export interface INuevoVecino {
   telefono?: string;
   email?: string;
   direccion?: string;
+  // Id Cliente viene en el registro de la app barrios privados
+  idCliente?: string;
   idsCliente?: string[];
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
