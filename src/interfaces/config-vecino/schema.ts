@@ -27,6 +27,12 @@ export interface IConfigVecino {
   idCliente?: string;
   idVecino?: string;
 
+  activo?: boolean;
+  fechaCreacion?: string;
+  creadoPorAdmin?: boolean;
+  importado?: boolean;
+  dniEscaneado?: boolean;
+
   ultimoAcceso?: string;
   tokenPush?: string;
   idSmartCity?: string;
