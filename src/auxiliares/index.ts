@@ -9,3 +9,4 @@ export * from "./rol";
 export * from "./socket-message";
 export * from "./ubicacion";
 export * from "./version";
+export * from "./opensearch-request";
