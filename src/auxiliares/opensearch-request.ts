@@ -9,4 +9,5 @@ export interface OpenSearchRequest {
   query?: string;
   body?: string;
   msg?: string;
+  timestamp?: string;
 }
