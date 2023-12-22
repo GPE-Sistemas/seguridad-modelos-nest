@@ -49,6 +49,7 @@ export interface IConfigVecino {
   direccion?: IDireccionVecino;
 
   idGrupo?: string;
+  adminGrupo?: boolean;
 
   // Virtuals
   cliente?: ICliente;
