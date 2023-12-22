@@ -14,6 +14,7 @@ export * from "./interfaces/contactos";
 export * from "./interfaces/controles-rf";
 export * from "./interfaces/estado-reclamo";
 export * from "./interfaces/eventos";
+export * from "./interfaces/grupo";
 export * from "./interfaces/localidades";
 export * from "./interfaces/mantenimiento";
 export * from "./interfaces/mensaje";
