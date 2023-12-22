@@ -1,4 +1,5 @@
 import { ICoordenadas } from "../../auxiliares";
+import { ICliente } from "../cliente";
 
 export interface IGrupo {
   _id?: string;
@@ -14,6 +15,7 @@ export interface IGrupo {
   };
 
   // Virtuals
+  cliente?: ICliente;
 }
 
 type OmitirCreate = "_id" | "cliente" | "vecino";
