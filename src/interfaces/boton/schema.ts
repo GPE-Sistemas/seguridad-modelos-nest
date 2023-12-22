@@ -18,11 +18,14 @@ export interface IEnvioMultimedia {
 
 export type FuncionBoton =
   | "Alerta"
+  | "Evento"
   | "Sirena"
   | "Reflector"
   | "911"
   | "Link"
   | "Alerta por Punto";
+
+export type tipoDato = "texto" | "numero" | "fecha" | "booleano";
 
 export interface IBoton {
   _id?: string;
@@ -44,6 +47,18 @@ export interface IBoton {
   codigoSmartCity?: string;
   // Para elegir uno de tres sonidos
   notificacion?: string;
-  // para que el botón no sirva para nada
+  /**
+   * El evento inicia con el estado 'Finalizada'
+   */
   finalizacionAutomatica?: boolean;
+  /**
+   * Define el estado con el que debe inciar el evento cuando el vecino pertenece a un grupo
+   * true = Pre Aprobada
+   * false = Nueva
+   */
+  requierePreAprobacion?: boolean;
+  /**
+   * Formulario dinamico dependiendo del tipo de evento
+   */
+  formulario?: { [label: string]: tipoDato };
 }

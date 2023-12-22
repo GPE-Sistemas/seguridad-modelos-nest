@@ -1,4 +1,5 @@
 export enum estados {
+  "Pre Aprobada" = "Pre Aprobada",
   "Nueva" = "Nueva",
   "Vista" = "Vista",
   "En Atención" = "En Atención",

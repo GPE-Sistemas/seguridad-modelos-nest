@@ -43,10 +43,12 @@ export interface IConfigVecino {
   envioCodigo?: IEnvioCodigo;
 
   // Configs
-  configs?: IConfigNotificacion;
+  configs?: IConfigNotificacion; //Cambiar configs por notificaciones
 
   categoria?: ICategoriaVecino;
   direccion?: IDireccionVecino;
+
+  idGrupo?: string;
 
   // Virtuals
   cliente?: ICliente;

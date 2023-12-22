@@ -5,23 +5,14 @@ import { ICentroMonitoreo } from "../centro-monitoreo/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 import { IUsuario } from "../usuario/schema";
 import { IZona } from "../zona/schema";
-import {
-  GeoJSONType,
-  IBarrio,
-  ICliente,
-  ILocalidad,
-  IPunto,
-  IVecino,
-} from "../..";
+import { IBarrio, ICliente, ILocalidad, IPunto, IVecino } from "../..";
 
 export interface IAlerta {
   _id?: string;
+  tipo?: "Emergencia" | "Evento";
+
   activa?: boolean;
   ubicacion?: ICoordenadas;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: "Point";
     coordinates: [number, number];
@@ -43,6 +34,10 @@ export interface IAlerta {
   idLocalidad?: string;
   idBarrio?: string;
   idPunto?: string;
+  idGrupo?: string; // Agrupacion de vecinos que la pueden ver (barrios cerrados y autogestion de alertas)
+
+  // Para eventos
+  formulario?: Record<string, any>; // Formulario de datos del evento
 
   // Virtuals
   boton?: IBoton;
