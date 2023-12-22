@@ -1,6 +1,7 @@
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 import { IBarrio } from "../barrios";
 import { ICliente } from "../cliente";
+import { IGrupo } from "../grupo";
 import { ILocalidad } from "../localidades/schema";
 import { ICategoriaVecino } from "../vecinos/categoria-vecino.model";
 import { IConfigNotificacion } from "../vecinos/config-notificaciones";
@@ -54,6 +55,7 @@ export interface IConfigVecino {
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
+  grupo?: IGrupo;
 }
 
 type OmitirCreate = "_id" | "cliente" | "vecino";
