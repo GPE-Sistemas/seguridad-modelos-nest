@@ -5,7 +5,7 @@ import { ICentroMonitoreo } from "../centro-monitoreo/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 import { IUsuario } from "../usuario/schema";
 import { IZona } from "../zona/schema";
-import { IBarrio, ICliente, ILocalidad, IPunto, IVecino } from "../..";
+import { IBarrio, ICliente, IGrupo, ILocalidad, IPunto, IVecino } from "../..";
 
 export interface IAlerta {
   _id?: string;
@@ -50,4 +50,5 @@ export interface IAlerta {
   localidad?: ILocalidad;
   barrio?: IBarrio;
   punto?: IPunto;
+  grupo?: IGrupo;
 }
