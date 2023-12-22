@@ -20,8 +20,12 @@ export interface IGrupo {
 
 type OmitirCreate = "_id" | "cliente" | "vecino";
 
-export interface ICreateGrupo extends Omit<Partial<IGrupo>, OmitirCreate> {}
+export interface ICreateGrupo extends Omit<Partial<IGrupo>, OmitirCreate> {
+  idsVecinos?: string[];
+}
 
 type OmitirUpdate = "_id" | "idCliente" | "idVecino" | "cliente" | "vecino";
 
-export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {}
+export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {
+  idsVecinos?: string[];
+}
