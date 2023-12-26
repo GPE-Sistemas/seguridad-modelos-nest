@@ -25,7 +25,16 @@ export type FuncionBoton =
   | "Link"
   | "Alerta por Punto";
 
-export type tipoDato = "texto" | "numero" | "fecha" | "booleano";
+export type tipoDato =
+  | "Texto"
+  | "Texto Largo"
+  | "Numero"
+  | "Fecha"
+  | "Booleano"
+  | "Ubicación"
+  | "Foto"
+  | "Persona"
+  | "Lista de personas";
 
 export interface IBoton {
   _id?: string;
