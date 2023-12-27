@@ -1,12 +1,12 @@
-import { TipoDePunto } from "../puntos";
+import { TipoDePunto } from '../puntos';
 
 export interface ITrackeo {
-  tiempoMinutos: number;
-  intervaloSegundos: number;
-  gps: boolean;
-  foto: boolean;
-  audio: boolean;
-  video: boolean;
+  tiempoMinutos?: number;
+  intervaloSegundos?: number;
+  gps?: boolean;
+  foto?: boolean;
+  audio?: boolean;
+  video?: boolean;
 }
 
 export interface IEnvioMultimedia {
@@ -17,24 +17,24 @@ export interface IEnvioMultimedia {
 }
 
 export type FuncionBoton =
-  | "Alerta"
-  | "Evento"
-  | "Sirena"
-  | "Reflector"
-  | "911"
-  | "Link"
-  | "Alerta por Punto";
+  | 'Alerta'
+  | 'Evento'
+  | 'Sirena'
+  | 'Reflector'
+  | '911'
+  | 'Link'
+  | 'Alerta por Punto';
 
 export type tipoDato =
-  | "Texto"
-  | "Texto Largo"
-  | "Numero"
-  | "Fecha"
-  | "Booleano"
-  | "Ubicación"
-  | "Foto"
-  | "Persona"
-  | "Lista de personas";
+  | 'Texto'
+  | 'Texto Largo'
+  | 'Numero'
+  | 'Fecha'
+  | 'Booleano'
+  | 'Ubicación'
+  | 'Foto'
+  | 'Persona'
+  | 'Lista de personas';
 
 export interface IBoton {
   _id?: string;
