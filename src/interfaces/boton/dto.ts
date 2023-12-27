@@ -2,12 +2,12 @@ import { FuncionBoton, IEnvioMultimedia } from './schema';
 import { TipoDePunto } from '../puntos';
 
 export interface ICrearTrackeoInput {
-  tiempoMinutos: number;
-  intervaloSegundos: number;
-  gps: boolean;
-  foto: boolean;
-  audio: boolean;
-  video: boolean;
+  tiempoMinutos?: number;
+  intervaloSegundos?: number;
+  gps?: boolean;
+  foto?: boolean;
+  audio?: boolean;
+  video?: boolean;
 }
 
 export interface ICrearBotonInput {
