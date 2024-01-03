@@ -52,6 +52,17 @@ export interface IConfigVecino {
   idGrupo?: string;
   adminGrupo?: boolean;
 
+  // Datos Personales
+  datosPersonales?: {
+    nombre?: string;
+    dni?: string;
+    sexo?: boolean | null;
+    email?: string;
+    pais?: string;
+    telefono?: string;
+    fechaNacimiento?: string;
+  };
+
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
