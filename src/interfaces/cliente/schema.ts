@@ -1,7 +1,7 @@
-import { ICategoria } from "../categoria/schema";
-import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { ICategoria } from '../categoria/schema';
+import { ICoordenadas } from '../../auxiliares/coordenadas';
 
-export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
+export type TipoCliente = 'Barrio Privado' | 'Municipio' | 'Provincia';
 export interface ICliente {
   _id?: string;
   activo?: boolean;
@@ -13,7 +13,7 @@ export interface ICliente {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "MultiPolygon";
+    type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
   superficie?: number;
@@ -61,6 +61,8 @@ export interface IConfigCliente {
   tagsMantenimiento?: string[];
   // Ver reclamos
   verReclamos?: boolean;
+  // ver eventos
+  verEventos?: boolean;
 }
 
 export interface ICategoriaCliente {
