@@ -4,6 +4,7 @@ export interface ICrearControl {
   fechaCreacion?: string;
   idCliente?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   baneado?: boolean;
 }
 
@@ -12,6 +13,7 @@ export interface IUpdateControl {
   etiqueta?: string;
   idCliente?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   baneado?: boolean;
 }
 

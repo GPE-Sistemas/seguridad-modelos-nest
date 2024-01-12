@@ -1,4 +1,4 @@
-import { ICliente, IVecino } from "../..";
+import { ICliente, IConfigVecino, IVecino } from '../..';
 
 export interface IControl {
   _id?: string;
@@ -7,9 +7,11 @@ export interface IControl {
   fechaCreacion?: string;
   idCliente?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   baneado?: boolean;
 
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
 }

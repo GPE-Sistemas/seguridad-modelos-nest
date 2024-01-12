@@ -1,8 +1,10 @@
 import { IConfigContacto } from './config';
 
 export interface ICreateContacto {
-  idVecino?: string;
-  idContacto?: string;
+  idVecino?: string; // VOS
+  idConfigVecino?: string;
+  idContacto?: string; // EL OTRO
+  idConfigVecinoContacto?: string;
   idCliente?: string;
   aprobado?: boolean;
   // Datos del Contacto

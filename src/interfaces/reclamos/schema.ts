@@ -1,11 +1,13 @@
-import { ICliente } from "../cliente";
-import { IVecino } from "../vecinos/vecino.model";
+import { ICliente } from '../cliente';
+import { IConfigVecino } from '../config-vecino';
+import { IVecino } from '../vecinos/vecino.model';
 
-export type EstadoReclamo = "Nuevo" | "En Proceso" | "Finalizado";
+export type EstadoReclamo = 'Nuevo' | 'En Proceso' | 'Finalizado';
 
 export interface IReclamo {
   _id?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   idCliente?: string;
   fechaCreacion?: string;
   fechaHecho?: string;
@@ -24,4 +26,5 @@ export interface IReclamo {
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
 }

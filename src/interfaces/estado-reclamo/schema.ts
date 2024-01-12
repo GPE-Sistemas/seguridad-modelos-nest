@@ -1,10 +1,11 @@
-import { EstadoReclamo } from "../reclamos";
+import { EstadoReclamo } from '../reclamos';
 
 export interface IEstadoReclamo {
   _id?: string;
   idReclamo?: string;
   idCliente?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   idUsuario?: string;
   fecha?: string;
   estado?: EstadoReclamo;

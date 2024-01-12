@@ -3,6 +3,7 @@ export interface IAlertaMensaje {
   idAlerta?: string;
   idCliente?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   idUsuario?: string;
   fecha?: string;
   mensaje?: string;
