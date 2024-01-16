@@ -1,10 +1,18 @@
-import { IApiKey, ICliente, IControl, IUsuario, IVecino } from "../..";
-import { ISirena } from "./sirena.model";
+import {
+  IApiKey,
+  ICliente,
+  IConfigVecino,
+  IControl,
+  IUsuario,
+  IVecino,
+} from '../..';
+import { ISirena } from './sirena.model';
 
 export interface IEventoSirena {
   _id?: string;
   chipId?: string;
   idVecino?: string;
+  idConfigVecino?: string;
   idUsuario?: string;
   idCliente?: string;
   chipIdControl?: string;
@@ -19,6 +27,7 @@ export interface IEventoSirena {
 
   // Virtuals
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
   cliente?: ICliente;
   control?: IControl;
   sirena?: ISirena;
