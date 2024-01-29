@@ -4,7 +4,8 @@ export type Rol =
   | "Crear Controles"
   | "veedor"
   | "Enviar Notificaciones"
-  | "Administrador de sirenas";
+  | "Administrador de sirenas"
+  | "Eliminar Vecinos";
 
 export const ROLES: Rol[] = [
   "admin",
@@ -13,4 +14,5 @@ export const ROLES: Rol[] = [
   "veedor",
   "Enviar Notificaciones",
   "Administrador de sirenas",
+  "Eliminar Vecinos",
 ];
