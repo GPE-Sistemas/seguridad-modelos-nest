@@ -1,15 +1,13 @@
 import { ICliente } from "../cliente";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
-import { GeoJSONType } from "../vecinos/vecino.model";
+
+export type TiposCentroMonitoreo = "Normal" | "Derivado";
 
 export interface ICentroMonitoreo {
   _id?: string;
   nombre?: string;
+  tipo?: TiposCentroMonitoreo;
   ubicacion?: ICoordenadas;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
     type: "Point";
     coordinates: [number, number];

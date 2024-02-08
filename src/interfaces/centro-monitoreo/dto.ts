@@ -1,13 +1,11 @@
 import { ICoordenadasInput } from "../../auxiliares/coordenadas";
 import { GeoJSONType } from "../vecinos/vecino.model";
+import { TiposCentroMonitoreo } from "./schema";
 
 export interface ICrearCentroMonitoreoInput {
   nombre: string;
   ubicacion: ICoordenadasInput;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  tipo?: TiposCentroMonitoreo;
   geojson?: {
     type: "Point";
     coordinates: [number, number];
@@ -18,10 +16,7 @@ export interface ICrearCentroMonitoreoInput {
 export interface IUpdateCentroMonitoreoInput {
   nombre?: string;
   ubicacion?: ICoordenadasInput;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  tipo?: TiposCentroMonitoreo;
   geojson?: {
     type: "Point";
     coordinates: [number, number];
@@ -31,10 +26,7 @@ export interface IUpdateCentroMonitoreoInput {
 export interface INuevoCentroMonitoreoInput {
   nombre: string;
   ubicacion: ICoordenadasInput;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
+  tipo?: TiposCentroMonitoreo;
   geojson?: {
     type: "Point";
     coordinates: [number, number];
