@@ -1,11 +1,12 @@
 export enum estados {
-  'Pre Aprobada' = 'Pre Aprobada',
-  'Nueva' = 'Nueva',
-  'Vista' = 'Vista',
-  'En Atención' = 'En Atención',
-  'En Espera' = 'En Espera',
-  'Liberada' = 'Liberada',
-  'Finalizada' = 'Finalizada',
+  "Pre Aprobada" = "Pre Aprobada",
+  "Nueva" = "Nueva",
+  "Vista" = "Vista",
+  "En Atención" = "En Atención",
+  "En Espera" = "En Espera",
+  "Liberada" = "Liberada",
+  "Derivada" = "Derivada",
+  "Finalizada" = "Finalizada",
 }
 
 export interface ICrearAlertaEstadoInput {
