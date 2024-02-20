@@ -16,6 +16,7 @@ export interface ICliente {
     type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
+  centro?: ICoordenadas;
   superficie?: number;
   fechaCreacion?: string;
   nombre?: string;
