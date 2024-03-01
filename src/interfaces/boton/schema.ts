@@ -3,10 +3,17 @@ import { TipoDePunto } from '../puntos';
 export interface ITrackeo {
   tiempoMinutos?: number;
   intervaloSegundos?: number;
+  //
   gps?: boolean;
+  gpsTiempo?: number;
+  gpsIntervalo?: number;
   foto?: boolean;
+  fotoCantidad?: number;
+  fotoIntervalo?: number;
   audio?: boolean;
+  audioTiempo?: number;
   video?: boolean;
+  videoTiempo?: number;
 }
 
 export interface IEnvioMultimedia {
