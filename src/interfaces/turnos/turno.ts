@@ -6,6 +6,7 @@ export interface ITurno {
   _id?: string;
   // Autogenerados
   fechaCreacion?: string;
+  numero?: string; // Prefijo + Posición entre los turnos del rango
   // Inputs
   fecha?: string;
   idConfigTurno?: string;

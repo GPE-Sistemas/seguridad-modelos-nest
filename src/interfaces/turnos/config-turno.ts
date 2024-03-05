@@ -16,6 +16,7 @@ export interface IConfigTurno {
   // Inputs
   tipoTurno?: TipoTurno;
   rangos?: RangoTurno[];
+  prefijo?: string; // Para poner el número del turno
   // Tenancy
   idCliente?: string;
   idUsuario?: string;
