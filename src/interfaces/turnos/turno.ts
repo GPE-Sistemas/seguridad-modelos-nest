@@ -17,7 +17,7 @@ export interface ITurno {
   // Populates
   cliente?: ICliente;
   vecino?: IVecino;
-  ConfigTurno?: IConfigTurno;
+  configTurno?: IConfigTurno;
 }
 
 type OmitirCreate =
