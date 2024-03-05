@@ -26,3 +26,4 @@ export * from './interfaces/sirenas';
 export * from './interfaces/usuario';
 export * from './interfaces/vecinos';
 export * from './interfaces/zona';
+export * from './interfaces/turnos';
