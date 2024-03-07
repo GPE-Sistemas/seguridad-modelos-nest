@@ -25,7 +25,7 @@ type OmitirCreate =
   | 'fechaCreacion'
   | 'cliente'
   | 'vecino'
-  | 'ConfigTurno';
+  | 'configTurno';
 
 export interface ICreateTurno extends Omit<Partial<ITurno>, OmitirCreate> {}
 
@@ -34,6 +34,6 @@ type OmitirUpdate =
   | 'fechaCreacion'
   | 'cliente'
   | 'vecino'
-  | 'ConfigTurno';
+  | 'configTurno';
 
 export interface IUpdateTurno extends Omit<Partial<ITurno>, OmitirUpdate> {}
