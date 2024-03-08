@@ -9,6 +9,7 @@ export interface ITurno {
   numero?: string; // Prefijo + Posición entre los turnos del rango
   // Inputs
   fecha?: string;
+  fechaFin?: string;
   idConfigTurno?: string;
   // Tenancy
   idCliente?: string;
