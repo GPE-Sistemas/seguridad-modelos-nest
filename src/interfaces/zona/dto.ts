@@ -1,15 +1,15 @@
-import { ICoordenadasInput } from "../../auxiliares/coordenadas";
-import { GeoJSONType } from "../vecinos/vecino.model";
+import { ICoordenadas } from '../../auxiliares/coordenadas';
+import { GeoJSONType } from '../vecinos/vecino.model';
 
 export interface ICrearZonaInput {
   nombre: string;
-  coordenadas: ICoordenadasInput[];
+  coordenadas: ICoordenadas[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][][];
   };
   superficie?: number;
@@ -19,13 +19,13 @@ export interface ICrearZonaInput {
 
 export interface IUpdateZonaInput {
   nombre?: string;
-  coordenadas?: ICoordenadasInput[];
+  coordenadas?: ICoordenadas[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][][];
   };
   superficie?: number;
@@ -34,13 +34,13 @@ export interface IUpdateZonaInput {
 
 export interface INuevaZonaInput {
   nombre: string;
-  coordenadas: ICoordenadasInput[];
+  coordenadas: ICoordenadas[];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][][];
   };
   superficie?: number;

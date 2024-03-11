@@ -1,19 +1,23 @@
-## *1-* En package.json agregar la dependencia
+## _1-_ En package.json agregar la dependencia
+
 ```
 "modelos": "git://github.com/GPE-Sistemas/seguridad-modelos-nest.git"
 ```
 
-## *2-* En package.json agregar el script para actualizar
+## _2-_ En package.json agregar el script para actualizar
+
 ```
 "modelos": "yarn upgrade modelos"
 ```
 
-## *3-* Instalar la dependencia
+## _3-_ Instalar la dependencia
+
 ```
 # yarn install
 ```
 
-## *4-* Importar los modelos requeridos
+## _4-_ Importar los modelos requeridos
+
 ```
-import { ICoordenadasInput, ICoordenadas } from 'modelos/src';
+import { ICoordenadas, ICoordenadas } from 'modelos/src';
 ```

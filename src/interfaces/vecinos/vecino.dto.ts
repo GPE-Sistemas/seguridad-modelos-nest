@@ -1,8 +1,8 @@
-import { ICrearCategoriaVecinoInput } from "./categoria-vecino.dto";
-import { ICoordenadasInput } from "../../auxiliares/coordenadas";
-import { IEnvioCodigo } from "./envio-codigo.dto";
-import { DireccionV2, GeoJSONType, ICategoriaVecino } from "../..";
-import { IConfigNotificacion } from "./config-notificaciones";
+import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
+import { ICoordenadas } from '../../auxiliares/coordenadas';
+import { IEnvioCodigo } from './envio-codigo.dto';
+import { DireccionV2, GeoJSONType, ICategoriaVecino } from '../..';
+import { IConfigNotificacion } from './config-notificaciones';
 
 export interface INuevoVecino {
   nombre?: string;
@@ -22,7 +22,7 @@ export interface INuevoVecino {
   /**
    * La ubicacion solo es necesaria cuando el vecino se crea desde la app de boton por la propia persona
    */
-  ubicacion?: ICoordenadasInput;
+  ubicacion?: ICoordenadas;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
@@ -41,7 +41,7 @@ export interface IUpdateDomicilioVecino {
   direccion?: string;
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
-  ubicacion?: ICoordenadasInput;
+  ubicacion?: ICoordenadas;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
@@ -84,7 +84,7 @@ export interface IUpdateVecinoDatos {
   direccion?: string;
   direccionV2?: DireccionV2;
   complementoDireccion?: string;
-  ubicacion?: ICoordenadasInput;
+  ubicacion?: ICoordenadas;
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar

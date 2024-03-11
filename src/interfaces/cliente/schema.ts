@@ -1,7 +1,7 @@
-import { ICategoria } from "../categoria/schema";
-import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { ICategoria } from '../categoria/schema';
+import { ICoordenadas } from '../../auxiliares/coordenadas';
 
-export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
+export type TipoCliente = 'Barrio Privado' | 'Municipio' | 'Provincia';
 export interface ICliente {
   _id?: string;
   activo?: boolean;
@@ -13,7 +13,7 @@ export interface ICliente {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "MultiPolygon";
+    type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
   centro?: ICoordenadas;
@@ -54,6 +54,8 @@ export interface IConfigCliente {
   distanciaCobertura?: number;
   verSirenasOnline?: boolean;
   tiposDeSirena?: string[]; // 'sirena' | 'totem' | 'sirena escolar';
+  // Estacionamiento Medido
+  unidadFija?: number;
   // Modulos a ver
   verContactos?: boolean;
   verPuntos?: boolean;
@@ -62,6 +64,7 @@ export interface IConfigCliente {
   verEventos?: boolean;
   verTurnos?: boolean;
   verGrupos?: boolean;
+  verEstacionamientoMedido?: boolean;
 }
 
 export interface ICategoriaCliente {

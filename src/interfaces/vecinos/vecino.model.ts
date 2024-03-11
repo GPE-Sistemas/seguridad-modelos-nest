@@ -17,6 +17,10 @@ export interface IPrivacidad {
   ubicacion: boolean;
 }
 
+/**
+ * @deprecated
+ * AHORA SE USA CONFIGVECINO
+ */
 export interface IVecino {
   _id?: string;
   // IVECINO DE VERDAD

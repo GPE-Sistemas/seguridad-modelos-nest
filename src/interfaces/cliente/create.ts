@@ -1,5 +1,5 @@
 import { ICategoriaCliente, IConfigCliente, IImagenesCliente } from './schema';
-import { ICoordenadas, ICoordenadasInput } from '../../auxiliares/coordenadas';
+import { ICoordenadas, ICoordenadas } from '../../auxiliares/coordenadas';
 
 export interface ICrearClienteInput {
   nombre: string;
@@ -10,7 +10,7 @@ export interface ICrearClienteInput {
   instagram?: string;
   sirenas?: boolean;
   categorias: ICategoriaCliente[];
-  coordenadas?: ICoordenadasInput[][];
+  coordenadas?: ICoordenadas[][];
   // GEOJSON
   // https://www.mongodb.com/docs/manual/reference/geojson/
   // type es el tipo de objeto a guardar
