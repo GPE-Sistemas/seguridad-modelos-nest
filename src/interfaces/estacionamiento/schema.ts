@@ -15,9 +15,12 @@ export interface IEstacionamiento {
   };
   tipo?: "Abono" | "Temporal";
   fechaInicio?: string;
-  fechaFin?: string;
   fechaFinalizacionAutomatica?: string;
   dominio?: string;
+
+  // Datos que se cargan al finalizar el estacionamiento
+  monto?: number;
+  fechaFin?: string;
 
   // Virtuals
   configVecino?: IConfigVecino;

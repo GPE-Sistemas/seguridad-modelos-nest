@@ -23,6 +23,8 @@ export interface IZonaEstacionamiento {
   rangos?: RangoEstacionamiento[];
   abonos?: IAbono[];
   coordenadas?: ICoordenadas[];
+  strokeColor?: string;
+  fillColor?: string;
   geojson?: {
     type: "Polygon";
     coordinates: [number, number][][];
