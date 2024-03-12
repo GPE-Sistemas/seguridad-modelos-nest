@@ -1,8 +1,8 @@
-import { ICoordenadas } from '../../auxiliares';
-import { ICliente } from '../cliente';
-import { IConfigVecino } from '../config-vecino';
-import { IUsuario } from '../usuario';
-import { IZonaEstacionamiento } from '../zona-estacionamiento';
+import { ICoordenadas } from "../../auxiliares";
+import { ICliente } from "../cliente";
+import { IConfigVecino } from "../config-vecino";
+import { IUsuario } from "../usuario";
+import { IZonaEstacionamiento } from "../zona-estacionamiento";
 
 export interface IInfraccion {
   _id?: string;
@@ -10,11 +10,11 @@ export interface IInfraccion {
   idCliente?: string;
   idUsuario?: string;
   idZonaEstacionamiento?: string;
-  tipo?: 'Estacionamiento' | 'Velocidad';
+  tipo?: "Estacionamiento" | "Velocidad";
   fecha?: string;
   coordenada?: ICoordenadas;
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
 
@@ -32,21 +32,21 @@ export interface IInfraccion {
 }
 
 type OmitirCreate =
-  | '_id'
-  | 'cliente'
-  | 'configVecino'
-  | 'usuario'
-  | 'zonaEstacionamiento';
+  | "_id"
+  | "cliente"
+  | "configVecino"
+  | "usuario"
+  | "zonaEstacionamiento";
 
-export interface ICreateInfracciones
+export interface ICreateInfraccion
   extends Omit<Partial<IInfraccion>, OmitirCreate> {}
 
 type OmitirUpdate =
-  | '_id'
-  | 'cliente'
-  | 'configVecino'
-  | 'usuario'
-  | 'zonaEstacionamiento';
+  | "_id"
+  | "cliente"
+  | "configVecino"
+  | "usuario"
+  | "zonaEstacionamiento";
 
-export interface IUpdateInfracciones
+export interface IUpdateInfraccion
   extends Omit<Partial<IInfraccion>, OmitirUpdate> {}
