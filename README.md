@@ -19,5 +19,5 @@
 ## _4-_ Importar los modelos requeridos
 
 ```
-import { ICoordenadas, ICoordenadas } from 'modelos/src';
+import { ICoordenadas } from 'modelos/src';
 ```

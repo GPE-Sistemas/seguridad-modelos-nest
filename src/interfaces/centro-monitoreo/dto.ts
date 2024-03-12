@@ -1,5 +1,4 @@
 import { ICoordenadas } from '../../auxiliares/coordenadas';
-import { GeoJSONType } from '../vecinos/vecino.model';
 import { TiposCentroMonitoreo } from './schema';
 
 export interface ICrearCentroMonitoreoInput {

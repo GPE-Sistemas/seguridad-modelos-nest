@@ -1,4 +1,4 @@
-import { GeoJSONType, ICoordenadas } from '../..';
+import { ICoordenadas } from '../..';
 import { estados } from './alerta-estado.dto';
 import { IAlertaEstado } from './alerta-estado.model';
 import { IAlertaMedia } from './alerta-media.model';

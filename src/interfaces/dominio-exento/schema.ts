@@ -1,5 +1,4 @@
 import { ICoordenadas } from '../../auxiliares';
-import { IConfigVecino } from '../config-vecino';
 import { IZonaEstacionamiento } from '../zona-estacionamiento';
 
 export interface IDominioExcento {

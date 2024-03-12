@@ -1,4 +1,4 @@
-import { GeoJSONType, IConfigSirena, ICoordenadas } from '../..';
+import { IConfigSirena, ICoordenadas } from '../..';
 
 export interface ICrearSirena {
   fechaCreacion?: string;

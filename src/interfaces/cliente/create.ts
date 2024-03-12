@@ -1,5 +1,5 @@
 import { ICategoriaCliente, IConfigCliente, IImagenesCliente } from './schema';
-import { ICoordenadas, ICoordenadas } from '../../auxiliares/coordenadas';
+import { ICoordenadas } from '../../auxiliares/coordenadas';
 
 export interface ICrearClienteInput {
   nombre: string;
