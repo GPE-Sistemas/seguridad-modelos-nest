@@ -1,5 +1,6 @@
 import { ICliente } from "../cliente";
 import { IConfigVecino } from "../config-vecino";
+import { IEstacionamiento } from "../estacionamiento";
 
 export interface ITransaccion {
   _id?: string;
@@ -17,9 +18,10 @@ export interface ITransaccion {
   // Virtuals
   cliente?: ICliente;
   configVecino?: IConfigVecino;
+  estacionamiento?: IEstacionamiento;
 }
 
-type OmitirCreate = "_id" | "cliente" | "configVecino";
+type OmitirCreate = "_id" | "cliente" | "configVecino" | "estacionamiento";
 
 export interface ICreateTransaccion
   extends Omit<Partial<ITransaccion>, OmitirCreate> {}
@@ -29,7 +31,8 @@ type OmitirUpdate =
   | "idCliente"
   | "idConfigVecino"
   | "cliente"
-  | "configVecino";
+  | "configVecino"
+  | "estacionamiento";
 
 export interface IUpdateTransaccion
   extends Omit<Partial<ITransaccion>, OmitirUpdate> {}
