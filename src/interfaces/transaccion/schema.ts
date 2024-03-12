@@ -1,11 +1,12 @@
-import { ICliente } from '../cliente';
-import { IConfigVecino } from '../config-vecino';
+import { ICliente } from "../cliente";
+import { IConfigVecino } from "../config-vecino";
 
 export interface ITransaccion {
   _id?: string;
   idConfigVecino?: string;
   idCliente?: string;
-  idComprobante?: string; // Externo al sistema (Una factura o un comprobante de pago de pago fácil)
+  idComprobante?: string; // id provisto por el medio de pago (Mercado Pago)
+  idEstacionamiento?: string; // Id del estacionamiento al que pertenece la transacción
 
   fecha?: string;
   saldoActual?: number;
@@ -18,17 +19,17 @@ export interface ITransaccion {
   configVecino?: IConfigVecino;
 }
 
-type OmitirCreate = '_id' | 'cliente' | 'configVecino';
+type OmitirCreate = "_id" | "cliente" | "configVecino";
 
 export interface ICreateTransaccion
   extends Omit<Partial<ITransaccion>, OmitirCreate> {}
 
 type OmitirUpdate =
-  | '_id'
-  | 'idCliente'
-  | 'idConfigVecino'
-  | 'cliente'
-  | 'configVecino';
+  | "_id"
+  | "idCliente"
+  | "idConfigVecino"
+  | "cliente"
+  | "configVecino";
 
 export interface IUpdateTransaccion
   extends Omit<Partial<ITransaccion>, OmitirUpdate> {}
