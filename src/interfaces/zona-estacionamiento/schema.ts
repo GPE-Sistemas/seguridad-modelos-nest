@@ -1,12 +1,14 @@
-import { ICoordenadas } from "../../auxiliares";
-import { ICliente } from "../cliente";
+import { ICoordenadas } from '../../auxiliares';
+import { ICliente } from '../cliente';
 
 export interface RangoEstacionamiento {
   dia?: number; // 0 - 6 (Domingo - Sabado) Como en el Date.getDay()
   desde?: string;
   hasta?: string;
   costoFraccion?: number; // Cantidades de unidad fija
+  costoHora?: number; // Cantidades de unidad fija
   fraccion?: number; // Tiempo en minutos
+  fraccionMinima?: number; // Tiempo en minutos
   tiempoDeGracia?: number; // MINUTOS
   costoInfraccion?: number; // Cantidades de unidad fija
 }
@@ -26,7 +28,7 @@ export interface IZonaEstacionamiento {
   strokeColor?: string;
   fillColor?: string;
   geojson?: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][][];
   };
 
@@ -34,12 +36,12 @@ export interface IZonaEstacionamiento {
   cliente?: ICliente;
 }
 
-type OmitirCreate = "_id" | "cliente";
+type OmitirCreate = '_id' | 'cliente';
 
 export interface ICreateZonaEstacionamiento
   extends Omit<Partial<IZonaEstacionamiento>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "cliente";
+type OmitirUpdate = '_id' | 'cliente';
 
 export interface IUpdateZonaEstacionamiento
   extends Omit<Partial<IZonaEstacionamiento>, OmitirUpdate> {}
