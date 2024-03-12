@@ -1,7 +1,7 @@
-import { ICoordenadas } from '../../auxiliares';
-import { ICliente } from '../cliente';
-import { IConfigVecino } from '../config-vecino';
-import { IZonaEstacionamiento } from '../zona-estacionamiento';
+import { ICoordenadas } from "../../auxiliares";
+import { ICliente } from "../cliente";
+import { IConfigVecino } from "../config-vecino";
+import { IZonaEstacionamiento } from "../zona-estacionamiento";
 
 export interface IEstacionamiento {
   _id?: string;
@@ -10,12 +10,13 @@ export interface IEstacionamiento {
   idZonaEstacionamiento?: string;
   coordenadas?: ICoordenadas;
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
-  tipo?: 'Abono' | 'Temporal';
+  tipo?: "Abono" | "Temporal";
   fechaInicio?: string;
   fechaFin?: string;
+  fechaFinalizacionAutomatica?: string;
   dominio?: string;
 
   // Virtuals
@@ -24,12 +25,12 @@ export interface IEstacionamiento {
   zonaEstacionamiento?: IZonaEstacionamiento;
 }
 
-type OmitirCreate = '_id' | 'configVecino' | 'cliente' | 'zonaEstacionamiento';
+type OmitirCreate = "_id" | "configVecino" | "cliente" | "zonaEstacionamiento";
 
 export interface ICreateEstacionamiento
   extends Omit<Partial<IEstacionamiento>, OmitirCreate> {}
 
-type OmitirUpdate = '_id' | 'configVecino' | 'cliente' | 'zonaEstacionamiento';
+type OmitirUpdate = "_id" | "configVecino" | "cliente" | "zonaEstacionamiento";
 
 export interface IUpdateEstacionamiento
   extends Omit<Partial<IEstacionamiento>, OmitirUpdate> {}
