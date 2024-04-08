@@ -1,3 +1,4 @@
+import { ICentroMonitoreo } from "../centro-monitoreo";
 import { ICliente } from "../cliente";
 import { IConfigVecino } from "../config-vecino";
 import { IUsuario } from "../usuario";
@@ -13,7 +14,7 @@ export interface IDerivacion {
   // Virtuals
   cliente?: ICliente;
   boton?: IConfigVecino;
-  centroMonitoreo?: IUsuario;
+  centroMonitoreo?: ICentroMonitoreo;
 }
 
 type OmitirCreate = "_id" | "cliente" | "boton" | "centroMonitoreo";
