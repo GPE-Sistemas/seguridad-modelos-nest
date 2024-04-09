@@ -1,9 +1,9 @@
-import { ICoordenadas } from '../..';
-import { estados } from './alerta-estado.dto';
-import { IAlertaEstado } from './alerta-estado.model';
-import { IAlertaMedia } from './alerta-media.model';
-import { IAlertaUbicacion } from './alerta-ubicacion.model';
-import { IAlerta } from './alerta.model';
+import { ICoordenadas } from "../..";
+import { Estados } from "./alerta-estado.dto";
+import { IAlertaEstado } from "./alerta-estado.model";
+import { IAlertaMedia } from "./alerta-media.model";
+import { IAlertaUbicacion } from "./alerta-ubicacion.model";
+import { IAlerta } from "./alerta.model";
 
 // Lo que envia el frontend
 export interface INuevaAlerta {
@@ -17,7 +17,7 @@ export interface ICrearAlerta {
   idCliente: string;
   ubicacion: ICoordenadas;
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   direccion: string;
@@ -32,10 +32,10 @@ export interface ICrearAlerta {
   idPunto?: string;
   idCategoria: string;
   prioridad: number;
-  estadoActual?: estados;
+  estadoActual?: Estados;
   activa?: boolean;
   //
-  tipo?: 'Emergencia' | 'Evento';
+  tipo?: "Emergencia" | "Evento";
   idGrupo?: string; // Agrupacion de vecinos que la pueden ver (barrios cerrados y autogestion de alertas)
   // Para eventos
   formulario?: Record<string, any>; // Formulario de datos del evento
@@ -43,7 +43,7 @@ export interface ICrearAlerta {
 
 export interface IUpdateAlerta {
   activa?: boolean;
-  estadoActual?: estados;
+  estadoActual?: Estados;
   idUsuario?: string;
   tiempoRespuesta?: number;
   tiempoResolucion?: number;

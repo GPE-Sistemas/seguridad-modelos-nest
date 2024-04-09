@@ -1,5 +1,5 @@
-import { estados } from './alerta-estado.dto';
-import { IAlerta } from './alerta.model';
+import { Estados } from "./alerta-estado.dto";
+import { IAlerta } from "./alerta.model";
 
 export interface IAlertaEstado {
   _id?: string;
@@ -9,7 +9,7 @@ export interface IAlertaEstado {
   idConfigVecino?: string;
   idUsuario?: string;
   fecha?: string;
-  estado?: estados;
+  estado?: Estados;
   nota?: string;
   notaPredefinida?: string;
   notaInterna?: string;

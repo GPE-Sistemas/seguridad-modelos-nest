@@ -1,4 +1,4 @@
-import { estados } from "./alerta-estado.dto";
+import { Estados } from "./alerta-estado.dto";
 import { IBoton } from "../boton/schema";
 import { ICategoria } from "../categoria/schema";
 import { ICentroMonitoreo } from "../centro-monitoreo/schema";
@@ -27,7 +27,7 @@ export interface IAlerta {
   };
   direccion?: string;
   prioridad?: number;
-  estadoActual?: estados;
+  estadoActual?: Estados;
   fechaCreacion?: string;
   tiempoRespuesta?: number;
   tiempoResolucion?: number;

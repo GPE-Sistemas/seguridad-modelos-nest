@@ -1,21 +1,21 @@
-export enum estados {
-  "Pre Aprobada" = "Pre Aprobada",
-  "Nueva" = "Nueva",
-  "Vista" = "Vista",
-  "En Atención" = "En Atención",
-  "En Espera" = "En Espera",
-  "Liberada" = "Liberada",
-  "Derivada" = "Derivada",
-  "Finalizada" = "Finalizada",
-}
+export type Estados =
+  | "Pre Aprobada"
+  | "Nueva"
+  | "Vista"
+  | "En Atención"
+  | "En Espera"
+  | "Liberada"
+  | "Derivada"
+  | "Devuelta"
+  | "Finalizada";
 
-export interface ICrearAlertaEstadoInput {
+export interface ICrearAlertaEstado {
   idAlerta: string;
   idCliente?: string;
   idVecino?: string;
   idConfigVecino?: string;
   idUsuario?: string;
-  estado: estados;
+  estado: Estados;
   notaPredefinida?: string;
   nota?: string;
   notaInterna?: string;
