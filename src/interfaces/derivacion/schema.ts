@@ -1,7 +1,6 @@
+import { IBoton } from "../boton";
 import { ICentroMonitoreo } from "../centro-monitoreo";
 import { ICliente } from "../cliente";
-import { IConfigVecino } from "../config-vecino";
-import { IUsuario } from "../usuario";
 
 export interface IDerivacion {
   _id?: string;
@@ -13,7 +12,7 @@ export interface IDerivacion {
 
   // Virtuals
   cliente?: ICliente;
-  boton?: IConfigVecino;
+  boton?: IBoton;
   centroMonitoreo?: ICentroMonitoreo;
 }
 
