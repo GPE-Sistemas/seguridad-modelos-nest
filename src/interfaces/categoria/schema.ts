@@ -20,3 +20,22 @@ export interface ICategoria {
   otrosBotones?: IBoton[];
   botonAlertaControl?: IBoton;
 }
+
+type OmitirCreate =
+  | "_id"
+  | "btnsPrincipales"
+  | "btnsSecundarios"
+  | "otrosBotones"
+  | "botonAlertaControl";
+export interface ICreateCategoria
+  extends Omit<Partial<ICategoria>, OmitirCreate> {}
+
+type OmitirUpdate =
+  | "_id"
+  | "btnsPrincipales"
+  | "btnsSecundarios"
+  | "otrosBotones"
+  | "botonAlertaControl";
+
+export interface IUpdateCategoria
+  extends Omit<Partial<ICategoria>, OmitirUpdate> {}
