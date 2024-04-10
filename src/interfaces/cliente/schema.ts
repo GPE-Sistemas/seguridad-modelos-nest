@@ -54,6 +54,7 @@ export interface IConfigCliente {
   distanciaCobertura?: number;
   verSirenasOnline?: boolean;
   tiposDeSirena?: string[]; // 'sirena' | 'totem' | 'sirena escolar';
+  notificacionesSirenas?: boolean; // Notificacion a los vecinos que viven cerca de la sirena cuando se activa
   // Estacionamiento Medido
   unidadFija?: number;
   // Modulos a ver
