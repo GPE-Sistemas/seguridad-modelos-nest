@@ -1,3 +1,2 @@
-export * from './create';
-export * from './schema';
-export * from './update';
+export * from "./schema";
+export * from "./resumen";

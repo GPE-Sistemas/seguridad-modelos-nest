@@ -2,37 +2,6 @@ import { ICategoria } from "../categoria/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 
 export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
-export interface ICliente {
-  _id?: string;
-  activo?: boolean;
-  tipo?: TipoCliente;
-  admin?: boolean;
-  coordenadas?: ICoordenadas[][];
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
-  geojson?: {
-    type: "MultiPolygon";
-    coordinates: [number, number][][][];
-  };
-  centro?: ICoordenadas;
-  superficie?: number;
-  fechaCreacion?: string;
-  nombre?: string;
-  nombreAppMobile?: string;
-  edadMinima?: number;
-  twitter?: string;
-  instagram?: string;
-  sirenas?: boolean;
-  categorias?: ICategoriaCliente[];
-  imagenes?: IImagenesCliente;
-  idCategoriaDefault?: string;
-  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
-  configuracion?: IConfigCliente;
-  // Virtuals
-  categoriaDefault?: ICategoria;
-}
 
 export interface IConfigCliente {
   hostSmartCity?: string;
@@ -102,3 +71,39 @@ export interface IImagenesCliente {
   adelantePush?: string;
   atrasPush?: string;
 }
+
+//
+
+export interface ICliente {
+  _id?: string;
+  activo?: boolean;
+  tipo?: TipoCliente;
+  admin?: boolean;
+  coordenadas?: ICoordenadas[][];
+  geojson?: {
+    type: "MultiPolygon";
+    coordinates: [number, number][][][];
+  };
+  centro?: ICoordenadas;
+  superficie?: number;
+  fechaCreacion?: string;
+  nombre?: string;
+  nombreAppMobile?: string;
+  edadMinima?: number;
+  twitter?: string;
+  instagram?: string;
+  sirenas?: boolean;
+  categorias?: ICategoriaCliente[];
+  imagenes?: IImagenesCliente;
+  idCategoriaDefault?: string;
+  categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
+  configuracion?: IConfigCliente;
+  // Virtuals
+  categoriaDefault?: ICategoria;
+}
+
+type OmitirCreate = "_id";
+export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
+
+type OmitirUpdate = "_id";
+export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}
