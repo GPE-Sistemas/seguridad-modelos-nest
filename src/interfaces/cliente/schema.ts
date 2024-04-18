@@ -44,6 +44,7 @@ export interface IConfigCliente {
   // App Monitoreo
   verActualizaciones?: boolean;
   nombreAppMonit?: string;
+  tiposReclamos?: string[];
   // APP Boton
   colorInstalar?: string;
   colorMenu?: string;
