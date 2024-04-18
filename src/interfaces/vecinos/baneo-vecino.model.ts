@@ -1,4 +1,5 @@
 import { ICliente } from '../cliente';
+import { IConfigVecino } from '../config-vecino';
 import { IUsuario } from '../usuario/schema';
 import { IVecino } from './vecino.model';
 
@@ -17,5 +18,6 @@ export interface IBaneoVecino {
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
   usuario?: IUsuario;
 }

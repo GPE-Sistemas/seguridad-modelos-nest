@@ -1,3 +1,4 @@
+import { IConfigVecino } from '../config-vecino';
 import { IVecino } from '../vecinos/vecino.model';
 
 export interface INotificacion {
@@ -19,4 +20,5 @@ export interface INotificacion {
   // Virtuals
 
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
 }

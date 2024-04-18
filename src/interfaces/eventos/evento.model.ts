@@ -1,6 +1,7 @@
 import { IAlerta } from '../alertas/alerta.model';
 import { ICoordenadas } from '../../auxiliares/coordenadas';
 import { IVecino } from '../vecinos/vecino.model';
+import { IConfigVecino } from '../config-vecino';
 
 export interface IEvento {
   _id?: string;
@@ -30,5 +31,6 @@ export interface IEvento {
   causante?: string;
   // Virtuals
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
   alerta?: IAlerta;
 }

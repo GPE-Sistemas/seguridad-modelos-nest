@@ -1,4 +1,5 @@
 import { ICategoria } from '../categoria/schema';
+import { IConfigVecino } from '../config-vecino';
 import { IUsuario } from '../usuario/schema';
 import { IArchivoVecino } from './archivo-vecino.dto';
 import { IVecino } from './vecino.model';
@@ -19,6 +20,7 @@ export interface ICategoriaVecino {
   // Virtuals
   categoria?: ICategoria;
   vecino?: IVecino;
+  configVecino?: IConfigVecino;
   usuario?: IUsuario;
   archivosVecinos?: IArchivoVecino[];
 }
