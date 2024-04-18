@@ -1,8 +1,8 @@
-import { ICliente } from '../cliente';
-import { IConfigVecino } from '../config-vecino';
-import { IVecino } from '../vecinos/vecino.model';
+import { ICliente } from "../cliente";
+import { IConfigVecino } from "../config-vecino";
+import { IVecino } from "../vecinos/vecino.model";
 
-export type EstadoReclamo = 'Nuevo' | 'En Proceso' | 'Finalizado';
+export type EstadoReclamo = "Nuevo" | "En Proceso" | "Finalizado";
 
 export interface IReclamo {
   _id?: string;
@@ -16,6 +16,7 @@ export interface IReclamo {
   anonimo?: boolean;
   titulo?: string;
   datos?: string;
+  direccion?: string;
   observaciones?: string;
   documentos?: string[];
   requiereContacto?: boolean;
