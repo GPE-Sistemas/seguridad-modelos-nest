@@ -254,6 +254,9 @@ export interface IDataBalizaSirena {
   id?: string;
   chipId?: string;
   duracion?: number;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idCliente?: string;
   chipIdControl?: string;
@@ -275,6 +278,9 @@ export interface IDataSonidoSirena {
   chipId?: string;
   sonido?: string;
   duracion?: number;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idCliente?: string;
   chipIdControl?: string;

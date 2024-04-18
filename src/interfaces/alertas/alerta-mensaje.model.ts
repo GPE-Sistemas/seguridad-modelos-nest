@@ -2,6 +2,9 @@ export interface IAlertaMensaje {
   id?: string;
   idAlerta?: string;
   idCliente?: string;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idConfigVecino?: string;
   idUsuario?: string;

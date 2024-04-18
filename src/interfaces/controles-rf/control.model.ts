@@ -6,6 +6,9 @@ export interface IControl {
   etiqueta?: string;
   fechaCreacion?: string;
   idCliente?: string;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idConfigVecino?: string;
   baneado?: boolean;

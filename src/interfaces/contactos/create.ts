@@ -1,6 +1,9 @@
 import { IConfigContacto } from './config';
 
 export interface ICreateContacto {
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string; // VOS
   idConfigVecino?: string;
   idContacto?: string; // EL OTRO

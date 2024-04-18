@@ -1,5 +1,8 @@
 export interface ICrearEventoSirena {
   chipId: string;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idUsuario?: string;
   idConfigVecino?: string;

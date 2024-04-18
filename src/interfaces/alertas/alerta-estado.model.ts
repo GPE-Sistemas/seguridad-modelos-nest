@@ -1,10 +1,13 @@
-import { Estados } from "./alerta-estado.dto";
-import { IAlerta } from "./alerta.model";
+import { Estados } from './alerta-estado.dto';
+import { IAlerta } from './alerta.model';
 
 export interface IAlertaEstado {
   _id?: string;
   idAlerta?: string;
   idCliente?: string;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idConfigVecino?: string;
   idUsuario?: string;

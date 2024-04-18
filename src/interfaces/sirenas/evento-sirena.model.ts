@@ -11,6 +11,9 @@ import { ISirena } from './sirena.model';
 export interface IEventoSirena {
   _id?: string;
   chipId?: string;
+  /**
+   * @deprecated se usa idConfigVecino
+   */
   idVecino?: string;
   idConfigVecino?: string;
   idUsuario?: string;

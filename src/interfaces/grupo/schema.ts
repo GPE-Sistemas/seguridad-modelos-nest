@@ -1,5 +1,5 @@
-import { ICoordenadas } from "../../auxiliares";
-import { ICliente } from "../cliente";
+import { ICoordenadas } from '../../auxiliares';
+import { ICliente } from '../cliente';
 
 export interface IGrupo {
   _id?: string;
@@ -10,7 +10,7 @@ export interface IGrupo {
   // Solo para grupos geograficos
   coordenadas?: ICoordenadas[];
   geojson?: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][][];
   };
 
@@ -18,14 +18,14 @@ export interface IGrupo {
   cliente?: ICliente;
 }
 
-type OmitirCreate = "_id" | "cliente" | "vecino";
+type OmitirCreate = '_id' | 'cliente';
 
 export interface ICreateGrupo extends Omit<Partial<IGrupo>, OmitirCreate> {
   idsVecinos?: string[];
   idsAdministradores?: string[];
 }
 
-type OmitirUpdate = "_id" | "idCliente" | "idVecino" | "cliente" | "vecino";
+type OmitirUpdate = '_id' | 'idCliente' | 'cliente';
 
 export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {
   idsVecinos?: string[];
