@@ -38,6 +38,7 @@ export interface IAlerta {
   idCentroDerivado?: string; // Este centro de monitoreo solo la ve cuando el centro principal le deriva la alerta
   idCliente?: string;
   idUsuario?: string;
+  idOperador?: string; // Este ID es para identificar si la alerta la creó un operador
   /**
    * @deprecated se usa idConfigVecino
    */
