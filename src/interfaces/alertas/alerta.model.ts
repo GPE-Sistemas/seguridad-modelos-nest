@@ -67,4 +67,5 @@ export interface IAlerta {
   barrio?: IBarrio;
   punto?: IPunto;
   grupo?: IGrupo;
+  operador?: IUsuario;
 }
