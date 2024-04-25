@@ -34,6 +34,7 @@ export interface ICrearAlerta {
   idBarrio?: string;
   idPunto?: string;
   idCategoria: string;
+  idOperador?: string;
   prioridad: number;
   estadoActual?: Estados;
   activa?: boolean;
