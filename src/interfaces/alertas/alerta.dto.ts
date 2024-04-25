@@ -44,6 +44,32 @@ export interface ICrearAlerta {
   formulario?: Record<string, any>; // Formulario de datos del evento
 }
 
+export interface ICrearAlertaOperador {
+  idCliente: string;
+  ubicacion: ICoordenadas;
+  geojson?: {
+    type: 'Point';
+    coordinates: [number, number];
+  };
+  direccion: string;
+  idsCentrosMonitoreo: string[];
+  idCentroDerivado?: string;
+  idZona: string;
+  idBoton: string;
+  idLocalidad?: string;
+  idBarrio?: string;
+  idPunto?: string;
+  idCategoria: string;
+  prioridad: number;
+  estadoActual?: Estados;
+  activa?: boolean;
+  idOperador: string;
+  idConfigVecino?: string; // Opcional porque puede ser una alerta de un vecino no registrado (llama por teléfono al COM)
+  //
+  tipo?: 'Emergencia' | 'Evento';
+
+}
+
 export interface IUpdateAlerta {
   activa?: boolean;
   estadoActual?: Estados;
