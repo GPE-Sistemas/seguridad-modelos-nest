@@ -45,6 +45,13 @@ export interface ICrearAlerta {
   formulario?: Record<string, any>; // Formulario de datos del evento
 }
 
+export interface ICrearAlertaMonitoreo {
+  direccion: string;
+  idConfigVecino?: string;
+  idBoton: string;
+  idCentroDerivado?: string;
+}
+
 export interface IUpdateAlerta {
   activa?: boolean;
   estadoActual?: Estados;
