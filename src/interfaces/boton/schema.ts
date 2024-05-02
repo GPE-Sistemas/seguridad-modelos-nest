@@ -41,7 +41,16 @@ export type tipoDato =
   | 'Ubicación'
   | 'Foto'
   | 'Persona'
-  | 'Lista de personas';
+  | 'Lista de personas'
+  | 'Texto (Requerido)'
+  | 'Texto Largo (Requerido)'
+  | 'Numero (Requerido)'
+  | 'Fecha (Requerido)'
+  | 'Booleano (Requerido)'
+  | 'Ubicación (Requerido)'
+  | 'Foto (Requerido)'
+  | 'Persona (Requerido)'
+  | 'Lista de personas (Requerido)';
 
 export interface IBoton {
   _id?: string;
