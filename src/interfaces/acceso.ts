@@ -27,3 +27,9 @@ export interface ICreateAcceso extends Omit<Partial<IAcceso>, OmitirCreate> {}
 
 type OmitirUpdate = "_id" | "vecino" | "visitante" | "vehiculo";
 export interface IUpdateAcceso extends Omit<Partial<IAcceso>, OmitirUpdate> {}
+
+export interface INuevoAcceso {
+  dominio?: string;
+  dnis?: string[];
+  observaciones?: string;
+}
