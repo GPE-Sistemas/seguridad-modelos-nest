@@ -3,6 +3,7 @@ import { IVisitante } from "./visitante";
 
 export interface IVehiculo {
   _id?: string;
+  idCliente?: string;
   dominio?: string;
   dnis?: string[];
   marca?: string;
