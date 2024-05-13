@@ -1,4 +1,4 @@
-import { IBoton } from "../boton/schema";
+import { IBoton } from "./boton/schema";
 
 export interface ICategoria {
   _id?: string;
@@ -36,6 +36,5 @@ type OmitirUpdate =
   | "btnsSecundarios"
   | "otrosBotones"
   | "botonAlertaControl";
-
 export interface IUpdateCategoria
   extends Omit<Partial<ICategoria>, OmitirUpdate> {}

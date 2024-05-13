@@ -1,10 +1,10 @@
-import { Estados } from './alerta-estado.dto';
-import { IBoton } from '../boton/schema';
-import { ICategoria } from '../categoria/schema';
-import { ICentroMonitoreo } from '../centro-monitoreo/schema';
-import { ICoordenadas } from '../../auxiliares/coordenadas';
-import { IUsuario } from '../usuario/schema';
-import { IZona } from '../zona/schema';
+import { Estados } from "./alerta-estado.dto";
+import { IBoton } from "../boton/schema";
+import { ICategoria } from "../categoria";
+import { ICentroMonitoreo } from "../centro-monitoreo/schema";
+import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { IUsuario } from "../usuario/schema";
+import { IZona } from "../zona/schema";
 import {
   IBarrio,
   ICliente,
@@ -13,16 +13,16 @@ import {
   ILocalidad,
   IPunto,
   IVecino,
-} from '../..';
+} from "../..";
 
 export interface IAlerta {
   _id?: string;
-  tipo?: 'Emergencia' | 'Evento';
+  tipo?: "Emergencia" | "Evento";
 
   activa?: boolean;
   ubicacion?: ICoordenadas;
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   direccion?: string;

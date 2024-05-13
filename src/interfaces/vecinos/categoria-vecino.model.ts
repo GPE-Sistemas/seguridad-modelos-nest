@@ -1,8 +1,8 @@
-import { ICategoria } from '../categoria/schema';
-import { IConfigVecino } from '../config-vecino';
-import { IUsuario } from '../usuario/schema';
-import { IArchivoVecino } from './archivo-vecino.dto';
-import { IVecino } from './vecino.model';
+import { ICategoria } from "../categoria";
+import { IConfigVecino } from "../config-vecino";
+import { IUsuario } from "../usuario/schema";
+import { IArchivoVecino } from "./archivo-vecino.dto";
+import { IVecino } from "./vecino.model";
 
 export interface ICategoriaVecino {
   _id?: string;

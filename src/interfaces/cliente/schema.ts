@@ -1,4 +1,4 @@
-import { ICategoria } from "../categoria/schema";
+import { ICategoria } from "../categoria";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
 
 export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
