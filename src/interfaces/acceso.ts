@@ -1,4 +1,4 @@
-import { IVehiculo, IVisitante } from ".";
+import { IUsuario, IVehiculo, IVisitante } from ".";
 import { IConfigVecino } from "./config-vecino";
 
 export interface IAcceso {
@@ -16,20 +16,32 @@ export interface IAcceso {
   fechaSalida?: string;
   observaciones?: string;
 
+  /**
+   * Vecino que aprueba el acceso
+   */
+  idConfigVecino?: string;
+
+  /**
+   * Usuario que crea el acceso
+   */
+  idUsuario?: string;
+
   // Virtuals
   vecino?: IConfigVecino;
   visitante?: IVisitante;
   vehiculo?: IVehiculo;
+  usuario?: IUsuario;
 }
 
-type OmitirCreate = "_id" | "vecino" | "visitante" | "vehiculo";
+type OmitirCreate = "_id" | "vecino" | "visitante" | "vehiculo" | "usuario";
 export interface ICreateAcceso extends Omit<Partial<IAcceso>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "vecino" | "visitante" | "vehiculo";
+type OmitirUpdate = "_id" | "vecino" | "visitante" | "vehiculo" | "usuario";
 export interface IUpdateAcceso extends Omit<Partial<IAcceso>, OmitirUpdate> {}
 
 export interface INuevoAcceso {
   dominio?: string;
   dnis?: string[];
   observaciones?: string;
+  idConfigVecino?: string;
 }
