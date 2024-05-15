@@ -49,6 +49,7 @@ export interface INuevoAcceso {
 export interface IAccesoGrouped {
   // Datos en comun de todos los accesos agrupados
   idAcceso?: string;
+  fechaIngreso?: string;
   observaciones?: string;
   configVecino?: IConfigVecino;
   usuario?: IUsuario;
