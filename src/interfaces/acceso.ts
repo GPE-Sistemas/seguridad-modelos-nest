@@ -45,3 +45,16 @@ export interface INuevoAcceso {
   observaciones?: string;
   idConfigVecino?: string;
 }
+
+export interface IAccesoGrouped {
+  /**
+   * es el idAcceso
+   */
+  _id?: string;
+  accesos?: IAcceso[];
+
+  // Datos en comun de todos los accesos agrupados
+  observaciones?: string;
+  idConfigVecino?: string;
+  idUsuario?: string;
+}
