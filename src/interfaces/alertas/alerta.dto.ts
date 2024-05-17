@@ -1,9 +1,9 @@
-import { ICoordenadas } from '../..';
-import { Estados } from './alerta-estado.dto';
-import { IAlertaEstado } from './alerta-estado.model';
-import { IAlertaMedia } from './alerta-media.model';
-import { IAlertaUbicacion } from './alerta-ubicacion.model';
-import { IAlerta } from './alerta.model';
+import { ICoordenadas } from "../..";
+import { Estados } from "./alerta-estado.dto";
+import { IAlertaEstado } from "./alerta-estado.model";
+import { IAlertaMedia } from "./alerta-media.model";
+import { IAlertaUbicacion } from "./alerta-ubicacion.model";
+import { IAlerta } from "./alerta.model";
 
 // Lo que envia el frontend
 export interface INuevaAlerta {
@@ -17,7 +17,7 @@ export interface ICrearAlerta {
   idCliente: string;
   ubicacion: ICoordenadas;
   geojson?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
   };
   direccion: string;
@@ -39,7 +39,7 @@ export interface ICrearAlerta {
   estadoActual?: Estados;
   activa?: boolean;
   //
-  tipo?: 'Emergencia' | 'Evento';
+  tipo?: "Emergencia" | "Evento";
   idGrupo?: string; // Agrupacion de vecinos que la pueden ver (barrios cerrados y autogestion de alertas)
   // Para eventos
   formulario?: Record<string, any>; // Formulario de datos del evento
@@ -50,6 +50,16 @@ export interface ICrearAlertaMonitoreo {
   idConfigVecino?: string;
   idBoton: string;
   idCentroDerivado?: string;
+  // Vecino no creado
+  vecino?: {
+    nombre?: string;
+    telefono?: string;
+    dni?: string;
+    email?: string;
+    sexo?: boolean;
+    direccion?: string;
+    fechaNacimiento?: string;
+  };
 }
 
 export interface IUpdateAlerta {
