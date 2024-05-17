@@ -1,5 +1,6 @@
 export * from "./acceso";
 export * from "./categoria";
+export * from "./cliente";
 export * from "./vehiculo";
 export * from "./visitante";
 
@@ -12,7 +13,6 @@ export * from "./auth";
 export * from "./barrios";
 export * from "./boton";
 export * from "./centro-monitoreo";
-export * from "./cliente";
 export * from "./config-vecino";
 export * from "./contactos";
 export * from "./controles-rf";

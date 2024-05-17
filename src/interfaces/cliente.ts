@@ -1,9 +1,10 @@
-import { ICategoria } from "../categoria";
-import { ICoordenadas } from "../../auxiliares/coordenadas";
+import { ICategoria } from "./categoria";
+import { ICoordenadas } from "../auxiliares/coordenadas";
 
 export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
 
 export interface IConfigCliente {
+  direccion?: string;
   hostSmartCity?: string;
   categoriasDeEvento?: string[];
   tagsDeEvento?: string[];
@@ -70,6 +71,15 @@ export interface IImagenesCliente {
   reflectorPush?: string;
   adelantePush?: string;
   atrasPush?: string;
+}
+
+export interface IResumenClientes {
+  cliente: string;
+  cantidadUsuarios: number;
+  cantidadVecinos: number;
+  cantidadAlertas: number;
+  cantidadSirenas: number;
+  cantidadControles: number;
 }
 
 //
