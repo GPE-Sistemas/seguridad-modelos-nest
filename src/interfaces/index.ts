@@ -1,6 +1,7 @@
 export * from "./acceso";
 export * from "./categoria";
 export * from "./cliente";
+export * from "./registro";
 export * from "./vehiculo";
 export * from "./visitante";
 

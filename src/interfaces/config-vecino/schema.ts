@@ -74,12 +74,18 @@ export interface IConfigVecino {
   grupo?: IGrupo;
 }
 
-type OmitirCreate = "_id" | "cliente" | "vecino";
+type OmitirCreate = "_id" | "cliente" | "vecino" | "grupo";
 
 export interface ICreateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "idCliente" | "idVecino" | "cliente" | "vecino";
+type OmitirUpdate =
+  | "_id"
+  | "idCliente"
+  | "idVecino"
+  | "cliente"
+  | "vecino"
+  | "grupo";
 
 export interface IUpdateConfigVecino
   extends Omit<Partial<IConfigVecino>, OmitirUpdate> {}
