@@ -11,12 +11,12 @@ import {
 export interface IRegistro {
   _id?: string;
   idCliente?: string;
-  /**
-   * @deprecated se usa idConfigVecino
-   */
-  idVecino?: string;
+  // /**
+  //  * @deprecated se usa idConfigVecino
+  //  */
+  // idVecino?: string;
 
-  activo?: boolean;
+  // activo?: boolean;
   fechaCreacion?: string;
   fechaValidacion?: string;
   creadoPorAdmin?: boolean;
