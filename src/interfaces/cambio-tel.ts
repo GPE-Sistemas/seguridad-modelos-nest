@@ -1,5 +1,6 @@
 export interface ICambioTel {
   _id?: string;
+  fecha?: string;
   idConfigVecino?: string;
   telefono?: string;
   codigo?: string;
