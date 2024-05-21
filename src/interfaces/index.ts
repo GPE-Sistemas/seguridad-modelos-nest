@@ -1,4 +1,5 @@
 export * from "./acceso";
+export * from "./cambio-tel";
 export * from "./categoria";
 export * from "./cliente";
 export * from "./registro";
