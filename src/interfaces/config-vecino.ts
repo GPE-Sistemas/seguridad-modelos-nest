@@ -1,12 +1,12 @@
-import { ICoordenadas } from "../../auxiliares/coordenadas";
-import { IBarrio } from "../barrios";
-import { ICliente } from "../cliente";
-import { IGrupo } from "../grupo";
-import { ILocalidad } from "../localidades/schema";
-import { ICategoriaVecino } from "../vecinos/categoria-vecino.model";
-import { IConfigNotificacion } from "../vecinos/config-notificaciones";
-import { IEnvioCodigo } from "../vecinos/envio-codigo.dto";
-import { IVecino } from "../vecinos/vecino.model";
+import { ICoordenadas } from "../auxiliares/coordenadas";
+import { IBarrio } from "./barrio";
+import { ICliente } from "./cliente";
+import { IGrupo } from "./grupo";
+import { ILocalidad } from "./localidades/schema";
+import { ICategoriaVecino } from "./vecinos/categoria-vecino.model";
+import { IConfigNotificacion } from "./vecinos/config-notificaciones";
+import { IEnvioCodigo } from "./vecinos/envio-codigo.dto";
+import { IVecino } from "./vecinos/vecino.model";
 
 export interface IDireccionVecino {
   direccion?: string;

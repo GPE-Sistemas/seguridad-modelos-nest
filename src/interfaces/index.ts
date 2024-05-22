@@ -1,5 +1,10 @@
 export * from "./acceso";
+export * from "./apikey";
+export * from "./auditoria";
+export * from "./barrio";
+export * from "./boton";
 export * from "./cambio-tel";
+export * from "./config-vecino";
 export * from "./categoria";
 export * from "./cliente";
 export * from "./registro";
@@ -9,13 +14,8 @@ export * from "./visitante";
 //
 export * from "./actualizacion-firmware";
 export * from "./alertas";
-export * from "./apiKey";
-export * from "./auditoria";
 export * from "./auth";
-export * from "./barrios";
-export * from "./boton";
 export * from "./centro-monitoreo";
-export * from "./config-vecino";
 export * from "./contactos";
 export * from "./controles-rf";
 export * from "./derivacion";

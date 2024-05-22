@@ -1,5 +1,4 @@
 import { Estados } from "./alerta-estado.dto";
-import { IBoton } from "../boton/schema";
 import { ICategoria } from "../categoria";
 import { ICentroMonitoreo } from "../centro-monitoreo/schema";
 import { ICoordenadas } from "../../auxiliares/coordenadas";
@@ -7,6 +6,7 @@ import { IUsuario } from "../usuario/schema";
 import { IZona } from "../zona/schema";
 import {
   IBarrio,
+  IBoton,
   ICliente,
   IConfigVecino,
   IGrupo,
