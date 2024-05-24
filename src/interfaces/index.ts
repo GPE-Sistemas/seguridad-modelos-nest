@@ -7,6 +7,7 @@ export * from "./cambio-tel";
 export * from "./config-vecino";
 export * from "./categoria";
 export * from "./cliente";
+export * from "./token-vecino";
 export * from "./registro";
 export * from "./vehiculo";
 export * from "./visitante";
