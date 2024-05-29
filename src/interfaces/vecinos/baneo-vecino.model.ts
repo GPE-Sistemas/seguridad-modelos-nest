@@ -1,7 +1,7 @@
-import { ICliente } from '../cliente';
-import { IConfigVecino } from '../config-vecino';
-import { IUsuario } from '../usuario/schema';
-import { IVecino } from './vecino.model';
+import { ICliente } from "../cliente";
+import { IConfigVecino } from "../config-vecino";
+import { IUsuario } from "../usuario";
+import { IVecino } from "./vecino.model";
 
 export interface IBaneoVecino {
   _id?: string;

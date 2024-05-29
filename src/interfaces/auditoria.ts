@@ -1,5 +1,5 @@
 import { ICliente } from "./cliente";
-import { IUsuario } from "./usuario/schema";
+import { IUsuario } from "./usuario";
 import { IVecino } from "./vecinos";
 
 export interface IAuditoria {

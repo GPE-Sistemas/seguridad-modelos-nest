@@ -1,6 +1,6 @@
 import { ICliente } from "../cliente";
 import { ISirena } from "../sirenas/sirena.model";
-import { IUsuario } from "../usuario/schema";
+import { IUsuario } from "../usuario";
 
 export interface IMantenimiento {
   _id?: string;

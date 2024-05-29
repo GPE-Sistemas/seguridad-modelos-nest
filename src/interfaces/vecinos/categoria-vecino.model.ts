@@ -1,6 +1,6 @@
 import { ICategoria } from "../categoria";
 import { IConfigVecino } from "../config-vecino";
-import { IUsuario } from "../usuario/schema";
+import { IUsuario } from "../usuario";
 import { IArchivoVecino } from "./archivo-vecino.dto";
 import { IVecino } from "./vecino.model";
 

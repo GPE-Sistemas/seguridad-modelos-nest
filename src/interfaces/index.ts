@@ -9,6 +9,7 @@ export * from "./categoria";
 export * from "./cliente";
 export * from "./token-vecino";
 export * from "./registro";
+export * from "./usuario";
 export * from "./vehiculo";
 export * from "./visitante";
 
@@ -31,7 +32,6 @@ export * from "./puntos";
 export * from "./reclamos";
 export * from "./sims";
 export * from "./sirenas";
-export * from "./usuario";
 export * from "./vecinos";
 export * from "./zona";
 export * from "./turnos";

@@ -5,7 +5,6 @@ export * from "./exactly";
 export * from "./listado";
 export * from "./mongo-date-to-string-format";
 export * from "./query-filter";
-export * from "./rol";
 export * from "./socket-message";
 export * from "./ubicacion";
 export * from "./version";

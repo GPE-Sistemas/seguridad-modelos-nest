@@ -1,4 +1,4 @@
-import { Rol } from "../auxiliares";
+import { Rol } from "./usuario";
 
 export interface IApiKey {
   _id?: string;
