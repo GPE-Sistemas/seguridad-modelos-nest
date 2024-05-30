@@ -10,4 +10,7 @@ export interface OpenSearchRequest {
   body?: string;
   msg?: string;
   timestamp?: string;
+  app?: string;
+  platform?: string;
+  appVersion?: string;
 }
