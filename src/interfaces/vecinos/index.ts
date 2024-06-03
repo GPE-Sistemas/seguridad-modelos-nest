@@ -4,6 +4,7 @@ export * from "./baneo-vecino.model";
 export * from "./categoria-vecino.dto";
 export * from "./categoria-vecino.model";
 export * from "./config-notificaciones";
+export * from "./dni";
 export * from "./envio-codigo.dto";
 export * from "./vecino.dto";
 export * from "./vecino.model";
