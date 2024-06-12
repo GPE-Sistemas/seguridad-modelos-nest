@@ -1,4 +1,5 @@
 export interface IArchivoVecino {
+  _id?: string;
   url?: string;
   nombre?: string;
   descripcion?: string;
