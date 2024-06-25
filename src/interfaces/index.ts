@@ -12,6 +12,8 @@ export * from "./registro";
 export * from "./usuario";
 export * from "./vehiculo";
 export * from "./visitante";
+export * from "./portico";
+export * from "./lectura-portico";
 
 //
 export * from "./actualizacion-firmware";
