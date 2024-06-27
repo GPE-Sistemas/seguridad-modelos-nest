@@ -1,9 +1,11 @@
+import { ICoordenadas } from "../auxiliares";
 import { ICliente } from "./cliente";
 
 
 export interface IPortico {
   _id?: string;
   nombre?: string;
+  ubicacionManual?: ICoordenadas;
   geojson?: {
     type: "Point";
     coordinates: [number, number];
