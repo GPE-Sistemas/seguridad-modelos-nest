@@ -2,7 +2,6 @@ import { ICoordenadas } from "../auxiliares";
 import { ICliente } from "./cliente";
 
 export interface IConfigPortico {
-  type?: string;
   imgFondo?: string;
   disSupP?: number;
   disIzqP?: number;
@@ -31,7 +30,7 @@ export interface IPortico {
 }
 
 type OmitirCreate = "_id" | "cliente";
-export interface ICreatePortico extends Omit<Partial<IPortico>, OmitirCreate> {}
+export interface ICreatePortico extends Omit<Partial<IPortico>, OmitirCreate> { }
 
 type OmitirUpdate = "_id" | "cliente";
-export interface IUpdatePortico extends Omit<Partial<IPortico>, OmitirUpdate> {}
+export interface IUpdatePortico extends Omit<Partial<IPortico>, OmitirUpdate> { }
