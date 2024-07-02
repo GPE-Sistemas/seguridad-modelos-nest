@@ -24,6 +24,8 @@ export interface IPortico {
   macAddress?: string;
   marcaCamara?: string;
   modeloCamara?: string;
+  fechaCreacion?: string;
+  fechaColocacion?: string;
   configuracion?: IConfigPortico;
   //Populate
   cliente?: ICliente;
