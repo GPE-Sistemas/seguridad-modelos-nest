@@ -1,26 +1,26 @@
-import { IBoton, ICentroMonitoreo, ICliente } from "..";
+import { IBoton, ICentroMonitoreo, ICliente } from '..';
 
 export type Rol =
-  | "admin"
-  | "operador"
-  | "Operador (Sin Mensajes)"
-  | "Crear Controles"
-  | "veedor"
-  | "Enviar Notificaciones"
-  | "Administrador de sirenas"
-  | "Administrador de porticos"
-  | "Eliminar Vecinos";
+  | 'admin'
+  | 'operador'
+  | 'Operador (Sin Mensajes)'
+  | 'Crear Controles'
+  | 'veedor'
+  | 'Enviar Notificaciones'
+  | 'Administrador de sirenas'
+  | 'Administrador de porticos'
+  | 'Eliminar Vecinos';
 
 export const ROLES: Rol[] = [
-  "admin",
-  "operador",
-  "Operador (Sin Mensajes)",
-  "Crear Controles",
-  "veedor",
-  "Enviar Notificaciones",
-  "Administrador de sirenas",
-  "Administrador de porticos",
-  "Eliminar Vecinos",
+  'admin',
+  'operador',
+  'Operador (Sin Mensajes)',
+  'Crear Controles',
+  'veedor',
+  'Enviar Notificaciones',
+  'Administrador de sirenas',
+  'Administrador de porticos',
+  'Eliminar Vecinos',
 ];
 
 export interface IOperador {
@@ -52,8 +52,13 @@ export interface IUsuario {
   cliente?: ICliente;
 }
 
-type OmitirCreate = "_id";
+export interface IResumenUsuariosPorCliente {
+  cliente: string;
+  cantidad: number;
+}
+
+type OmitirCreate = '_id';
 export interface ICreateUsuario extends Omit<Partial<IUsuario>, OmitirCreate> {}
 
-type OmitirUpdate = "_id";
+type OmitirUpdate = '_id';
 export interface IUpdateUsuario extends Omit<Partial<IUsuario>, OmitirUpdate> {}
