@@ -1,11 +1,15 @@
 export type Estados =
   | 'Pre Aprobada'
   | 'Nueva'
+  | 'Sin Tratamiento'
   | 'Vista'
+  | 'Pendiente'
   | 'En Atención'
   | 'En Espera'
+  | 'En Proceso'
   | 'Liberada'
   | 'Derivada'
+  | 'Derivada Finalizada'
   | 'Devuelta'
   | 'Finalizada';
 
