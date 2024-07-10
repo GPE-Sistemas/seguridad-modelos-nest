@@ -47,7 +47,7 @@ export interface IConfigCliente {
 }
 
 /// el string sería un mongoId del botón a ejecutar
-export type TipoBoton = 'Baliza' | 'Sirena' | string;
+export type TipoBoton = 'Reflector' | 'Sirena' | string;
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
