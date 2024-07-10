@@ -39,7 +39,15 @@ export interface IConfigCliente {
   verGrupos?: boolean;
   verEstacionamientoMedido?: boolean;
   verColectivos?: boolean;
+
+  /// Config Botones del Llavero---Control con tres botones
+  boton1?: TipoBoton;
+  boton2?: TipoBoton;
+  boton3?: TipoBoton;
 }
+
+/// el string sería un mongoId del botón a ejecutar
+export type TipoBoton = 'Baliza' | 'Sirena' | string;
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
