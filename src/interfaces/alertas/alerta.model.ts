@@ -19,6 +19,7 @@ export interface IAlerta {
   _id?: string;
   tipo?: "Emergencia" | "Evento";
 
+  counter?: number;
   activa?: boolean;
   ubicacion?: ICoordenadas;
   geojson?: {

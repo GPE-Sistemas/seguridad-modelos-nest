@@ -14,6 +14,7 @@ export interface INuevaAlerta {
 
 // Lo que se le envia al servicio de datos
 export interface ICrearAlerta {
+  counter?: number;
   idCliente: string;
   ubicacion: ICoordenadas;
   geojson?: {
@@ -46,6 +47,7 @@ export interface ICrearAlerta {
 }
 
 export interface ICrearAlertaMonitoreo {
+  counter?: number;
   direccion: string;
   idConfigVecino?: string;
   idBoton: string;
