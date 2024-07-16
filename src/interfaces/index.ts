@@ -5,6 +5,7 @@ export * from "./barrio";
 export * from "./boton";
 export * from "./cambio-tel";
 export * from "./config-vecino";
+export * from "./counters";
 export * from "./categoria";
 export * from "./cliente";
 export * from "./token-vecino";
