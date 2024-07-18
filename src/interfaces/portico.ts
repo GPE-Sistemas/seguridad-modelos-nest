@@ -26,13 +26,14 @@ export interface IPortico {
   modeloCamara?: string;
   fechaCreacion?: string;
   fechaColocacion?: string;
+  online?: boolean;
   configuracion?: IConfigPortico;
   //Populate
   cliente?: ICliente;
 }
 
 type OmitirCreate = "_id" | "cliente";
-export interface ICreatePortico extends Omit<Partial<IPortico>, OmitirCreate> { }
+export interface ICreatePortico extends Omit<Partial<IPortico>, OmitirCreate> {}
 
 type OmitirUpdate = "_id" | "cliente";
-export interface IUpdatePortico extends Omit<Partial<IPortico>, OmitirUpdate> { }
+export interface IUpdatePortico extends Omit<Partial<IPortico>, OmitirUpdate> {}
