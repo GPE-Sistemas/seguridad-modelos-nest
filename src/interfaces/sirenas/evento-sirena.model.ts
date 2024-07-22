@@ -30,7 +30,7 @@ export interface IEventoSirena {
   fechaApagado?: string;
   tiempoAcumuladoEncendido?: number;
   tiempoAcumuladoApagado?: number;
-  tipo?: string; // reflector | sirena
+  tipo?: "Reflector" | "Sirena";
   origen?: string; // app | control
   motivo?: string; // alerta | sirena
 
