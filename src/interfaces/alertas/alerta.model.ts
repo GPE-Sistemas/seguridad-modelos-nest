@@ -15,6 +15,12 @@ import {
   IVecino,
 } from "../..";
 
+export interface ITopAlertasVecino {
+  idConfigVecino: string;
+  vecino?: string;
+  cantidad: number;
+}
+
 export interface IAlerta {
   _id?: string;
   tipo?: "Emergencia" | "Evento";

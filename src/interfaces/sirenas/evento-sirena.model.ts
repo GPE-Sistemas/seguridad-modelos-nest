@@ -5,8 +5,14 @@ import {
   IControl,
   IUsuario,
   IVecino,
-} from '../..';
-import { ISirena } from './sirena.model';
+} from "../..";
+import { ISirena } from "./sirena.model";
+
+export interface ITopEventosSirenaVecino {
+  idConfigVecino: string;
+  vecino?: string;
+  cantidad: number;
+}
 
 export interface IEventoSirena {
   _id?: string;
