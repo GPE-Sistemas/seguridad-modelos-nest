@@ -88,6 +88,7 @@ export interface IResumenClientes {
   cantidadVecinos: number;
   cantidadAlertas: number;
   cantidadSirenas: number;
+  cantidadPorticos: number;
   cantidadControles: number;
 }
 
