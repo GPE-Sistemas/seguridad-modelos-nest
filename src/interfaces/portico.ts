@@ -32,6 +32,11 @@ export interface IPortico {
   cliente?: ICliente;
 }
 
+export interface IResumenPorticosPorCliente {
+  cliente: string;
+  cantidad: number;
+}
+
 type OmitirCreate = "_id" | "cliente";
 export interface ICreatePortico extends Omit<Partial<IPortico>, OmitirCreate> {}
 
