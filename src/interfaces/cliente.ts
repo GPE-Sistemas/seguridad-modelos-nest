@@ -88,6 +88,7 @@ export interface IResumenClientes {
   cantidadVecinos: number;
   cantidadAlertas: number;
   cantidadSirenas: number;
+  cantidadPorticos: number;
   cantidadControles: number;
 }
 
@@ -112,6 +113,7 @@ export interface ICliente {
   twitter?: string;
   instagram?: string;
   sirenas?: boolean;
+  porticos?: boolean;
   categorias?: ICategoriaCliente[];
   imagenes?: IImagenesCliente;
   idCategoriaDefault?: string;

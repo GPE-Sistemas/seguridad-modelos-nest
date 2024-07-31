@@ -1,4 +1,5 @@
-import { IBoton } from "./boton";
+import { IBoton } from './boton';
+import { TipoBoton } from './cliente';
 
 export interface ICategoria {
   _id?: string;
@@ -14,6 +15,10 @@ export interface ICategoria {
   tercerBoton?: boolean;
   nombreTemplate?: string;
   idBotonAlertaControl?: string;
+  /// Config Botones del Llavero---Control con tres botones
+  boton1?: TipoBoton;
+  boton2?: TipoBoton;
+  boton3?: TipoBoton;
   // Virtuals
   btnsPrincipales?: IBoton[];
   btnsSecundarios?: IBoton[];
@@ -22,19 +27,19 @@ export interface ICategoria {
 }
 
 type OmitirCreate =
-  | "_id"
-  | "btnsPrincipales"
-  | "btnsSecundarios"
-  | "otrosBotones"
-  | "botonAlertaControl";
+  | '_id'
+  | 'btnsPrincipales'
+  | 'btnsSecundarios'
+  | 'otrosBotones'
+  | 'botonAlertaControl';
 export interface ICreateCategoria
   extends Omit<Partial<ICategoria>, OmitirCreate> {}
 
 type OmitirUpdate =
-  | "_id"
-  | "btnsPrincipales"
-  | "btnsSecundarios"
-  | "otrosBotones"
-  | "botonAlertaControl";
+  | '_id'
+  | 'btnsPrincipales'
+  | 'btnsSecundarios'
+  | 'otrosBotones'
+  | 'botonAlertaControl';
 export interface IUpdateCategoria
   extends Omit<Partial<ICategoria>, OmitirUpdate> {}
