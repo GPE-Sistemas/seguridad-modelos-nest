@@ -49,7 +49,6 @@ export interface IConfigVecino {
 
   ultimoAcceso?: string;
   tokenPush?: string;
-  idSmartCity?: string;
   appVersion?: string;
   app?: string;
   appType?: string;
@@ -67,6 +66,10 @@ export interface IConfigVecino {
 
   // Datos Personales
   datosPersonales?: IDatosPersonales;
+
+  // Integraciones externas
+  idSmartCity?: string;
+  idUma?: string;
 
   // Virtuals
   cliente?: ICliente;
