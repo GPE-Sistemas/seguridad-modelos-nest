@@ -53,6 +53,7 @@ export interface ICrearAlertaMonitoreo {
   idBoton: string;
   idCentroDerivado?: string;
   idLocalidad?: string;
+  urlsImagenes?: string[];
   // Vecino no creado
   vecino?: {
     nombre?: string;
