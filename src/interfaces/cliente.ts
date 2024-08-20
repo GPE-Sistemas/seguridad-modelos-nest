@@ -4,6 +4,7 @@ import { ICoordenadas } from "../auxiliares/coordenadas";
 export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
 
 export type TipoBotonMobile =
+  | "Vacio"
   | "Cobertura"
   | "Alertas"
   | "Notificaciones"
