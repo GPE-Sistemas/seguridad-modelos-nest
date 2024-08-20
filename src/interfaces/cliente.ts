@@ -1,7 +1,23 @@
-import { ICategoria } from './categoria';
-import { ICoordenadas } from '../auxiliares/coordenadas';
+import { ICategoria } from "./categoria";
+import { ICoordenadas } from "../auxiliares/coordenadas";
 
-export type TipoCliente = 'Barrio Privado' | 'Municipio' | 'Provincia';
+export type TipoCliente = "Barrio Privado" | "Municipio" | "Provincia";
+
+export type TipoBotonMobile =
+  | "Cobertura"
+  | "Alertas"
+  | "Notificaciones"
+  | "Líneas de Colectivos"
+  | "Reclamos"
+  | "Contactos"
+  | "Eventos"
+  | "Perfil"
+  | "Ayuda"
+  | "Turnos"
+  | "Tramites"
+  | "Alertas Grupo"
+  | "Contactos"
+  | "Eventos Grupo";
 
 export interface IConfigCliente {
   direccion?: string;
@@ -44,10 +60,15 @@ export interface IConfigCliente {
   boton1?: TipoBoton;
   boton2?: TipoBoton;
   boton3?: TipoBoton;
+
+  // Config de botones de menu mobile
+  boton1Mobile?: TipoBotonMobile;
+  boton2Mobile?: TipoBotonMobile;
+  boton3Mobile?: TipoBotonMobile;
 }
 
 /// el string sería un mongoId del botón a ejecutar
-export type TipoBoton = 'Reflector' | 'Sirena' | string;
+export type TipoBoton = "Reflector" | "Sirena" | string;
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
@@ -101,7 +122,7 @@ export interface ICliente {
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   geojson?: {
-    type: 'MultiPolygon';
+    type: "MultiPolygon";
     coordinates: [number, number][][][];
   };
   centro?: ICoordenadas;
@@ -123,8 +144,8 @@ export interface ICliente {
   categoriaDefault?: ICategoria;
 }
 
-type OmitirCreate = '_id';
+type OmitirCreate = "_id";
 export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
 
-type OmitirUpdate = '_id';
+type OmitirUpdate = "_id";
 export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}
