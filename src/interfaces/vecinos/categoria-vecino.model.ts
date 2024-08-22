@@ -1,11 +1,12 @@
-import { ICategoria } from "../categoria";
-import { IConfigVecino } from "../config-vecino";
-import { IUsuario } from "../usuario";
-import { IArchivoVecino } from "./archivo-vecino.dto";
-import { IVecino } from "./vecino.model";
+import { ICategoria } from '../categoria';
+import { IConfigVecino } from '../config-vecino';
+import { IUsuario } from '../usuario';
+import { IArchivoVecino } from './archivo-vecino.dto';
+import { IVecino } from './vecino.model';
 
 export interface ICategoriaVecino {
   _id?: string;
+  fechaCreacion?: string;
   desde?: string;
   hasta?: string;
   idCategoria?: string;
