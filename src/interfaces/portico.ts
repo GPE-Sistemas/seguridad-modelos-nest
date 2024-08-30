@@ -1,6 +1,15 @@
 import { ICoordenadas } from "../auxiliares";
 import { ICliente } from "./cliente";
 
+export interface IConexionPortico {
+  type?: string;
+  ip?: string;
+  mask?: number;
+  gateway?: string;
+  dns?: string;
+  macAddress?: string;
+}
+
 export interface IConfigPortico {
   imgFondo?: string;
   disSupP?: number;
