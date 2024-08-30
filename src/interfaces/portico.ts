@@ -37,6 +37,7 @@ export interface IPortico {
   fechaColocacion?: string;
   online?: boolean;
   configuracion?: IConfigPortico;
+  conexion?: IConexionPortico;
   //Populate
   cliente?: ICliente;
 }
