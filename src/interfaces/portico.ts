@@ -2,7 +2,6 @@ import { ICoordenadas } from "../auxiliares";
 import { ICliente } from "./cliente";
 
 export interface IConexionPortico {
-  type?: string;
   ip?: string;
   mask?: number;
   gateway?: string;
