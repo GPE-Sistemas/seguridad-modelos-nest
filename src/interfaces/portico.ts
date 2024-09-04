@@ -7,6 +7,7 @@ export interface IConexionPortico {
   gateway?: string;
   dns?: string;
   macAddress?: string;
+  static?: boolean;
 }
 
 export interface IConfigPortico {
