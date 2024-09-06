@@ -48,6 +48,7 @@ export interface IUsuario {
   usuario?: string;
   clave?: string;
   operador?: IOperador;
+  sirenasOnline?:boolean;
   // Virtuals
   cliente?: ICliente;
 }
