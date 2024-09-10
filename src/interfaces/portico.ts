@@ -12,7 +12,6 @@ export interface IConexionPortico {
 
 export interface IConfigPortico {
   numeroCamara?: string;
-  imgFondo?: string;
   disSupP?: number;
   disIzqP?: number;
   tamP?: number;
@@ -34,6 +33,7 @@ export interface IPortico {
   fechaCreacion?: string;
   fechaColocacion?: string;
   online?: boolean;
+  imgFondo?: string;
   configuraciones?: IConfigPortico[];
   cantCamaras?: number;
   conexion?: IConexionPortico;
