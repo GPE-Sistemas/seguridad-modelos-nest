@@ -6,7 +6,6 @@ export interface IConexionPortico {
   mask?: number;
   gateway?: string;
   dns?: string;
-  macAddress?: string;
   static?: boolean;
 }
 
@@ -15,7 +14,6 @@ export interface IConfigPortico {
   disSupP?: number;
   disIzqP?: number;
   tamP?: number;
-  tamFondo?: number;
 }
 
 export interface IPortico {
@@ -34,6 +32,7 @@ export interface IPortico {
   fechaColocacion?: string;
   online?: boolean;
   imgFondo?: string;
+  tamFondo?: number;
   configuraciones?: IConfigPortico[];
   cantCamaras?: number;
   conexion?: IConexionPortico;
