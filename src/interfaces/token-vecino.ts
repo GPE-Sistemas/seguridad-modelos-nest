@@ -14,6 +14,11 @@ export interface ITokenVecino {
 
 type OmitirCreate = "_id" | "configVecino";
 
+export interface IResumenTokensPorFecha {
+  fecha: string;
+  cantidad: number;
+}
+
 export interface ICreateTokenVecino
   extends Omit<Partial<ITokenVecino>, OmitirCreate> {}
 
