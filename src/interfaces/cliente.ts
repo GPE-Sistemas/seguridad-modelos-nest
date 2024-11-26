@@ -56,6 +56,8 @@ export interface IConfigCliente {
   verGrupos?: boolean;
   verEstacionamientoMedido?: boolean;
   verColectivos?: boolean;
+  // Telemedicina
+  tieneTelemedicina?: boolean;
 
   /// Config Botones del Llavero---Control con tres botones
   boton1?: TipoBoton;
