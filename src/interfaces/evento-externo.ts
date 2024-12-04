@@ -1,7 +1,7 @@
-import { ICoordenadas } from "../../auxiliares/coordenadas";
-import { IBarrio } from "../barrio";
-import { ILocalidad } from "../localidades";
-import { ICliente } from "../cliente";
+import { ICoordenadas } from "../auxiliares";
+import { IBarrio } from "./barrio";
+import { ICliente } from "./cliente";
+import { ILocalidad } from "./localidades";
 
 export interface IEventoExterno {
   _id?: string;
