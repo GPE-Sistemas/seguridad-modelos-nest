@@ -59,6 +59,11 @@ export interface IConfigCliente {
   // Telemedicina
   tieneTelemedicina?: boolean;
 
+  // Config Evento Externo
+
+  alertaEventoExterno?: string;
+  activarSirena?: boolean;
+
   /// Config Botones del Llavero---Control con tres botones
   boton1?: TipoBoton;
   boton2?: TipoBoton;
