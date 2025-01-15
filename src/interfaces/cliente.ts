@@ -36,8 +36,8 @@ export interface IConfigCliente {
   colorInstalar?: string;
   colorMenu?: string;
   colorMenuInferior?: string;
-  ColorFondoBotonInferior?: string;
-  ColorIconoBotonInferior?: string;
+  colorFondoBotonInferior?: string;
+  colorIconoBotonInferior?: string;
   mostrarMapa?: boolean;
   mostrarSirenasOffline?: boolean;
   mostrarEstadoSirenas?: boolean;
