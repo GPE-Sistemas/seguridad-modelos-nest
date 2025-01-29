@@ -9,6 +9,7 @@ import {
   IBoton,
   ICliente,
   IConfigVecino,
+  IEventoExterno,
   IGrupo,
   ILocalidad,
   IPunto,
@@ -46,6 +47,7 @@ export interface IAlerta {
   idCliente?: string;
   idUsuario?: string;
   idOperador?: string; // Este ID es para identificar si la alerta la creó un operador
+  idEventoExterno?: string;
   /**
    * @deprecated se usa idConfigVecino
    */
@@ -75,4 +77,5 @@ export interface IAlerta {
   punto?: IPunto;
   grupo?: IGrupo;
   operador?: IUsuario;
+  eventoExterno?: IEventoExterno;
 }
