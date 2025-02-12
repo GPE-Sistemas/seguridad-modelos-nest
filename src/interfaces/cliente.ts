@@ -76,6 +76,12 @@ export interface IConfigCliente {
   boton1Mobile?: TipoBotonMobile;
   boton2Mobile?: TipoBotonMobile;
   boton3Mobile?: TipoBotonMobile;
+
+  // Restriccion uso de sierenas por vecino
+  restringirUsoSirenas?: boolean;
+  tiempoEntreUsoSirenas?: number; // Minutos
+  cantidadMaxSirenasPorDia?: number;
+  cantidadMaxSirenasPorMes?: number;
 }
 
 /// el string sería un mongoId del botón a ejecutar
