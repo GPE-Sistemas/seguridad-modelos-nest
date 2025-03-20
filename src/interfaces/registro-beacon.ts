@@ -1,6 +1,6 @@
 import { IConfigVecino } from "./config-vecino";
 
-export interface IBeacon {
+export interface IRegistroBeacon {
   _id?: string;
   mac?: string;
   fechaCreacion?: string;
@@ -15,7 +15,9 @@ export interface IBeacon {
 }
 
 type OmitirCreate = "_id" | "configVecino";
-export interface ICreateBeacon extends Omit<Partial<IBeacon>, OmitirCreate> {}
+export interface ICreateRegistroBeacon
+  extends Omit<Partial<IRegistroBeacon>, OmitirCreate> {}
 
 type OmitirUpdate = "_id" | "configVecino";
-export interface IUpdateBeacon extends Omit<Partial<IBeacon>, OmitirUpdate> {}
+export interface IUpdateRegistroBeacon
+  extends Omit<Partial<IRegistroBeacon>, OmitirUpdate> {}
