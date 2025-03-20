@@ -16,6 +16,8 @@ export * from "./visitante";
 export * from "./portico";
 export * from "./lectura-portico";
 export * from "./evento-externo";
+export * from "./beacon";
+export * from "./registro-beacon";
 
 //
 export * from "./actualizacion-firmware";
