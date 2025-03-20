@@ -7,7 +7,7 @@ export interface IRegistroBeacon {
   idConfigVecino?: string;
   geojson?: {
     type: "Point";
-    coordinates: [number, number][][];
+    coordinates: [number, number];
   };
   imei?: string;
   // Populate
