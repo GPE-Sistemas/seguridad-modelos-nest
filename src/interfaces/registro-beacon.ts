@@ -6,7 +6,7 @@ export interface IRegistroBeacon {
   fechaCreacion?: string;
   idConfigVecino?: string;
   geojson?: {
-    type: "Polygon";
+    type: "Point";
     coordinates: [number, number][][];
   };
   imei?: string;
