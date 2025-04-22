@@ -5,7 +5,9 @@ import {
   ICoordenadas,
   ILocalidad,
   ISim,
-} from "../..";
+} from '../..';
+
+export type ModeloSirena = 'NAC' | 'Avatis' | 'Alarcom';
 
 export interface ISirena {
   _id?: string;
@@ -30,7 +32,7 @@ export interface ISirena {
   // type es el tipo de objeto a guardar
   //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
   geojson?: {
-    type: "Point";
+    type: 'Point';
     coordinates: [number, number];
   };
   /**
@@ -101,6 +103,12 @@ export interface ISirena {
     fuenteExterna?: boolean;
     fechaDeFabricacion?: string;
   };
+
+  /**
+   * Modelo físico de la sirena
+   * NAC - Avatis - Alarcom - ETC
+   */
+  modeloSirena?: ModeloSirena;
 
   // configs de la sirena
   configs?: IConfigSirena;

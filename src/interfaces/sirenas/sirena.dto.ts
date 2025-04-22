@@ -1,4 +1,4 @@
-import { IConfigSirena, ICoordenadas } from '../..';
+import { IConfigSirena, ICoordenadas, ModeloSirena } from '../..';
 
 export interface ICrearSirena {
   fechaCreacion?: string;
@@ -45,6 +45,11 @@ export interface ICrearSirena {
     fechaDeFabricacion?: string;
   };
   configs?: IConfigSirena;
+  /**
+   * Modelo físico de la sirena
+   * NAC - Avatis - Alarcom - ETC
+   */
+  modeloSirena?: ModeloSirena;
 }
 
 export interface IUpdateSirena {
@@ -91,6 +96,11 @@ export interface IUpdateSirena {
   };
   // configs de la sirena
   configs?: IConfigSirena;
+  /**
+   * Modelo físico de la sirena
+   * NAC - Avatis - Alarcom - ETC
+   */
+  modeloSirena?: ModeloSirena;
 }
 
 export interface IResumenSirenasPorCliente {
