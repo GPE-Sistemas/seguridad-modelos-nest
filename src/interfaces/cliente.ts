@@ -1,7 +1,11 @@
 import { ICategoria } from './categoria';
 import { ICoordenadas } from '../auxiliares/coordenadas';
 
-export type TipoCliente = 'Barrio Privado' | 'Municipio' | 'Provincia';
+export type TipoCliente =
+  | 'Barrio Privado'
+  | 'Municipio'
+  | 'Provincia'
+  | 'Privado';
 
 export type TipoBotonMobile =
   | 'Vacio'
