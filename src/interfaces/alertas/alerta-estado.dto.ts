@@ -1,17 +1,19 @@
 export type Estados =
-  | 'Pre Aprobada'
-  | 'Nueva'
-  | 'Sin Tratamiento'
-  | 'Vista'
-  | 'Pendiente'
-  | 'En Atención'
-  | 'En Espera'
-  | 'En Proceso'
-  | 'Liberada'
-  | 'Derivada'
-  | 'Derivada Finalizada'
-  | 'Devuelta'
-  | 'Finalizada';
+  | "Pre Aprobada"
+  | "Nueva"
+  | "Sin Tratamiento"
+  | "Vista"
+  | "Pendiente"
+  | "En Atención"
+  | "En Espera"
+  | "En Proceso"
+  | "Liberada"
+  | "Derivada"
+  | "Derivada Finalizada"
+  | "Devuelta"
+  | "Finalizada"
+  | "Móvil Enviado"
+  | "Móvil En Destino";
 
 export interface ICrearAlertaEstado {
   idAlerta: string;
