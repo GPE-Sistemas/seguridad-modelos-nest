@@ -157,7 +157,7 @@ export interface ICliente {
   edadMinima?: number;
   twitter?: string;
   instagram?: string;
-  mail?: string;
+  email?: string;
   sirenas?: boolean;
   porticos?: boolean;
   categorias?: ICategoriaCliente[];
