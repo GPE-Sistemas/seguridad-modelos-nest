@@ -143,7 +143,6 @@ export interface ICliente {
   _id?: string;
   activo?: boolean;
   tipo?: TipoCliente;
-  mail?: string;
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   geojson?: {
@@ -158,6 +157,7 @@ export interface ICliente {
   edadMinima?: number;
   twitter?: string;
   instagram?: string;
+  mail?: string;
   sirenas?: boolean;
   porticos?: boolean;
   categorias?: ICategoriaCliente[];
