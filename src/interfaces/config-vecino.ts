@@ -52,6 +52,7 @@ export interface IConfigVecino {
   appVersion?: string;
   app?: string;
   appType?: string;
+  nota?: string;
 
   envioCodigo?: IEnvioCodigo;
 
