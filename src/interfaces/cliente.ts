@@ -75,6 +75,11 @@ export interface IConfigCliente {
   activarSirena?: boolean;
   pInteresEExterno?: boolean;
 
+  // Evento Luminaria
+
+  alertaEventoExternoBle?: string;
+  activarSirenaBle?: boolean;
+
   /// Config Botones del Llavero---Control con tres botones
   boton1?: TipoBoton;
   boton2?: TipoBoton;
