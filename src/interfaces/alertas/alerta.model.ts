@@ -1,9 +1,9 @@
-import { Estados } from "./alerta-estado.dto";
-import { ICategoria } from "../categoria";
-import { ICentroMonitoreo } from "../centro-monitoreo/schema";
-import { ICoordenadas } from "../../auxiliares/coordenadas";
-import { IUsuario } from "../usuario";
-import { IZona } from "../zona/schema";
+import { Estados } from './alerta-estado.dto';
+import { ICategoria } from '../categoria';
+import { ICentroMonitoreo } from '../centro-monitoreo/schema';
+import { ICoordenadas } from '../../auxiliares/coordenadas';
+import { IUsuario } from '../usuario';
+import { IZona } from '../zona/schema';
 import {
   IBarrio,
   IBoton,
@@ -14,7 +14,7 @@ import {
   ILocalidad,
   IPunto,
   IVecino,
-} from "../..";
+} from '../..';
 
 export interface ITopAlertasVecino {
   idConfigVecino: string;
@@ -24,13 +24,13 @@ export interface ITopAlertasVecino {
 
 export interface IAlerta {
   _id?: string;
-  tipo?: "Emergencia" | "Evento";
+  tipo?: 'Emergencia' | 'Evento';
 
   counter?: number;
   activa?: boolean;
   ubicacion?: ICoordenadas;
   geojson?: {
-    type: "Point";
+    type: 'Point';
     coordinates: [number, number];
   };
   direccion?: string;
@@ -39,6 +39,7 @@ export interface IAlerta {
   fechaCreacion?: string;
   tiempoRespuesta?: number;
   tiempoResolucion?: number;
+  creadoPorMonitoreo?: boolean; // Indica si la alerta fue creada por un centro de monitoreo default false
   //
   idBoton?: string;
   idCategoria?: string;
