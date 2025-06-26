@@ -56,6 +56,7 @@ export type tipoDato =
   | 'Foto'
   | 'Persona'
   | 'Lista de personas'
+  | 'Dirección' // Autocomplete
   | 'Texto (Requerido)'
   | 'Texto Largo (Requerido)'
   | 'Numero (Requerido)'
@@ -64,7 +65,8 @@ export type tipoDato =
   | 'Ubicación (Requerido)'
   | 'Foto (Requerido)'
   | 'Persona (Requerido)'
-  | 'Lista de personas (Requerido)';
+  | 'Lista de personas (Requerido)'
+  | 'Dirección (Requerido)'; // Autocomplete;
 
 export interface IBoton {
   _id?: string;
