@@ -60,6 +60,9 @@ export interface IAlerta {
   idPunto?: string;
   idGrupo?: string; // Agrupacion de vecinos que la pueden ver (barrios cerrados y autogestion de alertas)
 
+  // Configuración SOLO PARA EVENTOS DE EZEIZA
+  reenviarATito?: boolean;
+
   // Para eventos
   formulario?: Record<string, any>; // Formulario de datos del evento
 
