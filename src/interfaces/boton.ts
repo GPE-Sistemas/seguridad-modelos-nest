@@ -1,4 +1,4 @@
-import { TipoDePunto } from './puntos';
+import { TipoDePunto } from "./puntos";
 
 export interface ICrearTrackeoInput {
   tiempoMinutos?: number;
@@ -38,35 +38,36 @@ export interface IEnvioEmail {
 }
 
 export type FuncionBoton =
-  | 'Alerta'
-  | 'Evento'
-  | 'Sirena'
-  | 'Reflector'
-  | '911'
-  | 'Link'
-  | 'Alerta por Punto';
+  | "Alerta"
+  | "Evento"
+  | "Sirena"
+  | "Reflector"
+  | "911"
+  | "Link"
+  | "Alerta por Punto"
+  | "Telemedicina";
 
 export type tipoDato =
-  | 'Texto'
-  | 'Texto Largo'
-  | 'Numero'
-  | 'Fecha'
-  | 'Booleano'
-  | 'Ubicación'
-  | 'Foto'
-  | 'Persona'
-  | 'Lista de personas'
-  | 'Dirección' // Autocomplete
-  | 'Texto (Requerido)'
-  | 'Texto Largo (Requerido)'
-  | 'Numero (Requerido)'
-  | 'Fecha (Requerido)'
-  | 'Booleano (Requerido)'
-  | 'Ubicación (Requerido)'
-  | 'Foto (Requerido)'
-  | 'Persona (Requerido)'
-  | 'Lista de personas (Requerido)'
-  | 'Dirección (Requerido)'; // Autocomplete;
+  | "Texto"
+  | "Texto Largo"
+  | "Numero"
+  | "Fecha"
+  | "Booleano"
+  | "Ubicación"
+  | "Foto"
+  | "Persona"
+  | "Lista de personas"
+  | "Dirección" // Autocomplete
+  | "Texto (Requerido)"
+  | "Texto Largo (Requerido)"
+  | "Numero (Requerido)"
+  | "Fecha (Requerido)"
+  | "Booleano (Requerido)"
+  | "Ubicación (Requerido)"
+  | "Foto (Requerido)"
+  | "Persona (Requerido)"
+  | "Lista de personas (Requerido)"
+  | "Dirección (Requerido)"; // Autocomplete;
 
 export interface IBoton {
   _id?: string;
@@ -109,8 +110,8 @@ export interface IBoton {
   formulario?: { [label: string]: tipoDato };
 }
 
-type OmitirCreate = '_id';
+type OmitirCreate = "_id";
 export interface ICreateBoton extends Omit<Partial<IBoton>, OmitirCreate> {}
 
-type OmitirUpdate = '_id';
+type OmitirUpdate = "_id";
 export interface IUpdateBoton extends Omit<Partial<IBoton>, OmitirUpdate> {}
