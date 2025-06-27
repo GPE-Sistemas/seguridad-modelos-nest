@@ -18,4 +18,4 @@ export interface ILogReenvio {
 type Omitir = '_id' | 'cliente' | 'fechaCreacion';
 
 export interface ICreateLogReenvio extends Omit<Partial<ILogReenvio>, Omitir> {}
-export interface IUpdateVehiculo extends Omit<Partial<ILogReenvio>, Omitir> {}
+export interface IUpdateLogReenvio extends Omit<Partial<ILogReenvio>, Omitir> {}
