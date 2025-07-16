@@ -37,6 +37,7 @@ export interface ICrearAlerta {
   idCategoria: string;
   idOperador?: string;
   idEventoExterno?: string;
+  idTito?: string; // Id que devolvió Tito al crear la alerta.
   prioridad: number;
   estadoActual?: Estados;
   activa?: boolean;
