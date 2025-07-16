@@ -17,6 +17,7 @@ export interface ILogReenvio {
   codigoRespuesta?: number; // Código de respuesta HTTP
   respuesta?: Record<string, any>; // Seguro un json o un string
   body?: Record<string, any>; // Body del envío, si es que se envió algo
+  headers?: Record<string, string>; // Headers del envío, si es que se enviaron
 
   // Virtuals
   cliente?: ICliente;
