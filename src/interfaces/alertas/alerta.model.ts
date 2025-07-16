@@ -49,6 +49,7 @@ export interface IAlerta {
   idUsuario?: string;
   idOperador?: string; // Este ID es para identificar si la alerta la creó un operador
   idEventoExterno?: string;
+  idTito?: string; // Id que devolvió Tito al crear la alerta.
   /**
    * @deprecated se usa idConfigVecino
    */
