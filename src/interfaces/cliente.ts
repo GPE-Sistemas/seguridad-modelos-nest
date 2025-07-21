@@ -98,6 +98,9 @@ export interface IConfigCliente {
 
   // Configuración SOLO PARA EVENTOS DE EZEIZA
   reenviarATito?: boolean; // DEFAULT FALSE
+
+  // Compartir Sirenas
+  idsClientesACompartirSirenas?: string[];
 }
 
 /// el string sería un mongoId del botón a ejecutar
