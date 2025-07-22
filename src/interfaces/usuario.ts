@@ -1,9 +1,5 @@
 import { IBoton, ICentroMonitoreo, ICliente } from '..';
 
-export interface IConfigUsuario {
-  verSirenasOnline?: boolean;
-}
-
 export type Rol =
   | 'admin'
   | 'operador'
@@ -52,7 +48,7 @@ export interface IUsuario {
   usuario?: string;
   clave?: string;
   operador?: IOperador;
-  config?: IConfigUsuario;
+  sirenasOnline?: boolean;
   // Virtuals
   cliente?: ICliente;
 }
