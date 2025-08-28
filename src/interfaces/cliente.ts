@@ -22,7 +22,8 @@ export type TipoBotonMobile =
   | "Tramites"
   | "Alertas Grupo"
   | "Contactos"
-  | "Eventos Grupo";
+  | "Eventos Grupo"
+  | "Donde Voto";
 
 export interface IConfigCliente {
   direccion?: string;
