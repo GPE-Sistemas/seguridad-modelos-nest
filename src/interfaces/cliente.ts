@@ -23,7 +23,8 @@ export type TipoBotonMobile =
   | 'Alertas Grupo'
   | 'Contactos'
   | 'Eventos Grupo'
-  | 'Donde Voto';
+  | 'Donde Voto'
+  | 'EULA';
 
 export interface IConfigCliente {
   direccion?: string;
@@ -105,6 +106,7 @@ export interface IConfigCliente {
   idsClientesACompartirSirenas?: string[];
 
   mostrarEula?: boolean; // DEFAULT FALSE
+  textoEula?: string; // DEFAULT ''
 }
 
 /// el string sería un mongoId del botón a ejecutar
