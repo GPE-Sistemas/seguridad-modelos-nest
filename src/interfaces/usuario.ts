@@ -23,6 +23,35 @@ export const ROLES: Rol[] = [
   'Eliminar Vecinos',
 ];
 
+export interface IConfigUsuario {
+  // Config del dashboard
+  dashboard?: {
+    /// Uso el título del gráfico porque no hay otra manera de relacionarlos.
+    ///Top uso de sirenas
+    topUsoSirenas?: boolean;
+    /// Top envio de alertas
+    topEnvioAlertas?: boolean;
+    /// Vecinos Activos
+    vecinosActivos?: boolean;
+    // Alertas Por Dia
+    alertasPorDia?: boolean;
+    // Alertas por localidad
+    alertasPorLocalidad?: boolean;
+    // Alertas por tipo
+    alertasPorTipo?: boolean;
+    // Eventos por categoria
+    eventosPorCategoria?: boolean;
+    // Eventos por subcategoria
+    eventosPorSubcategoria?: boolean;
+    // Eventos de sirena
+    eventosDeSirena?: boolean;
+    // Eventos de reflector
+    eventosDeReflector?: boolean;
+    // Telemedicina
+    telemedicina?: boolean;
+  };
+}
+
 export interface IOperador {
   idCentroMonitoreo: string;
   idsBotones: string[];
@@ -49,6 +78,7 @@ export interface IUsuario {
   clave?: string;
   operador?: IOperador;
   sirenasOnline?: boolean;
+  config?: IConfigUsuario;
   // Virtuals
   cliente?: ICliente;
 }
