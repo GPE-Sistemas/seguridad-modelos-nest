@@ -8,6 +8,7 @@ export * from './config-vecino';
 export * from './counters';
 export * from './categoria';
 export * from './cliente';
+export * from './configuracion-localidad-categoria';
 export * from './token-vecino';
 export * from './registro';
 export * from './usuario';
