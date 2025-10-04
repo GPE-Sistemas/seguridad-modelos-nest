@@ -26,6 +26,15 @@ export const ROLES: Rol[] = [
 export interface IConfigUsuario {
   // Config del dashboard
   dashboard?: {
+    // Resúmenes (sección superior de tarjetas de estadísticas)
+    resumenVecinos?: boolean;
+    resumenUsuarios?: boolean;
+    resumenAlertas?: boolean;
+    resumenSirenas?: boolean;
+    resumenTelemedicina?: boolean;
+    // Mapa de calor
+    mapaDeCalor?: boolean;
+    /// Gráficos individuales
     /// Uso el título del gráfico porque no hay otra manera de relacionarlos.
     ///Top uso de sirenas
     topUsoSirenas?: boolean;
