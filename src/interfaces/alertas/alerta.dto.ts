@@ -69,11 +69,12 @@ export interface ICrearAlertaMonitoreo {
   creadoPorMonitoreo?: boolean;
 }
 
-export type TipoDelegacion = 'normal' | 'visibilidad-compartida';
+export type TipoDelegacion = 'normal' | 'visibilidad-compartida' | 'externa';
 
 export interface IDerivarAlerta {
-  idCentroMonitoreo: string;
+  idCentroMonitoreo?: string;
   tipo: TipoDelegacion;
+  entidadExterna?: string;
 }
 
 export interface IUpdateAlerta {
@@ -84,6 +85,7 @@ export interface IUpdateAlerta {
   tiempoResolucion?: number;
   idCentroDerivado?: string;
   tipoDelegacion?: TipoDelegacion;
+  entidadExterna?: string;
 }
 
 export interface IDetalleAlerta {

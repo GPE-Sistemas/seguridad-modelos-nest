@@ -12,6 +12,8 @@ export type Estados =
   | "Derivada Compartida"
   | "Derivada Finalizada"
   | "Derivada Compartida Finalizada"
+  | "Derivada Externa"
+  | "Derivada Externa Finalizada"
   | "Devuelta"
   | "Finalizada"
   | "Móvil Enviado"
