@@ -1,3 +1,6 @@
+import { ICliente } from '../cliente';
+import { ICentroMonitoreo } from '../centro-monitoreo';
+
 export interface IEntidadExternaHistorico {
   _id?: string;
   nombre: string; // Normalizado (lowercase, trimmed)
@@ -7,9 +10,13 @@ export interface IEntidadExternaHistorico {
   fechaUltimoUso: string;
   fechaCreacion: string;
   activo: boolean;
+
+  // Virtuals
+  cliente?: ICliente;
+  centroMonitoreo?: ICentroMonitoreo;
 }
 
-type OmitirCreate = "_id";
+type OmitirCreate = "_id" | "cliente" | "centroMonitoreo";
 
 export interface ICreateEntidadExternaHistorico
   extends Omit<Partial<IEntidadExternaHistorico>, OmitirCreate> {
@@ -17,7 +24,7 @@ export interface ICreateEntidadExternaHistorico
   idCliente: string; // Requerido
 }
 
-type OmitirUpdate = "_id";
+type OmitirUpdate = "_id" | "cliente" | "centroMonitoreo";
 
 export interface IUpdateEntidadExternaHistorico
   extends Omit<Partial<IEntidadExternaHistorico>, OmitirUpdate> {}
