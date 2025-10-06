@@ -48,12 +48,16 @@ export interface ICrearAlerta {
   formulario?: Record<string, any>; // Formulario de datos del evento
 }
 
+export type TipoDelegacion = 'normal' | 'visibilidad-compartida' | 'externa';
+
 export interface ICrearAlertaMonitoreo {
   counter?: number;
   direccion: string;
   idConfigVecino?: string;
   idBoton: string;
   idCentroDerivado?: string;
+  tipoDelegacion?: TipoDelegacion;
+  entidadExterna?: string;
   idLocalidad?: string;
   urlsImagenes?: string[];
   // Vecino no creado
@@ -68,8 +72,6 @@ export interface ICrearAlertaMonitoreo {
   };
   creadoPorMonitoreo?: boolean;
 }
-
-export type TipoDelegacion = 'normal' | 'visibilidad-compartida' | 'externa';
 
 export interface IDerivarAlerta {
   idCentroMonitoreo?: string;
