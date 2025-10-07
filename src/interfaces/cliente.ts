@@ -1,34 +1,35 @@
-import { ICategoria } from './categoria';
-import { ICoordenadas } from '../auxiliares/coordenadas';
+import { ICategoria } from "./categoria";
+import { ICoordenadas } from "../auxiliares/coordenadas";
 
 export type TipoCliente =
-  | 'Barrio Privado'
-  | 'Municipio'
-  | 'Provincia'
-  | 'Privado';
+  | "Barrio Privado"
+  | "Municipio"
+  | "Provincia"
+  | "Privado";
 
 export type TipoBotonMobile =
-  | 'Vacio'
-  | 'Cobertura'
-  | 'Alertas'
-  | 'Notificaciones'
-  | 'Líneas de Colectivos'
-  | 'Reclamos'
-  | 'Contactos'
-  | 'Eventos'
-  | 'Perfil'
-  | 'Ayuda'
-  | 'Turnos'
-  | 'Tramites'
-  | 'Alertas Grupo'
-  | 'Contactos'
-  | 'Eventos Grupo'
-  | 'Donde Voto'
-  | 'EULA';
+  | "Vacio"
+  | "Cobertura"
+  | "Alertas"
+  | "Notificaciones"
+  | "Líneas de Colectivos"
+  | "Reclamos"
+  | "Contactos"
+  | "Eventos"
+  | "Perfil"
+  | "Ayuda"
+  | "Turnos"
+  | "Tramites"
+  | "Alertas Grupo"
+  | "Contactos"
+  | "Eventos Grupo"
+  | "Donde Voto"
+  | "EULA";
 
 export interface IConfigCliente {
   direccion?: string;
   hostSmartCity?: string;
+  integracionSOFLEX?: boolean;
   categoriasDeEvento?: string[];
   tagsDeEvento?: string[];
   actualizacionesFirmware?: boolean;
@@ -110,7 +111,7 @@ export interface IConfigCliente {
 }
 
 /// el string sería un mongoId del botón a ejecutar
-export type TipoBoton = 'Reflector' | 'Sirena' | string;
+export type TipoBoton = "Reflector" | "Sirena" | string;
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
@@ -164,7 +165,7 @@ export interface ICliente {
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   geojson?: {
-    type: 'MultiPolygon';
+    type: "MultiPolygon";
     coordinates: [number, number][][][];
   };
   centro?: ICoordenadas;
@@ -187,8 +188,8 @@ export interface ICliente {
   categoriaDefault?: ICategoria;
 }
 
-type OmitirCreate = '_id';
+type OmitirCreate = "_id";
 export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
 
-type OmitirUpdate = '_id';
+type OmitirUpdate = "_id";
 export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}
