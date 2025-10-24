@@ -26,10 +26,26 @@ export type TipoBotonMobile =
   | "Donde Voto"
   | "EULA";
 
+/**
+ * Configuración de integración con SOFLEX
+ * Contiene las credenciales y parámetros necesarios para la integración
+ */
+export interface IConfigClienteSoflex {
+  url: string;                    // URL del endpoint SOFLEX
+  user: string;                   // Usuario API asignado por SOFLEX
+  password: string;               // Password API (se almacena encriptado)
+  providerid: string;            // ID proveedor asignado por SOFLEX
+  fleetid: string;               // ID flota asignada por SOFLEX
+  fleetName: string;             // Nombre de la flota en SOFLEX
+  maxReintentos?: number;        // Default: 3
+  tiempoEntreReintentos?: number; // Milisegundos, Default: 5000
+}
+
 export interface IConfigCliente {
   direccion?: string;
   hostSmartCity?: string;
   integracionSOFLEX?: boolean;
+  configSOFLEX?: IConfigClienteSoflex;
   categoriasDeEvento?: string[];
   tagsDeEvento?: string[];
   actualizacionesFirmware?: boolean;

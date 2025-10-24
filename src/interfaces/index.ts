@@ -51,3 +51,4 @@ export * from './infracciones';
 export * from './dominio-exento';
 export * from './dominio-lectura';
 export * from './log-reenvio';
+export * from './log-integracion-soflex';
