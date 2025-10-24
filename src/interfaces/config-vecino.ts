@@ -72,6 +72,10 @@ export interface IConfigVecino {
   idSmartCity?: string;
   idUma?: string;
 
+  // === Integración SOFLEX ===
+  enviadoSOFLEX?: boolean; // Indica si el vecino fue sincronizado con SOFLEX
+  fechaEnvioSOFLEX?: string; // Fecha del último envío exitoso a SOFLEX (ISO 8601)
+
   // Virtuals
   cliente?: ICliente;
   vecino?: IVecino;
