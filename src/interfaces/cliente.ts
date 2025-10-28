@@ -253,7 +253,7 @@ export const CONFIGURACIONES_PAIS: Record<string, IConfigPais> = {
     },
     validaciones: {
       telefono: '^(?!0|15)\\d{10}$',
-      dni: '^([MFmf]\\d{7}|\\d{7,9})$',
+      dni: '^\\d{7,8}$', // 7-8 dígitos (personas mayores pueden tener 7)
     },
     estructuraAdministrativa: {
       nivel1: 'Provincia',
@@ -290,8 +290,9 @@ export const CONFIGURACIONES_PAIS: Record<string, IConfigPais> = {
       lng: -99.1332,
     },
     validaciones: {
-      telefono: '^\\d{10}$',
-      dni: '^[A-Z]{4}\\d{6}[HM][A-Z]{5}[0-9A-Z]\\d$',
+      telefono: '^\\d{10}$', // 10 dígitos (formato unificado desde 2020)
+      // CURP: 18 caracteres - 4 letras iniciales, 6 dígitos fecha (AAMMDD), sexo (H/M), estado (2 letras), 3 consonantes internas, homoclave, dígito verificador
+      dni: '^[A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d]\\d$',
     },
     estructuraAdministrativa: {
       nivel1: 'Estado',
