@@ -41,6 +41,30 @@ export interface IConfigClienteSoflex {
   tiempoEntreReintentos?: number; // Milisegundos, Default: 5000
 }
 
+/**
+ * Configuración de país para el cliente
+ * Define parámetros geográficos, validaciones y formatos específicos del país
+ */
+export interface IConfigPais {
+  codigo: string;                 // Código ISO 3166-1 alpha-2: 'AR', 'PE', etc.
+  codigoPais: string;             // Código telefónico internacional: '+54', '+51', etc.
+  timezone: string;               // Zona horaria: '-03:00', '-05:00', etc.
+  locale: string;                 // Locale: 'es-AR', 'es-PE', etc.
+  coordenadasDefault: {
+    lat: number;                  // Latitud por defecto para el país
+    lng: number;                  // Longitud por defecto para el país
+  };
+  validaciones?: {
+    telefono?: string;            // Regex para validación de teléfono
+    dni?: string;                 // Regex para validación de documento
+  };
+  estructuraAdministrativa?: {
+    nivel1: string;               // Ej: 'Provincia' | 'Departamento'
+    nivel2: string;               // Ej: 'Partido' | 'Provincia'
+    nivel3: string;               // Ej: 'Localidad' | 'Distrito'
+  };
+}
+
 export interface IConfigCliente {
   direccion?: string;
   hostSmartCity?: string;
@@ -124,6 +148,9 @@ export interface IConfigCliente {
 
   mostrarEula?: boolean; // DEFAULT FALSE
   textoEula?: string; // DEFAULT ''
+
+  // Configuración de país
+  pais?: IConfigPais;
 }
 
 /// el string sería un mongoId del botón a ejecutar
@@ -209,3 +236,48 @@ export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
 
 type OmitirUpdate = "_id";
 export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}
+
+/**
+ * Configuraciones predefinidas de país
+ * Contiene los parámetros estándar para cada país soportado
+ */
+export const CONFIGURACIONES_PAIS: Record<string, IConfigPais> = {
+  AR: {
+    codigo: 'AR',
+    codigoPais: '+54',
+    timezone: '-03:00',
+    locale: 'es-AR',
+    coordenadasDefault: {
+      lat: -35.5836812,
+      lng: -58.0128784,
+    },
+    validaciones: {
+      telefono: '^(?!0|15)\\d{10}$',
+      dni: '^([MFmf]\\d{7}|\\d{7,9})$',
+    },
+    estructuraAdministrativa: {
+      nivel1: 'Provincia',
+      nivel2: 'Partido',
+      nivel3: 'Localidad',
+    },
+  },
+  PE: {
+    codigo: 'PE',
+    codigoPais: '+51',
+    timezone: '-05:00',
+    locale: 'es-PE',
+    coordenadasDefault: {
+      lat: -12.0464,
+      lng: -77.0428,
+    },
+    validaciones: {
+      telefono: '^9\\d{8}$',
+      dni: '^\\d{8}$',
+    },
+    estructuraAdministrativa: {
+      nivel1: 'Departamento',
+      nivel2: 'Provincia',
+      nivel3: 'Distrito',
+    },
+  },
+};
