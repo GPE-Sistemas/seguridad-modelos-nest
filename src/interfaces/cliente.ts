@@ -280,4 +280,23 @@ export const CONFIGURACIONES_PAIS: Record<string, IConfigPais> = {
       nivel3: 'Distrito',
     },
   },
+  MX: {
+    codigo: 'MX',
+    codigoPais: '+52',
+    timezone: '-06:00',
+    locale: 'es-MX',
+    coordenadasDefault: {
+      lat: 19.4326,
+      lng: -99.1332,
+    },
+    validaciones: {
+      telefono: '^\\d{10}$',
+      dni: '^[A-Z]{4}\\d{6}[HM][A-Z]{5}[0-9A-Z]\\d$',
+    },
+    estructuraAdministrativa: {
+      nivel1: 'Estado',
+      nivel2: 'Municipio',
+      nivel3: 'Localidad',
+    },
+  },
 };
