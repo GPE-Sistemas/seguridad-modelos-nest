@@ -9,3 +9,6 @@ export * from "./socket-message";
 export * from "./ubicacion";
 export * from "./version";
 export * from "./opensearch-request";
+
+// Configuraciones de país (JSON importable en runtime)
+export { default as CONFIGURACIONES_PAIS } from "./configuraciones-pais.json";

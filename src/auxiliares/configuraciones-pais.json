@@ -1,0 +1,59 @@
+{
+  "AR": {
+    "codigo": "AR",
+    "codigoPais": "+54",
+    "timezone": "-03:00",
+    "locale": "es-AR",
+    "coordenadasDefault": {
+      "lat": -35.5836812,
+      "lng": -58.0128784
+    },
+    "validaciones": {
+      "telefono": "^(?!0|15)\\d{10}$",
+      "dni": "^\\d{7,8}$"
+    },
+    "estructuraAdministrativa": {
+      "nivel1": "Provincia",
+      "nivel2": "Partido",
+      "nivel3": "Localidad"
+    }
+  },
+  "PE": {
+    "codigo": "PE",
+    "codigoPais": "+51",
+    "timezone": "-05:00",
+    "locale": "es-PE",
+    "coordenadasDefault": {
+      "lat": -12.0464,
+      "lng": -77.0428
+    },
+    "validaciones": {
+      "telefono": "^9\\d{8}$",
+      "dni": "^\\d{8}$"
+    },
+    "estructuraAdministrativa": {
+      "nivel1": "Departamento",
+      "nivel2": "Provincia",
+      "nivel3": "Distrito"
+    }
+  },
+  "MX": {
+    "codigo": "MX",
+    "codigoPais": "+52",
+    "timezone": "-06:00",
+    "locale": "es-MX",
+    "coordenadasDefault": {
+      "lat": 19.4326,
+      "lng": -99.1332
+    },
+    "validaciones": {
+      "telefono": "^\\d{10}$",
+      "dni": "^[A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d]\\d$"
+    },
+    "estructuraAdministrativa": {
+      "nivel1": "Estado",
+      "nivel2": "Municipio",
+      "nivel3": "Localidad"
+    }
+  }
+}
