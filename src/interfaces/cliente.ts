@@ -205,6 +205,7 @@ export interface ICliente {
   _id?: string;
   activo?: boolean;
   tipo?: TipoCliente;
+  pais?: string; // Código ISO 3166-1 alpha-2: 'AR', 'PE', etc.
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   geojson?: {
