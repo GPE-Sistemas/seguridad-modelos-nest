@@ -1,44 +1,53 @@
-import { ICategoria } from "./categoria";
-import { ICoordenadas } from "../auxiliares/coordenadas";
+import { ICategoria } from './categoria';
+import { ICoordenadas } from '../auxiliares/coordenadas';
 
 export type TipoCliente =
-  | "Barrio Privado"
-  | "Municipio"
-  | "Provincia"
-  | "Privado";
+  | 'Barrio Privado'
+  | 'Municipio'
+  | 'Provincia'
+  | 'Privado';
 
 export type TipoBotonMobile =
-  | "Vacio"
-  | "Cobertura"
-  | "Alertas"
-  | "Notificaciones"
-  | "Líneas de Colectivos"
-  | "Reclamos"
-  | "Contactos"
-  | "Eventos"
-  | "Perfil"
-  | "Ayuda"
-  | "Turnos"
-  | "Tramites"
-  | "Alertas Grupo"
-  | "Contactos"
-  | "Eventos Grupo"
-  | "Donde Voto"
-  | "EULA";
+  | 'Vacio'
+  | 'Cobertura'
+  | 'Alertas'
+  | 'Notificaciones'
+  | 'Líneas de Colectivos'
+  | 'Reclamos'
+  | 'Contactos'
+  | 'Eventos'
+  | 'Perfil'
+  | 'Ayuda'
+  | 'Turnos'
+  | 'Tramites'
+  | 'Alertas Grupo'
+  | 'Contactos'
+  | 'Eventos Grupo'
+  | 'Donde Voto'
+  | 'EULA';
 
 /**
  * Configuración de integración con SOFLEX
  * Contiene las credenciales y parámetros necesarios para la integración
  */
 export interface IConfigClienteSoflex {
-  url: string;                    // URL del endpoint SOFLEX
-  user: string;                   // Usuario API asignado por SOFLEX
-  password: string;               // Password API (se almacena encriptado)
-  providerid: string;            // ID proveedor asignado por SOFLEX
-  fleetid: string;               // ID flota asignada por SOFLEX
-  fleetName: string;             // Nombre de la flota en SOFLEX
-  maxReintentos?: number;        // Default: 3
+  url: string; // URL del endpoint SOFLEX
+  user: string; // Usuario API asignado por SOFLEX
+  password: string; // Password API (se almacena encriptado)
+  providerid: string; // ID proveedor asignado por SOFLEX
+  fleetid: string; // ID flota asignada por SOFLEX
+  fleetName: string; // Nombre de la flota en SOFLEX
+  maxReintentos?: number; // Default: 3
   tiempoEntreReintentos?: number; // Milisegundos, Default: 5000
+}
+
+/**
+ * Configuración de integración con SOFLEX
+ * Contiene las credenciales y parámetros necesarios para la integración
+ */
+export interface IConfigIrix {
+  apikey?: string; // API Key para integración con Irix
+  url?: string; // URL del endpoint Irix
 }
 
 /**
@@ -46,22 +55,22 @@ export interface IConfigClienteSoflex {
  * Define parámetros geográficos, validaciones y formatos específicos del país
  */
 export interface IConfigPais {
-  codigo: string;                 // Código ISO 3166-1 alpha-2: 'AR', 'PE', etc.
-  codigoPais: string;             // Código telefónico internacional: '+54', '+51', etc.
-  timezone: string;               // Zona horaria: '-03:00', '-05:00', etc.
-  locale: string;                 // Locale: 'es-AR', 'es-PE', etc.
+  codigo: string; // Código ISO 3166-1 alpha-2: 'AR', 'PE', etc.
+  codigoPais: string; // Código telefónico internacional: '+54', '+51', etc.
+  timezone: string; // Zona horaria: '-03:00', '-05:00', etc.
+  locale: string; // Locale: 'es-AR', 'es-PE', etc.
   coordenadasDefault: {
-    lat: number;                  // Latitud por defecto para el país
-    lng: number;                  // Longitud por defecto para el país
+    lat: number; // Latitud por defecto para el país
+    lng: number; // Longitud por defecto para el país
   };
   validaciones?: {
-    telefono?: string;            // Regex para validación de teléfono
-    dni?: string;                 // Regex para validación de documento
+    telefono?: string; // Regex para validación de teléfono
+    dni?: string; // Regex para validación de documento
   };
   estructuraAdministrativa?: {
-    nivel1: string;               // Ej: 'Provincia' | 'Departamento'
-    nivel2: string;               // Ej: 'Partido' | 'Provincia'
-    nivel3: string;               // Ej: 'Localidad' | 'Distrito'
+    nivel1: string; // Ej: 'Provincia' | 'Departamento'
+    nivel2: string; // Ej: 'Partido' | 'Provincia'
+    nivel3: string; // Ej: 'Localidad' | 'Distrito'
   };
 }
 
@@ -70,6 +79,9 @@ export interface IConfigCliente {
   hostSmartCity?: string;
   integracionSOFLEX?: boolean;
   configSOFLEX?: IConfigClienteSoflex;
+  integracionIRIX?: boolean;
+  configIRIX?: IConfigIrix;
+  // Filtros de eventos
   categoriasDeEvento?: string[];
   tagsDeEvento?: string[];
   actualizacionesFirmware?: boolean;
@@ -154,7 +166,7 @@ export interface IConfigCliente {
 }
 
 /// el string sería un mongoId del botón a ejecutar
-export type TipoBoton = "Reflector" | "Sirena" | string;
+export type TipoBoton = 'Reflector' | 'Sirena' | string;
 
 export interface ICategoriaCliente {
   imagenArriba?: string;
@@ -209,7 +221,7 @@ export interface ICliente {
   admin?: boolean;
   coordenadas?: ICoordenadas[][];
   geojson?: {
-    type: "MultiPolygon";
+    type: 'MultiPolygon';
     coordinates: [number, number][][][];
   };
   centro?: ICoordenadas;
@@ -232,8 +244,8 @@ export interface ICliente {
   categoriaDefault?: ICategoria;
 }
 
-type OmitirCreate = "_id";
+type OmitirCreate = '_id';
 export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
 
-type OmitirUpdate = "_id";
+type OmitirUpdate = '_id';
 export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}
