@@ -1,3 +1,5 @@
+import { IAlertaMedia } from "./alerta-media.model";
+
 export type Estados =
   | "Pre Aprobada"
   | "Nueva"
@@ -34,6 +36,7 @@ export interface ICrearAlertaEstado {
   estado: Estados;
   notaPredefinida?: string;
   nota?: string;
+  multimedia?: IAlertaMedia[];
   notaInterna?: string;
   causante?: string;
 }
