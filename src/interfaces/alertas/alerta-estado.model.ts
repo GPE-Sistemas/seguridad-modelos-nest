@@ -1,4 +1,5 @@
 import { Estados } from './alerta-estado.dto';
+import { IAlertaMedia } from './alerta-media.model';
 import { IAlerta } from './alerta.model';
 
 export interface IAlertaEstado {
@@ -15,6 +16,7 @@ export interface IAlertaEstado {
   estado?: Estados;
   nota?: string;
   notaPredefinida?: string;
+  multimedia?: IAlertaMedia[];
   notaInterna?: string;
   // Virtuals
   alerta?: IAlerta;
