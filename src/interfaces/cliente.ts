@@ -82,6 +82,7 @@ export interface IConfigCliente {
   integracionIRIX?: boolean;
   configIRIX?: IConfigIrix;
   // Filtros de eventos
+  mostrarEventos?: boolean;
   categoriasDeEvento?: string[];
   tagsDeEvento?: string[];
   actualizacionesFirmware?: boolean;
