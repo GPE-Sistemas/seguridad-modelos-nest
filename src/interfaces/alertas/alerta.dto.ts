@@ -41,6 +41,10 @@ export interface ICrearAlerta {
   prioridad: number;
   estadoActual?: Estados;
   activa?: boolean;
+  tipoDelegacion?: TipoDelegacion;
+  entidadExterna?: string;
+  creadoPorMonitoreo?: boolean;
+
   //
   tipo?: 'Emergencia' | 'Evento';
   idGrupo?: string; // Agrupacion de vecinos que la pueden ver (barrios cerrados y autogestion de alertas)
