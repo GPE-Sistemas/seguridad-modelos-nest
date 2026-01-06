@@ -14,6 +14,7 @@ import {
   ILocalidad,
   IPunto,
   IVecino,
+  TipoDelegacion,
 } from '../..';
 
 export interface ITopAlertasVecino {
@@ -45,7 +46,7 @@ export interface IAlerta {
   idCategoria?: string;
   idsCentrosMonitoreo?: string[];
   idCentroDerivado?: string; // Este centro de monitoreo solo la ve cuando el centro principal le deriva la alerta
-  tipoDelegacion?: 'normal' | 'visibilidad-compartida' | 'externa';
+  tipoDelegacion?: TipoDelegacion;
   entidadExterna?: string;
   idCliente?: string;
   idUsuario?: string;

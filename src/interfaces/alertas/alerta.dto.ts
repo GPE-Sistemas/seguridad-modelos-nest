@@ -43,6 +43,7 @@ export interface ICrearAlerta {
   activa?: boolean;
   tipoDelegacion?: TipoDelegacion;
   entidadExterna?: string;
+  creadoPorMonitoreo?: boolean;
 
   //
   tipo?: 'Emergencia' | 'Evento';
