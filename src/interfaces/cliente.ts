@@ -116,6 +116,7 @@ export interface IConfigCliente {
   tagsMantenimiento?: string[];
   verReclamos?: boolean;
   verEventos?: boolean;
+  verSucesos?: boolean;
   verEventosExternos?: boolean;
   verTurnos?: boolean;
   verGrupos?: boolean;
