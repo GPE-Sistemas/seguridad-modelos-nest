@@ -48,6 +48,8 @@ export interface IConfigUsuario {
     alertasPorLocalidad?: boolean;
     // Alertas por tipo
     alertasPorTipo?: boolean;
+    alertasPorCategoria?: boolean;
+    alertasPorEstado?: boolean;
     // Eventos por categoria
     eventosPorCategoria?: boolean;
     // Eventos por subcategoria
