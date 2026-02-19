@@ -46,6 +46,8 @@ export interface IConfigUsuario {
     alertasPorDia?: boolean;
     // Alertas por localidad
     alertasPorLocalidad?: boolean;
+    // Sirenas por localidad
+    sirenasPorLocalidad?: boolean;
     // Alertas por tipo
     alertasPorTipo?: boolean;
     alertasPorCategoria?: boolean;
