@@ -104,6 +104,10 @@ export interface IConfigCliente {
   mostrarEstadoSirenas?: boolean;
   apikeyColectivos?: string;
   // Sirenas
+  /**
+   * Cuando se superpone el poligono con otro cliente las nuevas sirenas se asignan por defecto al cliente cona la prioridad mas baja.
+   */
+  prioridadSirenas?: number;
   distanciaCobertura?: number;
   verSirenasOnline?: boolean;
   tiposDeSirena?: string[]; // 'sirena' | 'totem' | 'sirena escolar';
