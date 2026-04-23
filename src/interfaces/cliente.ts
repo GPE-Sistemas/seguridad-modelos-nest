@@ -102,6 +102,7 @@ export interface IConfigCliente {
   mostrarMapa?: boolean;
   mostrarSirenasOffline?: boolean;
   mostrarEstadoSirenas?: boolean;
+  mostrarTodasLasSirenas?: boolean;
   apikeyColectivos?: string;
   // Sirenas
   /**
