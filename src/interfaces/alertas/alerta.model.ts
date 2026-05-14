@@ -35,6 +35,7 @@ export interface IAlerta {
     coordinates: [number, number];
   };
   direccion?: string;
+  detallesDireccion?: string; // Piso, depto, entrecalles, referencias
   prioridad?: number;
   estadoActual?: Estados;
   fechaCreacion?: string;

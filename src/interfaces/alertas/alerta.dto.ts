@@ -22,6 +22,7 @@ export interface ICrearAlerta {
     coordinates: [number, number];
   };
   direccion: string;
+  detallesDireccion?: string;
   /**
    * @deprecated se usa idConfigVecino
    */
@@ -57,6 +58,7 @@ export type TipoDelegacion = 'normal' | 'visibilidad-compartida' | 'externa';
 export interface ICrearAlertaMonitoreo {
   counter?: number;
   direccion: string;
+  detallesDireccion?: string;
   idConfigVecino?: string;
   idBoton: string;
   idCentroDerivado?: string;
