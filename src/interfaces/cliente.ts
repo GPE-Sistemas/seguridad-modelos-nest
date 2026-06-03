@@ -211,6 +211,11 @@ export interface IImagenesCliente {
   reflectorPush?: string;
   adelantePush?: string;
   atrasPush?: string;
+  // Imágenes del instructivo (3 pasos: botón / atención / sirena). Config-driven; si faltan, la app
+  // usa las bundleadas por defecto.
+  instructivo1?: string;
+  instructivo2?: string;
+  instructivo3?: string;
 }
 
 export interface IResumenClientes {
