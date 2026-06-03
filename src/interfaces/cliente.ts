@@ -167,6 +167,12 @@ export interface IConfigCliente {
   mostrarEula?: boolean; // DEFAULT FALSE
   textoEula?: string; // DEFAULT ''
 
+  // Theming de la app nativa (white-label). Color de marca → ColorScheme Material3 completo
+  // (la app usa MaterialKolor). Reemplazan a los color* puntuales (que son de la web).
+  colorTema?: string; // hex "#RRGGBB" — seed primario de la marca
+  colorAccent?: string; // hex — secondary opcional (si null se deriva del primario)
+  fuente?: string; // URL a un OTF/TTF propio del cliente (null → fuente default bundleada)
+
   // Configuración de país
   pais?: IConfigPais;
 }
@@ -246,6 +252,10 @@ export interface ICliente {
   idCategoriaDefault?: string;
   categoriasDefault?: { desde: number; hasta: number; idCategoria: string }[];
   configuracion?: IConfigCliente;
+  // Identidad de la app nativa (white-label). Inmutable por build → la app móvil se resuelve por
+  // estos en vez del nombre (`nombreAppMobile`), que falla por tildes/typos.
+  bundleIdAndroid?: string; // applicationId Android (ej. com.gpesistemas.mialertaquilmes)
+  bundleIdIOS?: string; // CFBundleIdentifier iOS (ej. ar.gpesistemas.mialertaquilmes)
   // Virtuals
   categoriaDefault?: ICategoria;
 }
