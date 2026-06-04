@@ -173,6 +173,13 @@ export interface IConfigCliente {
   colorAccent?: string; // hex — secondary opcional (si null se deriva del primario)
   fuente?: string; // URL a un OTF/TTF propio del cliente (null → fuente default bundleada)
 
+  // Textos del instructivo (3 pasos; la imagen de cada paso va en imagenes.instructivoN). Si
+  // faltan, la app usa los textos default. TODO futuro: reemplazar imagen+texto por una lista de
+  // bloques [{imagen, texto}] para configurar el instructivo completo.
+  instructivoTexto1?: string;
+  instructivoTexto2?: string;
+  instructivoTexto3?: string;
+
   // Configuración de país
   pais?: IConfigPais;
 }
