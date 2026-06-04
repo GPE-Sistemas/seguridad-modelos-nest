@@ -223,6 +223,8 @@ export interface IImagenesCliente {
   instructivo1?: string;
   instructivo2?: string;
   instructivo3?: string;
+  // Imagen del header de login/registro (app nativa). Si falta, la app cae a icono/lateral.
+  login?: string;
 }
 
 export interface IResumenClientes {
