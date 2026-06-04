@@ -180,6 +180,13 @@ export interface IConfigCliente {
   instructivoTexto2?: string;
   instructivoTexto3?: string;
 
+  // Textos de la pantalla de permisos de la app nativa (la imagen de cada permiso va en
+  // imagenes.permisoN). Si faltan, la app usa los textos default bundleados.
+  permisoUbicacionTexto?: string;
+  permisoCamaraTexto?: string;
+  permisoMicrofonoTexto?: string;
+  permisoNotificacionesTexto?: string;
+
   // Configuración de país
   pais?: IConfigPais;
 }
@@ -225,6 +232,12 @@ export interface IImagenesCliente {
   instructivo3?: string;
   // Imagen del header de login/registro (app nativa). Si falta, la app cae a icono/lateral.
   login?: string;
+  // Imágenes de la pantalla de permisos de la app nativa (el texto de cada permiso va en
+  // configuracion.permisoNTexto). Si faltan, la app usa las bundleadas por defecto.
+  permisoUbicacion?: string;
+  permisoCamara?: string;
+  permisoMicrofono?: string;
+  permisoNotificaciones?: string;
 }
 
 export interface IResumenClientes {
