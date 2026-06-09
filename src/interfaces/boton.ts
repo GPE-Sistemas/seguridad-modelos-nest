@@ -45,7 +45,13 @@ export type FuncionBoton =
   | '911'
   | 'Link'
   | 'Alerta por Punto'
-  | 'Telemedicina';
+  | 'Telemedicina'
+  // Menu/Hub: no dispara alerta, navega al grupo de botones `grupoDestino` (templates multipágina).
+  | 'Menu';
+
+// Grupo de botones de la categoría al que navega un botón con funcion="Menu".
+// Espeja las tres listas existentes de ICategoria: btnsPrincipales / btnsSecundarios / otrosBotones.
+export type GrupoBotones = 'Principales' | 'Secundarios' | 'Otros';
 
 export type tipoDato =
   | 'Texto'
@@ -74,6 +80,8 @@ export interface IBoton {
   nombre?: string;
   variante?: string;
   funcion?: FuncionBoton;
+  // Solo para funcion="Menu": grupo de botones de la categoría al que navega el hub.
+  grupoDestino?: GrupoBotones;
   tipoDePunto?: TipoDePunto[];
   color?: string;
   texto?: string;
