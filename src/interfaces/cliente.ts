@@ -283,6 +283,12 @@ export interface ICliente {
   // estos en vez del nombre (`nombreAppMobile`), que falla por tildes/typos.
   bundleIdAndroid?: string; // applicationId Android (ej. com.gpesistemas.mialertaquilmes)
   bundleIdIOS?: string; // CFBundleIdentifier iOS (ej. ar.gpesistemas.mialertaquilmes)
+  // Plantillas de la app nativa (white-label) elegidas al provisionar el cliente. Identifican el
+  // layout que renderiza el botón nativo (`seguridad-boton-nativo`). Campos nuevos y additivos: NO
+  // reutilizar `ICategoria.nombreTemplate` (lo consume el botón viejo `seguridad-boton-web`).
+  // El nativo cae a un fallback si el id es desconocido o falta. Ver contrato en seguridad-boton-docs.
+  inicioTemplate?: string; // familia de botonera: 'grid' | 'banner' | 'centrado' | 'hub'
+  loginTemplate?: string; // layout de login: 'default' | 'logo-centrado' | 'hero'
   // Virtuals
   categoriaDefault?: ICategoria;
 }
