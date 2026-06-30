@@ -14,6 +14,12 @@ export interface ICategoria {
   twitter?: boolean;
   tercerBoton?: boolean;
   nombreTemplate?: string;
+  // Plantilla de botonera del botón nativo (`seguridad-boton-nativo`), POR categoría: identifica la
+  // familia de layout que rutea `InicioDispatcher` (genéricas 'grid'|'banner'|'centrado'|'hub' o
+  // hand-made 'quilmes'|'hurlingham'|...). Campo nuevo y aditivo. Resolución en el nativo:
+  // `categoria.inicioTemplate` > `cliente.inicioTemplate` > fallback. NO confundir con `nombreTemplate`
+  // (legacy del botón web viejo / variante dentro de la familia). Ver contrato en seguridad-boton-docs.
+  inicioTemplate?: string;
   idBotonAlertaControl?: string;
   /// Config Botones del Llavero---Control con tres botones
   boton1?: TipoBoton;
