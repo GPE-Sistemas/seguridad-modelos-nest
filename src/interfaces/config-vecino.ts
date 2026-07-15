@@ -31,6 +31,8 @@ export interface IDatosPersonales {
   pais?: string;
   telefono?: string;
   fechaNacimiento?: string;
+  /** URL pública (GCS) de la foto de perfil del vecino */
+  urlFoto?: string;
 }
 
 export interface IConfigVecino {
