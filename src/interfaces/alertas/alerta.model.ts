@@ -20,6 +20,8 @@ import {
 export interface ITopAlertasVecino {
   idConfigVecino: string;
   vecino?: string;
+  /** Foto de perfil del vecino (datosPersonales.urlFoto) */
+  urlFoto?: string;
   cantidad: number;
 }
 
