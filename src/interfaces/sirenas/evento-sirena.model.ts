@@ -11,6 +11,8 @@ import { ISirena } from "./sirena.model";
 export interface ITopEventosSirenaVecino {
   idConfigVecino: string;
   vecino?: string;
+  /** Foto de perfil del vecino (datosPersonales.urlFoto) */
+  urlFoto?: string;
   cantidad: number;
 }
 
