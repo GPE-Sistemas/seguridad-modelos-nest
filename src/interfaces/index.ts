@@ -29,6 +29,7 @@ export * from './contactos';
 export * from './controles-rf';
 export * from './derivacion';
 export * from './entidad-externa-historico';
+export * from './envio-notificacion';
 export * from './estado-reclamo';
 export * from './eventos';
 export * from './grupo';
