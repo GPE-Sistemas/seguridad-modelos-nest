@@ -32,6 +32,7 @@ export * from './entidad-externa-historico';
 export * from './estado-reclamo';
 export * from './eventos';
 export * from './grupo';
+export * from './lista-difusion';
 export * from './localidades';
 export * from './mantenimiento';
 export * from './mensaje';
