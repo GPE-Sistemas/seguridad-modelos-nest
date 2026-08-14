@@ -4,6 +4,8 @@ export interface ICrearAlertaMedia {
   tipo: string;
   mime: string;
   url: string;
+  duracion?: number;
+  seq?: number;
 }
 
 export interface INuevaAlertaMedia {
