@@ -6,6 +6,7 @@ export interface ICrearAlertaMedia {
   url: string;
   duracion?: number;
   seq?: number;
+  picos?: number[];
 }
 
 export interface INuevaAlertaMedia {
