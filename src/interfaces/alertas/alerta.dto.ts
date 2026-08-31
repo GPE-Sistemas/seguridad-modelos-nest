@@ -92,6 +92,7 @@ export interface IUpdateAlerta {
   tiempoRespuesta?: number;
   tiempoResolucion?: number;
   idCentroDerivado?: string;
+  idsCentrosCompartidos?: string[];
   tipoDelegacion?: TipoDelegacion;
   entidadExterna?: string;
 }
