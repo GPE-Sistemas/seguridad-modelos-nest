@@ -49,6 +49,13 @@ export interface IAlerta {
   idCategoria?: string;
   idsCentrosMonitoreo?: string[];
   idCentroDerivado?: string; // Este centro de monitoreo solo la ve cuando el centro principal le deriva la alerta
+  /**
+   * Centros que derivaron con visibilidad compartida y siguen viendo y
+   * gestionando la alerta. Se acumulan en cada derivación compartida de la
+   * cadena (A deriva a B, B deriva a C => [A, B]) y se limpian cuando alguien
+   * deriva de forma normal o se devuelve la alerta.
+   */
+  idsCentrosCompartidos?: string[];
   tipoDelegacion?: TipoDelegacion;
   entidadExterna?: string;
   idCliente?: string;
