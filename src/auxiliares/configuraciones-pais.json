@@ -55,5 +55,24 @@
       "nivel2": "Municipio",
       "nivel3": "Localidad"
     }
+  },
+  "PY": {
+    "codigo": "PY",
+    "codigoPais": "+595",
+    "timezone": "-03:00",
+    "locale": "es-PY",
+    "coordenadasDefault": {
+      "lat": -25.2637,
+      "lng": -57.5759
+    },
+    "validaciones": {
+      "telefono": "^9[6-9]\\d{7}$",
+      "dni": "^\\d{6,8}$"
+    },
+    "estructuraAdministrativa": {
+      "nivel1": "Departamento",
+      "nivel2": "Distrito",
+      "nivel3": "Localidad"
+    }
   }
 }
