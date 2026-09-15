@@ -10,7 +10,8 @@ export type Rol =
   | 'Administrador de sirenas'
   | 'Administrador de porticos'
   | 'Eliminar Vecinos'
-  | 'Cambiar Categoria Vecino';
+  | 'Cambiar Categoria Vecino'
+  | 'Consultas';
 
 export const ROLES: Rol[] = [
   'admin',
@@ -23,6 +24,7 @@ export const ROLES: Rol[] = [
   'Administrador de porticos',
   'Eliminar Vecinos',
   'Cambiar Categoria Vecino',
+  'Consultas',
 ];
 
 export interface IConfigUsuario {
