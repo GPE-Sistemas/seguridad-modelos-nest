@@ -1,6 +1,7 @@
 import { Estados } from './alerta-estado.dto';
 import { IAlertaMedia } from './alerta-media.model';
 import { IAlerta } from './alerta.model';
+import { IUsuario } from '../usuario';
 
 export interface IAlertaEstado {
   _id?: string;
@@ -20,4 +21,5 @@ export interface IAlertaEstado {
   notaInterna?: string;
   // Virtuals
   alerta?: IAlerta;
+  usuario?: IUsuario;
 }
