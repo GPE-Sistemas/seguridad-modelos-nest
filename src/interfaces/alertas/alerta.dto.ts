@@ -85,8 +85,19 @@ export interface IDerivarAlerta {
   entidadExterna?: string;
 }
 
+/**
+ * Recategorizar desde monitoreo: `null` vuelve al valor original del vecino.
+ * Un campo ausente no se toca.
+ */
+export interface IRecategorizarAlerta {
+  idCategoria?: string | null;
+  idBoton?: string | null;
+}
+
 export interface IUpdateAlerta {
   activa?: boolean;
+  idCategoriaMonitoreo?: string | null;
+  idBotonMonitoreo?: string | null;
   estadoActual?: Estados;
   idUsuario?: string;
   tiempoRespuesta?: number;
