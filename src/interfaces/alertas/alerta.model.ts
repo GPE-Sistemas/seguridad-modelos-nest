@@ -47,6 +47,18 @@ export interface IAlerta {
   //
   idBoton?: string;
   idCategoria?: string;
+  /**
+   * Recategorización desde monitoreo. `idCategoria`/`idBoton` guardan lo que
+   * apretó el vecino y no se pisan; si monitoreo elige otra categoría o tipo
+   * (botón) queda acá. Los `*Original` NO están en la base: los arma
+   * monitoreo-nest al leer, cuando hay recategorización, y en ese caso
+   * `idCategoria`/`categoria` e `idBoton`/`boton` salen con el valor de
+   * monitoreo para que listados, export, informe y dashboard lo vean igual.
+   */
+  idCategoriaMonitoreo?: string;
+  idBotonMonitoreo?: string;
+  idCategoriaOriginal?: string;
+  idBotonOriginal?: string;
   idsCentrosMonitoreo?: string[];
   idCentroDerivado?: string; // Este centro de monitoreo solo la ve cuando el centro principal le deriva la alerta
   /**
@@ -80,6 +92,10 @@ export interface IAlerta {
   // Virtuals
   boton?: IBoton;
   categoria?: ICategoria;
+  categoriaMonitoreo?: ICategoria;
+  botonMonitoreo?: IBoton;
+  categoriaOriginal?: ICategoria;
+  botonOriginal?: IBoton;
   centrosMonitoreo?: ICentroMonitoreo[];
   centroDerivado?: ICentroMonitoreo;
   cliente?: ICliente;
