@@ -35,9 +35,22 @@ export interface ILogIntegracionSoflex {
   intentos: number;               // Cantidad de intentos realizados
 
   // Datos enviados y respuesta
-  requestBody: any;               // Payload enviado a SOFLEX
-  responseBody?: any;             // Respuesta de SOFLEX
-  responseStatus?: number;        // HTTP status code
+  requestBody: any;               // Datos de entrada con los que se armó el envío (DTO interno, NO es el body HTTP)
+  responseBody?: any;             // Body de la respuesta de SOFLEX
+  responseStatus?: number;        // HTTP status code real devuelto por SOFLEX
+
+  // Crudo del request/response HTTP.
+  // `requestBody` es el DTO interno previo al armado del payload, así que por sí
+  // solo no permite reconstruir qué se envió: el body real lo arma
+  // SoflexClientService sumando constantes del protocolo y datos de configSOFLEX.
+  // Estos campos guardan el intercambio tal cual viajó, para poder auditarlo ante
+  // un reclamo sin depender del código vigente.
+  requestUrl?: string;                        // URL completa del endpoint invocado
+  requestMetodo?: string;                     // Verbo HTTP (siempre POST hoy)
+  requestHeaders?: Record<string, any>;       // Headers enviados, con credenciales redactadas
+  requestBodyHttp?: any;                      // Body HTTP real enviado a SOFLEX
+  responseHeaders?: Record<string, any>;      // Headers de la respuesta
+  duracionMs?: number;                        // Duración del request, en milisegundos
 
   // Errores
   mensajeError?: string;          // Mensaje de error si falló
