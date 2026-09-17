@@ -1,3 +1,4 @@
+import { IBoton } from './boton';
 import { ICategoria } from './categoria';
 import { ICoordenadas } from '../auxiliares/coordenadas';
 
@@ -128,6 +129,9 @@ export interface IConfigCliente {
   verEstacionamientoMedido?: boolean;
   verColectivos?: boolean;
   verPadron?: boolean;
+  // Sección "Servicios o Trámites" del menú "Más" de la app nativa. Los botones a mostrar se
+  // configuran en `ICliente.idsBtnsServiciosTramites`.
+  mostrarServiciosTramites?: boolean;
   // Telemedicina
   tieneTelemedicina?: boolean;
 
@@ -289,8 +293,13 @@ export interface ICliente {
   // El nativo cae a un fallback si el id es desconocido o falta. Ver contrato en seguridad-boton-docs.
   inicioTemplate?: string; // familia de botonera: 'grid' | 'banner' | 'centrado' | 'hub'
   loginTemplate?: string; // layout de login: 'default' | 'logo-centrado' | 'hero'
+  // Botones de la sección "Servicios o Trámites" del menú "Más" de la app nativa (ver
+  // `configuracion.mostrarServiciosTramites`). Orden = orden de aparición. A diferencia de los
+  // botones de categoría (`ICategoria.idsBtnsPrincipales/...`), estos cuelgan directo del cliente.
+  idsBtnsServiciosTramites?: string[];
   // Virtuals
   categoriaDefault?: ICategoria;
+  botonesServiciosTramites?: IBoton[];
 }
 
 type OmitirCreate = '_id';
