@@ -3,6 +3,24 @@ import { IBarrio } from "./barrio";
 import { ICliente } from "./cliente";
 import { ILocalidad } from "./localidades";
 
+/**
+ * Quién generó el evento externo, informado por el integrador.
+ * La apikey identifica al cliente, pero varias entidades del origen pueden
+ * compartir la misma (ej. todas las alarmas de un municipio).
+ */
+export interface IOrigenEventoExterno {
+  /** Sistema que envía el evento, ej. 'gestion-alarmas' */
+  sistema?: string;
+  /** Id de la entidad que generó el evento en el sistema de origen (ej. id de la alarma) */
+  idExterno?: string;
+  /** Nombre legible de la entidad, ej. el nombre de la alarma */
+  nombre?: string;
+  /** Id del evento en el sistema de origen */
+  idEvento?: string;
+  /** Detalle libre, ej. partición y zona que detonó */
+  detalle?: string;
+}
+
 export interface IEventoExterno {
   _id?: string;
   fecha?: string;
@@ -10,6 +28,7 @@ export interface IEventoExterno {
   idCliente?: string;
   idLocalidad?: string;
   idBarrio?: string;
+  origen?: IOrigenEventoExterno;
 
   coordenadas?: ICoordenadas;
   // GEOJSON
