@@ -28,7 +28,6 @@ export interface IEventoExterno {
   idCliente?: string;
   idLocalidad?: string;
   idBarrio?: string;
-  idApikey?: string;
   origen?: IOrigenEventoExterno;
 
   coordenadas?: ICoordenadas;
