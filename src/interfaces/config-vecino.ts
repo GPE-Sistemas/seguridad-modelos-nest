@@ -77,6 +77,7 @@ export interface IConfigVecino {
   // === Integración SOFLEX ===
   enviadoSOFLEX?: boolean; // Indica si el vecino fue sincronizado con SOFLEX
   fechaEnvioSOFLEX?: string; // Fecha del último envío exitoso a SOFLEX (ISO 8601)
+  fechaUltimoIntentoSOFLEX?: string; // Último intento de alta, exitoso o no (ISO 8601). Lo usa el cron de altas para no reintentar en cada tanda
 
   // Virtuals
   cliente?: ICliente;

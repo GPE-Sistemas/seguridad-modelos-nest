@@ -8,6 +8,7 @@ export type TipoOperacionSoflex = 'alta_vecino' | 'alerta';
  */
 export type EstadoEnvioSoflex =
   | 'pendiente'           // Creado pero no enviado aún
+  | 'programado'          // Alerta en espera hasta `fechaProgramada` (debounce tras el alta del vecino)
   | 'enviando'            // En proceso de envío
   | 'exitoso'             // Enviado exitosamente
   | 'error'               // Error en el envío (se reintentará)
@@ -60,6 +61,7 @@ export interface ILogIntegracionSoflex {
   fechaCreacion: string;          // Fecha de creación del log (ISO 8601)
   fechaUltimoIntento?: string;    // Fecha del último intento (ISO 8601)
   fechaExito?: string;            // Fecha de envío exitoso (ISO 8601)
+  fechaProgramada?: string;       // Solo estado 'programado': desde cuándo se puede enviar (ISO 8601)
 }
 
 type OmitirCreate = '_id';
