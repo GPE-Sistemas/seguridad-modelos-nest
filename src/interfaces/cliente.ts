@@ -75,6 +75,14 @@ export interface IConfigPais {
   };
 }
 
+/** Link del menú "Más" de la app nativa. Se abre en el navegador del sistema. */
+export interface ILinkMenuMobile {
+  nombre: string; // texto del ítem
+  link: string; // URL; sin esquema, la app antepone https://
+  icono?: string; // clave de la lista fija (web, whatsapp, telefono, ...); sin valor → default
+  imagen?: string; // URL pública subida desde admin; gana sobre icono
+}
+
 export interface IConfigCliente {
   direccion?: string;
   hostSmartCity?: string;
@@ -155,6 +163,9 @@ export interface IConfigCliente {
   boton1Mobile?: TipoBotonMobile;
   boton2Mobile?: TipoBotonMobile;
   boton3Mobile?: TipoBotonMobile;
+
+  // Links del menú "Más" de la app nativa, en orden.
+  linksMenuMobile?: ILinkMenuMobile[];
 
   // Restriccion uso de sierenas por vecino
   restringirUsoSirenas?: boolean;
