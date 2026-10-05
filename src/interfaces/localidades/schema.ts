@@ -1,5 +1,5 @@
 import { IUbicacion } from "../../auxiliares/ubicacion";
-import { GeoJSONType } from "../vecinos/vecino.model";
+import { GeoJSONType } from "../../auxiliares/coordenadas";
 
 export interface ILocalidad {
   _id?: string;

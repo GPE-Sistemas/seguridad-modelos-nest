@@ -128,6 +128,8 @@ export interface IResumenAlertasPorCliente {
 }
 
 export interface IResumenAlertasPorVecino {
+  /** `_id` del ConfigVecino al que se agrupa el resumen. */
+  idConfigVecino?: string;
   vecino: string;
   sexo: boolean;
   edad: number;

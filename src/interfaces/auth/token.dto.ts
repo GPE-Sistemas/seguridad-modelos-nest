@@ -1,6 +1,5 @@
 import { ICrearClientInput } from "./client.dto";
-import { IUsuario } from "../usuario";
-import { IVecino } from "../..";
+import { ITokenUser } from "./token-user";
 
 export interface ICrearTokenInput {
   accessToken: string;
@@ -9,5 +8,6 @@ export interface ICrearTokenInput {
   refreshTokenExpiresAt?: string;
   scope?: string | string[];
   client: ICrearClientInput;
-  user: IUsuario | IVecino;
+  /** Ver `ITokenUser`. Para vecinos usar la forma `ITokenUserVecino` (nunca el documento completo). */
+  user: ITokenUser;
 }

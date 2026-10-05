@@ -1,6 +1,5 @@
 import { IClient } from "./client.model";
-import { IUsuario } from "../usuario";
-import { IVecino } from "../..";
+import { ITokenUser } from "./token-user";
 
 export interface IToken {
   accessToken?: string;
@@ -9,5 +8,6 @@ export interface IToken {
   refreshTokenExpiresAt?: string;
   scope?: string | string[];
   client?: IClient;
-  user?: IUsuario | IVecino;
+  /** Ver `ITokenUser` y los helpers `esTokenUsuario` / `esTokenConfigVecino` / `esTokenVecinoLegacy`. */
+  user?: ITokenUser;
 }

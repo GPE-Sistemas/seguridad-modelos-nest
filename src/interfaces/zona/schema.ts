@@ -1,7 +1,6 @@
 import { ICentroMonitoreo } from "../centro-monitoreo/schema";
 import { ICliente } from "../cliente";
-import { ICoordenadas } from "../../auxiliares/coordenadas";
-import { GeoJSONType } from "../vecinos/vecino.model";
+import { GeoJSONType, ICoordenadas } from "../../auxiliares/coordenadas";
 
 export interface IZona {
   _id?: string;

@@ -12,6 +12,10 @@ export interface IAuditoria {
   fechaCreacion?: string;
   // Populate
   usuario?: IUsuario;
+  /**
+   * @deprecated la colección vecinos está deprecada. `idUsuario` en tokens nuevos es el `_id`
+   * del ConfigVecino: resolver la config por ese id y leer `datosPersonales`.
+   */
   vecino?: IVecino;
   cliente?: ICliente;
 }

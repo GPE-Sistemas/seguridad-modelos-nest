@@ -1,7 +1,5 @@
-import { ICrearCategoriaVecinoInput } from './categoria-vecino.dto';
-import { ICoordenadas } from '../../auxiliares/coordenadas';
-import { IEnvioCodigo } from './envio-codigo.dto';
-import { DireccionV2, GeoJSONType, ICategoriaVecino } from '../..';
+import { GeoJSONType, ICoordenadas } from '../../auxiliares/coordenadas';
+import { DireccionV2 } from '../../auxiliares/direccionV2';
 import { IConfigNotificacion } from './config-notificaciones';
 
 export interface INuevoVecino {
@@ -15,6 +13,10 @@ export interface INuevoVecino {
   direccion?: string;
   // Id Cliente viene en el registro de la app barrios privados
   idCliente?: string;
+  /**
+   * @deprecated Sin equivalente en ConfigVecino: cada cliente tiene su propia config
+   * (`IConfigVecino.idCliente`). Usar `idCliente` (un alta por cliente).
+   */
   idsCliente?: string[];
   // Comentario proque me mershié al instante.
   direccionV2?: DireccionV2;
@@ -37,64 +39,11 @@ export interface INuevoVecino {
   configs?: IConfigNotificacion;
 }
 
-export interface IUpdateDomicilioVecino {
-  direccion?: string;
-  direccionV2?: DireccionV2;
-  complementoDireccion?: string;
-  ubicacion?: ICoordenadas;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
-  geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
-  };
-}
-
-// Resumen
-
-export interface IResumenVecinosPorCliente {
-  cliente: string;
-  cantidad: number;
-}
-
-export interface IResumenVecinosPorCategoria {
-  categoria: string;
-  cantidad: number;
-}
-
-export interface IResumenVecinosPorSexo {
-  sexo: boolean | null;
-  cantidad: number;
-}
-
-export interface IUpdateVecinoDatos {
-  nombre?: string;
-  dni?: string;
-  sexo?: boolean | null;
-  fechaNacimiento?: string;
-  pais?: string;
-  telefono?: string;
-  email?: string;
-  idsCliente?: string[];
-  /**
-   * @deprecated Esta propiedad se reemplazó por 'DireccionV2'
-   */
-  direccion?: string;
-  direccionV2?: DireccionV2;
-  complementoDireccion?: string;
-  ubicacion?: ICoordenadas;
-  // GEOJSON
-  // https://www.mongodb.com/docs/manual/reference/geojson/
-  // type es el tipo de objeto a guardar
-  //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
-  geojson?: {
-    type: GeoJSONType;
-    coordinates: [number, number] | [number, number][];
-  };
-  idSmartCity?: string;
-
-  // Configs
-  configs?: IConfigNotificacion;
-}
+/**
+ * Re-exports por compatibilidad: `IUpdateDomicilioVecino` e `IResumenVecinosPorCliente`
+ * viven ahora en `config-vecino.ts` (operan sobre ConfigVecino, no sobre la colección vecinos).
+ */
+export type {
+  IUpdateDomicilioVecino,
+  IResumenVecinosPorCliente,
+} from '../config-vecino';

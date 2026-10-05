@@ -100,6 +100,10 @@ export interface IAlerta {
   centroDerivado?: ICentroMonitoreo;
   cliente?: ICliente;
   usuario?: IUsuario;
+  /**
+   * @deprecated usar `configVecino.datosPersonales` (la colección vecinos está deprecada).
+   * El virtual se mantiene solo por compatibilidad con los populate existentes.
+   */
   vecino?: IVecino;
   configVecino?: IConfigVecino;
   zona?: IZona;
