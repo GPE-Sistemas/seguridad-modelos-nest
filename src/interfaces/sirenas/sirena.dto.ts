@@ -265,9 +265,11 @@ export interface IDataBalizaSirena {
   chipId?: string;
   duracion?: number;
   /**
-   * @deprecated se usa idConfigVecino
+   * @deprecated usar `idConfigVecino`. Id de la colección vecinos, solo compat.
    */
   idVecino?: string;
+  /** `_id` del ConfigVecino que dispara el comando (identidad actual del vecino). */
+  idConfigVecino?: string;
   idCliente?: string;
   chipIdControl?: string;
   origen?: string;
@@ -289,9 +291,11 @@ export interface IDataSonidoSirena {
   sonido?: string;
   duracion?: number;
   /**
-   * @deprecated se usa idConfigVecino
+   * @deprecated usar `idConfigVecino`. Id de la colección vecinos, solo compat.
    */
   idVecino?: string;
+  /** `_id` del ConfigVecino que dispara el comando (identidad actual del vecino). */
+  idConfigVecino?: string;
   idCliente?: string;
   chipIdControl?: string;
   origen?: string;

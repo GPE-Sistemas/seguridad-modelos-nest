@@ -4,10 +4,13 @@ export interface IContacto {
   _id?: string;
   //
   /**
-   * @deprecated se usa idConfigVecino
+   * @deprecated usar `idConfigVecino` (`_id` del ConfigVecino dueño del contacto). Id de la colección vecinos.
    */
   idVecino?: string; // VOS
   idConfigVecino?: string;
+  /**
+   * @deprecated usar `idConfigVecinoContacto` (`_id` del ConfigVecino del contacto). Id de la colección vecinos.
+   */
   idContacto?: string; // EL OTRO
   idConfigVecinoContacto?: string;
   idCliente?: string;

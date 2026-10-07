@@ -5,16 +5,11 @@ import {
   ICategoriaVecino,
   IConfigNotificacion,
   IEnvioCodigo,
-  IVecino,
 } from "./vecinos";
 
 export interface IRegistro {
   _id?: string;
   idCliente?: string;
-  // /**
-  //  * @deprecated se usa idConfigVecino
-  //  */
-  // idVecino?: string;
 
   // activo?: boolean;
   fechaCreacion?: string;
@@ -46,22 +41,15 @@ export interface IRegistro {
 
   // Virtuals
   cliente?: ICliente;
-  vecino?: IVecino;
   grupo?: IGrupo;
 }
 
-type OmitirCreate = "_id" | "cliente" | "vecino" | "grupo";
+type OmitirCreate = "_id" | "cliente" | "grupo";
 
 export interface ICreateRegistro
   extends Omit<Partial<IRegistro>, OmitirCreate> {}
 
-type OmitirUpdate =
-  | "_id"
-  | "idCliente"
-  | "idVecino"
-  | "cliente"
-  | "vecino"
-  | "grupo";
+type OmitirUpdate = "_id" | "idCliente" | "cliente" | "grupo";
 
 export interface IUpdateRegistro
   extends Omit<Partial<IRegistro>, OmitirUpdate> {}

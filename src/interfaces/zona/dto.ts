@@ -1,5 +1,4 @@
-import { ICoordenadas } from '../../auxiliares/coordenadas';
-import { GeoJSONType } from '../vecinos/vecino.model';
+import { GeoJSONType, ICoordenadas } from '../../auxiliares/coordenadas';
 
 export interface ICrearZonaInput {
   nombre: string;

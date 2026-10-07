@@ -37,6 +37,10 @@ export interface IEventoSirena {
   motivo?: string; // alerta | sirena
 
   // Virtuals
+  /**
+   * @deprecated usar `configVecino.datosPersonales` (la colección vecinos está deprecada).
+   * El virtual se mantiene solo por compatibilidad con los populate existentes.
+   */
   vecino?: IVecino;
   configVecino?: IConfigVecino;
   cliente?: ICliente;

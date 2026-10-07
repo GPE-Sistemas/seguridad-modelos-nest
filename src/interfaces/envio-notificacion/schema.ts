@@ -40,8 +40,13 @@ export interface IEnvioNotificacion {
   idsListasDifusion?: string[];
   idsLocalidades?: string[];
   idsBarrios?: string[];
-  /** Ids de vecino (no de configvecino), igual que `ISendNotificacion.idsVecinos`. */
+  /**
+   * @deprecated usar `idsConfigVecinos`. Ids de la colección vecinos (no de configvecino),
+   * igual que `ISendNotificacion.idsVecinos`; se conservan por compatibilidad hasta la fase C.
+   */
   idsVecinos?: string[];
+  /** `_id` de los ConfigVecino destinatarios, igual que `ISendNotificacion.idsConfigVecinos`. */
+  idsConfigVecinos?: string[];
 
   /**
    * A cuántos vecinos se resolvió el criterio **en el momento del envío**.

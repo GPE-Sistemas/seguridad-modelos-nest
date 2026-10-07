@@ -20,6 +20,10 @@ export interface ICategoriaVecino {
   idsArchivosVecino?: string[];
   // Virtuals
   categoria?: ICategoria;
+  /**
+   * @deprecated usar `configVecino.datosPersonales` (la colección vecinos está deprecada).
+   * El virtual se mantiene solo por compatibilidad con los populate existentes.
+   */
   vecino?: IVecino;
   configVecino?: IConfigVecino;
   usuario?: IUsuario;
