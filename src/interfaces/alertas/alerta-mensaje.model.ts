@@ -11,4 +11,10 @@ export interface IAlertaMensaje {
   fecha?: string;
   mensaje?: string;
   remitente?: string;
+  /**
+   * Lectura por monitoreo de los mensajes del vecino: cuándo y qué operador
+   * abrió el chat por primera vez después de recibirlo.
+   */
+  fechaLectura?: string;
+  idUsuarioLectura?: string;
 }

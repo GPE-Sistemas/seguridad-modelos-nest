@@ -14,3 +14,9 @@ export interface ICrearAlertaMensaje {
 export interface IUpdateAlertaMensaje {
   mensaje?: string;
 }
+
+/** Marca leídos los mensajes del vecino de la alerta (PUT alertaMensajes/leidos) */
+export interface IMarcarLeidosAlertaMensajes {
+  idAlerta: string;
+  idUsuarioLectura: string;
+}
