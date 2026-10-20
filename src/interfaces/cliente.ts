@@ -8,6 +8,18 @@ export type TipoCliente =
   | 'Provincia'
   | 'Privado';
 
+/**
+ * Ícono de las sirenas en el mapa de Cobertura de la app nativa. 'default' (o sin valor) es el pin
+ * de siempre; 'custom' usa el PNG de `IImagenesCliente.sirenaMapa`. Salvo 'custom', todos se tiñen
+ * según el estado de la sirena (online/offline/sin estado).
+ */
+export type IconoSirenaMapa =
+  | 'default'
+  | 'sirena'
+  | 'megafono'
+  | 'antena'
+  | 'custom';
+
 export type TipoBotonMobile =
   | 'Vacio'
   | 'Cobertura'
@@ -112,6 +124,9 @@ export interface IConfigCliente {
   mostrarSirenasOffline?: boolean;
   mostrarEstadoSirenas?: boolean;
   mostrarTodasLasSirenas?: boolean;
+  iconoSirenaMapa?: IconoSirenaMapa;
+  // Dibuja los polígonos de las localidades del cliente en el mapa de Cobertura de la app nativa.
+  mostrarLocalidadesCobertura?: boolean;
   apikeyColectivos?: string;
   // Sirenas
   /**
@@ -253,6 +268,9 @@ export interface IImagenesCliente {
   permisoCamara?: string;
   permisoMicrofono?: string;
   permisoNotificaciones?: string;
+  // Ícono de las sirenas en el mapa de Cobertura (app nativa) cuando
+  // `configuracion.iconoSirenaMapa === 'custom'`. Solo PNG.
+  sirenaMapa?: string;
 }
 
 export interface IResumenClientes {
