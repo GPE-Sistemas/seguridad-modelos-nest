@@ -221,7 +221,15 @@ export type TipoEventoMensajeSirena =
   | 'PANICO_APAGADO_OPERADOR'
   | 'CONTROL_NO_CONOCIDO'
   | 'ERROR_SD'
-  | 'CONTROL_PANICO';
+  | 'CONTROL_PANICO'
+  // Respuestas a AUDIO_CLIENTE: AUDIO_CLIENTE_RES si sonó; si no, `error` con
+  // `error: 'ERROR_AUDIO_CLIENTE' | 'error sonido'` y `comando_id` = idAudio (IDataErrorSirena)
+  | 'AUDIO_CLIENTE_RES'
+  | 'error'
+  // Perifoneo en vivo y llamada del vecino (fases 2 y 3, doc Perifoneo VoIP NAC32 §7.2)
+  | 'PERIFONEO_ESTADO'
+  | 'LLAMADA_SOLICITADA'
+  | 'LLAMADA_CANCELADA';
 
 export type TipoEventoComandoSirena =
   | 'ENCENDER_PANICO'
@@ -238,7 +246,10 @@ export type TipoEventoComandoSirena =
   | 'CONTROL_AGREGAR'
   | 'AUDIO_CLIENTE'
   | 'COMANDO_RESET'
-  | 'ACTUALIZAR_FIRMWARE';
+  | 'ACTUALIZAR_FIRMWARE'
+  // Perifoneo en vivo (fase 2, §7.2). No llevan credenciales: el TCP 5050 no está cifrado.
+  | 'PERIFONEO_INICIAR'
+  | 'PERIFONEO_FIN';
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -329,9 +340,63 @@ export interface IDataControlSirena {
   inicial?: boolean;
 }
 
+/**
+ * El equipo arma la URL: GET /sirenas/sirena-wav/audio/{chipId}/{chipKey}/{idAudio}, y v2 le agrega
+ * `?hw=v2&chip=esp32s3`. idAudio: letras, números, '-' y '_', hasta 64 (lo valida el firmware v2).
+ * También es la forma de AUDIO_CLIENTE_RES.
+ */
 export interface IDataAudioClienteSirena {
   chipId?: string;
   idAudio?: string;
+}
+
+/** Evento `error` del equipo (los dos firmwares usan la misma forma) */
+export interface IDataErrorSirena {
+  chipId?: string;
+  /** ej. 'ERROR_AUDIO_CLIENTE', 'error sonido', 'error-formato', 'error-evento' */
+  error?: string;
+  mensaje?: string;
+  /** El id del comando que falló (idAudio en AUDIO_CLIENTE) o "null" */
+  comando_id?: string;
+}
+
+export type ModoPerifoneo = 'escucha_bocina' | 'llamada';
+
+/** Fase 2: backend → NAC. El NAC después pide las credenciales por HTTPS (ISesionPerifoneoNac). */
+export interface IDataPerifoneoIniciar {
+  chipId?: string;
+  idSesion: string;
+  modo: ModoPerifoneo;
+  /** Por defecto 600 */
+  duracionMaxS?: number;
+  volumenPct?: number;
+}
+
+export interface IDataPerifoneoFin {
+  chipId?: string;
+  idSesion: string;
+}
+
+/** Fase 2: NAC → backend */
+export interface IDataPerifoneoEstado {
+  chipId?: string;
+  idSesion: string;
+  estado: 'conectando' | 'activo' | 'silenciado_sirena' | 'finalizado';
+  motivo?:
+    | 'fin_operador'
+    | 'duracion_max'
+    | 'sin_audio'
+    | 'red'
+    | 'error_sesion'
+    | 'ocupado';
+}
+
+/** Fase 3: botón J11 del NAC. El operador atiende con PERIFONEO_INICIAR modo 'llamada' e idSesion = idLlamada. */
+export interface IDataLlamadaSirena {
+  chipId?: string;
+  idLlamada: string;
+  /** Solo en LLAMADA_CANCELADA: 'sin_respuesta' (60 s) o el vecino volvió a apretar */
+  motivo?: string;
 }
 
 export interface IMensajeAuthSirena {
@@ -382,6 +447,9 @@ export interface IMensajeSirena {
     | IDataPerifoneoSirena
     | IDataControlSirena
     | IDataAudioClienteSirena
+    | IDataErrorSirena
+    | IDataPerifoneoEstado
+    | IDataLlamadaSirena
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
@@ -395,6 +463,8 @@ export interface IComandoSirena {
     | IDataPerifoneoSirena
     | IDataControlSirena
     | IDataAudioClienteSirena
+    | IDataPerifoneoIniciar
+    | IDataPerifoneoFin
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }

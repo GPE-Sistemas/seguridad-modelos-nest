@@ -11,5 +11,6 @@ export * from "./firmware-version.dto";
 export * from "./firmware-version.model";
 export * from "./log-sirena.dto";
 export * from "./log-sirena.model";
+export * from "./perifoneo.model";
 export * from "./sirena.dto";
 export * from "./sirena.model";
