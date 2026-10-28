@@ -105,8 +105,9 @@ export interface IUpdateDestinoPerifoneo {
  */
 export interface ISesionPerifoneoNac {
   transporte: TransportePerifoneo;
+  /** WHEP del canal de la sesión (`<servidor>/nac-<idSesion>/whep`) */
   url: string;
-  /** Un solo uso, atado a chipId + idSesion, vence en 60 s */
+  /** Va en `Authorization: Bearer <token>`. Atado a chipId + idSesion: hay que conectarse antes de los 60 s */
   token: string;
   iceServers?: { urls: string; username?: string; credential?: string }[];
   codec: {
@@ -116,4 +117,21 @@ export interface ISesionPerifoneoNac {
     tramaMs: number;
     kbps: number;
   };
+}
+
+/** Fase 2: lo que manda el NAC en POST /sirenas/perifoneo/sesion */
+export interface IPedidoSesionPerifoneoNac {
+  chipId: string;
+  chipKey: string;
+  idSesion: string;
+}
+
+/**
+ * Fase 2: respuesta de POST /perifoneos/vivo de monitoreo. La consola publica el micrófono por WHIP en `url` con
+ * `Authorization: Bearer <token>`. El token vale hasta `duracionMaxS` del perifoneo.
+ */
+export interface ISesionPerifoneoOperador {
+  perifoneo: IPerifoneo;
+  url: string;
+  token: string;
 }
