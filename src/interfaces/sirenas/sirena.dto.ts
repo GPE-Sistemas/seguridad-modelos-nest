@@ -360,7 +360,12 @@ export interface IDataErrorSirena {
   comando_id?: string;
 }
 
-export type ModoPerifoneo = 'escucha_bocina' | 'llamada';
+/**
+ * - escucha_bocina: el NAC solo reproduce la voz del operador.
+ * - bidireccional: además publica su micrófono cuando el operador no habla (half-duplex).
+ * - llamada: fase 3.
+ */
+export type ModoPerifoneo = 'escucha_bocina' | 'bidireccional' | 'llamada';
 
 /** Fase 2: backend → NAC. El NAC después pide las credenciales por HTTPS (ISesionPerifoneoNac). */
 export interface IDataPerifoneoIniciar {
@@ -389,6 +394,8 @@ export interface IDataPerifoneoEstado {
     | 'red'
     | 'error_sesion'
     | 'ocupado';
+  /** Solo en sesiones `bidireccional` */
+  microfono?: 'abierto' | 'cerrado' | 'no_disponible';
 }
 
 /** Fase 3: botón J11 del NAC. El operador atiende con PERIFONEO_INICIAR modo 'llamada' e idSesion = idLlamada. */
