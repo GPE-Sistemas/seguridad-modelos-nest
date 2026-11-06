@@ -249,7 +249,8 @@ export type TipoEventoComandoSirena =
   | 'ACTUALIZAR_FIRMWARE'
   // Perifoneo en vivo (fase 2, §7.2). No llevan credenciales: el TCP 5050 no está cifrado.
   | 'PERIFONEO_INICIAR'
-  | 'PERIFONEO_FIN';
+  | 'PERIFONEO_FIN'
+  | 'PERIFONEO_TURNO';
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -382,6 +383,16 @@ export interface IDataPerifoneoFin {
   idSesion: string;
 }
 
+/**
+ * Fase 2, solo `bidireccional`: el operador apretó (`hablaOperador: true`) o soltó el botón de hablar. El NAC cierra
+ * el micrófono al instante sin esperar a detectar la voz, y lo vuelve a abrir al soltarlo.
+ */
+export interface IDataPerifoneoTurno {
+  chipId?: string;
+  idSesion: string;
+  hablaOperador: boolean;
+}
+
 /** Fase 2: NAC → backend */
 export interface IDataPerifoneoEstado {
   chipId?: string;
@@ -472,6 +483,7 @@ export interface IComandoSirena {
     | IDataAudioClienteSirena
     | IDataPerifoneoIniciar
     | IDataPerifoneoFin
+    | IDataPerifoneoTurno
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
