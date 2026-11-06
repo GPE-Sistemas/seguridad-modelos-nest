@@ -13,6 +13,7 @@ import {
   IGrupo,
   ILocalidad,
   IPunto,
+  ISirena,
   IVecino,
   TipoDelegacion,
 } from '../..';
@@ -80,6 +81,8 @@ export interface IAlerta {
    */
   idVecino?: string;
   idConfigVecino?: string;
+  /** Alerta creada por el botón de llamada de una sirena (NAC32): no tiene vecino */
+  idSirena?: string;
   idZona?: string;
   idLocalidad?: string;
   idBarrio?: string;
@@ -106,6 +109,7 @@ export interface IAlerta {
    */
   vecino?: IVecino;
   configVecino?: IConfigVecino;
+  sirena?: ISirena;
   zona?: IZona;
   localidad?: ILocalidad;
   barrio?: IBarrio;

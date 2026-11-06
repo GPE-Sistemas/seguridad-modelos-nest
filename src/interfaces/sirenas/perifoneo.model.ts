@@ -78,8 +78,13 @@ export interface IPerifoneo {
   /** En vivo (fase 2): id de la sala/sesión que viaja en PERIFONEO_INICIAR */
   idSesion?: string;
   transporte?: TransportePerifoneo;
-  /** En vivo: `escucha_bocina` (solo la bajada) o `bidireccional` (el operador también escucha el micrófono) */
+  /**
+   * En vivo: `escucha_bocina` (solo la bajada), `bidireccional` (el operador también escucha el micrófono) o
+   * `microfono` (la abrió el botón de llamada del NAC: solo el micrófono, que se graba en la alerta `idAlerta`)
+   */
   modo?: ModoPerifoneo;
+  /** Solo `microfono`: la alerta de la sirena a la que van los trozos grabados */
+  idAlerta?: string;
   /** En vivo (fase 2): tope de la sesión (PERIFONEO_INICIAR.duracionMaxS) */
   duracionMaxS?: number;
   /** Grabación de la sesión en vivo, si se habilita (decisión abierta 5) */
@@ -127,15 +132,16 @@ export interface ICodecPerifoneo {
  */
 export interface ISesionPerifoneoNac {
   transporte: TransportePerifoneo;
-  /** WHEP del canal de la sesión (`<servidor>/nac-<idSesion>/whep`) */
-  url: string;
+  /** WHEP del canal de la sesión (`<servidor>/nac-<idSesion>/whep`). No viene en `microfono`: no hay bajada */
+  url?: string;
   /** Va en `Authorization: Bearer <token>`. Atado a chipId + idSesion: hay que conectarse antes de los 60 s */
-  token: string;
+  token?: string;
   iceServers?: { urls: string; username?: string; credential?: string }[];
   codec: ICodecPerifoneo;
   /**
-   * Solo en sesiones `bidireccional`: WHIP del micrófono de este NAC (`<servidor>/nac-<idSesion>-mic-<chipId>/whip`)
-   * con su token de publicación. Sin `subida` el NAC hace solo la bajada.
+   * En sesiones `bidireccional`: WHIP del micrófono de este NAC (`<servidor>/nac-<idSesion>-mic-<chipId>/whip`) con su
+   * token de publicación. Sin `subida` el NAC hace solo la bajada.
+   * En `microfono` es lo único que viene (`<servidor>/nac-<idSesion>-alerta-<chipId>/whip`, el canal que se graba).
    */
   subida?: {
     url: string;
