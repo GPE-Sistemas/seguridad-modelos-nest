@@ -1,4 +1,5 @@
 import { IUsuario } from "../usuario";
+import { ModoPerifoneo } from "./sirena.dto";
 import { ISirena } from "./sirena.model";
 
 /**
@@ -33,6 +34,14 @@ export type MotivoFinPerifoneo =
   | "error_sesion"
   | "ocupado";
 
+/**
+ * Micrófono del NAC en una sesión `bidireccional` (half-duplex, lo decide el NAC):
+ * - abierto: publica lo que escucha.
+ * - cerrado: habla el operador, o suena sirena o audio.
+ * - no_disponible: la subida no conectó o se cayó; la sesión sigue con la bajada sola.
+ */
+export type MicrofonoPerifoneo = "abierto" | "cerrado" | "no_disponible";
+
 /** Transporte del audio en vivo (fase 2): opción C o, si falla la prueba de concepto, la B. */
 export type TransportePerifoneo = "webrtc" | "websocket";
 
@@ -43,6 +52,8 @@ export interface IDestinoPerifoneo {
   /** Lo que contestó el equipo cuando falla (ej. "Sirena sonando") */
   mensaje?: string;
   motivo?: MotivoFinPerifoneo;
+  /** En vivo `bidireccional`: el último que mandó el NAC en PERIFONEO_ESTADO */
+  microfono?: MicrofonoPerifoneo;
   fechaEstado?: string;
   // Virtuals
   sirena?: ISirena;
@@ -67,6 +78,8 @@ export interface IPerifoneo {
   /** En vivo (fase 2): id de la sala/sesión que viaja en PERIFONEO_INICIAR */
   idSesion?: string;
   transporte?: TransportePerifoneo;
+  /** En vivo: `escucha_bocina` (solo la bajada) o `bidireccional` (el operador también escucha el micrófono) */
+  modo?: ModoPerifoneo;
   /** En vivo (fase 2): tope de la sesión (PERIFONEO_INICIAR.duracionMaxS) */
   duracionMaxS?: number;
   /** Grabación de la sesión en vivo, si se habilita (decisión abierta 5) */
@@ -97,6 +110,15 @@ export interface IUpdateDestinoPerifoneo {
   estado: EstadoDestinoPerifoneo;
   mensaje?: string;
   motivo?: MotivoFinPerifoneo;
+  microfono?: MicrofonoPerifoneo;
+}
+
+export interface ICodecPerifoneo {
+  nombre: "opus";
+  fs: number;
+  canales: number;
+  tramaMs: number;
+  kbps: number;
 }
 
 /**
@@ -110,12 +132,15 @@ export interface ISesionPerifoneoNac {
   /** Va en `Authorization: Bearer <token>`. Atado a chipId + idSesion: hay que conectarse antes de los 60 s */
   token: string;
   iceServers?: { urls: string; username?: string; credential?: string }[];
-  codec: {
-    nombre: "opus";
-    fs: number;
-    canales: number;
-    tramaMs: number;
-    kbps: number;
+  codec: ICodecPerifoneo;
+  /**
+   * Solo en sesiones `bidireccional`: WHIP del micrófono de este NAC (`<servidor>/nac-<idSesion>-mic-<chipId>/whip`)
+   * con su token de publicación. Sin `subida` el NAC hace solo la bajada.
+   */
+  subida?: {
+    url: string;
+    token: string;
+    codec: ICodecPerifoneo;
   };
 }
 
@@ -134,4 +159,12 @@ export interface ISesionPerifoneoOperador {
   perifoneo: IPerifoneo;
   url: string;
   token: string;
+  /**
+   * Solo en sesiones `bidireccional`: el WHEP del micrófono de cada NAC, todos con el mismo `token` de lectura. Cada
+   * uno existe recién cuando ese NAC empieza a publicar (destino.microfono `abierto`).
+   */
+  escucha?: {
+    token: string;
+    microfonos: { chipId: string; url: string }[];
+  };
 }
