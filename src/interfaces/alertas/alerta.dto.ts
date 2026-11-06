@@ -28,6 +28,8 @@ export interface ICrearAlerta {
    */
   idVecino?: string;
   idConfigVecino?: string;
+  /** Botón de llamada de una sirena: la alerta es de la sirena y no tiene vecino */
+  idSirena?: string;
   idsCentrosMonitoreo: string[];
   idCentroDerivado?: string;
   idZona: string;

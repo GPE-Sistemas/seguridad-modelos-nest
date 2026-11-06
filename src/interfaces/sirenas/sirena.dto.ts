@@ -229,7 +229,9 @@ export type TipoEventoMensajeSirena =
   // Perifoneo en vivo y llamada del vecino (fases 2 y 3, doc Perifoneo VoIP NAC32 §7.2)
   | 'PERIFONEO_ESTADO'
   | 'LLAMADA_SOLICITADA'
-  | 'LLAMADA_CANCELADA';
+  | 'LLAMADA_CANCELADA'
+  // Botón de llamada del NAC32 (trama TCP 0x13): crea la alerta de la sirena y abre una sesión `microfono`
+  | 'BOTON_LLAMADA';
 
 export type TipoEventoComandoSirena =
   | 'ENCENDER_PANICO'
@@ -365,8 +367,14 @@ export interface IDataErrorSirena {
  * - escucha_bocina: el NAC solo reproduce la voz del operador.
  * - bidireccional: además publica su micrófono cuando el operador no habla (half-duplex).
  * - llamada: fase 3.
+ * - microfono: lo abre el botón de llamada del NAC (BOTON_LLAMADA). Solo la subida del micrófono, siempre abierto y
+ *   sin bajada; mediaMTX lo graba y cada trozo se guarda como audio de la alerta de la sirena.
  */
-export type ModoPerifoneo = 'escucha_bocina' | 'bidireccional' | 'llamada';
+export type ModoPerifoneo =
+  | 'escucha_bocina'
+  | 'bidireccional'
+  | 'llamada'
+  | 'microfono';
 
 /** Fase 2: backend → NAC. El NAC después pide las credenciales por HTTPS (ISesionPerifoneoNac). */
 export interface IDataPerifoneoIniciar {
@@ -415,6 +423,14 @@ export interface IDataLlamadaSirena {
   idLlamada: string;
   /** Solo en LLAMADA_CANCELADA: 'sin_respuesta' (60 s) o el vecino volvió a apretar */
   motivo?: string;
+}
+
+/**
+ * NAC → backend al apretar el botón de llamada. El backend crea la alerta de la sirena (o sigue con la que tiene
+ * activa) y contesta con PERIFONEO_INICIAR modo `microfono`.
+ */
+export interface IDataBotonLlamada {
+  chipId?: string;
 }
 
 export interface IMensajeAuthSirena {
@@ -468,6 +484,7 @@ export interface IMensajeSirena {
     | IDataErrorSirena
     | IDataPerifoneoEstado
     | IDataLlamadaSirena
+    | IDataBotonLlamada
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
