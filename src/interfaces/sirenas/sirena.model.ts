@@ -113,6 +113,16 @@ export interface ISirena {
   // configs de la sirena
   configs?: IConfigSirena;
 
+  /**
+   * Volumen de sirenas, pánico y audios grabados del NAC32, 0 a 100 (%). Es el que confirmó la placa
+   * (VOLUMEN_CONFIGURADO o AUTH_SIRENA), no el pedido.
+   */
+  volumenSirena?: number;
+  /** Volumen del perifoneo del NAC32, 0 a 100 (%). Confirmado por la placa. */
+  volumenVoz?: number;
+  /** Cuándo llegó el último VOLUMEN_CONFIGURADO */
+  fechaVolumen?: string;
+
   // Virtuals
   cliente?: ICliente;
 

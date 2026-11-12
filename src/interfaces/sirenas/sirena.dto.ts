@@ -101,6 +101,10 @@ export interface IUpdateSirena {
    * NAC - Avatis - Alarcom - ETC
    */
   modeloSirena?: ModeloSirena;
+  /** Volúmenes confirmados por el NAC32 (VOLUMEN_CONFIGURADO / AUTH_SIRENA), 0 a 100 */
+  volumenSirena?: number;
+  volumenVoz?: number;
+  fechaVolumen?: string;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -231,7 +235,9 @@ export type TipoEventoMensajeSirena =
   | 'LLAMADA_SOLICITADA'
   | 'LLAMADA_CANCELADA'
   // Botón de llamada del NAC32 (trama TCP 0x13): crea la alerta de la sirena y abre una sesión `microfono`
-  | 'BOTON_LLAMADA';
+  | 'BOTON_LLAMADA'
+  // Respuesta del NAC32 a CONFIGURAR_VOLUMEN (trama TCP 0x14): los dos volúmenes que quedaron guardados
+  | 'VOLUMEN_CONFIGURADO';
 
 export type TipoEventoComandoSirena =
   | 'ENCENDER_PANICO'
@@ -252,7 +258,9 @@ export type TipoEventoComandoSirena =
   // Perifoneo en vivo (fase 2, §7.2). No llevan credenciales: el TCP 5050 no está cifrado.
   | 'PERIFONEO_INICIAR'
   | 'PERIFONEO_FIN'
-  | 'PERIFONEO_TURNO';
+  | 'PERIFONEO_TURNO'
+  // Volumen del NAC32: la placa contesta VOLUMEN_CONFIGURADO, o `error` (error-formato / error-config)
+  | 'CONFIGURAR_VOLUMEN';
 
 export interface IDataAuthSirena {
   chipId: string;
@@ -266,6 +274,9 @@ export interface IDataAuthSirena {
   rssi?: number;
   ber?: number;
   imsi?: string;
+  /** NAC32 con volumen configurable: lo que tiene guardado la placa */
+  volumenSirena?: number;
+  volumenVoz?: number;
 }
 
 export interface IDataUbicacionSirena {
@@ -433,6 +444,25 @@ export interface IDataBotonLlamada {
   chipId?: string;
 }
 
+/**
+ * Plataforma → NAC32. Los dos campos son opcionales (el que no viene queda como estaba), pero tiene que venir al
+ * menos uno. Enteros 0 a 100 (%). Se guarda en la placa y rige desde el próximo sonido.
+ * - volumenSirena: sirenas, pánico y audios grabados
+ * - volumenVoz: perifoneo, salvo que PERIFONEO_INICIAR traiga su propio volumen
+ */
+export interface IDataConfigurarVolumen {
+  chipId?: string;
+  volumenSirena?: number;
+  volumenVoz?: number;
+}
+
+/** NAC32 → plataforma (trama TCP 0x14): siempre con los dos valores que quedaron guardados (ya recortados a 0–100) */
+export interface IDataVolumenConfigurado {
+  chipId?: string;
+  volumenSirena: number;
+  volumenVoz: number;
+}
+
 export interface IMensajeAuthSirena {
   event: ETipoEventoSirena.AUTH_SIRENA;
   data: IDataAuthSirena;
@@ -485,6 +515,7 @@ export interface IMensajeSirena {
     | IDataPerifoneoEstado
     | IDataLlamadaSirena
     | IDataBotonLlamada
+    | IDataVolumenConfigurado
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
@@ -501,6 +532,7 @@ export interface IComandoSirena {
     | IDataPerifoneoIniciar
     | IDataPerifoneoFin
     | IDataPerifoneoTurno
+    | IDataConfigurarVolumen
     | IDataBalizaSirenaOperador
     | IDataSonidoSirenaOperador;
 }
