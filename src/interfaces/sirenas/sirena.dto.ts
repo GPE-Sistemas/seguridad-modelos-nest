@@ -1,4 +1,5 @@
 import { IConfigSirena, ICoordenadas, ModeloSirena } from '../..';
+import { HwSirena } from './firmware-sirena.model';
 
 export interface ICrearSirena {
   fechaCreacion?: string;
@@ -105,6 +106,9 @@ export interface IUpdateSirena {
   volumenSirena?: number;
   volumenVoz?: number;
   fechaVolumen?: string;
+  /** Hardware y chip que informa el AUTH (NAC32 nuevo: 'v2' / 'esp32s3') */
+  hw?: HwSirena;
+  chip?: string;
 }
 
 export interface IResumenSirenasPorCliente {
@@ -274,6 +278,10 @@ export interface IDataAuthSirena {
   rssi?: number;
   ber?: number;
   imsi?: string;
+  /** NAC32 nuevo: hardware ('v2'), chip ('esp32s3') y módulo celular */
+  hw?: HwSirena;
+  chip?: string;
+  modulo?: string;
   /** NAC32 con volumen configurable: lo que tiene guardado la placa */
   volumenSirena?: number;
   volumenVoz?: number;
