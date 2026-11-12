@@ -6,6 +6,7 @@ import {
   ILocalidad,
   ISim,
 } from '../..';
+import { HwSirena } from './firmware-sirena.model';
 
 export type ModeloSirena = 'NAC' | 'Avatis' | 'Alarcom';
 
@@ -122,6 +123,11 @@ export interface ISirena {
   volumenVoz?: number;
   /** Cuándo llegó el último VOLUMEN_CONFIGURADO */
   fechaVolumen?: string;
+
+  /** Hardware de la placa que informa el AUTH (NAC32 nuevo: 'v2'). Sin dato = v1. Define qué firmware se le manda. */
+  hw?: HwSirena;
+  /** Chip que informa el AUTH (NAC32 nuevo: 'esp32s3') */
+  chip?: string;
 
   // Virtuals
   cliente?: ICliente;
