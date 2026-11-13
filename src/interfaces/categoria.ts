@@ -94,6 +94,11 @@ export interface ICategoria {
   boton1?: TipoBoton;
   boton2?: TipoBoton;
   boton3?: TipoBoton;
+  /**
+   * Botón de pánico Bluetooth (KKM) escuchado por el NAC32: es UN solo botón. Misma elección que los del control
+   * RF: 'Reflector' | 'Sirena' | _id del IBoton (Alerta). Sin dato = Alerta con `idBotonAlertaControl`.
+   */
+  botonBle?: TipoBoton;
   // Virtuals
   btnsPrincipales?: IBoton[];
   btnsSecundarios?: IBoton[];
